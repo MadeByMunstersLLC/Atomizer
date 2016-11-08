@@ -1,0 +1,74 @@
+<!-- Edit Scenario Partial - Active by default -->
+<section role="region" aria-label="Edit Scenario" id="tab-1" class="page-section tab__content is-active">
+  <aside role="sidebar" class="page-sidebar page-sidebar--left">
+    <header role="banner" class="page-sidebar__header">
+      <h2 class="title">Available Modules</h2>
+    </header>
+    <div class="page-sidebar__body">
+      <% data.modules.module_group.each do |g| %>
+        <div class="toggle toggle--border">
+          <div class="toggle__header">
+            <h5 class="form__label"><%= g.group_title %></h5>
+            <a href="#" class="toggle__trigger <%= 'is-active' if g.group_active %>">
+              <%= inline_svg("icons/plus-icon.svg", class: "toggle__icon toggle__icon--small toggle__icon--plus") %>
+              <%= inline_svg("icons/minus-icon.svg", class: "toggle__icon toggle__icon--small toggle__icon--minus #{'is-active' if g.group_active}") %>
+            </a>
+          </div>
+          <ul class="list toggle__body <%= 'is-active' if g.group_active %>">
+            <% g.modules.each do |m| %>
+              <li class="item card card--extra-small card--draggable">
+                <div class="checkbox--label">
+                  <input type="checkbox" />
+                  <span><%= m.title %></span>
+                </div>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+  </aside>
+  <div class="page-main page-main--right">
+    <header role="banner" class="page-main__header">
+      <h2 class="title">Current Scenario</h2>
+      <div class="page-main__header--right">
+        <a href="#" class="button--bravo button--small">3 Updates</a>
+      </div>
+    </header>
+    <div class="page-main__content">
+      <ul class="module-card__list-titles">
+        <li class="form__label module-card__title">Module Name</li>
+        <li class="form__label module-card__update">Last Updated</li>
+        <li class="form__label module-card__version">Version</li>
+        <li class="form__label module-card__rules">Rules</li>
+        <li class="form__label module-card__actions">Actions</li>
+      </ul>
+      <ul class="list">
+        <% data.scenario_modules.module.each do |m| %>
+          <li class="card card--small card--draggable module-card">
+            <div class="module-card__title">
+              <input type="checkbox" class="checkbox" />
+              <h4 class="title"><%= m.title %></h4>
+            </div>
+            <div class="module-card__update">
+              <img src="../../<%= m.update_image %>" class="avatar" />
+              <div class="updated-content">
+                <h5 class="module-card__text"><%= m.updated_by %></h5>
+                <h5 class="module-card__text--small"><%= m.updated_date %></h5>
+              </div>
+            </div>
+            <div class="module-card__version">
+              <p class="module-card__text"><%= m.version %></p>
+            </div>
+            <div class="module-card__rules">
+              <a href="#" class="module-card__text <%= m.rules_present ? 'link--bravo' : 'link--alpha' %>"><%= m.rules %></a>
+            </div>
+            <div class="module-card__actions">
+              <a href="#" class="action"><%= inline_svg("icons/edit-icon.svg") %></a>
+              <a href="#" class="action"><%= inline_svg("icons/trash-icon.svg") %></a>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,110 @@
+// Application Scenario Module
+// ========================================
+
+// Variables
+$module-card-display:         inline-block;
+$module-card-margin:          $spacer-echo;
+$module-card-v-align:         middle;
+
+$module-card-title-margin:    0;
+
+$module-avatar-float:         left;
+$module-avatar-margin:        $spacer-echo;
+$module-avatar-radius:        30em;
+$module-avatar-size:          25px;
+
+$module-actions-align:        right;
+$module-actions-cords:        $spacer-echo null null null;
+$module-actions-position:     relative;
+
+$module-action-margin:        3px 0 0;
+
+$module-action-icon-width:    15px;
+$module-action-icon-fill:     $grey-dark;
+
+
+// Structure
+.module-card {
+  @extend .row;
+  margin-bottom: $module-card-margin;
+}
+
+.module-card__title,
+.module-card__update,
+.module-card__version,
+.module-card__rules,
+.module-card__actions {
+  display: $module-card-display;
+  vertical-align: $module-card-v-align;
+}
+
+.module-card__title {
+  width: 40%;
+
+  .title {
+    display: $module-card-display;
+    margin: $module-card-title-margin;
+    vertical-align: $module-card-v-align;
+  }
+}
+
+.module-card__version,
+.module-card__rules {
+  width: 13%;
+}
+
+.module-card__update {
+  display: $module-card-display;
+  width: 25%;
+
+  .avatar {
+    border-radius: $module-avatar-radius;
+    float: $module-avatar-float;
+    height: $module-avatar-size;
+    margin-right: $module-avatar-margin;
+    width: $module-avatar-size;
+  }
+
+  .updated-content {
+    margin-top: 2px;
+  }
+}
+
+.module-card__actions {
+  text-align: $module-actions-align;
+  width: 6%;
+
+  .action {
+    @include position($module-actions-position, $module-actions-cords);
+    display: $module-card-display;
+
+    &:not(:last-child) {
+      margin-right: $module-card-margin;
+    }
+
+    svg {
+      width: $module-action-icon-width;
+    }
+  }
+
+  #app-icon {
+    fill: $module-action-icon-fill;
+  }
+}
+
+
+// Module Card Text Sizes
+.module-card__text {
+  @include s-golf;
+  margin: 0;
+}
+
+.module-card__text--small {
+  @include s-hotel;
+  margin: 0;
+}
+
+// Module Card Titles
+.module-card__list-titles {
+  margin-bottom: $spacer-delta;
+}

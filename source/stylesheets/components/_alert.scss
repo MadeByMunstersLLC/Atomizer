@@ -3,15 +3,19 @@
 
 // Variables
 $alet-border:              1px solid;
+$alert-cords:              null null -500px 30px;
+$alert-cords-active:       null null 30px 30px;
 $alet-display:             inline;
 $alert-opacity:            1;
 $alert-opacity-hidden:     0;
 $alet-padding:             $spacer-delta $spacer-charlie;
-$alert-position:           relative;
+$alert-position:           fixed;
 $alert-radius:             1px;
 $alert-spread:             0 0 15px;
 $alert-shadow:             rgba(35,35,35,0.20);
+$alert-transition:         bottom 0.75s ease;
 $alert-v-align:            middle;
+$alert-z-index:            99999;
 
 $alert-close-float:        right;
 $alert-close-margin:       3px;
@@ -22,12 +26,14 @@ $alert-close-transition:   0.5s opacity ease;
 // Structure
 %alert {
   @include box-shadow($alert-spread, $alert-shadow);
-  @include position($alert-position);
-  @include transition(opacity 0.5s ease);
+  @include position($alert-position, $alert-cords);
+  @include transition($alert-transition);
   border: $alet-border;
   border-radius: $alert-radius;
+  min-width: 500px;
   opacity: $alert-opacity;
   padding: $alet-padding;
+  z-index: $alert-z-index;
 }
 
 
@@ -46,10 +52,8 @@ $alert-close-transition:   0.5s opacity ease;
       fill: $border-color;
     }
 
-    // Hide Alert
-      // NOTE: This class should be more descriptive. Possibly is-hidden if close icon is clicked to hide the alert.
     &.is-active {
-      opacity: $alert-opacity-hidden;
+      @include position($alert-position, $alert-cords-active);
     }
   }
 }

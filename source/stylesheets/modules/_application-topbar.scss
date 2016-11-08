@@ -5,8 +5,13 @@
 // Variables
 $app-topbar-background:             $black-base;
 $app-topbar-border:                 1px solid $black-dark;
+$app-topbar-cords:                  0 null null null;
 $app-topbar-margin-0:               0;
+$app-topbar-max-width:              1600px;
 $app-topbar-padding:                $spacer-charlie;
+$app-topbar-position:               fixed;
+$app-topbar-width:                  100%;
+$app-topbar-z-index:                11;
 
 $app-topbar-section-display:        inline-block;
 $app-topbar-section-v-align:        middle;
@@ -44,9 +49,13 @@ $app-topbar-settings-item-margin:   $spacer-echo;
 
 // Structure
 .app-topbar {
+  @include position($app-topbar-position, $app-topbar-cords);
   background-color: $app-topbar-background;
   border-bottom: $app-topbar-border;
+  max-width: $app-topbar-max-width;
   padding: $app-topbar-padding;
+  width: $app-topbar-width;
+  z-index: $app-topbar-z-index;
 }
 
 // Application Topbar Layout

@@ -1,0 +1,17 @@
+module:
+  - title: Atom Hailo
+    updated_by: Kurt Cunningham
+    updated_date: Oct. 12, 2016
+    update_image: images/misc/user-avatar-img.jpg
+    version: 1.3.5
+    version_update: false
+    rules: Add Rules
+    rules_present: false
+  - title: Red Switch Transfer
+    updated_by: Kurt Cunningham
+    updated_date: Oct. 12, 2016
+    update_image: images/misc/user-avatar-img.jpg
+    version: 1.0.5
+    version_update: false
+    rules: Add Rules
+    rules_present: false

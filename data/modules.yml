@@ -1,0 +1,55 @@
+module_group:
+  - group_title: Global Modules
+    group_active: true
+    modules:
+      - title: Contact Form
+      - title: Terms of Service
+      - title: Banner
+      - title: Cable Widget
+      - title: Credit Check
+      - title: Date of Birth
+  - group_title: HughesNet Modules
+    group_active: true
+    modules:
+      - title: HN Contact Form
+      - title: HN Terms of Service
+      - title: HN Banner
+      - title: HN Cable Widget
+      - title: HN Credit Check
+      - title: HN Date of Birth
+  - group_title: DirectTV Modules
+    group_active: false
+    modules:
+      - title: DT Contact Form
+      - title: DT Terms of Service
+      - title: DT Banner
+      - title: DT Cable Widget
+      - title: DT Credit Check
+      - title: DT Date of Birth
+  - group_title: Verizon Wireless Modules
+    group_active: false
+    modules:
+      - title: VW Contact Form
+      - title: VW Terms of Service
+      - title: VW Banner
+      - title: VW Cable Widget
+      - title: VW Credit Check
+      - title: VW Date of Birth
+  - group_title: AT&T Modules
+    group_active: false
+    modules:
+      - title: ATT Contact Form
+      - title: ATT Terms of Service
+      - title: ATT Banner
+      - title: ATT Cable Widget
+      - title: ATT Credit Check
+      - title: ATT Date of Birth
+  - group_title: Frontier Modules
+    group_active: false
+    modules:
+      - title: F Contact Form
+      - title: F Terms of Service
+      - title: F Banner
+      - title: F Cable Widget
+      - title: F Credit Check
+      - title: F Date of Birth

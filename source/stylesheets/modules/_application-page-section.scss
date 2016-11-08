@@ -1,0 +1,103 @@
+// Application Page Section Module
+// ========================================
+
+// Variables
+$page-height:                  100%;
+$page-overflow:                hidden;
+$page-padding:                 $spacer-charlie;
+
+$page-overflow-y:              scroll;
+$page-padding-overflow:        $spacer-charlie $spacer-charlie $spacer-alpha * 5;
+
+$page-section-height:          100%;
+$page-section-margin:          217px 0 0;
+$page-section-position:        relative;
+
+$page-sidebar-border:          1px solid $grey-light;
+$page-sidebar-cords:           0 null 0 null;
+$page-sidebar-height:          100%;
+$page-sidebar-position:        absolute;
+$page-sidebar-width:           25%;
+
+$page-sidebar-title-margin:    $spacer-bravo;
+
+$page-main-cords:              $page-sidebar-cords;
+$page-main-width:              75%;
+$page-main-position:           $page-sidebar-position;
+
+$page-main-header-margin:      $page-sidebar-title-margin;
+
+$page-main-title-margin-0:     0;
+$page-main-title-display:      inline-block;
+
+$page-main-header-right-float: right;
+
+
+
+// Structure
+.page {
+  height: $page-height;
+  overflow: $page-overflow;
+}
+
+// Page Section
+.page-section {
+  @include position($page-section-position);
+  height: $page-section-height;
+  margin: $page-section-margin;
+}
+
+
+// Page Section Sidebar
+.page-sidebar {
+  @include position($page-sidebar-position, $page-sidebar-cords);
+  border-right: $page-sidebar-border;
+  height: $page-sidebar-height;
+  overflow-y: $page-overflow-y;
+  padding: $page-padding-overflow;
+  width: $page-sidebar-width;
+
+  &.page-sidebar--left {
+    left: 0;
+  }
+
+  &.page-sidebar--right {
+    right: 0;
+  }
+
+  // Page Section Sidebar Text
+  .title {
+    margin-bottom: $page-sidebar-title-margin;
+  }
+}
+
+
+// Page Section Main
+.page-main {
+  @include position($page-main-position, $page-main-cords);
+  padding: $page-padding-overflow;
+  overflow-y: $page-overflow-y;
+  width: $page-main-width;
+
+  &.page-main--left {
+    left: 0;
+  }
+
+  &.page-main--right {
+    left: 25%;
+  }
+}
+
+.page-main__header {
+  margin-bottom: $page-main-header-margin;
+
+  .title {
+    display: $page-main-title-display;
+    margin: $page-main-title-margin-0;
+  }
+
+  .page-main__header--right {
+    display: $page-main-title-display;
+    float: $page-main-header-right-float;
+  }
+}
