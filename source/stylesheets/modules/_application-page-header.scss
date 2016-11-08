@@ -1,0 +1,47 @@
+// Application Page Header Module
+// ========================================
+
+// Variables
+$page-header-background:          $black-base;
+$page-header-padding:             $spacer-charlie;
+$page-header-padding-0:           0;
+$page-header-position:            relative;
+
+$page-header-tabs-margin:         $spacer-charlie;
+
+$page-header-title-color:         $white-base;
+$page-header-margin:              0;
+
+
+// Structure
+.page-header {
+  @include position($page-header-position);
+  background-color: $page-header-background;
+  padding: $page-header-padding;
+
+  // Tab Adjustments
+  &.page-header--tabs {
+    padding-bottom: $page-header-padding-0;
+  }
+
+  // Add margin to tabs
+  .tabs {
+    margin-top: $page-header-tabs-margin;
+  }
+
+  // Remove tab default border
+    // Note: Might be worth removing border to begin with.
+  .tab__list {
+    border-bottom: none;
+  }
+
+}
+
+.page-header__right {
+  @include position(absolute, 30px 30px null null);
+}
+
+.page-header__title {
+  color: $page-header-title-color;
+  margin: $page-header-margin;
+}

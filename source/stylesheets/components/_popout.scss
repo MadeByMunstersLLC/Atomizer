@@ -2,10 +2,10 @@
 // ========================================
 
 // Variables
-$popout-cords:                  30px null null 0;
+$popout-cords:                  30px 0 null null;
 $popout-opacity:                0;
 $popout-position:               absolute;
-$popout-transition:             opacity 0.35s ease;
+$popout-transition:             opacity 0.75s ease;
 $popout-shadow:                 rgba(35,35,35,0.20);
 $popout-spread:                 0 0 15px;
 $popout-z-index:                -1;
@@ -20,6 +20,8 @@ $popout-item-display:           block;
 $popout-item-margin:            $spacer-delta;
 
 $popout-link-color:             $black-base;
+$popout-link-transition:        color 0.5s ease;
+$popout-link-white-space:       nowrap;
 
 
 
@@ -53,8 +55,9 @@ $popout-link-color:             $black-base;
 }
 
 .popout__link {
-  @include transition(color 0.5s ease);
+  @include transition($popout-link-transition);
   color: $popout-link-color;
+  white-space: $popout-link-white-space;
 
   &:hover {
     color: lighten($popout-link-color, 30%);

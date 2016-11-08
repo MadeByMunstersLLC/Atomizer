@@ -1,20 +1,17 @@
 // Tabs Component Interaction
-var $tabLink = $('.tab__item-link');
+$(document).ready(function(){
 
-$(document).ready(function() {
-  $tabLink.on('click', function(e)  {
+  $('.tabs ul li').on('click', function(e) {
     e.preventDefault();
-    e.stopPropagation();
-
-    var currentAttrValue = $(this).attr('href'),
-        $tabParent = $('.tab__item'),
+    var tabID = $(this).attr('data-tab'),
+        $tabContent = $('.tab__content');
+        $tabLink = $('.tab__item');
         activeClass = 'is-active';
 
-    // Show/Hide Tabs
-    $('.tabs ' + currentAttrValue).show().siblings().hide();
+    $tabLink.removeClass(activeClass);
+    $tabContent.removeClass(activeClass);
 
-    // Change/remove current tab to active
-    $(this).parent($tabParent).addClass(activeClass).siblings().removeClass(activeClass);
-
+    $(this).addClass(activeClass);
+    $("#" + tabID).addClass(activeClass);
   });
 });
