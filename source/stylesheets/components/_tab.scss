@@ -1,0 +1,97 @@
+// Tab Component
+// ========================================
+
+
+// Variables
+$tab-margin-top:                     $spacer-charlie;
+
+$tab-list-border:                    1px solid $grey-light;
+$tab-list-padding:                   0;
+
+$tab-list-item-align:                left;
+$tab-list-item-color:                $black-base;
+$tab-list-item-color-active:         $blue-base;
+$tab-list-item-margin:               $spacer-charlie;
+$tab-list-item-opacity:              0.5;
+$tab-list-item-padding:              0 0 $spacer-echo;
+$tab-list-item-position:             relative;
+$tab-list-item-transform:            uppercase;
+
+$tab-list-item-opacity-active:       1;
+
+$tab-list-link-bg:                   $blue-base;
+$tab-list-link-cords:                null null -5px null;
+$tab-list-link-color-active:         $blue-base;
+$tab-list-link-height:               3px;
+$tab-list-link-position:             absolute;
+$tab-list-link-transition:           width 0.75s ease;
+$tab-list-link-width:                0;
+$tab-list-link-width-active:         100%;
+
+$tab-content-margin:                 $spacer-charlie;
+$tab-content-animation-in:           fade-in 2.5s ease;
+
+
+// Structure
+.tab {
+  display: inline-block;
+  margin-top: $tab-margin-top;
+}
+
+// Tab Nav List
+.tab__list {
+  border-bottom: $tab-list-border;
+  padding: $tab-list-padding;
+
+  // Tab Item
+  .tab__item {
+    @include position($tab-list-item-position);
+    @include s-foxtrot;
+    display: inline-block;
+    padding: $tab-list-item-padding;
+    text-align: $tab-list-item-align;
+    text-transform: $tab-list-item-transform;
+
+    &:not(:last-child) {
+      margin-right: $tab-list-item-margin;
+    }
+  }
+}
+
+// Tab Item Link
+.tab__item-link {
+  @include font-type($primary-sans-serif, normal, 600);
+  color: $tab-list-item-color;
+  opacity: $tab-list-item-opacity;
+
+  &::before {
+    @include position($tab-list-link-position, $tab-list-link-cords);
+    @include transition($tab-list-link-transition);
+    background-color: $tab-list-link-bg;
+    content: "";
+    display: block;
+    height: $tab-list-link-height;
+    width: $tab-list-link-width;
+  }
+
+  &.is-active {
+    color: $tab-list-link-color-active;
+    opacity: $tab-list-item-opacity-active;
+
+    &::before {
+      width: $tab-list-link-width-active;
+    }
+  }
+}
+
+
+// Tab Pane
+.tab__content {
+  display: none;
+  margin-top: $tab-content-margin;
+
+  &.is-active {
+    @include animation($tab-content-animation-in);
+    display: block;
+  }
+}

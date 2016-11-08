@@ -1,0 +1,62 @@
+// Popout Component
+// ========================================
+
+// Variables
+$popout-cords:                  30px null null 0;
+$popout-opacity:                0;
+$popout-position:               absolute;
+$popout-transition:             opacity 0.35s ease;
+$popout-shadow:                 rgba(35,35,35,0.20);
+$popout-spread:                 0 0 15px;
+$popout-z-index:                -1;
+
+$popout-opacity-active:         1;
+$popout-z-index-active:         1;
+
+$popout-container-display:      inline-block;
+$popout-container-position:     relative;
+
+$popout-item-display:           block;
+$popout-item-margin:            $spacer-delta;
+
+$popout-link-color:             $black-base;
+
+
+
+// Structure
+.popout {
+  @extend .card;
+  @extend .card--small;
+  @include box-shadow($popout-spread, $popout-shadow);
+  @include transition($popout-transition);
+  @include position($popout-position, $popout-cords);
+  opacity: $popout-opacity;
+  z-index: $popout-z-index;
+
+  &.is-active {
+    opacity: $popout-opacity-active;
+    z-index: $popout-z-index-active;
+  }
+}
+
+.popout__container {
+  @include position($popout-container-position);
+  display: $popout-container-display;
+}
+
+.popout__item {
+  display: $popout-item-display;
+
+  &:not(:last-child) {
+    margin-bottom: $spacer-delta;
+  }
+}
+
+.popout__link {
+  @include transition(color 0.5s ease);
+  color: $popout-link-color;
+
+  &:hover {
+    color: lighten($popout-link-color, 30%);
+  }
+}

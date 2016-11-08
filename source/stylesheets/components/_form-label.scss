@@ -1,0 +1,21 @@
+// Form Label Component
+// ========================================
+
+
+// Variabeles
+$form-label-color:          $purple-base;
+$form-label-display:        block;
+$form-label-margin:         $spacer-delta;
+$form-label-transform:      uppercase;
+
+
+// Structure
+label,
+.form__label {
+  @extend .text--bold;
+  @include s-golf;
+  color: $form-label-color;
+  display: $form-label-display;
+  margin-bottom: $form-label-margin;
+  text-transform: $form-label-transform;
+}
