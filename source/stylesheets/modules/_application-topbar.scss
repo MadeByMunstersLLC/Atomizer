@@ -99,7 +99,12 @@ $app-topbar-settings-item-margin:   $spacer-echo;
     display: $app-topbar-avatar-display;
     height: $app-topbar-avatar-size;
     margin-right: $app-topbar-avatar-margin;
+    overflow: hidden;
     width: $app-topbar-avatar-size;
+  }
+
+  .user__avatar-img {
+    width: 100%;
   }
 
   // Add class if on avatar is present
