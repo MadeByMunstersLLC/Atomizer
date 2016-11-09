@@ -17,11 +17,17 @@
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
   </head>
   <body>
+    <!-- Topbar Navigation -->
     <%= partial 'layouts/shared/_application-topbar' %>
+
+    <!-- Main Body -->
     <main role="main" class="page">
       <%= yield %>
     </main>
+
+    <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <%= javascript_include_tag  "application" %>
   </body>
 </html>

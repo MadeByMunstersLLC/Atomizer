@@ -1,4 +1,4 @@
-// Application Scenario Module
+// Scenario Module Card Module
 // ========================================
 
 // Variables
@@ -8,25 +8,38 @@ $module-card-v-align:         middle;
 
 $module-card-title-margin:    0;
 
+$module-avatar-align:         center;
+$module-avatar-background:    $grey-light;
+$module-avatar-color:         $grey-dark;
 $module-avatar-float:         left;
 $module-avatar-margin:        $spacer-echo;
+$module-avatar-padding:       $spacer-echo;
 $module-avatar-radius:        30em;
 $module-avatar-size:          25px;
+$module-avatar-weight:        600;
 
 $module-actions-align:        right;
-$module-actions-cords:        $spacer-echo null null null;
+$module-actions-cords:        2px null null null;
 $module-actions-position:     relative;
 
 $module-action-margin:        3px 0 0;
 
 $module-action-icon-width:    15px;
-$module-action-icon-fill:     $grey-dark;
+
+$module-icon-fill:            $grey-dark;
 
 
 // Structure
 .module-card {
   @extend .row;
   margin-bottom: $module-card-margin;
+}
+
+.module-card--dragged {
+  @extend .highlight--bravo;
+  background-color: $grey-light;
+  padding: $spacer-charlie;
+  margin-bottom: $spacer-echo;
 }
 
 .module-card__title,
@@ -58,15 +71,44 @@ $module-action-icon-fill:     $grey-dark;
   width: 25%;
 
   .avatar {
+    background-color: $module-avatar-background;
     border-radius: $module-avatar-radius;
+    color: $module-avatar-color;
     float: $module-avatar-float;
     height: $module-avatar-size;
     margin-right: $module-avatar-margin;
     width: $module-avatar-size;
   }
 
-  .updated-content {
-    margin-top: 2px;
+  .no-avatar {
+    @include s-golf;
+    font-weight: $module-avatar-weight;
+    padding-top: $module-avatar-padding;
+    text-align: $module-avatar-align;
+  }
+}
+
+.module-card__version {
+  @include position(relative);
+
+  .update-icon {
+    @include position(absolute, 3px null null $spacer-alpha);
+
+    // Adjust tooltip location
+      // NOTE: This needs to be done because of all of the
+      //       positioning being applied to this element.
+    .tooltip {
+      bottom: 1.5em;
+      left: -6.9em;
+    }
+
+    svg {
+      height: $module-action-icon-width;
+    }
+
+    #app-icon {
+      fill: $module-icon-fill;
+    }
   }
 }
 
@@ -88,7 +130,7 @@ $module-action-icon-fill:     $grey-dark;
   }
 
   #app-icon {
-    fill: $module-action-icon-fill;
+    fill: $module-icon-fill;
   }
 }
 

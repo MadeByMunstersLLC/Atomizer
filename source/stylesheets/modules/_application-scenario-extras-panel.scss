@@ -1,0 +1,70 @@
+// Scenario Extras Panel Module
+// ========================================
+
+// Variables
+$module-extras-panel-cords:         null 0 -300px 0;
+$module-extras-panel-cords-active:  0;
+$module-extras-panel-display:       inline-block;
+$module-extras-panel-margin:        0 auto;
+$module-extras-panel-max-width:     1600px;
+$module-extras-panel-position:      fixed;
+$module-extras-panel-shadow:        rgba(191,189,189,0.30);
+$module-extras-panel-spread:        0 -2px 15px 0;
+$module-extras-panel-transition:    bottom 0.75s ease;
+$module-extras-panel-width:         100%;
+$module-extras-panel-v-align:       middle;
+
+$module-extras-panel-section-width: 33%;
+
+$module-extras-action-display:      inline-block;
+$module-extras-action-margin:       $spacer-echo;
+
+
+
+// Structure
+.module-extras-panel {
+  @extend .card;
+  @extend .card--small;
+  @include box-shadow($module-extras-panel-spread, $module-extras-panel-shadow);
+  @include position($module-extras-panel-position, $module-extras-panel-cords);
+  @include transition($module-extras-panel-transition);
+  margin: $module-extras-panel-margin;
+  max-width: $module-extras-panel-max-width;
+  width: $module-extras-panel-width;
+
+  &.is-active {
+    bottom: 0;
+  }
+}
+
+.module-extras-panel__left,
+.module-extras-panel__middle,
+.module-extras-panel__right {
+  display: $module-extras-panel-display;
+  width: $module-extras-panel-section-width;
+  vertical-align: $module-extras-panel-v-align;
+}
+
+.module-extras-panel__middle {
+  text-align: center;
+
+  .module-extras-panel__action {
+    display: $module-extras-action-display;
+
+    &:not(:last-child) {
+      margin: $module-extras-action-margin;
+    }
+  }
+
+  .module-extras-panel__action {
+
+  }
+
+  #app-icon {
+    fill: $grey-dark;
+  }
+}
+
+.module-extras-panel__right {
+  text-align: right;
+}

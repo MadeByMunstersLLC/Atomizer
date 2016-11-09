@@ -10,7 +10,8 @@ $page-overflow-y:              scroll;
 $page-padding-overflow:        $spacer-charlie $spacer-charlie $spacer-alpha * 5;
 
 $page-section-height:          100%;
-$page-section-margin:          217px 0 0;
+$page-section-margin:          105px 0 0;
+$page-section-margin-alt:      217px 0 0;
 $page-section-position:        relative;
 
 $page-sidebar-border:          1px solid $grey-light;
@@ -45,6 +46,10 @@ $page-main-header-right-float: right;
   @include position($page-section-position);
   height: $page-section-height;
   margin: $page-section-margin;
+
+  &.page-section--header-offset {
+    margin: $page-section-margin-alt;
+  }
 }
 
 
@@ -66,8 +71,43 @@ $page-main-header-right-float: right;
   }
 
   // Page Section Sidebar Text
+  .page-sidebar__header {
+    @include position(relative);
+  }
+
   .title {
     margin-bottom: $page-sidebar-title-margin;
+  }
+
+  .page-sidebar__header--right {
+    @include position(absolute, 0 0 null null);
+
+    #app-icon {
+      fill: $grey-dark;
+    }
+
+    // Hide Search Bar
+    .search-input {
+      display: none;
+    }
+
+    // Show Search Bar When Header Active
+    &.is-active {
+      width: 100%;
+
+      .search-input{
+        @include position(absolute, -13px null null 0);
+        display: block;
+        width: 90%;
+
+        input { width: 100% }
+      }
+
+      .toggle-element {
+        float: right;
+        vertical-align: middle;
+      }
+    }
   }
 }
 

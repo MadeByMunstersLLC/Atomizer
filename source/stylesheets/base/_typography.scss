@@ -68,6 +68,15 @@ a {
   }
 }
 
+b,
+strong {
+  font-weight: 600;
+}
+
+em {
+  font-style: italic;
+}
+
 
 // Text Alignment
 @each $text-alignment in $text-alignments {

@@ -1,8 +1,17 @@
 <!-- Edit Scenario Partial - Active by default -->
-<section role="region" aria-label="Edit Scenario" id="tab-1" class="page-section tab__content is-active">
+<section role="region" aria-label="Edit Scenario" id="tab-1" class="page-section page-section--header-offset tab__content is-active">
   <aside role="sidebar" class="page-sidebar page-sidebar--left">
     <header role="banner" class="page-sidebar__header">
       <h2 class="title">Available Modules</h2>
+      <div class="page-sidebar__header--right toggle-parent">
+        <a href="#" class="toggle-element">
+          <%= inline_svg("icons/search-icon.svg") %>
+        </a>
+        <div class="search-input">
+          <input type="search" placeholder="Lookup a module" />
+
+        </div>
+      </div>
     </header>
     <div class="page-sidebar__body">
       <% data.modules.module_group.each do |g| %>
@@ -42,15 +51,19 @@
         <li class="form__label module-card__rules">Rules</li>
         <li class="form__label module-card__actions">Actions</li>
       </ul>
-      <ul class="list">
+      <ul id="module-list--sortable" class="list">
         <% data.scenario_modules.module.each do |m| %>
           <li class="card card--small card--draggable module-card">
             <div class="module-card__title">
-              <input type="checkbox" class="checkbox" />
+              <input type="checkbox" class="checkbox checkbox-extras-panel" />
               <h4 class="title"><%= m.title %></h4>
             </div>
             <div class="module-card__update">
-              <img src="../../<%= m.update_image %>" class="avatar" />
+              <% if m.update_image %>
+                <img src="../../<%= m.update_image %>" class="avatar" />
+              <% else %>
+                <span class="avatar no-avatar"><%= m.updated_by[0] %></span>
+              <% end %>
               <div class="updated-content">
                 <h5 class="module-card__text"><%= m.updated_by %></h5>
                 <h5 class="module-card__text--small"><%= m.updated_date %></h5>
@@ -58,6 +71,16 @@
             </div>
             <div class="module-card__version">
               <p class="module-card__text"><%= m.version %></p>
+              <% if m.version_update %>
+                <div class="update-icon">
+                  <div class="tooltip__item">
+                    <%= inline_svg("icons/update-icon.svg") %>
+                    <figure class="tooltip">
+                      <p class="tooltip__text">Looks like an update is avaliable. Click the button in the top right.</p>
+                    </figure>
+                  </div>
+                </div>
+              <% end %>
             </div>
             <div class="module-card__rules">
               <a href="#" class="module-card__text <%= m.rules_present ? 'link--bravo' : 'link--alpha' %>"><%= m.rules %></a>
@@ -72,3 +95,4 @@
     </div>
   </div>
 </section>
+<%= partial 'scenario/shared/_scenario-module-extras-panel' %>
