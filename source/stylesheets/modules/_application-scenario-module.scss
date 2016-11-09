@@ -18,8 +18,7 @@ $module-avatar-radius:        30em;
 $module-avatar-size:          25px;
 $module-avatar-weight:        600;
 
-$module-actions-align:        right;
-$module-actions-cords:        2px null null null;
+$module-actions-cords:        2px -22px null null;
 $module-actions-position:     relative;
 
 $module-action-margin:        3px 0 0;
@@ -113,7 +112,6 @@ $module-icon-fill:            $grey-dark;
 }
 
 .module-card__actions {
-  text-align: $module-actions-align;
   width: 6%;
 
   .action {

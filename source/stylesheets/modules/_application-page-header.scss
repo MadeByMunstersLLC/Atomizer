@@ -19,6 +19,10 @@ $page-header-right-position:      absolute;
 $page-header-title-color:         $white-base;
 $page-header-margin:              0;
 
+$page-header-link-display:        inline-block;
+$page-header-link-margin:         $spacer-echo;
+$page-header-link-transform:      uppercase;
+
 $page-header-stats-float:         left;
 $page-header-stats-margin:        $spacer-delta;
 
@@ -59,11 +63,38 @@ $page-header-stat-margin:         $spacer-delta;
   @include position($page-header-right-position, $page-header-right-cords);
 }
 
+
+// Page Header Title
 .page-header__title {
   color: $page-header-title-color;
   margin: $page-header-margin;
 }
 
+
+// Page Header Back Link
+.page-header__back-link {
+  @extend .link--alpha;
+  @include s-golf;
+  display: $page-header-link-display;
+  margin-bottom: $page-header-link-margin;
+  text-transform: $page-header-link-transform;
+
+  span,
+  svg {
+    vertical-align: middle;
+  }
+
+  svg {
+    width: 10px;
+  }
+
+  #app-icon {
+    fill: $blue-base;
+  }
+}
+
+
+// Page Header Stats
 .page-header__stats {
   float: $page-header-stats-float;
   margin-right: $page-header-stats-margin;

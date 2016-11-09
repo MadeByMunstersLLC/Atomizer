@@ -76,6 +76,10 @@ $modal-trigger-icon-width:      15px;
   }
 }
 
+.modal__body-content {
+  margin: $modal-margin * 2 0;
+}
+
 .modal__header {
   margin-bottom: $modal-margin;
 

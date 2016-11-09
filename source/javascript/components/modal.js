@@ -7,7 +7,7 @@ var $modalTrigger = $('.modal__trigger'),
 
 $modalTrigger.on('click', function (event) {
   event.preventDefault();
-  $(this).siblings($modal).addClass($modalActive);
+  $(this).siblings($modal).toggleClass($modalActive);
   $modal.attr('aria-hidden', 'false');
 });
 
