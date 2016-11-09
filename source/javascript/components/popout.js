@@ -8,5 +8,6 @@ var $popoutTrigger = $('.popout__trigger'),
 $popoutTrigger.on('click', function(e) {
   e.preventDefault();
 
+  $(this).toggleClass(popoutActive);
   $(this).parent('.popout__container').find($popout).toggleClass(popoutActive);
 });

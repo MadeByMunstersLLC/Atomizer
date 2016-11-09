@@ -94,6 +94,11 @@ $app-topbar-settings-item-margin:   $spacer-echo;
       margin-right: $spacer-delta;
     }
   }
+
+  // Active Popout Trigger
+  .popout__trigger.is-active {
+    opacity: 0.5;
+  }
 }
 
 .app-topbar__user {
