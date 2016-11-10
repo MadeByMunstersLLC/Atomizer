@@ -3,6 +3,8 @@
 
 // Variables
 $toggle-border:               1px solid $grey-light;
+$toggle-display-inactive:     none;
+$toggle-display-active:       inline-block;
 $toggle-margin:               0 0 $spacer-charlie;
 $toggle-padding:              0 0 $spacer-delta;
 
@@ -50,22 +52,22 @@ $toggle-body-height-active:   auto;
 
     // Inactive Toggle Icons
     .toggle__icon--minus {
-      display: none;
+      display: $toggle-display-inactive;
     }
 
     .toggle__icon--plus {
-      display: inline-block;
+      display: $toggle-display-active;
     }
 
     // Active Toggle Icons
     &.is-active {
 
       .toggle__icon--minus {
-        display: inline-block;
+        display: $toggle-display-active;
       }
 
       .toggle__icon--plus {
-        display: none;
+        display: $toggle-display-inactive;
       }
     }
   }
