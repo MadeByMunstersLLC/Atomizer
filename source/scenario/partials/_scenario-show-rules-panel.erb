@@ -9,16 +9,62 @@
       <li class="tab__item" data-tab="tab-3">Preview Module</li>
     </ul>
   </div>
-  <div class="margin-top--charlie" id="tab-1">
+  <div class="margin-top--charlie tab__content is-active" id="tab-1">
     <div class="card">
       <div class="tooltip__item">
         <label class="tooltip__label label">Module Title</label>
-          <%= inline_svg ('icons/help-icon.svg'), class: 'tooltip__icon' %>
-          <figure class="tooltip">
-            <p class="tooltip__text">This title will be used to identify the module in the scenario list.</p>
-          </figure>
-        </div>
+        <%= inline_svg ('icons/help-icon.svg'), class: 'tooltip__icon' %>
+        <figure class="tooltip">
+          <p class="tooltip__text">This title will be used to identify the module in the scenario list.</p>
+        </figure>
+      </div>
       <input type="text" value="Red Switch Transfer" class="margin-reset--bottom" />
     </div>
+    <div class="card">
+      <div class="row">
+        <div class="columns-4__l">
+          <label class="tooltip__label label">Company ID</label>
+          <input type="text" value="19" />
+        </div>
+        <div class="columns-4__l">
+          <label class="tooltip__label label">Script Type</label>
+          <select>
+            <option selected="selected">Script</option>
+            <option>Option</option>
+            <option>Option</option>
+          </select>
+        </div>
+        <div class="columns-4__l">
+          <label class="tooltip__label label">Box Style Option</label>
+          <select>
+            <option selected="selected">Chat</option>
+            <option>Option</option>
+            <option>Option</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <label>Text</label>
+        <textarea style="height: 100px" class="margin-reset--bottom"></textarea>
+      </div>
+    </div>
+    <div class="card">
+      <div class="tooltip__item">
+        <label class="tooltip__label label">
+          Replacements <%= inline_svg ('icons/help-icon.svg'), class: 'tooltip__icon' %>
+        </label>
+        <figure class="tooltip">
+          <p class="tooltip__text">This title will be used to identify the module in the scenario list.</p>
+        </figure>
+      </div>
+      <p class="margin-bottom--charlie">You currently have no replacements at the moment. Add a replacement by clicking the link below.</p>
+      <a href="#" class="link--alpha">+ Add Replacement</a>
+    </div>
+  </div>
+  <div id="tab-2" class="margin-top--charlie tab__content">
+    Edit Rules
+  </div>
+  <div id="tab-3" class="margin-top--charlie tab__content">
+    Preview Module
   </div>
 </div>

@@ -21,8 +21,12 @@ $form-input-border-inactive:     1px solid $grey-light;
 $form-input-radius-zero:         0;
 
 $form-input-add-on-display:      inline-block;
-$form-input-add-on-height:       45px;
+$form-input-add-on-height:       40px;
 $form-input-add-on-padding:      0 $spacer-delta;
+$form-input-add-on-width:        30%;
+
+$form-add-on-container-width:    100%;
+$form-add-on-input-width:        70%;
 
 
 // Structure
@@ -86,7 +90,7 @@ select {
     border-top-right-radius: $form-input-radius-zero;
     display: $form-input-add-on-display;
     margin: -4px;
-    width: auto;
+    width: $form-add-on-input-width;
   }
 }
 
@@ -103,10 +107,15 @@ input[type="search"],
 
 
 // Form Input Add On Button
+.button--add-on__container {
+  width: $form-add-on-container-width;
+}
+
 .input--add-on__button {
   border-bottom-left-radius: $form-input-radius-zero;
   border-top-left-radius: $form-input-radius-zero;
   display: $form-input-add-on-display;
   height: $form-input-add-on-height;
   padding: $form-input-add-on-padding;
+  width: $form-input-add-on-width;
 }

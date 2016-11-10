@@ -87,36 +87,45 @@ $page-main-header-right-float: right;
   .title {
     margin-bottom: $page-sidebar-title-margin;
   }
+}
 
-  .page-sidebar__header--right {
-    @include position(absolute, 0 0 null null);
+.page-sidebar__header--right {
+  @include position(absolute, 0 0 null null);
 
-    #app-icon {
-      fill: $grey-dark;
+  #app-icon {
+    fill: $grey-dark;
+  }
+
+  // Hide Search Bar
+  .search-input {
+    display: none;
+  }
+
+  // Show Search Bar When Header Active
+  &.is-active {
+    width: 100%;
+
+    .search-input{
+      @include position(absolute, -13px null null 0);
+      display: block;
+      width: 90%;
+
+      input { width: 100% }
     }
 
-    // Hide Search Bar
-    .search-input {
-      display: none;
+    .toggle-element {
+      float: right;
+      vertical-align: middle;
     }
+  }
+}
 
-    // Show Search Bar When Header Active
-    &.is-active {
-      width: 100%;
+.page-sidebar__content {
 
-      .search-input{
-        @include position(absolute, -13px null null 0);
-        display: block;
-        width: 90%;
-
-        input { width: 100% }
-      }
-
-      .toggle-element {
-        float: right;
-        vertical-align: middle;
-      }
-    }
+  &.page-sidebar__content--border {
+    border-bottom: $page-sidebar-border;
+    margin-bottom: $spacer-charlie;
+    padding-bottom: $spacer-charlie;
   }
 }
 

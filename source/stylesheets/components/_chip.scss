@@ -7,8 +7,11 @@ $chip-display:            inline;
 $chip-float:              left;
 $chip-margin:             $spacer-delta 0 0;
 
-$chip-right-margin:       $spacer-echo 0 0 $spacer-delta;
-$chip-right-width:        70%;
+$chip-right-margin-lg:    $spacer-echo 0 0 $spacer-delta;
+$chip-right-margin-md:    $spacer-echo 0 0 0;
+$chip-right-width-e-lg:   65%;
+$chip-right-width-lg:     60%;
+$chip-right-width-md:     50%;
 
 $chip-image-background:   $purple-base;
 $chip-image-color:        $white-base;
@@ -37,8 +40,18 @@ $chip-text-line-height:   1.25;
 }
 
 .chip--right {
-  margin: $chip-right-margin;
-  width: $chip-right-width;
+  width: 100%;
+  margin: $chip-right-margin-md;
+
+  @include media($large) {
+    margin: $chip-right-margin-lg;
+    width: $chip-right-width-lg;
+  }
+
+  @include media($extra-large) {
+    margin: $chip-right-margin-lg;
+    width: $chip-right-width-e-lg;
+  }
 }
 
 
