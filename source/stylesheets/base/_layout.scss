@@ -22,11 +22,11 @@ body {
   $zero:      nth($reset, 2);
 
   .margin-reset--#{$position} {
-    margin-#{$position}: $zero;
+    margin-#{$position}: $zero !important;
   }
 
   .padding-reset--#{$position} {
-    padding-#{$position}: $zero;
+    padding-#{$position}: $zero !important;
   }
 };
 

@@ -19,6 +19,7 @@ $page-sidebar-cords:           0 null 0 null;
 $page-sidebar-height:          100%;
 $page-sidebar-position:        absolute;
 $page-sidebar-width:           25%;
+$page-sidebar-width-sm:        18%;
 
 $page-sidebar-title-margin:    $spacer-bravo;
 
@@ -56,18 +57,26 @@ $page-main-header-right-float: right;
 // Page Section Sidebar
 .page-sidebar {
   @include position($page-sidebar-position, $page-sidebar-cords);
-  border-right: $page-sidebar-border;
   height: $page-sidebar-height;
   overflow-y: $page-overflow-y;
   padding: $page-padding-overflow;
   width: $page-sidebar-width;
 
+
+  // Page Section Sidebar Position
   &.page-sidebar--left {
+    border-right: $page-sidebar-border;
     left: 0;
   }
 
   &.page-sidebar--right {
+    border-left: $page-sidebar-border;
     right: 0;
+  }
+
+  // Page Section Sidebar Modifiers
+  &.page-sidebar--small {
+    width: $page-sidebar-width-sm;
   }
 
   // Page Section Sidebar Text
@@ -125,6 +134,12 @@ $page-main-header-right-float: right;
 
   &.page-main--right {
     left: 25%;
+  }
+
+  &.page-main--middle {
+    left: 18%;
+    right: 25%;
+    width: 57%;
   }
 }
 

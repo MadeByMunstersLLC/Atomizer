@@ -88,7 +88,7 @@
             <div class="module-card__actions">
               <a href="/scenario/show.html" class="action"><%= inline_svg("icons/edit-icon.svg") %></a>
               <a href="#" class="action modal__trigger"><%= inline_svg("icons/trash-icon.svg") %></a>
-              <%= partial 'scenario/shared/_scenario-delete-modal', locals: { m:m } %>
+              <%= partial 'scenario/partials/_scenario-edit-delete-modal', locals: { m:m } %>
             </div>
           </li>
         <% end %>
@@ -96,4 +96,4 @@
     </div>
   </div>
 </section>
-<%= partial 'scenario/shared/_scenario-module-extras-panel' %>
+<%= partial 'scenario/partials/_scenario-module-extras-panel' %>

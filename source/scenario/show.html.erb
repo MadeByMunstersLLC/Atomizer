@@ -1,5 +1,9 @@
 ---
 title: SSL Order Process [Production] | Atomizer
 ---
-
-<%= partial 'scenario/shared/_scenario-show-header' %>
+<%= partial 'scenario/partials/_scenario-show-header' %>
+<section role="region" aria-label="scenario-details" class="page-section page-section--header-offset">
+  <%= partial 'scenario/partials/_scenario-show-activity-feed' %>
+  <%= partial 'scenario/partials/_scenario-show-rules-panel' %>
+  <%= partial 'scenario/partials/_scenario-show-rules-preview' %>
+</section>

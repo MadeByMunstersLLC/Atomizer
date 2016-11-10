@@ -1,0 +1,75 @@
+// Chip Component
+// ========================================
+
+
+// Variables
+$chip-display:            inline;
+$chip-float:              left;
+$chip-margin:             $spacer-delta 0 0;
+
+$chip-right-margin:       $spacer-echo 0 0 $spacer-delta;
+$chip-right-width:        70%;
+
+$chip-image-background:   $purple-base;
+$chip-image-color:        $white-base;
+$chip-image-overflow:     hidden;
+$chip-image-position:     relative;
+$chip-image-radius:       30em;
+$chip-image-size:         40px;
+$chip-image-weight:       600;
+
+$chip-text-line-height:   1.25;
+
+
+
+// Structure
+.chip {
+  @include clearfix;
+  margin: $chip-margin;
+}
+
+
+// Chip Layout
+.chip--left,
+.chip--right {
+  display: $chip-display;
+  float: $chip-float;
+}
+
+.chip--right {
+  margin: $chip-right-margin;
+  width: $chip-right-width;
+}
+
+
+// Chip Image
+.chip__image {
+  @include position($chip-image-position);
+  background: $chip-image-background;
+  border-radius: $chip-image-radius;
+  color: $chip-image-color;
+  font-weight: $chip-image-weight;
+  height: $chip-image-size;
+  overflow: $chip-image-overflow;
+  width: $chip-image-size;
+
+  img {
+    width: 100%;
+  }
+
+  .chip__icon {
+    @include center(true, true);
+    width: 40%;
+  }
+
+  .chip__image--none {
+    @include center(true, true);
+  }
+}
+
+
+// Chip Text
+.chip__text {
+  @include s-golf;
+  line-height: $chip-text-line-height;
+}
