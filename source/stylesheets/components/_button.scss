@@ -126,11 +126,18 @@ $button-dropdown-link-weight:       600;
 }
 
 
+
 // Button Sizes
 .button--small {
   @include s-golf;
   padding: $button-small-padding;
 }
+
+.button--form {
+  height: 40px;
+  padding: 0 $spacer-delta;
+}
+
 
 // Button Dropdown
 .button--add-on__container {

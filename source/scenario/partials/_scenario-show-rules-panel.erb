@@ -61,10 +61,69 @@
       <a href="#" class="link--alpha">+ Add Replacement</a>
     </div>
   </div>
+
   <div id="tab-2" class="margin-top--charlie tab__content">
-    Edit Rules
+    <div class="card">
+      <h3 class="card__title">Set Visibility</h3>
+      <div class="tooltip__item">
+        <label class="tooltip__label label">Module Title</label>
+        <%= inline_svg ('icons/help-icon.svg'), class: 'tooltip__icon' %>
+        <figure class="tooltip">
+          <p class="tooltip__text">Set the visibility of the module if the rule set equals true.</p>
+        </figure>
+      </div>
+      <select class="margin-reset--bottom">
+        <option selected="selected" disabled>Select One</option>
+        <option>Visible</option>
+        <option>Not Visible</option>
+      </select>
+    </div>
+    <div class="card">
+      <h3 class="card__title">Build Rule Set</h3>
+      <form class="row">
+        <fieldset class="columns-4__l columns-3__m">
+          <div class="tooltip__item">
+            <label class="tooltip__label label">Check Property</label>
+            <%= inline_svg ('icons/help-icon.svg'), class: 'tooltip__icon' %>
+            <figure class="tooltip">
+              <p class="tooltip__text">Set the property you want to check.</p>
+            </figure>
+          </div>
+          <select class="margin-reset--bottom" disabled>
+            <option selected="selected">Select One</option>
+          </select>
+        </fieldset>
+        <fieldset class="columns-2__l columns-2__m">
+          <div class="tooltip__item">
+            <label class="tooltip__label label">Check Rule</label>
+            <%= inline_svg ('icons/help-icon.svg'), class: 'tooltip__icon' %>
+            <figure class="tooltip">
+              <p class="tooltip__text">Selecting the rule means the the property and value need to equal true for the module to display correctly.</p>
+            </figure>
+          </div>
+          <select class="margin-reset--bottom" disabled>
+            <option selected="selected">Select One</option>
+          </select>
+        </fieldset>
+        <fieldset class="columns-4__l columns-2__m">
+          <div class="tooltip__item">
+            <label class="tooltip__label label">Check Value</label>
+            <%= inline_svg ('icons/help-icon.svg'), class: 'tooltip__icon' %>
+            <figure class="tooltip">
+              <p class="tooltip__text">Set the value you want to check.</p>
+            </figure>
+          </div>
+          <input type="text" class="margin-reset--bottom" disabled />
+        </fieldset>
+        <fieldset class="columns-2__l columns-2__m">
+          <input type="submit" value="add" class="button--disabled button--form label--offset float--right" disabled />
+        </fieldset>
+      </form>
+    </div>
   </div>
+
+
   <div id="tab-3" class="margin-top--charlie tab__content">
-    Preview Module
+    <!-- Preview Module -->
   </div>
 </div>

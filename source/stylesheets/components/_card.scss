@@ -20,6 +20,9 @@ $card-draggable-shadow:     rgba(48, 54, 67, 0.1);
 $card-draggable-spread:     0 0 10px;
 $card-draggable-transition: all 0.5s ease;
 
+$card-title-margin:         $spacer-delta;
+$card-title-padding:        $spacer-delta;
+
 
 // Structure
 .card {
@@ -51,4 +54,13 @@ $card-draggable-transition: all 0.5s ease;
   &:hover {
     @include box-shadow($card-draggable-spread, $card-draggable-shadow);
   }
+}
+
+
+// Card Text
+.card__title {
+  @include s-delta;
+  border-bottom: $card-border;
+  margin-bottom: $card-title-margin;
+  padding-bottom: $card-title-padding;
 }

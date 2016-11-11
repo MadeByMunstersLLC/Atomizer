@@ -106,8 +106,8 @@ input[type="search"],
 }
 
 
-// Form Input Add On Button
-.button--add-on__container {
+// NOTE: Only use on form inputs with attached butons
+.button--add-on__container--full {
   width: $form-add-on-container-width;
 }
 
