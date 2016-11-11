@@ -86,7 +86,9 @@
               <a href="#" class="module-card__text <%= m.rules_present ? 'link--bravo' : 'link--alpha' %>"><%= m.rules %></a>
             </div>
             <div class="module-card__actions">
-              <a href="/scenario/show.html" class="action"><%= inline_svg("icons/edit-icon.svg") %></a>
+              <% link_to "#{config[:root_url] ? config[:root_url] : '/'}scenario/show", class: 'action' do %>
+                <%= inline_svg("icons/edit-icon.svg") %>
+              <% end %>
               <a href="#" class="action modal__trigger"><%= inline_svg("icons/trash-icon.svg") %></a>
               <%= partial 'scenario/partials/_scenario-edit-delete-modal', locals: { m:m } %>
             </div>
