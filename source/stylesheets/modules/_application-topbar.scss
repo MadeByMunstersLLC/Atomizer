@@ -95,6 +95,16 @@ $app-topbar-settings-item-margin:   $spacer-echo;
     }
   }
 
+  // Style Popout Trigger
+  .popout__trigger svg {
+    height: $spacer-delta;
+    width: $spacer-delta;
+  }
+
+  #app-icon {
+    fill: $blue-base;
+  }
+
   // Active Popout Trigger
   .popout__trigger.is-active {
     opacity: 0.5;
