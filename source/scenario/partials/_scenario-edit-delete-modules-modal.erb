@@ -1,0 +1,57 @@
+<div class="modal" aria-hidden="true" data-modal="deleteModules">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <%= inline_svg("icons/close-icon.svg", class: "modal__close-icon") %>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Are you sure about this move? </h3>
+          <p class="modal-intro">You are about to perform an action that cannot be undone. Please double check the modules listed below before confirming this action.</p>
+        </header>
+        <div class="modal__body-content">
+          <ul class="row">
+            <li class="columns-10__l form__label">Selected Modules</li>
+            <li class="columns-2__l form__label">Action</li>
+          </ul>
+          <ul class="row">
+            <li class="columns-12__l clearfix margin-bottom--delta hide-element">
+              <ul>
+                <li class="columns-10__l">Contact Form</li>
+                <li class="columns-2__l">
+                  <a href="#" class="link--delta hide-link">Remove</a>
+                </li>
+              </ul>
+            </li>
+            <li class="columns-12__l clearfix margin-bottom--delta hide-element">
+              <ul>
+                <li class="columns-10__l">Existing Customer, Satellite TV?</li>
+                <li class="columns-2__l">
+                  <a href="#" class="link--delta hide-link">Remove</a>
+                </li>
+              </ul>
+            </li>
+            <li class="columns-12__l clearfix margin-bottom--delta hide-element">
+              <ul>
+                <li class="columns-10__l">Alaska or Hawaii Stop</li>
+                <li class="columns-2__l">
+                  <a href="#" class="link--delta hide-link">Remove</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--charlie">Delete Modules</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

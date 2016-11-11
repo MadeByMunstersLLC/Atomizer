@@ -7,7 +7,8 @@ $page-overflow:                hidden;
 $page-padding:                 $spacer-charlie;
 
 $page-overflow-y:              scroll;
-$page-padding-overflow:        $spacer-charlie $spacer-charlie $spacer-alpha * 5;
+$page-padding-overflow-md:        $spacer-charlie $spacer-delta $spacer-alpha * 5;
+$page-padding-overflow-lg:        $spacer-charlie $spacer-charlie $spacer-alpha * 5;
 
 $page-section-height:          100%;
 $page-section-margin:          105px 0 0;
@@ -59,8 +60,12 @@ $page-main-header-right-float: right;
   @include position($page-sidebar-position, $page-sidebar-cords);
   height: $page-sidebar-height;
   overflow-y: $page-overflow-y;
-  padding: $page-padding-overflow;
+  padding: $page-padding-overflow-md;
   width: $page-sidebar-width;
+
+  @include media($large) {
+    padding: $page-padding-overflow-lg;
+  }
 
 
   // Page Section Sidebar Position
@@ -133,9 +138,13 @@ $page-main-header-right-float: right;
 // Page Section Main
 .page-main {
   @include position($page-main-position, $page-main-cords);
-  padding: $page-padding-overflow;
+  padding: $page-padding-overflow-md;
   overflow-y: $page-overflow-y;
   width: $page-main-width;
+
+  @include media($large) {
+    padding: $page-padding-overflow-lg;
+  }
 
   &.page-main--left {
     left: 0;

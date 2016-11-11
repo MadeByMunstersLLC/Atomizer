@@ -1,3 +1,4 @@
+<!-- Extras Panel Footer -->
 <div class="module-extras-panel">
   <div class="module-extras-panel__left">
     <p class="form__label margin--reset"><span class="badge--alpha margin-right--echo checkboxes-badge"></span> Selected Modules</p>
@@ -5,10 +6,10 @@
   <div class="module-extras-panel__middle">
     <ul class="list">
       <li class="item module-extras-panel__action">
-        <a href="#" class="module-extras-panel__link"><%= inline_svg("icons/trash-icon.svg") %></a>
+        <a href="#" class="module-extras-panel__link modal__trigger" data-modal="deleteModules"><%= inline_svg("icons/trash-icon.svg") %></a>
       </li>
       <li class="item module-extras-panel__action">
-        <a href="#" class="module-extras-panel__link"><%= inline_svg("icons/duplicate-icon.svg") %></a>
+        <a href="#" class="module-extras-panel__link modal__trigger" data-modal="duplicateModules"><%= inline_svg("icons/duplicate-icon.svg") %></a>
       </li>
       <li class="item module-extras-panel__action">
         <a href="#" class="module-extras-panel__link"><%= inline_svg("icons/arrow-up-down-icon.svg") %></a>

@@ -1,0 +1,92 @@
+<div class="modal" aria-hidden="true" data-modal="updateModules">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <%= inline_svg("icons/close-icon.svg", class: "modal__close-icon") %>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Update Outdated Modules</h3>
+          <p class="modal-intro">Please review the modules that need to be updated. If you have questions about the modules that have updates just ask. You won’t break anything by updating. Some just need more testing then others.</p>
+        </header>
+        <div class="modal__body-content">
+          <div class="toggle toggle--card">
+            <div class="toggle__header">
+              <h5 class="toggle--card-title form__label">Update Legend</h5>
+              <a href="" class="toggle__trigger">
+                <%= inline_svg("icons/plus-icon.svg", class: 'toggle__icon toggle__icon--small toggle__icon--plus' ) %>
+                <%= inline_svg("icons/minus-icon.svg", class: 'toggle__icon toggle__icon--small toggle__icon--minus' ) %>
+              </a>
+            </div>
+            <div class="toggle__body">
+              <ul>
+                <li class="margin-bottom--delta"><span class="indicator--alpha"></span>Minor Updates: Safe to update.</li>
+                <li class="margin-bottom--delta"><span class="indicator--bravo"></span>Patch Updates: Safe to update with testing.</li>
+                <li><span class="indicator--charlie"></span>Major Updates: Caution, thorough testing needed.</li>
+              </ul>
+            </div>
+          </div>
+          <ul class="row">
+            <li class="columns-7__l form__label">Outdated Modules</li>
+            <li class="columns-3__l form__label">Update</li>
+            <li class="columns-2__l form__label">Action</li>
+          </ul>
+          <ul class="row">
+            <li class="columns-12__l clearfix margin-bottom--delta hide-element">
+              <ul>
+                <li class="columns-7__l">
+                  <span class="indicator--bravo"></span>
+                  Contact Form
+                </li>
+                <li class="columns-3__l">
+                  0.6.8 to 0.7.0
+                </li>
+                <li class="columns-2__l">
+                  <a href="#" class="link--delta hide-link">Remove</a>
+                </li>
+              </ul>
+            </li>
+            <li class="columns-12__l clearfix margin-bottom--delta hide-element">
+              <ul>
+                <li class="columns-7__l">
+                  <span class="indicator--alpha"></span>
+                  Existing Customer, Satellite TV?
+                </li>
+                <li class="columns-3__l">
+                  0.7.2 to 0.7.3
+                </li>
+                <li class="columns-2__l">
+                  <a href="#" class="link--delta hide-link">Remove</a>
+                </li>
+              </ul>
+            </li>
+            <li class="columns-12__l clearfix margin-bottom--delta hide-element">
+              <ul>
+                <li class="columns-7__l">
+                  <span class="indicator--bravo"></span>
+                  Alaska or Hawaii Stop
+                </li>
+                <li class="columns-3__l">
+                  0.5.11 to 0.6.0
+                </li>
+                <li class="columns-2__l">
+                  <a href="#" class="link--delta hide-link">Remove</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--alpha">Update Module</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

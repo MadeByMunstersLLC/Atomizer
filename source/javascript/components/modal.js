@@ -6,9 +6,16 @@ var $modalTrigger = $('.modal__trigger'),
     $modalActive = 'modal--active';
 
 $modalTrigger.on('click', function (event) {
+
   event.preventDefault();
-  $(this).siblings($modal).toggleClass($modalActive);
-  $modal.attr('aria-hidden', 'false');
+  var modalId = $(this).data('modal');
+  $('.modal').each(function(index, modal) {
+    if ($(modal).data('modal') === modalId) {
+      $(modal).toggleClass($modalActive);
+      $(modal).attr('aria-hidden', 'false');
+    }
+  });
+
 });
 
 $modalCloseTrigger.on('click', function (event) {

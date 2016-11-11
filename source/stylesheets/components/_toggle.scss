@@ -20,6 +20,8 @@ $toggle-body-overflow:        hidden;
 
 $toggle-body-height-active:   auto;
 
+$toggle-card-padding:         $spacer-delta;
+
 
 
 // Structure
@@ -80,5 +82,21 @@ $toggle-body-height-active:   auto;
   &.is-active {
     height: $toggle-body-height-active;
     margin-bottom: $spacer-delta;
+  }
+}
+
+.toggle--card {
+  @extend .card;
+  padding: $toggle-card-padding;
+
+  // Standard Toggle Card Title
+  .toggle--card-title {
+    margin: 0;
+  }
+
+  // Toggle Card Body Active
+  .toggle__body.is-active {
+    margin-bottom: 0;
+    margin-top: $spacer-delta;
   }
 }

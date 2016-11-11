@@ -39,7 +39,7 @@
     <header role="banner" class="page-main__header">
       <h2 class="title">Current Scenario</h2>
       <div class="page-main__header--right">
-        <a href="#" class="button--bravo button--small">3 Updates</a>
+        <a href="#" class="button--bravo button--small modal__trigger" data-modal="updateModules">3 Updates</a>
       </div>
     </header>
     <div class="page-main__content">
@@ -51,7 +51,7 @@
         <li class="form__label module-card__actions">Actions</li>
       </ul>
       <ul id="module-list--sortable" class="list">
-        <% data.scenario_modules.module.each do |m| %>
+        <% data.scenario_modules.module.each_with_index do |m, i| %>
           <li class="card card--small card--draggable module-card">
             <div class="module-card__title">
               <input type="checkbox" class="checkbox checkbox-extras-panel" />
@@ -88,8 +88,8 @@
               <% link_to "#{config[:root_url] ? config[:root_url] : '/'}scenario/show", class: 'action' do %>
                 <%= inline_svg("icons/edit-icon.svg") %>
               <% end %>
-              <a href="#" class="action modal__trigger"><%= inline_svg("icons/trash-icon.svg") %></a>
-              <%= partial 'scenario/partials/_scenario-edit-delete-modal', locals: { m:m } %>
+              <a href="#" class="action modal__trigger" data-modal="deleteModal<%= i %>"><%= inline_svg("icons/trash-icon.svg") %></a>
+              <%= partial 'scenario/partials/_scenario-edit-delete-modal', locals: { m:m, i:i } %>
             </div>
           </li>
         <% end %>
@@ -97,4 +97,8 @@
     </div>
   </div>
 </section>
-<%= partial 'scenario/partials/_scenario-module-extras-panel' %>
+<%= partial 'scenario/partials/_scenario-edit-save-alert' %>
+<%= partial 'scenario/partials/_scenario-edit-module-extras-panel' %>
+<%= partial 'scenario/partials/_scenario-edit-update-modules-modal' %>
+<%= partial 'scenario/partials/_scenario-edit-duplicate-modules-modal' %>
+<%= partial 'scenario/partials/_scenario-edit-delete-modules-modal' %>

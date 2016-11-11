@@ -9,8 +9,6 @@ $modal-position:                absolute;
 
 $modal-container-position:      relative;
 
-$modal-container-width:         500px;
-
 $modal-overlay-background:      rgba(48, 55, 67, 0.8);
 $modal-overlay-dimensions:      100%;
 $modal-overlay-postion:         fixed;
@@ -31,7 +29,7 @@ $modal-body-bottom-position:    0;
 $modal-body-left-position:      0;
 $modal-body-right-position:     0;
 $modal-body-top-position:       0;
-$modal-body-width:              450px;
+$modal-body-width:              500px;
 $modal-body-z-index:            99999;
 
 $modal-close-cords:             -31px -31px null null;
@@ -73,8 +71,6 @@ $modal-close-icon-width:        15px;
   @include position($modal-container-position);
 }
 
-
-// Structure
 .modal__overlay {
   @include position($modal-overlay-postion, $modal-overlay-top-position null null $modal-overlay-left-position);
   @include transition(opacity 0.75s ease);

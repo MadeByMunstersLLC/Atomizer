@@ -3,8 +3,6 @@
 
 
 // Variables
-$link-transition:       color 0.5s ease;
-
 $link-cursor-disabled:  not-allowed;
 
 
@@ -18,16 +16,11 @@ $link-cursor-disabled:  not-allowed;
 
   .link--#{$link} {
     @extend %link;
-    @include transition($link-transition);
     color: $color;
 
     // Disabled Button
     @if $link == 'disabled' {
       cursor: $link-cursor-disabled;
-    }
-
-    &:hover {
-      color: lighten($color, 10%);
     }
   }
 }

@@ -13,14 +13,17 @@ $popout-z-index:                -1;
 $popout-opacity-active:         1;
 $popout-z-index-active:         1;
 
+$popout-container-align:        left;
 $popout-container-display:      inline-block;
 $popout-container-position:     relative;
 
 $popout-item-display:           block;
 $popout-item-margin:            $spacer-delta;
 
+$popout-icon-width:             15px;
+$popout-icon-v-align:           middle;
+
 $popout-link-color:             $black-base;
-$popout-link-transition:        color 0.5s ease;
 $popout-link-white-space:       nowrap;
 
 
@@ -44,6 +47,7 @@ $popout-link-white-space:       nowrap;
 .popout__container {
   @include position($popout-container-position);
   display: $popout-container-display;
+  text-align: $popout-container-align;
 }
 
 .popout__item {
@@ -52,10 +56,23 @@ $popout-link-white-space:       nowrap;
   &:not(:last-child) {
     margin-bottom: $spacer-delta;
   }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .popout__icon {
+    margin-right: $popout-item-margin;
+    width: $popout-icon-width;
+    vertical-align: $popout-icon-v-align;
+
+    #app-icon {
+      fill: $grey-dark;
+    }
+  }
 }
 
 .popout__link {
-  @include transition($popout-link-transition);
   color: $popout-link-color;
   white-space: $popout-link-white-space;
 

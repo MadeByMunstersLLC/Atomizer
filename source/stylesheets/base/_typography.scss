@@ -55,7 +55,7 @@ dd{
 
 a {
   @include font-type(inherit, normal, 400);
-  @include transition(opacity 0.5s ease);
+  @include transition(all 0.5s ease);
   text-decoration: none;
 
   &:hover {

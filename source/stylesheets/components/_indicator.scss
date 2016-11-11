@@ -1,0 +1,29 @@
+// Indicator Component
+// ========================================
+
+// Variables
+$indicator-display:   inline-block;
+$indicator-margin:    0 $spacer-echo 0 0;
+$indicator-radius:    30em;
+$indicator-size:      10px;
+
+
+
+// Structure
+%indicator {
+  border-radius: $indicator-radius;
+  display: $indicator-display;
+  height: $indicator-size;
+  margin: $indicator-margin;
+  width: $indicator-size;
+}
+
+
+@each $indicator, $styles in $indicators {
+  $bg-color:      nth($styles, 1);
+
+  .indicator--#{$indicator} {
+    @extend %indicator;
+    background: $bg-color;
+  }
+}
