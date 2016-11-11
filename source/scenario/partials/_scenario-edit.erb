@@ -9,7 +9,6 @@
         </a>
         <div class="search-input">
           <input type="search" placeholder="Lookup a module" />
-
         </div>
       </div>
     </header>
@@ -60,7 +59,7 @@
             </div>
             <div class="module-card__update">
               <% if m.update_image %>
-                <img src="../../<%= m.update_image %>" class="avatar" />
+                <%= image_tag m.update_image, class: 'avatar' %>
               <% else %>
                 <span class="avatar no-avatar"><%= m.updated_by[0] %></span>
               <% end %>
