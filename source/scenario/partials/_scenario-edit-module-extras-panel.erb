@@ -11,8 +11,9 @@
       <li class="item module-extras-panel__action">
         <a href="#" class="module-extras-panel__link modal__trigger" data-modal="duplicateModules"><%= inline_svg("icons/duplicate-icon.svg") %></a>
       </li>
-      <li class="item module-extras-panel__action">
-        <a href="#" class="module-extras-panel__link"><%= inline_svg("icons/arrow-up-down-icon.svg") %></a>
+      <li class="item module-extras-panel__action popout__container">
+        <a href="#" class="module-extras-panel__link popout__trigger"><%= inline_svg("icons/arrow-up-down-icon.svg") %></a>
+        <%= partial 'scenario/partials/_scenario-edit-move-modules-popout' %>
       </li>
     </ul>
   </div>

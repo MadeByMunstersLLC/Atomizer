@@ -1,0 +1,15 @@
+<div class="popout popout--inverse popout--max-height">
+  <div class="popout__header">
+    <select>
+      <option selected>Move Above</option>
+      <option>Move Below</option>
+    </select>
+  </div>
+  <ul class="popout__list">
+    <% data.scenario_modules.module.each do |m| %>
+      <li class="popout__item">
+        <a href="#" class="popout__link"><%= m.title %></a>
+      </li>
+    <% end %>
+  </ul>
+</div>
