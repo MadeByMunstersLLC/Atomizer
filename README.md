@@ -20,4 +20,4 @@ Once you have Middleman installed on your machine. Please make sure to install b
 
 Everything good to go? Great. Next start your local server.
 
-`$ middleman build`
+`$ middleman server`
