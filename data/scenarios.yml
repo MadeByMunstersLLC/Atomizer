@@ -1,0 +1,49 @@
+scenario:
+  - title: SSL Order Process [Production]
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
+    status: active
+    is_favorite: true
+    stats:
+      - title:
+      - title:
+      - title:
+      - title:
+    updated_by: Kurt Cunningham
+    updated_by_img: ../images/misc/user-avatar-img.jpg
+    updated_on: an hour ago
+  - title: Compatible Inkjet Cartridge You Choose
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
+    status: active
+    is_favorite: true
+    stats:
+      - title:
+      - title:
+      - title:
+      - title:
+    updated_by: Joey Kirk
+    updated_by_img: ../images/misc/user-avatar-2-img.jpg
+    updated_on: on July 11, 2016
+  - title: Headset No Longer Wired For Sound
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
+    status: in-active
+    is_favorite: true
+    stats:
+      - title:
+      - title:
+      - title:
+      - title:
+    updated_by: Joey Kirk
+    updated_by_img: ../images/misc/user-avatar-2-img.jpg
+    updated_on: 15 minutes ago
+  - title: Clean And Organize Your Computer
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
+    status: active
+    is_favorite: true
+    stats:
+      - title:
+      - title:
+      - title:
+      - title:
+    updated_by: Kurt Cunningham
+    updated_by_img: ../images/misc/user-avatar-img.jpg
+    updated_on: on Nov. 11, 2016

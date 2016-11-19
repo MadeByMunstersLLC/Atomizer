@@ -13,7 +13,7 @@ $page-header-z-index:             10;
 
 $page-header-tabs-margin:         $spacer-charlie;
 
-$page-header-right-cords:         30px 30px null null;
+$page-header-right-cords:         null 30px null null;
 $page-header-right-position:      absolute;
 
 $page-header-title-color:         $white-base;
@@ -60,7 +60,8 @@ $page-header-stat-margin:         $spacer-delta;
 
 // Page Header Right
 .page-header__right {
-  @include position($page-header-right-position, $page-header-right-cords);
+  @include center(false, true);
+  right: $page-header-right-cords;
 }
 
 

@@ -15,6 +15,8 @@ $page-section-margin:          105px 0 0;
 $page-section-margin-alt:      217px 0 0;
 $page-section-position:        relative;
 
+$page-section-no-tabs-margin:  194px 0 0;
+
 $page-sidebar-border:          1px solid $grey-light;
 $page-sidebar-cords:           0 null 0 null;
 $page-sidebar-height:          100%;
@@ -51,6 +53,10 @@ $page-main-header-right-float: right;
 
   &.page-section--header-offset {
     margin: $page-section-margin-alt;
+  }
+
+  &.page-section--no-tabs {
+    margin: $page-section-no-tabs-margin;
   }
 }
 
@@ -144,6 +150,10 @@ $page-main-header-right-float: right;
 
   @include media($large) {
     padding: $page-padding-overflow-lg;
+  }
+
+  &.page-main--full {
+    width: 100%;
   }
 
   &.page-main--left {

@@ -46,7 +46,7 @@ $card-title-padding:        $spacer-delta;
 }
 
 
-// Card Hover Modifiers
+// Card Modifiers
 .card--draggable {
   @include transition($card-draggable-transition);
   cursor: move;
@@ -54,6 +54,10 @@ $card-title-padding:        $spacer-delta;
   &:hover {
     @include box-shadow($card-draggable-spread, $card-draggable-shadow);
   }
+}
+
+.card--shadow {
+  @include box-shadow($card-draggable-spread, $card-draggable-shadow);
 }
 
 

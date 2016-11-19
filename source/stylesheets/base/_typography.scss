@@ -44,6 +44,7 @@ p {
 
 p.text--small {
   @include s-golf;
+  line-height: 1.0;
 }
 
 li,
@@ -97,6 +98,11 @@ em {
     color: $tone-color;
   };
 }
+
+
+// Text Styles
+.text--uppercase { text-transform: uppercase; }
+
 
 // Text Weight
 .text--bold    { font-weight: 700; }

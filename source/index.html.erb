@@ -1,8 +1,44 @@
 ---
 title: Atomizer Dashboard | Red Ventures
 ---
-<section role="region" class="page-section text--center">
-  <div class="padding-top--alpha">
-    <%= link_to 'Launch Scenario', "#{config[:root_url] ? config[:root_url] : '/'}scenario/", class: 'button--alpha' %>
+<header role="header" class="page-header">
+  <h2 class="page-header__title margin-bottom--echo">Dashboard</h2>
+  <div class="page-header__right">
+    <button class="button--alpha">Create Scenario</button>
+  </div>
+</header>
+<section role="region" aria-label="atomzier-dashboard" class="page-section page-section--header-offset page-section--no-tabs">
+  <div class="page-main page-main--full">
+    <div class="page-main__content">
+      <header role="banner" class="page-main__header">
+        <h2 class="title">Favorite Scenarios</h2>
+      </header>
+      <ul class="list">
+        <% data.scenarios.scenario.each do |s| %>
+          <% if s.is_favorite %>
+            <li class="card card--shadow columns-3__l">
+              <div class="card__header">
+                <p class="margin-bottom--delta <%= 'badge--delta' if s.status === 'active' %> <%= 'badge--charlie' if s.status === 'in-active' %>"><%= s.status %></p>
+                <% link_to "#{config[:root_url] ? config[:root_url] : '/'}scenario/" do %>
+                  <h2><%= s.title %></h2>
+                <% end %>
+                <p><%= s.description %></p>
+              </div>
+              <div class="chip">
+                <div class="chip--left">
+                  <div class="chip__image">
+                    <%= image_tag s.updated_by_img %>
+                  </div>
+                </div>
+                <div class="chip--right">
+                  <p class="text--small text--uppercase margin-bottom--echo">Last Updated</p>
+                  <p class="text--small"><%= s.updated_by %> <%= s.updated_on %></p>
+                </div>
+              </div>
+            </li>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
   </div>
 </section>
