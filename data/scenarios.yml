@@ -1,49 +1,205 @@
 scenario:
   - title: SSL Order Process [Production]
     description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
+    business: DirecTV
     status: active
     is_favorite: true
     stats:
-      - title:
-      - title:
-      - title:
-      - title:
+      - title: Modules
+        number: 100
+      - title: Rules
+        number: 25
+      - title: Variations
+        number: 3
+      - title: Tests
+        number: 2
     updated_by: Kurt Cunningham
     updated_by_img: ../images/misc/user-avatar-img.jpg
-    updated_on: an hour ago
+    updated_on: An hour ago
   - title: Compatible Inkjet Cartridge You Choose
     description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
+    business: HughesNet
     status: active
     is_favorite: true
     stats:
-      - title:
-      - title:
-      - title:
-      - title:
+      - title: Modules
+        number: 155
+      - title: Rules
+        number: 55
+      - title: Variations
+        number: 1
+      - title: Tests
+        number: 0
     updated_by: Joey Kirk
     updated_by_img: ../images/misc/user-avatar-2-img.jpg
-    updated_on: on July 11, 2016
+    updated_on: July 11, 2016
   - title: Headset No Longer Wired For Sound
     description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
+    business: HughesNet
     status: in-active
     is_favorite: true
     stats:
-      - title:
-      - title:
-      - title:
-      - title:
+      - title: Modules
+        number: 100
+      - title: Rules
+        number: 25
+      - title: Variations
+        number: 3
+      - title: Tests
+        number: 0
     updated_by: Joey Kirk
     updated_by_img: ../images/misc/user-avatar-2-img.jpg
     updated_on: 15 minutes ago
   - title: Clean And Organize Your Computer
     description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
+    business: HughesNet
     status: active
     is_favorite: true
     stats:
-      - title:
-      - title:
-      - title:
-      - title:
+      - title: Modules
+        number: 65
+      - title: Rules
+        number: 12
+      - title: Variations
+        number: 4
+      - title: Tests
+        number: 0
     updated_by: Kurt Cunningham
     updated_by_img: ../images/misc/user-avatar-img.jpg
-    updated_on: on Nov. 11, 2016
+    updated_on: Nov. 11, 2016
+  - title: Convert Existing User To New Package
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
+    business: DirecTV
+    status: active
+    is_favorite: false
+    stats:
+      - title: Modules
+        number: 122
+      - title: Rules
+        number: 34
+      - title: Variations
+        number: 3
+      - title: Tests
+        number: 1
+    updated_by: Kurt Cunningham
+    updated_by_img: ../images/misc/user-avatar-img.jpg
+    updated_on: Oct. 12, 2016
+  - title: V7 Digital Photo Printing
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
+    business: DirecTV
+    status: active
+    is_favorite: false
+    stats:
+      - title: Modules
+        number: 122
+      - title: Rules
+        number: 34
+      - title: Variations
+        number: 3
+      - title: Tests
+        number: 1
+    updated_by: Kurt Cunningham
+    updated_by_img: ../images/misc/user-avatar-img.jpg
+    updated_on: Oct. 12, 2016
+  - title: Are You Ready To Buy A Home Theater Audio System
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
+    business: DirecTV
+    status: in-active
+    is_favorite: false
+    stats:
+      - title: Modules
+        number: 122
+      - title: Rules
+        number: 34
+      - title: Variations
+        number: 3
+      - title: Tests
+        number: 1
+    updated_by: Joey Kirk
+    updated_by_img: ../images/misc/user-avatar-2-img.jpg
+    updated_on: Oct. 12, 2016
+  - title: Buying Used Electronic Test Equipment
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
+    business: DirecTV
+    status: in-active
+    is_favorite: false
+    stats:
+      - title: Modules
+        number: 122
+      - title: Rules
+        number: 34
+      - title: Variations
+        number: 3
+      - title: Tests
+        number: 1
+    updated_by: Joey Kirk
+    updated_by_img: ../images/misc/user-avatar-2-img.jpg
+    updated_on: Oct. 12, 2016
+  - title: Myspace Layouts The Missing Element
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
+    business: DirecTV
+    status: in-active
+    is_favorite: false
+    stats:
+      - title: Modules
+        number: 122
+      - title: Rules
+        number: 34
+      - title: Variations
+        number: 3
+      - title: Tests
+        number: 1
+    updated_by: Kurt Cunningham
+    updated_by_img: ../images/misc/user-avatar-img.jpg
+    updated_on: Oct. 12, 2016
+  - title: Are You Ready To Buy A Home Theater Audio System
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
+    business: DirecTV
+    status: active
+    is_favorite: false
+    stats:
+      - title: Modules
+        number: 122
+      - title: Rules
+        number: 34
+      - title: Variations
+        number: 3
+      - title: Tests
+        number: 1
+    updated_by: Joey Kirk
+    updated_by_img: ../images/misc/user-avatar-2-img.jpg
+    updated_on: Oct. 12, 2016
+  - title: Buying Used Electronic Test Equipment
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
+    business: DirecTV
+    status: in-active
+    is_favorite: false
+    stats:
+      - title: Modules
+        number: 122
+      - title: Rules
+        number: 34
+      - title: Variations
+        number: 3
+      - title: Tests
+        number: 1
+    updated_by: Joey Kirk
+    updated_by_img: ../images/misc/user-avatar-2-img.jpg
+    updated_on: Oct. 12, 2016
+  - title: Myspace Layouts The Missing Element
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
+    business: DirecTV
+    status: active
+    is_favorite: false
+    stats:
+      - title: Modules
+        number: 122
+      - title: Rules
+        number: 34
+      - title: Variations
+        number: 3
+      - title: Tests
+        number: 1
+    updated_by: Kurt Cunningham
+    updated_by_img: ../images/misc/user-avatar-img.jpg
+    updated_on: Oct. 12, 2016

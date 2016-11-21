@@ -50,3 +50,16 @@
   -o-text-shadow:      $dim $color;
   text-shadow:         $dim $color;
 }
+
+// Muti-line Truncate
+@mixin multiline-ellipsis($mx-width, $height){
+  display: block;
+  display: -webkit-box;
+  max-width: $mx-width;
+  height: $height;
+  margin: 0 auto;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

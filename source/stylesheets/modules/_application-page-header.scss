@@ -23,13 +23,6 @@ $page-header-link-display:        inline-block;
 $page-header-link-margin:         $spacer-echo;
 $page-header-link-transform:      uppercase;
 
-$page-header-stats-float:         left;
-$page-header-stats-margin:        $spacer-delta;
-
-$page-header-stat-align:          center;
-$page-header-stat-display:        inline-block;
-$page-header-stat-margin:         $spacer-delta;
-
 
 // Structure
 .page-header {
@@ -91,33 +84,5 @@ $page-header-stat-margin:         $spacer-delta;
 
   #app-icon {
     fill: $blue-base;
-  }
-}
-
-
-// Page Header Stats
-.page-header__stats {
-  float: $page-header-stats-float;
-  margin-right: $page-header-stats-margin;
-}
-
-.page-header__stat {
-  display: $page-header-stat-display;
-  margin-right: $page-header-stat-margin;
-  text-align: $page-header-stat-align;
-
-  .number,
-  .text {
-    color: $white-base;
-  }
-
-  .number {
-    @include s-bravo;
-    display: block;
-  }
-
-  .text {
-    @include s-hotel;
-    text-transform: uppercase;
   }
 }

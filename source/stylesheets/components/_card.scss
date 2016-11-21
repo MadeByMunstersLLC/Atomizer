@@ -1,4 +1,4 @@
-// Card Component Directory
+// Card Component
 // ========================================
 
 
@@ -22,6 +22,8 @@ $card-draggable-transition: all 0.5s ease;
 
 $card-title-margin:         $spacer-delta;
 $card-title-padding:        $spacer-delta;
+
+$card-title-link-color:     $blue-base;
 
 
 // Structure
@@ -67,4 +69,19 @@ $card-title-padding:        $spacer-delta;
   border-bottom: $card-border;
   margin-bottom: $card-title-margin;
   padding-bottom: $card-title-padding;
+}
+
+
+// Card Title Link
+  // NOTE: Use when card title is clickable
+.card__title-link {
+  @include multiline-ellipsis(400px, 60px);
+  @include transition(color 0.5s ease);
+  @include s-bravo;
+  line-height: 1.25;
+  margin-bottom: $spacer-echo;
+
+  &:hover {
+    color: $card-title-link-color;
+  }
 }

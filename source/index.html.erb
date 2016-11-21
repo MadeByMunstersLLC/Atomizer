@@ -13,17 +13,27 @@ title: Atomizer Dashboard | Red Ventures
       <header role="banner" class="page-main__header">
         <h2 class="title">Favorite Scenarios</h2>
       </header>
-      <ul class="list">
+      <ul class="list card__list">
         <% data.scenarios.scenario.each do |s| %>
           <% if s.is_favorite %>
-            <li class="card card--shadow columns-3__l">
+            <li class="card card--shadow card__item">
               <div class="card__header">
                 <p class="margin-bottom--delta <%= 'badge--delta' if s.status === 'active' %> <%= 'badge--charlie' if s.status === 'in-active' %>"><%= s.status %></p>
                 <% link_to "#{config[:root_url] ? config[:root_url] : '/'}scenario/" do %>
-                  <h2><%= s.title %></h2>
+                  <h2 class="card__title-link">
+                    <%= s.title %>
+                  </h2>
                 <% end %>
-                <p><%= s.description %></p>
+                <p><%= truncate(s.description, :length => 125) %></p>
               </div>
+              <ul class="stat-list">
+                <% s.stats.each do |i| %>
+                  <li class="stat-item">
+                    <span class="number"><%= i.number %></span>
+                    <span class="text"><%= i.title %></span>
+                  </li>
+                <% end %>
+              </ul>
               <div class="chip">
                 <div class="chip--left">
                   <div class="chip__image">
@@ -32,13 +42,95 @@ title: Atomizer Dashboard | Red Ventures
                 </div>
                 <div class="chip--right">
                   <p class="text--small text--uppercase margin-bottom--echo">Last Updated</p>
-                  <p class="text--small"><%= s.updated_by %> <%= s.updated_on %></p>
+                  <p class="text--small margin-reset--bottom"><%= s.updated_on %> by <%= s.updated_by %> </p>
                 </div>
               </div>
             </li>
           <% end %>
         <% end %>
       </ul>
+    </div>
+    <hr class="page-section__divider" />
+    <div class="page-main__content">
+      <header role="banner" class="page-main__header">
+        <div class="page-main__header--left">
+          <h2 class="title">All Scenarios</h2>
+        </div>
+        <div class="page-main__header--right">
+          <ul class="list">
+            <li class="item">
+              <input type="search" placeholder="Look up a scenario">
+            </li>
+            <li class="item">
+              <select>
+                <option selected="selected" disabled="disabled">Select A Business</option>
+              </select>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <table class="card-table">
+        <thead class="card-table__header">
+          <tr>
+            <th class="card-item card-item--large">Scenario Title</th>
+            <th class="card-item">Business</th>
+            <th class="card-item">Status</th>
+            <th class="card-item">Modified Last</th>
+            <th class="card-item">Modules</th>
+            <th class="card-item">Rules</th>
+            <th class="card-item">Variations</th>
+            <th class="card-item">Tests</th>
+            <th class="card-item">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="card-table__body">
+          <% data.scenarios.scenario.each do |s, i| %>
+            <% if !s.is_favorite %>
+              <tr class="card card--small">
+                <td class="card-item card-item--large">
+                  <a href="#" class="card__favorite-action">
+                    <%= inline_svg("icons/star-outline-icon.svg") %>
+                  </a>
+                  <h4 class="title"><%= s.title %></h4>
+                </td>
+                <td class="card-item"><%= s.business %></td>
+                <td class="card-item">
+                  <i class="<%= 'indicator--alpha' if s.status === 'active' %> <%= 'indicator--charlie' if s.status === 'in-active' %>"></i>
+                  <%= s.status %>
+                </td>
+                <td class="card-item">
+                  <div class="chip margin--reset">
+                    <div class="chip--left">
+                      <div class="chip__image chip__image--small">
+                        <%= image_tag s.updated_by_img, class: 'image' %>
+                      </div>
+                    </div>
+                    <div class="chip--right margin-reset--top margin-right--echo">
+                      <p class="chip__text margin-reset--bottom"><%= s.updated_by %><br/><%= s.updated_on %></p>
+                    </div>
+                  </div>
+                </td>
+                <td class="card-item"><%= s.stats[0].number %></td>
+                <td class="card-item"><%= s.stats[1].number %></td>
+                <td class="card-item"><%= s.stats[2].number %></td>
+                <td class="card-item"><%= s.stats[3].number %></td>
+                <td class="card-item__actions">
+                  <% link_to '#', class: 'link' do %>
+                    <%= inline_svg("icons/stats-icon.svg") %>
+                  <% end %>
+                  <% link_to '#', class: 'link' do %>
+                    <%= inline_svg("icons/edit-icon.svg") %>
+                  <% end %>
+                  <% link_to '#', class: 'link' do %>
+                    <%= inline_svg("icons/trash-icon.svg") %>
+                  <% end %>
+                </td>
+              </tr>
+              <tr class="spacer"></tr>
+            <% end %>
+          <% end %>
+        </tbody>
+        </table>
     </div>
   </div>
 </section>

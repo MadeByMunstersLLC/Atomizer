@@ -1,0 +1,53 @@
+// Stat List Component
+// ========================================
+
+// Variables
+$stat-list-border:                  1px solid $grey-light;
+$stat-list-display:                 table;
+$stat-list-float:                   left;
+$stat-list-margin:                  $spacer-delta 0;
+$stat-list-padding:                 $spacer-delta 0;
+$stat-list-text-align:              center;
+$stat-list-width:                   100%;
+
+
+$stat-item-align:                   center;
+$state-item-color:                  $black-base;
+$state-item-color-inverse:          $white-base;
+$stat-item-display:                 table-cell;
+
+
+// Structure
+.stat-list {
+  border-bottom: $stat-list-border;
+  border-top: $stat-list-border;
+  display: $stat-list-display;
+  margin: $stat-list-margin;
+  padding: $stat-list-padding;
+  text-align: $stat-list-text-align;
+  width: $stat-list-width;
+}
+
+.stat-item {
+  display: $stat-item-display;
+  text-align: $stat-item-align;
+
+  .number,
+  .text {
+    color: $state-item-color;
+
+    &.stat-item--inverse {
+      color: $state-item-color-inverse;
+    }
+  }
+
+  .number {
+    @include s-bravo;
+    display: block;
+  }
+
+  .text {
+    @include s-hotel;
+    text-transform: uppercase;
+  }
+}

@@ -21,6 +21,8 @@ $chip-image-radius:       30em;
 $chip-image-size:         40px;
 $chip-image-weight:       600;
 
+$chip-image-size-sm:      24px;
+
 $chip-text-line-height:   1.25;
 
 
@@ -85,6 +87,12 @@ $chip-text-line-height:   1.25;
 
   .chip__image--none {
     @include center(true, true);
+  }
+
+  // Chip Image Modifiers
+  &.chip__image--small {
+    height: $chip-image-size-sm;
+    width: $chip-image-size-sm;
   }
 }
 

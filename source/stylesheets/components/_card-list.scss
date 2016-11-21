@@ -1,0 +1,47 @@
+// Card List Component
+// ========================================
+
+// Card List
+.card__list {
+
+  .card__item {
+    @include omega(2n);
+    @include span-columns(2 of 4);
+    margin-bottom: $spacer-delta;
+
+    // Remove Margin
+    @include last(2) {
+      margin-bottom: 0;
+    }
+
+    @include media($medium) {
+      @include omega-reset(2n);
+      @include omega(3n);
+      @include span-columns(3 of 9);
+
+      @include last(3) {
+        margin-bottom: 0;
+      }
+    }
+
+    @include media($large) {
+      @include omega-reset(3n);
+      @include omega(3n);
+      @include span-columns(4 of 12);
+
+      @include last(3) {
+        margin-bottom: 0;
+      }
+    }
+
+    @include media($extra-large) {
+      @include omega-reset(3n);
+      @include omega(4n);
+      @include span-columns(3 of 12);
+
+      @include last(4) {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

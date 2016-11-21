@@ -60,6 +60,12 @@ $page-main-header-right-float: right;
   }
 }
 
+.page-section__divider {
+  border: none;
+  border-bottom: $page-sidebar-border;
+  margin: $spacer-alpha 0;
+}
+
 
 // Page Section Sidebar
 .page-sidebar {
@@ -179,8 +185,35 @@ $page-main-header-right-float: right;
     margin: $page-main-title-margin-0;
   }
 
+  .page-main__header--left,
+  .page-main__header-right {
+    display: inline-block;
+  }
+
   .page-main__header--right {
     display: $page-main-title-display;
     float: $page-main-header-right-float;
+
+    .item {
+      display: inline-block;
+      float: left;
+      min-width: 200px;
+
+      &:not(:last-child) {
+        margin-right: $spacer-delta;
+      }
+
+      input,
+      select {
+        height: 30px;
+        margin-bottom: 0;
+        margin-top: 0;
+        padding: $spacer-echo $spacer-delta;
+      }
+    }
   }
+}
+
+.page-main__content {
+  @include clearfix;
 }
