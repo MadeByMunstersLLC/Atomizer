@@ -94,6 +94,11 @@ select {
   }
 }
 
+textarea {
+  height: $form-input-height * 2;
+  padding: $form-input-padding;
+}
+
 
 // Search Input
 input[type="search"],

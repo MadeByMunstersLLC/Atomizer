@@ -3,31 +3,38 @@
 
 
 // Variables
-$card-background:           $white-base;
-$card-border:               1px solid $grey-light;
-$card-display:              block;
-$card-margin:               0 0 $spacer-charlie;
-$card-padding:              $spacer-charlie;
-$card-radius:               1px;
+$card-background:               $white-base;
+$card-border:                   1px solid $grey-light;
+$card-display:                  block;
+$card-margin:                   0 0 $spacer-charlie;
+$card-padding:                  $spacer-charlie;
+$card-position:                 relative;
+$card-radius:                   1px;
 
-$card-margin-small:         0 0 $spacer-delta;
-$card-padding-small:        $spacer-delta;
+$card-margin-small:             0 0 $spacer-delta;
+$card-padding-small:            $spacer-delta;
 
-$card-margin-extra-small:   0 0 $spacer-echo;
-$card-padding-extra-small:  10px $spacer-delta;
+$card-margin-extra-small:       0 0 $spacer-echo;
+$card-padding-extra-small:      10px $spacer-delta;
 
-$card-draggable-shadow:     rgba(48, 54, 67, 0.1);
-$card-draggable-spread:     0 0 10px;
-$card-draggable-transition: all 0.5s ease;
+$card-draggable-shadow:         rgba(48, 54, 67, 0.1);
+$card-draggable-spread:         0 0 10px;
+$card-draggable-transition:     all 0.5s ease;
 
-$card-title-margin:         $spacer-delta;
-$card-title-padding:        $spacer-delta;
+$card-title-margin:             $spacer-delta;
+$card-title-padding:            $spacer-delta;
 
-$card-title-link-color:     $blue-base;
+$card-title-link-color:         $blue-base;
+
+$card-favorite-icon-cords:      35px 30px null null;
+$card-favorite-icon-fill:       $yellow-base;
+$card-favorite-icon-position:   absolute;
+$card-favorite-icon-size:       15px;
 
 
 // Structure
 .card {
+  @include position($card-position);
   background: $card-background;
   border: $card-border;
   border-radius: $card-radius;
@@ -69,6 +76,20 @@ $card-title-link-color:     $blue-base;
   border-bottom: $card-border;
   margin-bottom: $card-title-margin;
   padding-bottom: $card-title-padding;
+}
+
+
+// Favorite Icon
+.card__favorite-trigger {
+  @include position($card-favorite-icon-position, $card-favorite-icon-cords);
+
+  svg {
+    width: $card-favorite-icon-size;
+  }
+
+  #app-icon {
+    fill: $card-favorite-icon-fill;
+  }
 }
 
 
