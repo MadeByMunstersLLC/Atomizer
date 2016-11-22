@@ -16,39 +16,7 @@ title: Atomizer Dashboard | Red Ventures
       <ul class="list card__list">
         <% data.scenarios.scenario.each do |s| %>
           <% if s.is_favorite %>
-            <li class="card card--shadow card__item">
-              <div class="card__header">
-                <% link_to '#', class: 'card__favorite-trigger' do %>
-                  <%= inline_svg("icons/star-filled-icon.svg") %>
-                <% end %>
-                <p class="margin-bottom--delta <%= 'badge--delta' if s.status === 'active' %> <%= 'badge--charlie' if s.status === 'in-active' %>"><%= s.status %></p>
-                <% link_to "#{config[:root_url] ? config[:root_url] : '/'}scenario/" do %>
-                  <h2 class="card__title-link">
-                    <%= s.title %>
-                  </h2>
-                <% end %>
-                <p><%= truncate(s.description, :length => 125) %></p>
-              </div>
-              <ul class="stat-list">
-                <% s.stats.each do |i| %>
-                  <li class="stat-item">
-                    <span class="number"><%= i.number %></span>
-                    <span class="text"><%= i.title %></span>
-                  </li>
-                <% end %>
-              </ul>
-              <div class="chip">
-                <div class="chip--left">
-                  <div class="chip__image">
-                    <%= image_tag s.updated_by_img %>
-                  </div>
-                </div>
-                <div class="chip--right">
-                  <p class="text--small text--uppercase margin-bottom--echo">Last Updated</p>
-                  <p class="text--small margin-reset--bottom"><%= s.updated_on %> by <%= s.updated_by %> </p>
-                </div>
-              </div>
-            </li>
+            <%= partial 'dashboard/partials/_dashboard-scenario-favorite-item', locals: {s:s} %>
           <% end %>
         <% end %>
       </ul>
@@ -87,138 +55,16 @@ title: Atomizer Dashboard | Red Ventures
           </tr>
         </thead>
         <tbody class="card-table__body">
-          <% data.scenarios.scenario.each do |s, i| %>
+          <% data.scenarios.scenario.each_with_index do |s, i| %>
             <% if !s.is_favorite %>
-              <tr class="card card--small">
-                <td class="card-item card-item--large">
-                  <a href="#" class="card__favorite-action">
-                    <%= inline_svg("icons/star-outline-icon.svg") %>
-                  </a>
-                  <h4 class="title"><%= s.title %></h4>
-                </td>
-                <td class="card-item"><%= s.business %></td>
-                <td class="card-item">
-                  <i class="<%= 'indicator--alpha' if s.status === 'active' %> <%= 'indicator--charlie' if s.status === 'in-active' %>"></i>
-                  <%= s.status %>
-                </td>
-                <td class="card-item">
-                  <div class="chip margin--reset">
-                    <div class="chip--left">
-                      <div class="chip__image chip__image--small">
-                        <%= image_tag s.updated_by_img, class: 'image' %>
-                      </div>
-                    </div>
-                    <div class="chip--right margin-reset--top margin-right--echo">
-                      <p class="chip__text margin-reset--bottom"><%= s.updated_by %><br/><%= s.updated_on %></p>
-                    </div>
-                  </div>
-                </td>
-                <td class="card-item"><%= s.stats[0].number %></td>
-                <td class="card-item"><%= s.stats[1].number %></td>
-                <td class="card-item"><%= s.stats[2].number %></td>
-                <td class="card-item"><%= s.stats[3].number %></td>
-                <td class="card-item__actions">
-                  <% link_to '#', class: 'link' do %>
-                    <%= inline_svg("icons/stats-icon.svg") %>
-                  <% end %>
-                  <% link_to '#', class: 'link' do %>
-                    <%= inline_svg("icons/edit-icon.svg") %>
-                  <% end %>
-                  <% link_to '#', class: 'link' do %>
-                    <%= inline_svg("icons/trash-icon.svg") %>
-                  <% end %>
-                </td>
-              </tr>
-              <tr class="spacer"></tr>
+              <%= partial 'dashboard/partials/_dashboard-scenario-table-item', locals: {s:s, i:i} %>
+              <%= partial 'dashboard/partials/_dashboard-scenario-preview-modal', locals: {s:s, i:i} %>
+              <%= partial 'dashboard/partials/_dashboard-scenario-delete-modal', locals: {s:s, i:i} %>
             <% end %>
           <% end %>
         </tbody>
-        </table>
+      </table>
     </div>
   </div>
 </section>
-
-<!-- Create Scenario Modal -->
-<div class="modal" aria-hidden="true" data-modal="createScenario">
-  <div class="modal__overlay">
-    <div class="modal__container">
-      <div class="modal__body">
-        <a href="#" role="button" class="modal__close">
-          <%= inline_svg("icons/close-icon.svg", class: "modal__close-icon") %>
-        </a>
-        <header class="modal__header">
-          <h3 class="title">Add New Scenario</h3>
-          <p class="modal-intro">Before you get started, we need to know a few things about this new scenario. Please fill out each field in the form below. </p>
-        </header>
-        <div class="modal__body-content">
-          <label>Select Scenario Type</label>
-          <select id="create-scenario" name="form_select">
-            <option selected="selected" disabled="disabled">Please Select One</option>
-            <option value="0">Create New Scenario</option>
-            <option value ="1">Copy Exisiting Scenario</option>
-          </select>
-          <form id="0" class="scenario-form">
-            <fieldset>
-              <div class="group columns-6__l">
-                <label>Business</label>
-                <select>
-                  <option selected="selected">Please Section One</option>
-                </select>
-              </div>
-              <div class="group columns-6__l">
-                <label>Scenario Title</label>
-                <input type="text" placeholder="Enter a title" />
-              </div>
-            </fieldset>
-            <fieldset>
-              <label>Scenario Description</label>
-              <textarea placeholder="Enter a description"></textarea>
-            </fieldset>
-          </form>
-          <form id="1" class="scenario-form">
-            <fieldset>
-              <div class="group columns-6__l">
-                <label>Business To Copy From</label>
-                <select>
-                  <option selected="selected">Please Section One</option>
-                </select>
-              </div>
-              <div class="group columns-6__l">
-                <label>Select Scenario</label>
-                <select>
-                  <option selected="selected">Please Section One</option>
-                </select>
-              </div>
-            </fieldset>
-            <fieldset>
-              <div class="group columns-6__l">
-                <label>Business To Add To</label>
-                <select>
-                  <option selected="selected">Please Section One</option>
-                </select>
-              </div>
-              <div class="group columns-6__l">
-                <label>Scenario Title</label>
-                <input type="text" placeholder="Enter a title" />
-              </div>
-            </fieldset>
-            <fieldset>
-              <label>Scenario Description</label>
-              <textarea placeholder="Enter a description"></textarea>
-            </fieldset>
-          </form>
-          <div class="modal__actions">
-            <ul class="modal__actions-list">
-              <li class="modal__actions-item">
-                <a href="#" class="link--delta">Cancel</a>
-              </li>
-              <li class="modal__actions-item">
-                <button class="button--disabled">Create Scenario</button>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<%= partial 'dashboard/partials/_dashboard-scenario-create-modal' %>

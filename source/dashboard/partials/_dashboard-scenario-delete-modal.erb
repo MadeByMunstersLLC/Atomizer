@@ -1,4 +1,4 @@
-<div class="modal" aria-hidden="true" data-modal="deleteModal<%= i %>">
+<div class="modal" aria-hidden="true" data-modal="deleteScenario<%= i %>">
   <div class="modal__overlay">
     <div class="modal__container">
       <div class="modal__body">
@@ -7,12 +7,12 @@
         </a>
         <header class="modal__header">
           <h3 class="title">Are you sure about this move?</h3>
-          <p class="modal-intro">You are about to perform an action that cannot be undone. Please double check the modules listed below before continuing.</p>
+          <p class="modal-intro">You are about to perform an action that cannot be undone. Please double check the scenario listed below before continuing. </p>
         </header>
         <div class="modal__body-content">
-          <label class="form__label">Selected modules</label>
+          <label class="form__label">Selected scenario</label>
           <ul>
-            <li><%= m.title %></li>
+            <li><%= s.title %></li>
           </ul>
           <div class="modal__actions">
             <ul class="modal__actions-list">
@@ -20,7 +20,7 @@
                 <a href="#" class="link--delta">Cancel</a>
               </li>
               <li class="modal__actions-item">
-                <button class="button--charlie">Delete Module</button>
+                <button class="button--charlie">Delete Scenario</button>
               </li>
             </ul>
           </div>

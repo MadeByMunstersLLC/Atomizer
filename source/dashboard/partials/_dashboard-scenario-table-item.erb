@@ -1,0 +1,41 @@
+<tr class="card card--small">
+  <td class="card-item card-item--large">
+    <a href="#" class="card__favorite-action">
+      <%= inline_svg("icons/star-outline-icon.svg") %>
+    </a>
+    <h4 class="title"><%= s.title %></h4>
+  </td>
+  <td class="card-item"><%= s.business %></td>
+  <td class="card-item">
+    <i class="<%= 'indicator--alpha' if s.status === 'active' %> <%= 'indicator--charlie' if s.status === 'in-active' %>"></i>
+    <%= s.status %>
+  </td>
+  <td class="card-item">
+    <div class="chip margin--reset">
+      <div class="chip--left">
+        <div class="chip__image chip__image--small">
+          <%= image_tag s.updated_by_img, class: 'image' %>
+        </div>
+      </div>
+      <div class="chip--right margin-reset--top margin-right--echo">
+        <p class="chip__text margin-reset--bottom"><%= s.updated_by %><br/><%= s.updated_on %></p>
+      </div>
+    </div>
+  </td>
+  <td class="card-item"><%= s.stats[0].number %></td>
+  <td class="card-item"><%= s.stats[1].number %></td>
+  <td class="card-item"><%= s.stats[2].number %></td>
+  <td class="card-item"><%= s.stats[3].number %></td>
+  <td class="card-item__actions">
+    <% link_to '#', class: 'link modal__trigger', data: {modal: "previewScenario#{i}"} do %>
+      <%= inline_svg("icons/stats-icon.svg") %>
+    <% end %>
+    <% link_to "#{config[:root_url] ? config[:root_url] : '/'}scenario/", class: 'link' do %>
+      <%= inline_svg("icons/edit-icon.svg") %>
+    <% end %>
+    <% link_to '#', class: 'link modal__trigger', data: {modal: "deleteScenario#{i}"} do %>
+      <%= inline_svg("icons/trash-icon.svg") %>
+    <% end %>
+  </td>
+</tr>
+<tr class="spacer"></tr>

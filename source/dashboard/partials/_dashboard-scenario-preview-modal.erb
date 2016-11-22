@@ -1,0 +1,56 @@
+<div class="modal" aria-hidden="true" data-modal="previewScenario<%= i %>">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <%= inline_svg("icons/close-icon.svg", class: "modal__close-icon") %>
+        </a>
+        <header class="modal__header">
+          <p class="margin-bottom--delta <%= 'badge--delta' if s.status === 'active' %> <%= 'badge--charlie' if s.status === 'in-active' %>">
+            <%= s.status %>
+          </p>
+          <h3 class="title"><%= s.title %></h3>
+          <p class="modal-intro"><%= s.description %></p>
+        </header>
+        <div class="modal__body-content">
+          <ul class="stat-list">
+            <% s.stats.each do |i| %>
+              <li class="stat-item">
+                <span class="number"><%= i.number %></span>
+                <span class="text"><%= i.title %></span>
+              </li>
+            <% end %>
+          </ul>
+          <div class="margin-top--charlie">
+            <% s.test.each do |t| %>
+              <h4><%= t.title %></h4>
+              <ul class="list row margin-bottom--charlie">
+                <li class="item columns-12__l">
+                  <ul class="row">
+                    <li class="columns-5__l form__label">Scenario</li>
+                    <li class="columns-2__l form__label">Split</li>
+                    <li class="columns-2__l form__label">Calls</li>
+                    <li class="columns-3__l form__label">Conversions</li>
+                  </ul>
+                </li>
+                <li class="item columns-12__l">
+                  <% t.test_scenario.each do |ts| %>
+                    <ul>
+                      <li class="columns-5__l"><%= ts.title %></li>
+                      <li class="columns-2__l"><%= ts.split %></li>
+                      <li class="columns-2__l"><%= ts.calls %></li>
+                      <li class="columns-3__l">
+                        <%= ts.conversions %>
+                        <span class="float--right"><%= ts.percent %></span>
+                      </li>
+                    </ul>
+                  <% end %>
+                </li>
+              </ul>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

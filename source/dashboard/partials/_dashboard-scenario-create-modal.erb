@@ -1,0 +1,84 @@
+<!-- Create Scenario Modal -->
+<div class="modal" aria-hidden="true" data-modal="createScenario">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <%= inline_svg("icons/close-icon.svg", class: "modal__close-icon") %>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Add New Scenario</h3>
+          <p class="modal-intro">Before you get started, we need to know a few things about this new scenario. Please fill out each field in the form below. </p>
+        </header>
+        <div class="modal__body-content">
+          <label>Select Scenario Type</label>
+          <select id="create-scenario" name="form_select">
+            <option selected="selected" disabled="disabled">Please Select One</option>
+            <option value="0">Create New Scenario</option>
+            <option value ="1">Copy Exisiting Scenario</option>
+          </select>
+          <form id="0" class="scenario-form">
+            <fieldset>
+              <div class="group columns-6__l">
+                <label>Business</label>
+                <select>
+                  <option selected="selected">Please Section One</option>
+                </select>
+              </div>
+              <div class="group columns-6__l">
+                <label>Scenario Title</label>
+                <input type="text" placeholder="Enter a title" />
+              </div>
+            </fieldset>
+            <fieldset>
+              <label>Scenario Description</label>
+              <textarea placeholder="Enter a description"></textarea>
+            </fieldset>
+          </form>
+          <form id="1" class="scenario-form">
+            <fieldset>
+              <div class="group columns-6__l">
+                <label>Business To Copy From</label>
+                <select>
+                  <option selected="selected">Please Section One</option>
+                </select>
+              </div>
+              <div class="group columns-6__l">
+                <label>Select Scenario</label>
+                <select>
+                  <option selected="selected">Please Section One</option>
+                </select>
+              </div>
+            </fieldset>
+            <fieldset>
+              <div class="group columns-6__l">
+                <label>Business To Add To</label>
+                <select>
+                  <option selected="selected">Please Section One</option>
+                </select>
+              </div>
+              <div class="group columns-6__l">
+                <label>Scenario Title</label>
+                <input type="text" placeholder="Enter a title" />
+              </div>
+            </fieldset>
+            <fieldset>
+              <label>Scenario Description</label>
+              <textarea placeholder="Enter a description"></textarea>
+            </fieldset>
+          </form>
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--disabled">Create Scenario</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

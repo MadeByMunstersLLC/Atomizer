@@ -24,7 +24,8 @@ $card-body-item-spacer:         $spacer-echo;
 
 $card-favorite-margin:          0 $spacer-echo 0 0;
 
-$card-actions-width:            6%;
+$card-actions-width-md:         8%;
+$card-actions-width-lg:         6%;
 
 $card-action-width:             $spacer-delta;
 
@@ -112,7 +113,14 @@ $card-action-icon-width:        $spacer-delta;
 // Card Table Item Actions
 .card-item__actions {
   padding: $card-body-item-padding $card-body-item-padding 0 0;
-  width: $card-actions-width;
+
+  @include media($large) {
+    width: $card-actions-width-md;
+  }
+
+  @include media($extra-large) {
+    width: $card-actions-width-lg;
+  }
 
   .link {
     display: $card-action-link-display;

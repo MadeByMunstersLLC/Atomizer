@@ -1,0 +1,33 @@
+<li class="card card--shadow card__item">
+  <div class="card__header">
+    <% link_to '#', class: 'card__favorite-trigger' do %>
+      <%= inline_svg("icons/star-filled-icon.svg") %>
+    <% end %>
+    <p class="margin-bottom--delta <%= 'badge--delta' if s.status === 'active' %> <%= 'badge--charlie' if s.status === 'in-active' %>"><%= s.status %></p>
+    <% link_to "#{config[:root_url] ? config[:root_url] : '/'}scenario/" do %>
+      <h2 class="card__title-link">
+        <%= s.title %>
+      </h2>
+    <% end %>
+    <p><%= truncate(s.description, :length => 125) %></p>
+  </div>
+  <ul class="stat-list">
+    <% s.stats.each do |i| %>
+      <li class="stat-item">
+        <span class="number"><%= i.number %></span>
+        <span class="text"><%= i.title %></span>
+      </li>
+    <% end %>
+  </ul>
+  <div class="chip">
+    <div class="chip--left">
+      <div class="chip__image">
+        <%= image_tag s.updated_by_img %>
+      </div>
+    </div>
+    <div class="chip--right">
+      <p class="text--small text--uppercase margin-bottom--echo">Last Updated</p>
+      <p class="text--small margin-reset--bottom"><%= s.updated_on %> by <%= s.updated_by %> </p>
+    </div>
+  </div>
+</li>
