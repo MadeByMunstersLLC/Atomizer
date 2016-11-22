@@ -41,6 +41,11 @@ $card-action-icon-width:        $spacer-delta;
 .card-table {
   width: $card-table-width;
 
+  // Remove Card Positioning
+  .card {
+    position: inherit;
+  }
+
   #app-icon {
     fill: $card-table-icon-fill;
   }

@@ -6,9 +6,11 @@ $page-height:                  100%;
 $page-overflow:                hidden;
 $page-padding:                 $spacer-charlie;
 
+$page-overflow-height:         300px;
+
 $page-overflow-y:              scroll;
-$page-padding-overflow-md:        $spacer-charlie $spacer-delta $spacer-alpha * 5;
-$page-padding-overflow-lg:        $spacer-charlie $spacer-charlie $spacer-alpha * 5;
+$page-padding-overflow-md:     $spacer-charlie $spacer-delta 0;
+$page-padding-overflow-lg:     $spacer-charlie $spacer-charlie 0;
 
 $page-section-height:          100%;
 $page-section-margin:          105px 0 0;
@@ -74,6 +76,12 @@ $page-main-header-right-float: right;
   overflow-y: $page-overflow-y;
   padding: $page-padding-overflow-md;
   width: $page-sidebar-width;
+
+  &::after {
+    content: " ";
+    display: block;
+    height: $page-overflow-height;
+  }
 
   @include media($large) {
     padding: $page-padding-overflow-lg;
@@ -156,6 +164,13 @@ $page-main-header-right-float: right;
 
   @include media($large) {
     padding: $page-padding-overflow-lg;
+  }
+
+  // Overflow Scroll
+  &::after {
+    content: " ";
+    display: block;
+    height: $page-overflow-height;
   }
 
   &.page-main--full {

@@ -29,7 +29,7 @@ $button-add-on-container-display:   inline-block;
 $button-add-on-container-position:  relative;
 
 $button-add-on-display:             inline-block;
-$button-add-on-margin:              -5px;
+$button-add-on-margin:              -4px;
 $button-add-on-padding:             $spacer-delta;
 $button-add-on-radius:              0;
 
@@ -121,6 +121,13 @@ $button-dropdown-link-weight:       600;
 
     &:hover {
       cursor: pointer;
+    }
+  }
+
+  // Moz Fix
+  @-moz-document url-prefix() {
+    .button--add-on--#{$button} {
+      padding: 16px $spacer-delta;
     }
   }
 }
