@@ -23,23 +23,27 @@ $columns: 12;
   }
 
   // Medium Devices
-  @include media($medium) {
-    .columns-#{$column}__m {
+  .columns-#{$column}__m {
+    @include media($medium) {
       @include span-columns($column in 9);
     }
+  }
 
-    .offset-#{$column}__m {
+  .offset-#{$column}__m {
+    @include media($medium) {
       @include shift($column in 9);
     }
   }
 
   // Large Devices
-  @include media($large) {
-    .columns-#{$column}__l {
+  .columns-#{$column}__l {
+    @include media($large) {
       @include span-columns($column in 12);
     }
+  }
 
-    .offset-#{$column}__l {
+  .offset-#{$column}__l {
+    @include media($large) {
       @include shift($column in 12);
     }
   }
