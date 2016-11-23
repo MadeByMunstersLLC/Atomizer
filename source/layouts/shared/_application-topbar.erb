@@ -46,7 +46,7 @@
               </li>
               <li class="list__item">|</li>
               <li class="list__item">
-                <a href="#" class="list__item-link">Sign Out</a>
+                <% link_to "Sign Out", "#{config[:root_url] ? config[:root_url] : '/'}", class: 'list__item-link' %>
               </li>
             </ul>
           </div>
