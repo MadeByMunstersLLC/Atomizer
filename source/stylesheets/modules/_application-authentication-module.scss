@@ -1,0 +1,51 @@
+// User Authentication Module
+// ========================================
+
+// Variables
+$auth-background-img:             'misc/atom-icon-lg.svg';
+$auth-background-position:        -350px 0;
+$auth-background-size:            55%;
+
+$auth-container-height:           100%;
+$auth-container-padding:          0 $spacer-delta;
+$auth-container-position:         relative;
+
+$auth-form-container-min-width:   425px;
+
+$auth-form-margin:                0 0 $spacer-charlie;
+$auth-form-text-align:            center;
+
+$auth-form-logo-fill:             $purple-base;
+$auth-form-logo-margin:           $spacer-delta;
+
+
+// Structure
+.auth-page {
+  background: image_url($auth-background-img) no-repeat $auth-background-position;
+  background-size: $auth-background-size;
+}
+
+.auth-page__container {
+  @include position($auth-container-position);
+  @include outer-container;
+  height: $auth-container-height;
+  padding: $auth-container-padding;
+}
+
+.auth-page__form-container {
+  @include center($horizontal: true, $vertical: true);
+  min-width: $auth-form-container-min-width;
+}
+
+.auth-page__form-header {
+  margin: $auth-form-margin;
+  text-align: $auth-form-text-align;
+
+  .logo {
+    margin-bottom: $auth-form-logo-margin;
+  }
+
+  #atomizer-logo {
+    fill: $auth-form-logo-fill;
+  }
+}

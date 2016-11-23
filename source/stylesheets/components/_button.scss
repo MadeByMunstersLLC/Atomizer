@@ -140,6 +140,11 @@ $button-dropdown-link-weight:       600;
   padding: $button-small-padding;
 }
 
+.button--full {
+  display: block;
+  width: 100%;
+}
+
 .button--form {
   height: 40px;
   padding: 0 $spacer-delta;

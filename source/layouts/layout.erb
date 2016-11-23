@@ -18,10 +18,12 @@
   </head>
   <body>
     <!-- Topbar Navigation -->
-    <%= partial 'layouts/shared/_application-topbar' %>
+    <% if current_page.data.topbar %>
+      <%= partial 'layouts/shared/_application-topbar' %>
+    <% end %>
 
     <!-- Main Body -->
-    <main role="main" class="page">
+    <main role="main" class="page <%= current_page.data.page_class %>">
       <%= yield %>
     </main>
 
