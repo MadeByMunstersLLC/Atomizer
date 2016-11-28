@@ -1,0 +1,40 @@
+---
+title: Atomizer | Red Ventures
+topbar: true
+---
+
+<section role="region" aria-label="atomzier-user-settings" class="page-section">
+  <div class="page-main columns-4__s columns-6__l offset-3__l">
+    <div class="page-main__content">
+      <header role="banner" class="page-main__header">
+        <h2 class="title">Update User Settings</h2>
+      </header>
+      <div class="columns-3__l">
+        <div class="user-settings__avatar">
+          <%= image_tag 'misc/user-avatar-img.jpg', class: 'user-settings__avatar-img' %>
+        </div>
+        <input type="file" name="file" id="file" class="input__file" />
+        <label for="file" class="input__file-label text--center">Update Avatar</label>
+      </div>
+      <div class="columns-4__s columns-9__l">
+        <form>
+          <fieldset class="fieldset--border">
+            <label>Update Name</label>
+            <input type="text" value="Kurt Cunningham" placeholder="Add your name" />
+            <label>Update Email Address</label>
+            <input type="text" value="kurt.cunningham@madebymunsters.com" placeholder="Add your email address" />
+          </fieldset>
+          <fieldset>
+            <label>Update Password</label>
+            <input type="password" placeholder="Create new password" />
+            <label>Confirm Password Update</label>
+            <input type="password" placeholder="Confirm new password" />
+          </fieldset>
+          <fieldset>
+            <input type="submit" value="Update" class="button--disabled float--right" disabled />
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

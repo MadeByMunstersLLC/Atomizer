@@ -4,7 +4,7 @@
 // Variables
 $auth-background-img:             'misc/atom-icon-lg.svg';
 $auth-background-position:        -350px 0;
-$auth-background-size:            55%;
+$auth-background-size:            100vh;
 
 $auth-container-height:           100%;
 $auth-container-padding:          0 $spacer-delta;
@@ -17,6 +17,13 @@ $auth-form-text-align:            center;
 
 $auth-form-logo-fill:             $purple-base;
 $auth-form-logo-margin:           $spacer-delta;
+
+$user-settings-avatar-margin:     0 auto $spacer-delta;
+$user-settings-avatar-overflow:   hidden;
+$user-settings-avatar-radius:     30em;
+$user-settings-avatar-size:       100px;
+
+$user-settings-avatar-img-size:   100%;
 
 
 // Structure
@@ -48,4 +55,18 @@ $auth-form-logo-margin:           $spacer-delta;
   #atomizer-logo {
     fill: $auth-form-logo-fill;
   }
+}
+
+
+// User Settings Avatar
+.user-settings__avatar {
+  border-radius: $user-settings-avatar-radius;
+  height: $user-settings-avatar-size;
+  overflow: $user-settings-avatar-overflow;
+  margin: $user-settings-avatar-margin;
+  width: $user-settings-avatar-size;
+}
+
+.user-settings__avatar-img {
+  width: $user-settings-avatar-img-size;
 }

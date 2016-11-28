@@ -1,0 +1,29 @@
+// Form Input File Component
+// ========================================
+
+// Variable
+$input-file-opacity:    0;
+$input-file-overflow:   hidden;
+$input-file-position:   absolute;
+$input-file-size:       0.1px;
+$input-file-z-index:    -1;
+
+
+// Structure
+
+// NOTE: This hides the default file input styles
+.input__file {
+  @include position($input-file-position);
+  height: $input-file-size;
+  opacity: $input-file-opacity;
+  overflow: $input-file-overflow;
+  width: $input-file-size;
+  z-index: $input-file-z-index;
+}
+
+.input__file-label {
+
+  &:hover {
+    cursor: pointer;
+  }
+}
