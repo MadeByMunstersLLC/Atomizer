@@ -37,9 +37,23 @@
   </aside>
   <div class="page-main page-main--right">
     <header role="banner" class="page-main__header">
-      <h2 class="title">Current Scenario</h2>
+      <h2 class="title">Scenario: Control</h2>
       <div class="page-main__header--right">
-        <a href="#" class="button--bravo button--small modal__trigger" data-modal="updateModules">3 Updates</a>
+        <ul class="list">
+          <li class="item">
+            <select>
+              <% data.scenario_variations.variation.each do |v| %>
+                <option><%= v.title %></option>
+              <% end %>
+            </select>
+          </li>
+          <li class="item">
+            <a href="#" class="button--alpha button--small modal__trigger" data-modal="createVariation">New Variation</a>
+          </li>
+          <li class="item">
+            <a href="#" class="button--bravo button--small modal__trigger" data-modal="updateModules">3 Updates</a>
+          </li>
+        </ul>
       </div>
     </header>
     <div class="page-main__content">
@@ -105,3 +119,4 @@
 <%= partial 'scenario/partials/_scenario-edit-delete-modules-modal' %>
 <!-- Edit Scenario Modals -->
 <%= partial 'scenario/partials/_scenario-edit-update-modules-modal' %>
+<%= partial 'scenario/partials/_scenario-edit-create-variation-modal' %>

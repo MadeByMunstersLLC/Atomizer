@@ -56,9 +56,7 @@
         </thead>
         <tbody class="card-table__body">
           <% data.scenario_variations.variation.each_with_index do |v, i| %>
-            <% if i > 0 %>
-              <%= partial 'scenario/partials/_scenario-settings-variation-table-item', locals: {v:v, i:i} %>
-            <% end %>
+            <%= partial 'scenario/partials/_scenario-settings-variation-table-item', locals: {v:v, i:i} %>
             <%= partial 'scenario/partials/_scenario-settings-edit-variation-modal', locals: {v:v, i:i} %>
             <%= partial 'scenario/partials/_scenario-settings-delete-variation-modal', locals: {v:v, i:i} %>
           <% end %>

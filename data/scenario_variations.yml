@@ -1,5 +1,5 @@
 variation:
-  - title: SSL Order Process [Production]
+  - title: SSL Order Process - Mobile
     description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
     business: Hughesnet
     stats:
@@ -38,7 +38,7 @@ variation:
     updated_by: Kurt Cunningham
     updated_by_img: ../images/misc/user-avatar-img.jpg
     updated_on: An Hour Ago
-  - title: Upgrade Existing Customer - Midwest
+  - title: Upgrade Existing Customer - Northeast
     description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
     business: Hughesnet
     stats:

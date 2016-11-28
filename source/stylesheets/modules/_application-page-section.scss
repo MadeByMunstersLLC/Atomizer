@@ -212,10 +212,15 @@ $page-main-header-right-float: right;
     .item {
       display: inline-block;
       float: left;
+      max-width: 200px;
       min-width: 200px;
 
       &:not(:last-child) {
         margin-right: $spacer-delta;
+      }
+
+      &:not(.button--small) {
+        min-width: 0;
       }
 
       input,

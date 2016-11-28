@@ -4,6 +4,7 @@
 // Variables
 $select-background-position:         100%;
 $select-background-url:              'icons/form-select-icon.svg';
+$select-padding:                     $spacer-delta + 5px;
 
 $select-background-inactive:         $white-dark;
 $select-border-inactive:             1px solid $grey-light;
@@ -15,6 +16,7 @@ select{
   background-image: image-url($select-background-url);
   background-position: $select-background-position;
   background-repeat: no-repeat;
+  padding-right: $select-padding !important; // NOTE: Forcing additional padding on the right so icon is not overlapped
 
   &:disabled {
     background-color: $select-background-inactive;
