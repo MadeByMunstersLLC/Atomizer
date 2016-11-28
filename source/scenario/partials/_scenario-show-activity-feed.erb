@@ -3,23 +3,6 @@
     <h5 class="form__label">Module Activity</h5>
   </header>
   <ul class="page-sidebar__list">
-    <% data.scenario_module_details.activity.each do |a| %>
-      <li class="page-sidebar__item chip">
-        <div class="chip--left">
-          <% if a.updated_by_img_present %>
-            <div class="chip__image">
-              <%= image_tag a.updated_by_img, class: "#{'chip__icon' if a.updated_by_img_icon}" %>
-            </div>
-          <% else %>
-            <div class="chip__image">
-              <span class="chip__image--none"><%= a.updated_by[0] %></span>
-            </div>
-          <% end %>
-        </div>
-        <div class="chip--right">
-          <p class="chip__text"><b><%= a.updated_by %></b> <%= a.updated_content %></p>
-        </div>
-      </li>
-    <% end %>
+    <%= partial 'scenario/partials/_scenario-activity' %>
   </ul>
 </aside>

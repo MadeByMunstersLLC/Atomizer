@@ -1,0 +1,31 @@
+activity:
+  - updated_by: Kurt Cunningham
+    updated_content: updated the module rules to fix issue with visibility issue.
+    updated_by_img: ../images/misc/user-avatar-img.jpg
+    updated_by_img_present: true
+    updated_by_img_icon: false
+    updated_on: October 12, 2016
+  - updated_by: Kurt Cunningham
+    updated_content: removed rule because the campaign ended recently.
+    updated_by_img: ../images/misc/user-avatar-img.jpg
+    updated_by_img_present: true
+    updated_by_img_icon: false
+    updated_on: October 11, 2016
+  - updated_by: Clay Carpenter
+    updated_content: removed rule because the campaign ended recently.
+    updated_by_img:
+    updated_by_img_present: false
+    updated_by_img_icon: false
+    updated_on: October 11, 2016
+  - updated_by: MINOR UPDATE
+    updated_content: to module. Update from version 1.0.4 to 1.0.5
+    updated_by_img: ../images/icons/update-icon.svg
+    updated_by_img_present: true
+    updated_by_img_icon: true
+    updated_on: September 12, 2016
+  - updated_by: Joey Kirk
+    updated_content: added module and rules to scenario.
+    updated_by_img: ../images/misc/user-avatar-2-img.jpg
+    updated_by_img_present: true
+    updated_by_img_icon: false
+    updated_on: September 10, 2016

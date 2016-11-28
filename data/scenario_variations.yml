@@ -1,0 +1,53 @@
+variation:
+  - title: SSL Order Process [Production]
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
+    business: Hughesnet
+    stats:
+      - title: Modules
+        number: 155
+      - title: Rules
+        number: 25
+      - title: Tests
+        number: 1
+    updated_by: Kurt Cunningham
+    updated_by_img: ../images/misc/user-avatar-img.jpg
+    updated_on: Oct. 12, 2016
+  - title: SSL Order Process - Simplified
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
+    business: Hughesnet
+    stats:
+      - title: Modules
+        number: 65
+      - title: Rules
+        number: 10
+      - title: Tests
+        number: 1
+    updated_by: Kurt Cunningham
+    updated_by_img: ../images/misc/user-avatar-img.jpg
+    updated_on: Nov. 12, 2016
+  - title: Upgrade Existing Customer - Midwest
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
+    business: Hughesnet
+    stats:
+      - title: Modules
+        number: 176
+      - title: Rules
+        number: 55
+      - title: Tests
+        number: 0
+    updated_by: Kurt Cunningham
+    updated_by_img: ../images/misc/user-avatar-img.jpg
+    updated_on: An Hour Ago
+  - title: Upgrade Existing Customer - Midwest
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
+    business: Hughesnet
+    stats:
+      - title: Modules
+        number: 176
+      - title: Rules
+        number: 55
+      - title: Tests
+        number: 0
+    updated_by: Joey Kirk
+    updated_by_img: ../images/misc/user-avatar-2-img.jpg
+    updated_on: 15 mins Ago

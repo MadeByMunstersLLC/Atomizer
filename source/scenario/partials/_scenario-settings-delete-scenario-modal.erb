@@ -1,0 +1,29 @@
+<div class="modal" aria-hidden="true" data-modal="deleteScenario">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <%= inline_svg("icons/close-icon.svg", class: "modal__close-icon") %>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Are you sure about this move?</h3>
+          <p class="modal-intro">You are about to perform an action that cannot be undone. Please double check the variation listed before continuing. This will delete the scenario and all of it's variations and end any A/B tests currently running.</p>
+        </header>
+        <div class="modal__body-content">
+          <label>Confirm Scenario name</label>
+          <input type="text" placeholder="Enter scenario name to continue" class="required-input" />
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--charlie">Delete Scenario</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

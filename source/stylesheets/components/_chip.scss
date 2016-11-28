@@ -8,8 +8,8 @@ $chip-float:              left;
 $chip-hide:               none;
 $chip-margin:             $spacer-delta 0 0;
 
-$chip-right-margin-lg:    $spacer-echo 0 0 $spacer-delta;
-$chip-right-margin-md:    $spacer-echo 0 0 0;
+$chip-right-margin-lg:    0 0 0 $spacer-delta;
+$chip-right-margin-md:    0;
 $chip-right-width-e-lg:   65%;
 $chip-right-width-lg:     55%;
 
@@ -18,7 +18,7 @@ $chip-image-color:        $white-base;
 $chip-image-overflow:     hidden;
 $chip-image-position:     relative;
 $chip-image-radius:       30em;
-$chip-image-size:         40px;
+$chip-image-size:         35px;
 $chip-image-weight:       600;
 
 $chip-image-size-sm:      24px;

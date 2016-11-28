@@ -39,6 +39,9 @@ $modal-close-icon-cords:        7px null null 7px;
 $modal-close-icon-position:     relative;
 $modal-close-icon-width:        15px;
 
+$modal-actions-margin:          $spacer-charlie 0 0;
+$modal-actions-float:           right;
+
 
 
 // Structure
@@ -130,8 +133,8 @@ $modal-close-icon-width:        15px;
 }
 
 .modal__actions {
-  float: right;
-  margin-top: $spacer-alpha;
+  float: $modal-actions-float;
+  margin: $modal-actions-margin;
 }
 
 .modal__actions-item {

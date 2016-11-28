@@ -1,0 +1,78 @@
+<!-- Scenario Settings -->
+<section role="region" aria-label="Edit Scenario" id="tab-5" class="page-section page-section--header-offset tab__content">
+  <aside role="complementary" class="page-sidebar page-sidebar--right">
+    <header role="banner" class="page-sidebar__header">
+      <h2 class="title">Scenario History</h2>
+    </header>
+    <div class="page-sidebar__body">
+      <ul class="list">
+        <%= partial 'scenario/partials/_scenario-activity' %>
+      </ul>
+    </div>
+  </aside>
+  <div class="page-main page-main--left">
+    <div class="page-main__content">
+      <header role="banner" class="page-main__header">
+        <h2 class="title">Scenario Settings</h2>
+      </header>
+      <form>
+        <fieldset class="row">
+          <div class="columns-6__l">
+            <label>Scenario Title</label>
+            <input type="text" value="SSL Order Process [Production]" />
+          </div>
+          <div class="columns-6__l">
+            <label>Associated Tag</label>
+            <select>
+              <option selected="selected" disabled="disabled">Please Select One</option>
+              <option>Tag Name 1</option>
+              <option>Tag Name 2</option>
+              <option>Tag Name 3</option>
+              <option>Tag Name 4</option>
+            </select>
+          </div>
+        </fieldset>
+        <fieldset class="row">
+          <label>Scenario Description</label>
+          <textarea class="margin-reset--bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tristique, ligula vulputate scelerisque maximus, massa urna pellentesque velit, mollis imperdiet lectus justo sed magna.</textarea>
+        </fieldset>
+      </form>
+    </div>
+    <hr class="page-section__divider" />
+    <div class="page-main__content">
+      <header role="banner" class="page-main__header">
+        <h2 class="title">Scenario Variations</h2>
+      </header>
+      <table class="card-table">
+        <thead class="card-table__header">
+          <tr>
+            <th class="card-item card-item--large">Scenario Title</th>
+            <th class="card-item">Modified Last</th>
+            <th class="card-item">Modules</th>
+            <th class="card-item">Rules</th>
+            <th class="card-item">Tests</th>
+            <th class="card-item">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="card-table__body">
+          <% data.scenario_variations.variation.each_with_index do |v, i| %>
+            <% if i > 0 %>
+              <%= partial 'scenario/partials/_scenario-settings-variation-table-item', locals: {v:v, i:i} %>
+            <% end %>
+            <%= partial 'scenario/partials/_scenario-settings-edit-variation-modal', locals: {v:v, i:i} %>
+            <%= partial 'scenario/partials/_scenario-settings-delete-variation-modal', locals: {v:v, i:i} %>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    <hr class="page-section__divider" />
+    <div class="page-main__content">
+      <header role="banner" class="page-main__header">
+        <h2 class="title">Delete Scenario</h2>
+        <p class="margin-top--delta">By deleting this scenario, you will be removing it from the system and any of its associated variations will be deleted as well. This action is final. Please make sure you want to move forward with this action.</p>
+      </header>
+      <button data-modal="deleteScenario" class="button--charlie modal__trigger">Delete Scenario</button>
+    </div>
+  </div>
+</section>
+<%= partial 'scenario/partials/_scenario-settings-delete-scenario-modal' %>
