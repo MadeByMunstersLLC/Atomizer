@@ -1,11 +1,58 @@
-<!-- Edit Scenario Partial - Active by default -->
+<!-- A/B Test Scenario Partial -->
 <section role="region" aria-label="Edit Scenario" id="tab-3" class="page-section page-section--header-offset tab__content">
   <div class="page-main page-main--full">
-    <header role="banner" class="page-main__header">
-      <h2 class="title">Active Tests</h2>
-      <div class="page-main__header--right">
-        <a href="#" class="button--alpha button--small modal__trigger" data-modal="newTest">New Test</a>
-      </div>
-    </header>
+    <div class="page-main__content">
+      <header role="banner" class="page-main__header">
+        <h2 class="title">Active Tests</h2>
+        <div class="page-main__header--right">
+          <%= link_to 'New Test', '/scenario/create-test.html', class: 'button--alpha button--small' %>
+        </div>
+      </header>
+      <table class="card-table">
+        <thead class="card-table__header">
+          <tr>
+            <th class="card-item card-item--large">Test Title</th>
+            <th class="card-item">Status</th>
+            <th class="card-item">Test Created On</th>
+            <th class="card-item">Users</th>
+            <th class="card-item">Days Active</th>
+            <th class="card-item">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="card-table__body">
+          <% data.scenario_tests.test.each_with_index do |t, i| %>
+            <% if t.status != 'archived' %>
+              <%= partial 'scenario/partials/scenario-ab-test-table-item', locals: {t:t, i:i} %>
+            <% end %>
+          <% end %>
+          <tr class="toggle-table-row__trigger">
+            <td colspan="6" class="padding-top--charlie">
+              <%= link_to 'View Archived Tests', '#', class: 'link--alpha' %>
+            </td>
+          </tr>
+          <% data.scenario_tests.test.each_with_index do |t, i| %>
+            <% if t.status === 'archived' %>
+              <%= partial 'scenario/partials/scenario-ab-test-table-item', locals: {t:t, i:i} %>
+            <% end %>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+    <hr class="page-section__divider" />
+    <div class="page-main__content">
+      <header role="banner" class="page-main__header">
+        <h2 class="title">Test Tree</h2>
+        <div class="page-main__header--right">
+          <ul class="list">
+            <li class="item">
+              <div class="button--add-on__container button--add-on__container--full">
+                <input type="text" placeholder="Enter call ID" class="input--add-on" />
+                <input type="submit" value="Test" class="input--add-on__button button--disabled" />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </header>
+    </div>
   </div>
 </section>

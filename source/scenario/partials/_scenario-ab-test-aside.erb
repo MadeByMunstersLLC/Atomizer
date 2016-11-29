@@ -1,0 +1,36 @@
+<aside role="complementary" class="page-sidebar page-sidebar--right">
+  <header role="banner" class="page-sidebar__header">
+    <h2 class="title">General Information</h2>
+  </header>
+  <div class="page-sidebar__body">
+    <div class="page-sidebar__content">
+      <form>
+        <fieldset>
+          <label>Title</label>
+          <input type="text" value="<%= current_page.data.test.title %>" />
+        </fieldset>
+        <fieldset>
+          <label>Description</label>
+          <textarea><%= current_page.data.test.description %></textarea>
+        </fieldset>
+      </form>
+    </div>
+    <div class="page-sidebar__content page-sidebar__content--border">
+      <% if current_page.data.test.rules_preview %>
+        <label>Rules Preview</label>
+        <p class="highlight--alpha highlight__text--lead">if</p>
+        <p class="highlight--bravo">Agent ID <b>is one of</b>  1, 2, 3, 4</p>
+        <p class="highlight--alpha highlight__text--lead margin-reset--bottom">then test is active</p>
+      <% end %>
+    </div>
+    <div class="page-sidebar__content">
+      <header role="banner" class="page-sidebar__header">
+        <h5 class="form__label">Test Rules</h5>
+      </header>
+      <div class="button--add-on__container button--add-on__container--full">
+        <input type="text" placeholder="Enter call ID" class="input--add-on" />
+        <input type="submit" value="Test" class="input--add-on__button button--disabled" />
+      </div>
+    </div>
+  </div>
+</aside>

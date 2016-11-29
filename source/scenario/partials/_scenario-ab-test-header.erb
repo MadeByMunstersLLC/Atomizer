@@ -1,0 +1,21 @@
+<header role="header" class="page-header">
+  <% link_to "#{config[:root_url] ? config[:root_url] : '/'}scenario/", class: 'page-header__back-link' do %>
+    <%= inline_svg("icons/arrow-left-icon.svg") %>
+    <span>Back To All Tests</span>
+  <% end %>
+  <h2 class="page-header__title margin-bottom--echo">
+    <% if current_page.data.test.title %>
+      <%= current_page.data.test.title %>
+    <% else %>
+      Start New Split Test
+    <% end %>
+  </h2>
+  <div class="page-header__right">
+    <% if current_page.data.test.test_active %>
+      <button class="button-outline--echo margin-right--echo"> <i><%= inline_svg("icons/pause-icon.svg", class: "margin-right--echo") %></i> Pause</button>
+    <% else %>
+      <button class="button-outline--disabled margin-right--delta"> <i><%= inline_svg("icons/play-icon.svg", class: "margin-right--echo") %></i> Start</button>
+    <% end %>
+    <button class="button--disabled">Save Updates</button>
+  </div>
+</header>

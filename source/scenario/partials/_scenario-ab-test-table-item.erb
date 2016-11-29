@@ -1,0 +1,51 @@
+<tr class="card card--small <%= 'card-row__toggle hidden' if t.status === 'archived' %>">
+  <td class="card-item card-item--extra-large">
+    <h4 class="title"><%= t.title %></h4>
+  </td>
+  <td class="card-item">
+    <i class="<%= 'indicator--alpha' if t.status === 'active' %> <%= 'indicator--bravo' if t.status === 'paused' %> <%= 'indicator--charlie' if t.status === 'archived' %>"></i>
+    <%= t.status %>
+  </td>
+  <td class="card-item">
+    <div class="chip margin--reset">
+      <div class="chip--left">
+        <div class="chip__image chip__image--small">
+          <%= image_tag t.updated_image, class: 'image' %>
+        </div>
+      </div>
+      <div class="chip--right margin-reset--top margin-right--echo">
+        <p class="chip__text margin-reset--bottom"><%= t.updated_by %><br/><%= t.updated_date %></p>
+      </div>
+    </div>
+  </td>
+  <td class="card-item"><%= number_with_delimiter(t.tested, delimiter: ',') %></td>
+  <td class="card-item"><%= t.days_active %> days</td>
+  <td class="card-item__actions">
+    <% if t.status === 'active' %>
+      <% link_to '#', class: 'link' do %>
+        <%= inline_svg("icons/pause-icon.svg") %>
+      <% end %>
+    <% elsif t.status === 'paused' %>
+      <% link_to '#', class: 'link' do %>
+        <%= inline_svg("icons/play-icon.svg") %>
+      <% end %>
+    <% else %>
+      <% link_to '#', class: 'link' do %>
+        <%= inline_svg("icons/trash-icon.svg") %>
+      <% end %>
+    <% end %>
+    <% link_to '/scenario/test.html', class: 'link' do %>
+      <%= inline_svg("icons/edit-icon.svg") %>
+    <% end %>
+    <% if t.status != 'archived' %>
+      <% link_to '#', class: 'link' do %>
+        <%= inline_svg("icons/archive-icon.svg") %>
+      <% end %>
+    <% else %>
+      <% link_to '#', class: 'link' do %>
+        <%= inline_svg("icons/unarchive-icon.svg") %>
+      <% end %>
+    <% end %>
+  </td>
+</tr>
+<tr class="spacer <%= 'card-row__toggle hidden' if t.status === 'archived' %>"></tr>

@@ -9,7 +9,7 @@ $form-input-border-radius:       1px;
 $form-input-color:               $black-base;
 $form-input-color-placeholder:   $grey-dark;
 $form-input-height:              40px;
-$form-input-margin:              $spacer-echo 0 $spacer-charlie;
+$form-input-margin:              0 0 $spacer-charlie;
 $form-input-padding:             10px;
 
 $form-input-background-active:   $white-base;
@@ -23,10 +23,11 @@ $form-input-radius-zero:         0;
 $form-input-add-on-display:      inline-block;
 $form-input-add-on-height:       40px;
 $form-input-add-on-padding:      0 $spacer-delta;
-$form-input-add-on-width:        30%;
+$form-input-add-on-width:        80px;
 
 $form-add-on-container-width:    100%;
-$form-add-on-input-width:        70%;
+$form-input-add-on-float:        left;
+$form-add-on-input-width:        auto;
 
 
 // Structure
@@ -89,8 +90,8 @@ select {
     border-bottom-right-radius: $form-input-radius-zero;
     border-top-right-radius: $form-input-radius-zero;
     display: $form-input-add-on-display;
-    margin: -4px;
-    width: $form-add-on-input-width;
+    float: $form-input-add-on-float;
+    width: calc(100% - 80px);
   }
 }
 
@@ -120,7 +121,8 @@ input[type="search"],
   border-bottom-left-radius: $form-input-radius-zero;
   border-top-left-radius: $form-input-radius-zero;
   display: $form-input-add-on-display;
+  float: $form-input-add-on-float;
   height: $form-input-add-on-height;
   padding: $form-input-add-on-padding;
-  width: $form-input-add-on-width;
+  min-width: $form-input-add-on-width;
 }

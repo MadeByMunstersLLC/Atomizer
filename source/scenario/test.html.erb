@@ -1,0 +1,35 @@
+---
+title: Split Test | Atomizer.
+topbar: true
+test:
+  test_active: true
+  title: SSL Order Streamlined
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tristique, ligula vulputate scelerisque maximus.
+  users: 5,345
+  days_active: 27
+  scenarios: 2
+  rules_preview: true
+---
+<%= partial 'scenario/partials/scenario-ab-test-header' %>
+<section role="region" aria-label="Create A/B Test" class="page-section page-section--header-offset">
+  <div class="page-main page-main--left">
+    <div class="page-main__content">
+      <header role="banner" class="page-main__header">
+        <h2 class="title">Performance Summary</h2>
+      </header>
+      <div class="tabs">
+        <ul class="tab__list">
+          <li class="tab__item is-active" data-tab="tab-1">Overview</li>
+          <li class="tab__item" data-tab="tab-2">Set Visibility</li>
+        </ul>
+      </div>
+      <div id="tab-1" class="tab__content is-active">
+        <%= partial 'scenario/partials/scenario-ab-test-overview' %>
+      </div>
+      <div id="tab-2" class="tab__content">
+        <%= partial 'scenario/partials/scenario-ab-test-visibility' %>
+      </div>
+    </div>
+  </div>
+  <%= partial 'scenario/partials/scenario-ab-test-aside' %>
+</section>

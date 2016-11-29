@@ -1,0 +1,113 @@
+<div class="margin-bottom--alpha row">
+  <ul class="list">
+    <li class="item card card--small columns-4__l columns-3__m">
+      <i class="card--user-icon"></i>
+      <label>Total Number of Users</label>
+      <h2 class="margin-reset--bottom"><%= number_with_delimiter(current_page.data.test.users, :delimiter => ',') %> Users</h2>
+    </li>
+    <li class="item card card--small columns-4__l columns-3__m">
+      <i class="card--date-icon"></i>
+      <label>Days Running</label>
+      <h2 class="margin-reset--bottom"><%= current_page.data.test.days_active %> Days</h2>
+    </li>
+    <li class="item card card--small columns-4__l columns-3__m">
+      <i class="card--document-icon"></i>
+      <label>Active Scenarios</label>
+      <h2 class="margin-reset--bottom"><%= current_page.data.test.scenarios %> Scenarios</h2>
+    </li>
+  </ul>
+</div>
+<div>
+  <header role="banner" class="page-main__header">
+    <h2 class="title">Breakdown Summary</h2>
+  </header>
+  <table class="card-table">
+    <thead class="card-table__header">
+      <tr>
+        <th class="card-item">Scenario</th>
+        <th class="card-item">Avg. Call Time</th>
+        <th class="card-item">Avg. Sold Time</th>
+        <th class="card-item">Avg. Non-Sold Time</th>
+        <th class="card-item">Calls Tested</th>
+        <th class="card-item">Conversions</th>
+        <th class="card-item">Modules</th>
+        <th class="card-item">Rules</th>
+      </tr>
+    </thead>
+    <tbody class="card-table__body">
+      <% if current_page.data.test.test_active %>
+        <tr class="card card--small">
+          <td class="card-item">SSL Order Process</td>
+          <td class="card-item">
+            5.45
+            <span class="card-item__description">Minutes</span>
+          </td>
+          <td class="card-item">
+            5.23
+            <span class="card-item__description">Minutes</span>
+          </td>
+          <td class="card-item">
+            7.89
+            <span class="card-item__description">Minutes</span>
+          </td>
+          <td class="card-item">
+            1,726
+            <span class="card-item__percent">50%</span>
+            <span class="card-item__description">Calls</span>
+          </td>
+          <td class="card-item">
+            220
+            <span class="card-item__percent card-item__percent--red">12.7%</span>
+            <span class="card-item__description">Users</span>
+          </td>
+          <td class="card-item">
+            151
+            <span class="card-item__description">total</span>
+          </td>
+          <td class="card-item">
+            34
+            <span class="card-item__description">total</span>
+          </td>
+        </tr>
+        <tr class="spacer"></tr>
+        <tr class="card card--small">
+          <td class="card-item">Simplified Process</td>
+          <td class="card-item">
+            3.45
+            <span class="card-item__description">Minutes</span>
+          </td>
+          <td class="card-item">
+            3.55
+            <span class="card-item__description">Minutes</span>
+          </td>
+          <td class="card-item">
+            2.45
+            <span class="card-item__description">Minutes</span>
+          </td>
+          <td class="card-item">
+            1,726
+            <span class="card-item__percent">50%</span>
+            <span class="card-item__description">Calls</span>
+          </td>
+          <td class="card-item">
+            443
+            <span class="card-item__percent card-item__percent--green">25.7%</span>
+            <span class="card-item__description">Users</span>
+          </td>
+          <td class="card-item">
+            67
+            <span class="card-item__description">total</span>
+          </td>
+          <td class="card-item">
+            15
+            <span class="card-item__description">total</span>
+          </td>
+        </tr>
+      <% else %>
+        <tr class="card card--small">
+          <td colspan="8" class="card-item text--center">You have not included any scripts in this test. You can do so by adding scenarios from the visibility tab.</td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

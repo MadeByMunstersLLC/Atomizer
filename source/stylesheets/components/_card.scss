@@ -7,6 +7,7 @@ $card-background:               $white-base;
 $card-border:                   1px solid $grey-light;
 $card-display:                  block;
 $card-margin:                   0 0 $spacer-charlie;
+$card-overflow:                 hidden;
 $card-padding:                  $spacer-charlie;
 $card-position:                 relative;
 $card-radius:                   1px;
@@ -31,6 +32,11 @@ $card-favorite-icon-fill:       $yellow-base;
 $card-favorite-icon-position:   absolute;
 $card-favorite-icon-size:       15px;
 
+$card-icon-cords:               15px -15px null null;
+$card-icon-display:             inline-block;
+$card-icon-position:            absolute;
+$card-icon-size:                80px;
+
 
 // Structure
 .card {
@@ -40,6 +46,7 @@ $card-favorite-icon-size:       15px;
   border-radius: $card-radius;
   display: $card-display;
   margin: $card-margin;
+  overflow: $card-overflow;
   padding: $card-padding;
 }
 
@@ -104,5 +111,32 @@ $card-favorite-icon-size:       15px;
 
   &:hover {
     color: $card-title-link-color;
+  }
+}
+
+
+// Card Corner Icons
+// Card Corner Icons
+$date-icon:     'icons/date-icon.svg';
+$document-icon: 'icons/file-icon.svg';
+$user-icon:     'icons/user-icon.svg';
+
+$icons: (
+  ('date',      $date-icon),
+  ('document',  $document-icon),
+  ('user',      $user-icon)
+);
+
+@each $icon in $icons {
+  $name:   nth($icon, 1);
+  $url:    nth($icon, 2);
+
+  .card--#{$name}-icon {
+    @include position($card-icon-position, $card-icon-cords);
+    background: image-url($url) no-repeat;
+    background-size: $card-icon-size;
+    display: $card-icon-display;
+    height: $card-icon-size;
+    width: $card-icon-size;
   }
 }

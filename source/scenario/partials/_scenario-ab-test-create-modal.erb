@@ -1,0 +1,34 @@
+<div class="modal modal--active" aria-hidden="false">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <header class="modal__header">
+          <h3 class="title">Create New Test</h3>
+          <p class="modal-intro">Please give your test a title and a description. This will allow others to track and review the test results.</p>
+        </header>
+        <div class="modal__body-content">
+          <form>
+            <fieldset>
+              <label>Test Title</label>
+              <input type="text" />
+            </fieldset>
+            <fieldset>
+              <label>Test Description</label>
+              <textarea></textarea>
+            </fieldset>
+          </form>
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="/scenario/" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <%= link_to 'Create Test', '/scenario/test.html', class: 'button--alpha' %>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

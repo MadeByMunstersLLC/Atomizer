@@ -1,0 +1,75 @@
+<div class="page-main page-main--right">
+  <header role="banner" class="page-main__header">
+    <h2 class="title">Scenario: Control</h2>
+    <div class="page-main__header--right">
+      <ul class="list">
+        <li class="item">
+          <select>
+            <% data.scenario_variations.variation.each do |v| %>
+              <option><%= v.title %></option>
+            <% end %>
+          </select>
+        </li>
+        <li class="item">
+          <a href="#" class="button--alpha button--small modal__trigger" data-modal="createVariation">Add Variation</a>
+        </li>
+        <li class="item">
+          <a href="#" class="button--bravo button--small modal__trigger" data-modal="updateModules">3 Updates</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <div class="page-main__content">
+    <ul class="module-card__list-titles">
+      <li class="form__label module-card__title">Module Name</li>
+      <li class="form__label module-card__update">Last Updated</li>
+      <li class="form__label module-card__version">Version</li>
+      <li class="form__label module-card__rules">Rules</li>
+      <li class="form__label module-card__actions">Actions</li>
+    </ul>
+    <ul id="module-list--sortable" class="list">
+      <% data.scenario_modules.module.each_with_index do |m, i| %>
+        <li class="card card--small card--draggable module-card">
+          <div class="module-card__title">
+            <input type="checkbox" class="checkbox checkbox-extras-panel" />
+            <h4 class="title"><%= m.title %></h4>
+          </div>
+          <div class="module-card__update">
+            <% if m.update_image %>
+              <%= image_tag m.update_image, class: 'avatar' %>
+            <% else %>
+              <span class="avatar no-avatar"><%= m.updated_by[0] %></span>
+            <% end %>
+            <div class="updated-content">
+              <h5 class="module-card__text"><%= m.updated_by %></h5>
+              <h5 class="module-card__text--small"><%= m.updated_date %></h5>
+            </div>
+          </div>
+          <div class="module-card__version">
+            <p class="module-card__text"><%= m.version %></p>
+            <% if m.version_update %>
+              <div class="update-icon">
+                <div class="tooltip__item">
+                  <%= inline_svg("icons/update-icon.svg") %>
+                  <figure class="tooltip">
+                    <p class="tooltip__text">Looks like an update is avaliable. Click the button in the top right.</p>
+                  </figure>
+                </div>
+              </div>
+            <% end %>
+          </div>
+          <div class="module-card__rules">
+            <a href="#" class="module-card__text <%= m.rules_present ? 'link--bravo' : 'link--alpha' %>"><%= m.rules %></a>
+          </div>
+          <div class="module-card__actions">
+            <% link_to "#{config[:root_url] ? config[:root_url] : '/'}scenario/show", class: 'action' do %>
+              <%= inline_svg("icons/edit-icon.svg") %>
+            <% end %>
+            <a href="#" class="action modal__trigger" data-modal="deleteModal<%= i %>"><%= inline_svg("icons/trash-icon.svg") %></a>
+            <%= partial 'scenario/partials/_scenario-edit-delete-modal', locals: { m:m, i:i } %>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>

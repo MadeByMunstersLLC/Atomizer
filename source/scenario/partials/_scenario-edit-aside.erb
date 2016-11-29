@@ -1,0 +1,35 @@
+<aside role="sidebar" class="page-sidebar page-sidebar--left">
+  <header role="banner" class="page-sidebar__header">
+    <h2 class="title">Available Modules</h2>
+    <div class="page-sidebar__header--right toggle-parent">
+      <a href="#" class="toggle-element">
+        <%= inline_svg("icons/search-icon.svg") %>
+      </a>
+      <div class="search-input">
+        <input type="search" placeholder="Lookup a module" />
+      </div>
+    </div>
+  </header>
+  <div class="page-sidebar__body">
+    <% data.modules.module_group.each do |g| %>
+      <div class="toggle toggle--border">
+        <div class="toggle__header">
+          <h5 class="form__label"><%= g.group_title %></h5>
+          <a href="#" class="toggle__trigger <%= 'is-active' if g.group_active %>">
+            <%= inline_svg("icons/plus-icon.svg", class: "toggle__icon toggle__icon--small toggle__icon--plus") %>
+            <%= inline_svg("icons/minus-icon.svg", class: "toggle__icon toggle__icon--small toggle__icon--minus #{'is-active' if g.group_active}") %>
+          </a>
+        </div>
+        <ul class="list toggle__body <%= 'is-active' if g.group_active %>">
+          <% g.modules.each do |m| %>
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span><%= m.title %></span>
+              </div>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+</aside>

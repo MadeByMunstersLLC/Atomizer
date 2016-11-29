@@ -46,7 +46,7 @@ $button-dropdown-link-weight:       600;
 %button {
   @include font-type($primary-sans-serif, normal, 700);
   @include s-foxtrot;
-  @include transition(background-color 0.3s ease);
+  @include transition($button-transition);
   border: $button-border;
   border-radius: $button-radius;
   display: $button-display;
@@ -110,6 +110,26 @@ $button-dropdown-link-weight:       600;
 
     &.button--add-on__dropdown:hover {
       background: $bg-color;
+    }
+  }
+
+  // Button Outline
+  .button-outline--#{$button} {
+    @extend %button;
+    background: transparent;
+    border: 1px solid $bg-color;
+    color: $color;
+
+    &:hover {
+      opacity: 0.75;
+    }
+
+    i {
+      vertical-align: middle;
+    }
+
+    i #app-icon {
+      fill: $bg-color;
     }
   }
 
