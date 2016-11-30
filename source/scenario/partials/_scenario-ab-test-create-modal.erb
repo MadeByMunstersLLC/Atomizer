@@ -20,10 +20,10 @@
           <div class="modal__actions">
             <ul class="modal__actions-list">
               <li class="modal__actions-item">
-                <a href="/scenario/" class="link--delta">Cancel</a>
+                <%= link_to 'Cancel', "#{config[:root_url] ? config[:root_url] : '/'}scenario/", class: 'link--delta' %>
               </li>
               <li class="modal__actions-item">
-                <%= link_to 'Create Test', "#{config[:root_url] ? config[:root_url] : '/'}scenario/", class: 'button--alpha' %>
+                <%= link_to 'Create Test', '/scenario/test.html', class: 'button--alpha' %>
               </li>
             </ul>
           </div>
