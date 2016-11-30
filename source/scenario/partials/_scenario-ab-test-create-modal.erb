@@ -23,7 +23,7 @@
                 <a href="/scenario/" class="link--delta">Cancel</a>
               </li>
               <li class="modal__actions-item">
-                <%= link_to 'Create Test', '/scenario/test.html', class: 'button--alpha' %>
+                <%= link_to 'Create Test', "#{config[:root_url] ? config[:root_url] : '/'}scenario/", class: 'button--alpha' %>
               </li>
             </ul>
           </div>
