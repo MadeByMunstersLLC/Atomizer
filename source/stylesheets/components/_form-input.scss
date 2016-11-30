@@ -117,11 +117,15 @@ input[type="search"],
   width: $form-add-on-container-width;
 }
 
+.button--add-on__container--fixed {
+  width: 200px;
+}
+
 .input--add-on__button {
+  @include position(absolute);
   border-bottom-left-radius: $form-input-radius-zero;
   border-top-left-radius: $form-input-radius-zero;
   display: $form-input-add-on-display;
-  float: $form-input-add-on-float;
   height: $form-input-add-on-height;
   padding: $form-input-add-on-padding;
   min-width: $form-input-add-on-width;

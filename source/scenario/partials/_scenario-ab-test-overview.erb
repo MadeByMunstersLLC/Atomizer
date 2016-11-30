@@ -1,16 +1,16 @@
 <div class="margin-bottom--alpha row">
   <ul class="list">
-    <li class="item card card--small columns-4__l columns-3__m">
+    <li class="item card card--small card--overflow columns-4__l columns-3__m">
       <i class="card--user-icon"></i>
       <label>Total Number of Users</label>
       <h2 class="margin-reset--bottom"><%= number_with_delimiter(current_page.data.test.users, :delimiter => ',') %> Users</h2>
     </li>
-    <li class="item card card--small columns-4__l columns-3__m">
+    <li class="item card card--small card--overflow columns-4__l columns-3__m">
       <i class="card--date-icon"></i>
       <label>Days Running</label>
       <h2 class="margin-reset--bottom"><%= current_page.data.test.days_active %> Days</h2>
     </li>
-    <li class="item card card--small columns-4__l columns-3__m">
+    <li class="item card card--small card--overflow columns-4__l columns-3__m">
       <i class="card--document-icon"></i>
       <label>Active Scenarios</label>
       <h2 class="margin-reset--bottom"><%= current_page.data.test.scenarios %> Scenarios</h2>

@@ -113,6 +113,12 @@ $button-dropdown-link-weight:       600;
     }
   }
 
+  // Remove Border Radius from Button Add on
+  .button--add-on--#{$button} {
+    border-bottom-left-radius: $button-add-on-radius;
+    border-top-left-radius: $button-add-on-radius;
+  }
+
   // Button Outline
   .button-outline--#{$button} {
     @extend %button;

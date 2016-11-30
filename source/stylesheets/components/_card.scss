@@ -46,7 +46,6 @@ $card-icon-size:                80px;
   border-radius: $card-radius;
   display: $card-display;
   margin: $card-margin;
-  overflow: $card-overflow;
   padding: $card-padding;
 }
 
@@ -59,6 +58,10 @@ $card-icon-size:                80px;
 .card--extra-small {
   margin: $card-margin-extra-small;
   padding: $card-padding-extra-small;
+}
+
+.card--overflow {
+  overflow: $card-overflow;
 }
 
 

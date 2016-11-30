@@ -1,1 +1,79 @@
-scenario-ab-test-visibility
+<div class="card">
+  <h3 class="card__title">Add Scenarios</h3>
+  <select class="margin-reset--bottom">
+    <option selected="selected" disabled>Select One</option>
+    <% data.scenario_variations.variation.each do |v| %>
+      <option><%= v.title %></option>
+    <% end %>
+  </select>
+  <div class="row">
+    <ul class="list margin-bottom--charlie">
+      <li class="item form__label columns-8__l columns-6__m">Scenario</li>
+      <li class="item form__label columns-2__l columns-1__m">Users</li>
+    </ul>
+    <ul class="list">
+      <li class="item columns-8__l columns-6__m">
+        <input type="text" value="SSL Order Process" disabled="true" class="margin-reset--bottom" />
+      </li>
+      <li class="item columns-2__l columns-1__m">
+        <input type="text" value="50%" class="margin-reset--bottom" />
+      </li>
+      <li class="item columns-2__l columns-2__m">
+        <button class="button--charlie button--full button--form">Remove</button>
+      </li>
+    </ul>
+    <ul class="list">
+      <li class="item columns-8__l columns-6__m">
+        <input type="text" value="SSL Order Process" disabled="true" class="margin-reset--bottom" />
+      </li>
+      <li class="item columns-2__l columns-1__m">
+        <input type="text" value="50%" class="margin-reset--bottom" />
+      </li>
+      <li class="item columns-2__l columns-2__m">
+        <button class="button--charlie button--full button--form">Remove</button>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="card">
+  <h3 class="card__title">Build Rule Set</h3>
+  <form class="row">
+    <fieldset class="columns-4__l columns-3__m">
+      <div class="tooltip__item">
+        <label class="tooltip__label label">Property</label>
+        <%= inline_svg ('icons/help-icon.svg'), class: 'tooltip__icon' %>
+        <figure class="tooltip">
+          <p class="tooltip__text">Set the property you want to check.</p>
+        </figure>
+      </div>
+      <select class="margin-reset--bottom">
+        <option selected="selected">Select One</option>
+      </select>
+    </fieldset>
+    <fieldset class="columns-2__l columns-2__m">
+      <div class="tooltip__item">
+        <label class="tooltip__label label">Rule</label>
+        <%= inline_svg ('icons/help-icon.svg'), class: 'tooltip__icon' %>
+        <figure class="tooltip">
+          <p class="tooltip__text">Selecting the rule means the the property and value need to equal true for the module to display correctly.</p>
+        </figure>
+      </div>
+      <select class="margin-reset--bottom">
+        <option selected="selected">Select One</option>
+      </select>
+    </fieldset>
+    <fieldset class="columns-4__l columns-2__m">
+      <div class="tooltip__item">
+        <label class="tooltip__label label">Value</label>
+        <%= inline_svg ('icons/help-icon.svg'), class: 'tooltip__icon' %>
+        <figure class="tooltip">
+          <p class="tooltip__text">Set the value you want to check.</p>
+        </figure>
+      </div>
+      <input type="text" class="margin-reset--bottom" />
+    </fieldset>
+    <fieldset class="columns-2__l columns-2__m">
+      <input type="submit" value="add" class="button--disabled button--full button--form label--offset float--right" disabled />
+    </fieldset>
+  </form>
+</div>
