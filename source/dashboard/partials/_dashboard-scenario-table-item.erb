@@ -1,7 +1,11 @@
 <tr class="card card--small">
   <td class="card-item card-item--large">
     <a href="#" class="card__favorite-action">
-      <%= inline_svg("icons/star-outline-icon.svg") %>
+      <% if !s.is_favorite %>
+        <%= inline_svg("icons/star-outline-icon.svg", class: "outline") %>
+      <% else %>
+        <%= inline_svg("icons/star-filled-icon.svg", class: "filled") %>
+      <% end %>
     </a>
     <h4 class="title"><%= s.title %></h4>
   </td>
@@ -25,7 +29,6 @@
   <td class="card-item"><%= s.stats[0].number %></td>
   <td class="card-item"><%= s.stats[1].number %></td>
   <td class="card-item"><%= s.stats[2].number %></td>
-  <td class="card-item"><%= s.stats[3].number %></td>
   <td class="card-item__actions">
     <% link_to '#', class: 'link modal__trigger', data: {modal: "previewScenario#{i}"} do %>
       <%= inline_svg("icons/stats-icon.svg") %>

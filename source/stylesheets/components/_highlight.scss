@@ -3,19 +3,32 @@
 
 
 // Variables
-$highlight-align:          center;
-$highlight-display:        block;
-$highlight-margin:         0 0 $spacer-delta;
-$highlight-padding:        $spacer-echo;
+$highlight-align:                   center;
+$highlight-display:                 block;
+$highlight-margin:                  0 0 $spacer-delta;
+$highlight-padding:                 $spacer-echo;
+$highlight-position:                relative;
 
-$highlight-text-weight:    600;
-$highlight-text-transform: uppercase;
+$highlight-text-weight:             600;
+$highlight-text-transform:          uppercase;
 
-$highlight-nest-margin:    $spacer-delta $spacer-echo;
+$highlight-text-right-cords:        null $spacer-delta null null;
+$highlight-text-right-position:     absolute;
+
+$highlight-nest-margin:             $spacer-delta $spacer-echo;
+
+$hightlight-card-margin:            $spacer-delta $spacer-echo;
+
+$hightlight-card-action-cords:      null 0 null null;
+$highlight-card-action-line-height: 0;
+$hightlight-card-action-position:   absolute;
+$highlight-card-action-size:        15px;
+
 
 
 // Structure
 %highlight {
+  @include position($highlight-position);
   display: $highlight-display;
   margin: $highlight-margin;
   padding: $highlight-padding;
@@ -45,7 +58,37 @@ $highlight-nest-margin:    $spacer-delta $spacer-echo;
   font-weight: $highlight-text-weight;
 }
 
+.highlight__text--right {
+  @include position($highlight-text-right-position, $highlight-text-right-cords)
+}
+
 // Nest Highlight
 .highlight--nested {
   margin: $highlight-nest-margin;
+}
+
+// Highlight Card
+.highlight__card {
+  @extend .card;
+  @extend .card--small;
+  margin: $hightlight-card-margin;
+}
+
+.highlight__card-title {
+  margin-bottom: 0;
+}
+
+.highlight__card-action {
+  @include center($horizontal: false, $vertical: true);
+  line-height: $highlight-card-action-line-height;
+  right: $spacer-delta;
+
+  svg {
+    height: $highlight-card-action-size;
+    width: $highlight-card-action-size;
+  }
+
+  #app-icon {
+    fill: $grey-dark;
+  }
 }

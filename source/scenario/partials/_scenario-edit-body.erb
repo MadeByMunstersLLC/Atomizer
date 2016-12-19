@@ -4,16 +4,6 @@
     <div class="page-main__header--right">
       <ul class="list">
         <li class="item">
-          <select>
-            <% data.scenario_variations.variation.each do |v| %>
-              <option><%= v.title %></option>
-            <% end %>
-          </select>
-        </li>
-        <li class="item">
-          <a href="#" class="button--alpha button--small modal__trigger" data-modal="createVariation">Add Variation</a>
-        </li>
-        <li class="item">
           <a href="#" class="button--bravo button--small modal__trigger" data-modal="updateModules">3 Updates</a>
         </li>
       </ul>

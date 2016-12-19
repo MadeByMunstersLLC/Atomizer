@@ -18,6 +18,7 @@ $app-topbar-section-v-align:        middle;
 $app-topbar-section-width:          28%;
 
 $app-topbar-middle-margin:          0 auto;
+$app-topbar-middle-position:        relative;
 $app-topbar-middle-width:           40%;
 
 $app-topbar-right-float:            right;
@@ -72,6 +73,7 @@ $app-topbar-settings-item-margin:   $spacer-echo;
 }
 
 .app-topbar__middle {
+  @include position($app-topbar-middle-position);
   margin: $app-topbar-middle-margin;
   width: $app-topbar-middle-width;
 

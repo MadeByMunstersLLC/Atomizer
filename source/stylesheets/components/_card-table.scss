@@ -119,6 +119,11 @@ $card-action-icon-width:        $spacer-delta;
     .card__favorite-action svg {
       margin: $card-favorite-margin;
       width: $card-action-width;
+
+      // Color Favorite Icon
+      &.filled #app-icon {
+        fill: $yellow-base;
+      }
     }
   }
 

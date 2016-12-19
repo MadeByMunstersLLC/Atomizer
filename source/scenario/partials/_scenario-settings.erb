@@ -41,31 +41,6 @@
     <hr class="page-section__divider" />
     <div class="page-main__content">
       <header role="banner" class="page-main__header">
-        <h2 class="title">Scenario Variations</h2>
-      </header>
-      <table class="card-table">
-        <thead class="card-table__header">
-          <tr>
-            <th class="card-item card-item--large">Scenario Title</th>
-            <th class="card-item">Modified Last</th>
-            <th class="card-item">Modules</th>
-            <th class="card-item">Rules</th>
-            <th class="card-item">Tests</th>
-            <th class="card-item">Actions</th>
-          </tr>
-        </thead>
-        <tbody class="card-table__body">
-          <% data.scenario_variations.variation.each_with_index do |v, i| %>
-            <%= partial 'scenario/partials/_scenario-settings-variation-table-item', locals: {v:v, i:i} %>
-            <%= partial 'scenario/partials/_scenario-settings-edit-variation-modal', locals: {v:v, i:i} %>
-            <%= partial 'scenario/partials/_scenario-settings-delete-variation-modal', locals: {v:v, i:i} %>
-          <% end %>
-        </tbody>
-      </table>
-    </div>
-    <hr class="page-section__divider" />
-    <div class="page-main__content">
-      <header role="banner" class="page-main__header">
         <h2 class="title">Delete Scenario</h2>
         <p class="margin-top--delta">By deleting this scenario, you will be removing it from the system and any of its associated variations will be deleted as well. This action is final. Please make sure you want to move forward with this action.</p>
       </header>

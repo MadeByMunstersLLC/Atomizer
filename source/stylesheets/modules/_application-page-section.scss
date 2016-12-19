@@ -209,10 +209,12 @@ $page-main-header-right-float: right;
     display: $page-main-title-display;
     float: $page-main-header-right-float;
 
+    // Note: This may need to be refactored
+      // Not a fan of how it is implemented.
     .item {
       display: inline-block;
       float: left;
-      max-width: 200px;
+      max-width: 400px;
       min-width: 200px;
 
       &:not(:last-child) {
@@ -230,6 +232,11 @@ $page-main-header-right-float: right;
         margin-top: 0;
         padding: $spacer-echo $spacer-delta;
       }
+    }
+
+    // Expand Button Add ons
+    .button--add-on__container {
+      width: 300px;
     }
   }
 }

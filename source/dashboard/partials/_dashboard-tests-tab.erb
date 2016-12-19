@@ -1,0 +1,106 @@
+<section role="region" aria-label="atomzier-bussiness-tests" id="tab-2" class="page-section page-section--header-offset tab__content">
+  <aside role="complementary" class="page-sidebar page-sidebar--right">
+    <header role="banner" class="page-sidebar__header">
+      <h2 class="title">Test Details</h2>
+    </header>
+    <div class="page-sidebar__body">
+      <div class="page-sidebar__group is-active">
+        <p>Click on a test from the left side of the page to view its details here.</p>
+      </div>
+      <div class="page-sidebar__group">
+        <div class="page-sidebar__content page-sidebar__content--border">
+          <h4>Streamlined SSL</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu sapien nisl. Proin lorem nisi, blandit nec interdum cursus, auctor eleifend est. Nam mattis et lorem in accumsan.</p><br/>
+          <ul>
+            <li>Days Running <span class="float--right">15 Days</span></li>
+            <li>Total Users Tested <span class="float--right">3,451 Users</span></li>
+          </ul>
+        </div>
+        <div class="page-sidebar__content page-sidebar__content--border">
+          <h6 class="form__label">Scenarios + Traffic Allocation</h6>
+          <ul>
+            <li>SSL Order Process (Version 10) <span class="float--right">50%</span></li>
+            <li>Simpified Upgrade (Version 9) <span class="float--right">50%</span></li>
+          </ul>
+        </div>
+        <div class="page-sidebar__content margin-bottom--charlie">
+          <h6 class="form__label">Conversion Rates</h6>
+          <ul>
+            <li>SSL Order Process <span class="float--right text--red">12.7%</span></li>
+            <li>Simpified Upgrade <span class="float--right text--green">25.7%</span></li>
+          </ul>
+        </div>
+        <div class="page-sidebar__content text--center">
+          <%= link_to 'Launch Test', "#{config[:root_url] ? config[:root_url] : '/'}scenario/test", class: 'button--bravo button--full' %><br/>
+          <%= link_to 'Hide Details', "#", id: 'hide-test-details', class: 'text--grey' %>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="page-main page-main--left">
+    <header role="banner" class="page-main__header">
+      <div class="page-main__header--left">
+        <h2 class="title">Scenario Hierarchy</h2>
+      </div>
+      <div class="page-main__header--right">
+        <ul class="list">
+          <li class="item">
+            <div class="button--add-on__container">
+              <input type="text" placeholder="Enter call log ID" class="input--add-on" />
+              <input type="submit" value="Test" class="input--add-on__button button--disabled button--small" />
+            </div>
+          </li>
+          <li class="item">
+            <%= link_to 'New Test', '/scenario/create-test.html', class: 'button--alpha button--small' %>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="page-main__content">
+      <ul>
+        <li class="highlight--alpha highlight__text--lead">IF</li>
+        <li class="highlight--bravo">
+          <span>Agent ID <span class="highlight__text--heavy"> is one of</span> 1, 2, 3</span>
+          <span class="highlight__text--right">Configuration ID: 7765</span>
+          <div class="highlight__card">
+            <h4 id="show-test-details" class="highlight__card-title clickable">Streamlined SSL</h4>
+            <% link_to "#{config[:root_url] ? config[:root_url] : '/'}scenario/", class: "highlight__card-action" do %>
+              <%= inline_svg("icons/edit-icon.svg") %>
+            <% end %>
+          </div>
+        </li>
+        <li class="highlight--alpha highlight__text--lead">Else If</li>
+        <li class="highlight--bravo">
+          <span>Customer Device <span class="highlight__text--heavy"> equals</span> mobile</span>
+          <span class="highlight__text--right">Configuration ID: 7786</span>
+          <div class="highlight__card">
+            <h4 class="highlight__card-title">Simplified Order Process - Mobile Customers</h4>
+            <% link_to "#{config[:root_url] ? config[:root_url] : '/'}scenario/", class: "highlight__card-action" do %>
+              <%= inline_svg("icons/edit-icon.svg") %>
+            <% end %>
+          </div>
+        </li>
+        <li class="highlight--alpha highlight__text--lead">Else If</li>
+        <li class="highlight--bravo">
+          <span>Customer Location <span class="highlight__text--heavy"> equals</span> Midwest Sales Region</span>
+          <span class="highlight__text--right">Configuration ID: 6796</span>
+          <div class="highlight__card">
+            <h4 class="highlight__card-title">Existing Customer Package Upgrade - Midwest</h4>
+            <% link_to "#{config[:root_url] ? config[:root_url] : '/'}scenario/", class: "highlight__card-action" do %>
+              <%= inline_svg("icons/edit-icon.svg") %>
+            <% end %>
+          </div>
+        </li>
+        <li class="highlight--alpha highlight__text--lead">Else</li>
+        <li class="highlight--bravo">
+          <div class="highlight__card">
+            <h4 class="highlight__card-title">SSL Order Process [Production]</h4>
+            <% link_to "#{config[:root_url] ? config[:root_url] : '/'}scenario/", class: "highlight__card-action" do %>
+              <%= inline_svg("icons/edit-icon.svg") %>
+            <% end %>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>

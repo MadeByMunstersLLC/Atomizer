@@ -1,0 +1,70 @@
+<section role="region" aria-label="atomzier-dashboard" id="tab-1" class="page-section page-section--header-offset tab__content is-active">
+  <div class="page-main page-main--full">
+    <div class="page-main__content">
+      <header role="banner" class="page-main__header">
+        <h2 class="title">Favorite Scenarios</h2>
+      </header>
+      <ul class="list card__list">
+        <% data.scenarios.business.each do |b| %>
+          <% if b.title === "HughesNet" %>
+            <% b.scenario.each_with_index do |s, i| %>
+              <% if s.is_favorite %>
+                <%= partial 'dashboard/partials/_dashboard-scenario-favorite-item', locals: {s:s} %>
+              <% end %>
+            <% end %>
+          <% end %>
+        <% end %>
+      </ul>
+    </div>
+    <hr class="page-section__divider" />
+    <div class="page-main__content">
+      <header role="banner" class="page-main__header">
+        <div class="page-main__header--left">
+          <h2 class="title">All Scenarios</h2>
+        </div>
+        <div class="page-main__header--right">
+          <ul class="list">
+            <li class="item">
+              <input type="search" placeholder="Look up a scenario">
+            </li>
+            <li class="item">
+              <select>
+                <option disabled="disabled">Select A Business</option>
+                <option selected="selected">HughesNet</option>
+                <option>DirectTV</option>
+                <option>AT&amp;T</option>
+                <option>Verizon</option>
+                <option>Frontier Communications</option>
+              </select>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <table class="card-table">
+        <thead class="card-table__header">
+          <tr>
+            <th class="card-item card-item--large">Scenario Title</th>
+            <th class="card-item">Business</th>
+            <th class="card-item">Status</th>
+            <th class="card-item">Modified Last</th>
+            <th class="card-item">Modules</th>
+            <th class="card-item">Rules</th>
+            <th class="card-item">Tests</th>
+            <th class="card-item">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="card-table__body">
+          <% data.scenarios.business.each do |b| %>
+            <% if b.title === "HughesNet" %>
+              <% b.scenario.each_with_index do |s, i| %>
+                <%= partial 'dashboard/partials/_dashboard-scenario-table-item', locals: {s:s, i:i} %>
+                <%= partial 'dashboard/partials/_dashboard-scenario-preview-modal', locals: {s:s, i:i} %>
+                <%= partial 'dashboard/partials/_dashboard-scenario-delete-modal', locals: {s:s, i:i} %>
+              <% end %>
+            <% end %>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>

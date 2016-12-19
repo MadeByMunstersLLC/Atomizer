@@ -1,0 +1,78 @@
+// Application Tobar Search Module Stylesheet
+// ============================================
+
+// Variables
+$quick-search-position:             absolute;
+$quick-search-max-height:           300px;
+$quick-search-overflow:             scroll;
+$quick-search-opacity:              0;
+$quick-search-transition:           all 0.5s ease;
+$quick-search-visibility:           hidden;
+$quick-search-width:                100%;
+
+$quick-search-margin-active:        $spacer-delta 0 0;
+$quick-search-opacity-active:       1;
+$quick-search-visibility-active:    visible;
+
+$quick-search-list-height:          200px;
+$quick-search-list-margin:          0 0 $spacer-charlie;
+$quick-search-list-padding:         $spacer-delta $spacer-delta $spacer-bravo;
+
+$quick-search-footer-background:    $white-base;
+$quick-search-footer-border:        1px solid $white-dark;
+$quick-search-footer-cords:         null 0 0 0;
+$quick-search-footer-padding:       $spacer-echo;
+$quick-search-footer-position:      absolute;
+$quick-search-footer-shadow:        rgba(48,54,67,0.10);
+$quick-search-footer-spread:        0 1px 10px;
+$quick-search-footer-width:         100%;
+
+
+// Structure
+.quick-search__container {
+  @extend .card;
+  @extend .card--small;
+  @extend .card--shadow-dark;
+  @include position($quick-search-position);
+  @include transition($quick-search-transition);
+  max-height: $quick-search-max-height;
+  opacity: $quick-search-opacity;
+  padding: 0;
+  visibility: $quick-search-visibility;
+  width: $quick-search-width;
+
+
+  // Active State
+  &.is-active {
+    margin: $quick-search-margin-active;
+    opacity: $quick-search-opacity-active;
+    visibility: $quick-search-visibility-active;
+  }
+
+  // List + List Items
+  .list {
+    margin: $quick-search-list-margin;
+  }
+}
+
+.quick-search__lists {
+  height: $quick-search-list-height;
+  overflow: $quick-search-overflow;
+  padding: $quick-search-list-padding;
+}
+
+// Quick Search Footer
+.quick-search__footer {
+  @extend .text--center;
+  @include box-shadow($quick-search-footer-spread, $quick-search-footer-shadow);
+  @include position($quick-search-footer-position, $quick-search-footer-cords);
+  background-color: $quick-search-footer-background;
+  border-top: $quick-search-footer-border;
+  padding: $quick-search-footer-padding;
+  width: $quick-search-footer-width;
+}
+
+.quick-search__footer-text {
+  @extend .text--grey;
+  margin: 0;
+}

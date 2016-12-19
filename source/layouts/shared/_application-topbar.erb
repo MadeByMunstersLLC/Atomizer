@@ -5,7 +5,22 @@
     <% end %>
   </div>
   <div class="app-topbar__middle">
-    <input type="search" name="siteSearch" placeholder="Quickly lookup a scenario and launch its dashboard" class="input--search input--no-border" />
+    <input type="search" name="siteSearch" placeholder="Quickly lookup a scenario and launch its dashboard" class="input--search input--no-border" id="quick-search-input" />
+    <div class="quick-search__container">
+      <div class="quick-search__lists">
+        <% data.scenarios.business.each do |b| %>
+          <h6 class="form__label"><%= b.title %></h6>
+          <ul class="list">
+            <% b.scenario.each do |s| %>
+              <li class="item"><%= s.title %></li>
+            <% end %>
+          </ul>
+        <% end %>
+      </div>
+      <div class="quick-search__footer">
+        <p class="quick-search__footer-text">Tip: By press "/" at any time you will load the quick search tool.</p>
+      </div>
+    </div>
   </div>
   <div class="app-topbar__right">
     <ul class="right__list">
@@ -26,6 +41,12 @@
                 <a href="#" class="popout__link">
                   <%= inline_svg("icons/settings-icon.svg", class: 'popout__icon') %>
                   Application Settings
+                </a>
+              </li>
+              <li class="popout__item">
+                <a href="#" class="popout__link">
+                  <%= inline_svg("icons/file-icon.svg", class: 'popout__icon') %>
+                  Provide Feedback
                 </a>
               </li>
             </ul>

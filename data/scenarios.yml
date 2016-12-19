@@ -1,506 +1,490 @@
-scenario:
-  - title: SSL Order Process [Production]
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
-    business: DirecTV
-    status: active
-    is_favorite: true
-    stats:
-      - title: Modules
-        number: 100
-      - title: Rules
-        number: 25
-      - title: Variations
-        number: 3
-      - title: Tests
-        number: 2
-    updated_by: Kurt Cunningham
-    updated_by_img: ../images/misc/user-avatar-img.jpg
-    updated_on: An hour ago
-    test:
-      - title: Simplified Upgrade Test
-        test_scenario:
-          - title: Control Scenario
-            split: 50%
-            calls: 1,256
-            conversions: 200
-            percent: 16%
-          - title: Simplified SSL Process
-            split: 50%
-            calls: 1,255
-            conversions: 310
-            percent: 25%
-      - title: Upgrade Existing Customer
-        test_scenario:
-          - title: Control Scenario
-            split: 50%
-            calls: 1,256
-            conversions: 200
-            percent: 16%
-          - title: Simplified SSL Process
-            split: 50%
-            calls: 1,255
-            conversions: 310
-            percent: 25%
-  - title: Compatible Inkjet Cartridge You Choose
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
-    business: HughesNet
-    status: active
-    is_favorite: true
-    stats:
-      - title: Modules
-        number: 155
-      - title: Rules
-        number: 55
-      - title: Variations
-        number: 1
-      - title: Tests
-        number: 0
-    updated_by: Joey Kirk
-    updated_by_img: ../images/misc/user-avatar-2-img.jpg
-    updated_on: July 11, 2016
-    test:
-      - title: Simplified Upgrade Test
-        test_scenario:
-          - title: Control Scenario
-            split: 50%
-            calls: 1,256
-            conversions: 200
-            percent: 16%
-          - title: Simplified SSL Process
-            split: 50%
-            calls: 1,255
-            conversions: 310
-            percent: 25%
-      - title: Upgrade Existing Customer
-        test_scenario:
-          - title: Control Scenario
-            split: 50%
-            calls: 1,256
-            conversions: 200
-            percent: 16%
-          - title: Simplified SSL Process
-            split: 50%
-            calls: 1,255
-            conversions: 310
-            percent: 25%
-  - title: Headset No Longer Wired For Sound
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
-    business: HughesNet
-    status: in-active
-    is_favorite: true
-    stats:
-      - title: Modules
-        number: 100
-      - title: Rules
-        number: 25
-      - title: Variations
-        number: 3
-      - title: Tests
-        number: 0
-    updated_by: Joey Kirk
-    updated_by_img: ../images/misc/user-avatar-2-img.jpg
-    updated_on: 15 minutes ago
-    test:
-      - title: Simplified Upgrade Test
-        test_scenario:
-          - title: Control Scenario
-            split: 50%
-            calls: 1,256
-            conversions: 200
-            percent: 16%
-          - title: Simplified SSL Process
-            split: 50%
-            calls: 1,255
-            conversions: 310
-            percent: 25%
-      - title: Upgrade Existing Customer
-        test_scenario:
-          - title: Control Scenario
-            split: 50%
-            calls: 1,256
-            conversions: 200
-            percent: 16%
-          - title: Simplified SSL Process
-            split: 50%
-            calls: 1,255
-            conversions: 310
-            percent: 25%
-  - title: Clean And Organize Your Computer
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
-    business: HughesNet
-    status: active
-    is_favorite: true
-    stats:
-      - title: Modules
-        number: 65
-      - title: Rules
-        number: 12
-      - title: Variations
-        number: 4
-      - title: Tests
-        number: 0
-    updated_by: Kurt Cunningham
-    updated_by_img: ../images/misc/user-avatar-img.jpg
-    updated_on: Nov. 11, 2016
-    test:
-      - title: Simplified Upgrade Test
-        test_scenario:
-          - title: Control Scenario
-            split: 50%
-            calls: 1,256
-            conversions: 200
-            percent: 16%
-          - title: Simplified SSL Process
-            split: 50%
-            calls: 1,255
-            conversions: 310
-            percent: 25%
-      - title: Upgrade Existing Customer
-        test_scenario:
-          - title: Control Scenario
-            split: 50%
-            calls: 1,256
-            conversions: 200
-            percent: 16%
-          - title: Simplified SSL Process
-            split: 50%
-            calls: 1,255
-            conversions: 310
-            percent: 25%
-  - title: Convert Existing User To New Package
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
-    business: DirecTV
-    status: active
-    is_favorite: false
-    stats:
-      - title: Modules
-        number: 122
-      - title: Rules
-        number: 34
-      - title: Variations
-        number: 3
-      - title: Tests
-        number: 1
-    updated_by: Kurt Cunningham
-    updated_by_img: ../images/misc/user-avatar-img.jpg
-    updated_on: Oct. 12, 2016
-    test:
-      - title: Simplified Upgrade Test
-        test_scenario:
-          - title: Control Scenario
-            split: 50%
-            calls: 1,256
-            conversions: 200
-            percent: 16%
-          - title: Simplified SSL Process
-            split: 50%
-            calls: 1,255
-            conversions: 310
-            percent: 25%
-      - title: Upgrade Existing Customer
-        test_scenario:
-          - title: Control Scenario
-            split: 50%
-            calls: 1,256
-            conversions: 200
-            percent: 16%
-          - title: Simplified SSL Process
-            split: 50%
-            calls: 1,255
-            conversions: 310
-            percent: 25%
-  - title: V7 Digital Photo Printing
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
-    business: DirecTV
-    status: active
-    is_favorite: false
-    stats:
-      - title: Modules
-        number: 122
-      - title: Rules
-        number: 34
-      - title: Variations
-        number: 3
-      - title: Tests
-        number: 1
-    updated_by: Kurt Cunningham
-    updated_by_img: ../images/misc/user-avatar-img.jpg
-    updated_on: Oct. 12, 2016
-    test:
-      - title: Simplified Upgrade Test
-        test_scenario:
-          - title: Control Scenario
-            split: 50%
-            calls: 1,256
-            conversions: 200
-            percent: 16%
-          - title: Simplified SSL Process
-            split: 50%
-            calls: 1,255
-            conversions: 310
-            percent: 25%
-      - title: Upgrade Existing Customer
-        test_scenario:
-          - title: Control Scenario
-            split: 50%
-            calls: 1,256
-            conversions: 200
-            percent: 16%
-          - title: Simplified SSL Process
-            split: 50%
-            calls: 1,255
-            conversions: 310
-            percent: 25%
-  - title: Are You Ready To Buy A Home Theater
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
-    business: DirecTV
-    status: in-active
-    is_favorite: false
-    stats:
-      - title: Modules
-        number: 122
-      - title: Rules
-        number: 34
-      - title: Variations
-        number: 3
-      - title: Tests
-        number: 1
-    updated_by: Joey Kirk
-    updated_by_img: ../images/misc/user-avatar-2-img.jpg
-    updated_on: Oct. 12, 2016
-    test:
-      - title: Simplified Upgrade Test
-        test_scenario:
-          - title: Control Scenario
-            split: 50%
-            calls: 1,256
-            conversions: 200
-            percent: 16%
-          - title: Simplified SSL Process
-            split: 50%
-            calls: 1,255
-            conversions: 310
-            percent: 25%
-      - title: Upgrade Existing Customer
-        test_scenario:
-          - title: Control Scenario
-            split: 50%
-            calls: 1,256
-            conversions: 200
-            percent: 16%
-          - title: Simplified SSL Process
-            split: 50%
-            calls: 1,255
-            conversions: 310
-            percent: 25%
-  - title: Buying Used Electronic Test Equipment
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
-    business: DirecTV
-    status: in-active
-    is_favorite: false
-    stats:
-      - title: Modules
-        number: 122
-      - title: Rules
-        number: 34
-      - title: Variations
-        number: 3
-      - title: Tests
-        number: 1
-    updated_by: Joey Kirk
-    updated_by_img: ../images/misc/user-avatar-2-img.jpg
-    updated_on: Oct. 12, 2016
-    test:
-      - title: Simplified Upgrade Test
-        test_scenario:
-          - title: Control Scenario
-            split: 50%
-            calls: 1,256
-            conversions: 200
-            percent: 16%
-          - title: Simplified SSL Process
-            split: 50%
-            calls: 1,255
-            conversions: 310
-            percent: 25%
-      - title: Upgrade Existing Customer
-        test_scenario:
-          - title: Control Scenario
-            split: 50%
-            calls: 1,256
-            conversions: 200
-            percent: 16%
-          - title: Simplified SSL Process
-            split: 50%
-            calls: 1,255
-            conversions: 310
-            percent: 25%
-  - title: Myspace Layouts The Missing Element
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
-    business: DirecTV
-    status: in-active
-    is_favorite: false
-    stats:
-      - title: Modules
-        number: 122
-      - title: Rules
-        number: 34
-      - title: Variations
-        number: 3
-      - title: Tests
-        number: 1
-    updated_by: Kurt Cunningham
-    updated_by_img: ../images/misc/user-avatar-img.jpg
-    updated_on: Oct. 12, 2016
-    test:
-      - title: Simplified Upgrade Test
-        test_scenario:
-          - title: Control Scenario
-            split: 50%
-            calls: 1,256
-            conversions: 200
-            percent: 16%
-          - title: Simplified SSL Process
-            split: 50%
-            calls: 1,255
-            conversions: 310
-            percent: 25%
-      - title: Upgrade Existing Customer
-        test_scenario:
-          - title: Control Scenario
-            split: 50%
-            calls: 1,256
-            conversions: 200
-            percent: 16%
-          - title: Simplified SSL Process
-            split: 50%
-            calls: 1,255
-            conversions: 310
-            percent: 25%
-  - title: Are You Ready To Buy A Home Theater
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
-    business: DirecTV
-    status: active
-    is_favorite: false
-    stats:
-      - title: Modules
-        number: 122
-      - title: Rules
-        number: 34
-      - title: Variations
-        number: 3
-      - title: Tests
-        number: 1
-    updated_by: Joey Kirk
-    updated_by_img: ../images/misc/user-avatar-2-img.jpg
-    updated_on: Oct. 12, 2016
-    test:
-      - title: Simplified Upgrade Test
-        test_scenario:
-          - title: Control Scenario
-            split: 50%
-            calls: 1,256
-            conversions: 200
-            percent: 16%
-          - title: Simplified SSL Process
-            split: 50%
-            calls: 1,255
-            conversions: 310
-            percent: 25%
-      - title: Upgrade Existing Customer
-        test_scenario:
-          - title: Control Scenario
-            split: 50%
-            calls: 1,256
-            conversions: 200
-            percent: 16%
-          - title: Simplified SSL Process
-            split: 50%
-            calls: 1,255
-            conversions: 310
-            percent: 25%
-  - title: Buying Used Electronic Test Equipment
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
-    business: DirecTV
-    status: in-active
-    is_favorite: false
-    stats:
-      - title: Modules
-        number: 122
-      - title: Rules
-        number: 34
-      - title: Variations
-        number: 3
-      - title: Tests
-        number: 1
-    updated_by: Joey Kirk
-    updated_by_img: ../images/misc/user-avatar-2-img.jpg
-    updated_on: Oct. 12, 2016
-    test:
-      - title: Simplified Upgrade Test
-        test_scenario:
-          - title: Control Scenario
-            split: 50%
-            calls: 1,256
-            conversions: 200
-            percent: 16%
-          - title: Simplified SSL Process
-            split: 50%
-            calls: 1,255
-            conversions: 310
-            percent: 25%
-      - title: Upgrade Existing Customer
-        test_scenario:
-          - title: Control Scenario
-            split: 50%
-            calls: 1,256
-            conversions: 200
-            percent: 16%
-          - title: Simplified SSL Process
-            split: 50%
-            calls: 1,255
-            conversions: 310
-            percent: 25%
-  - title: Myspace Layouts The Missing Element
-    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
-    business: DirecTV
-    status: active
-    is_favorite: false
-    stats:
-      - title: Modules
-        number: 122
-      - title: Rules
-        number: 34
-      - title: Variations
-        number: 3
-      - title: Tests
-        number: 1
-    updated_by: Kurt Cunningham
-    updated_by_img: ../images/misc/user-avatar-img.jpg
-    updated_on: Oct. 12, 2016
-    test:
-      - title: Simplified Upgrade Test
-        test_scenario:
-          - title: Control Scenario
-            split: 50%
-            calls: 1,256
-            conversions: 200
-            percent: 16%
-          - title: Simplified SSL Process
-            split: 50%
-            calls: 1,255
-            conversions: 310
-            percent: 25%
-      - title: Upgrade Existing Customer
-        test_scenario:
-          - title: Control Scenario
-            split: 50%
-            calls: 1,256
-            conversions: 200
-            percent: 16%
-          - title: Simplified SSL Process
-            split: 50%
-            calls: 1,255
-            conversions: 310
-            percent: 25%
-            percent: 25%
+business:
+  - title: HughesNet
+    scenario:
+      - title: SSL Order Process [Production]
+        description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
+        business: HughesNet
+        status: active
+        is_favorite: true
+        stats:
+          - title: Modules
+            number: 100
+          - title: Rules
+            number: 25
+          - title: Tests
+            number: 2
+        updated_by: Kurt Cunningham
+        updated_by_img: ../images/misc/user-avatar-img.jpg
+        updated_on: An hour ago
+        test:
+          - title: SSL Order Process - Simplified
+            test_scenario:
+              - title: Control Scenario
+                split: 50%
+                calls: 1,256
+                conversions: 200
+                percent: 16%
+              - title: Simplified SSL Process
+                split: 50%
+                calls: 1,255
+                conversions: 310
+                percent: 25%
+          - title: Upgrade Existing Customer
+            test_scenario:
+              - title: Control Scenario
+                split: 50%
+                calls: 1,256
+                conversions: 200
+                percent: 16%
+              - title: Simplified SSL Process
+                split: 50%
+                calls: 1,255
+                conversions: 310
+                percent: 25%
+      - title: SSL Order Process - Mobile
+        description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
+        business: HughesNet
+        status: active
+        is_favorite: true
+        stats:
+          - title: Modules
+            number: 155
+          - title: Rules
+            number: 55
+          - title: Tests
+            number: 0
+        updated_by: Joey Kirk
+        updated_by_img: ../images/misc/user-avatar-2-img.jpg
+        updated_on: July 11, 2016
+        test:
+          - title: Simplified Upgrade Test
+            test_scenario:
+              - title: Control Scenario
+                split: 50%
+                calls: 1,256
+                conversions: 200
+                percent: 16%
+              - title: Simplified SSL Process
+                split: 50%
+                calls: 1,255
+                conversions: 310
+                percent: 25%
+          - title: Upgrade Existing Customer
+            test_scenario:
+              - title: Control Scenario
+                split: 50%
+                calls: 1,256
+                conversions: 200
+                percent: 16%
+              - title: Simplified SSL Process
+                split: 50%
+                calls: 1,255
+                conversions: 310
+                percent: 25%
+      - title: Upgrade Exisiting Customer - Mobile
+        description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
+        business: HughesNet
+        status: in-active
+        is_favorite: false
+        stats:
+          - title: Modules
+            number: 100
+          - title: Rules
+            number: 25
+          - title: Tests
+            number: 0
+        updated_by: Joey Kirk
+        updated_by_img: ../images/misc/user-avatar-2-img.jpg
+        updated_on: 15 minutes ago
+        test:
+          - title: Simplified Upgrade Test
+            test_scenario:
+              - title: Control Scenario
+                split: 50%
+                calls: 1,256
+                conversions: 200
+                percent: 16%
+              - title: Simplified SSL Process
+                split: 50%
+                calls: 1,255
+                conversions: 310
+                percent: 25%
+          - title: Upgrade Existing Customer
+            test_scenario:
+              - title: Control Scenario
+                split: 50%
+                calls: 1,256
+                conversions: 200
+                percent: 16%
+              - title: Simplified SSL Process
+                split: 50%
+                calls: 1,255
+                conversions: 310
+                percent: 25%
+      - title: Upgrade Exisiting Customer - Simplified
+        description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
+        business: HughesNet
+        status: active
+        is_favorite: false
+        stats:
+          - title: Modules
+            number: 65
+          - title: Rules
+            number: 12
+          - title: Variations
+            number: 4
+          - title: Tests
+            number: 0
+        updated_by: Kurt Cunningham
+        updated_by_img: ../images/misc/user-avatar-img.jpg
+        updated_on: Nov. 11, 2016
+        test:
+          - title: Simplified Upgrade Test
+            test_scenario:
+              - title: Control Scenario
+                split: 50%
+                calls: 1,256
+                conversions: 200
+                percent: 16%
+              - title: Simplified SSL Process
+                split: 50%
+                calls: 1,255
+                conversions: 310
+                percent: 25%
+          - title: Upgrade Existing Customer
+            test_scenario:
+              - title: Control Scenario
+                split: 50%
+                calls: 1,256
+                conversions: 200
+                percent: 16%
+              - title: Simplified SSL Process
+                split: 50%
+                calls: 1,255
+                conversions: 310
+                percent: 25%
+  - title: DirectTV
+    scenario:
+      - title: Convert Existing User To New Package
+        description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
+        business: DirectTV
+        status: active
+        is_favorite: false
+        stats:
+          - title: Modules
+            number: 122
+          - title: Rules
+            number: 34
+          - title: Tests
+            number: 1
+        updated_by: Kurt Cunningham
+        updated_by_img: ../images/misc/user-avatar-img.jpg
+        updated_on: Oct. 12, 2016
+        test:
+          - title: Simplified Upgrade Test
+            test_scenario:
+              - title: Control Scenario
+                split: 50%
+                calls: 1,256
+                conversions: 200
+                percent: 16%
+              - title: Simplified SSL Process
+                split: 50%
+                calls: 1,255
+                conversions: 310
+                percent: 25%
+          - title: Upgrade Existing Customer
+            test_scenario:
+              - title: Control Scenario
+                split: 50%
+                calls: 1,256
+                conversions: 200
+                percent: 16%
+              - title: Simplified SSL Process
+                split: 50%
+                calls: 1,255
+                conversions: 310
+                percent: 25%
+      - title: V7 Digital Photo Printing
+        description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
+        business: DirectTV
+        status: active
+        is_favorite: false
+        stats:
+          - title: Modules
+            number: 122
+          - title: Rules
+            number: 34
+          - title: Tests
+            number: 1
+        updated_by: Kurt Cunningham
+        updated_by_img: ../images/misc/user-avatar-img.jpg
+        updated_on: Oct. 12, 2016
+        test:
+          - title: Simplified Upgrade Test
+            test_scenario:
+              - title: Control Scenario
+                split: 50%
+                calls: 1,256
+                conversions: 200
+                percent: 16%
+              - title: Simplified SSL Process
+                split: 50%
+                calls: 1,255
+                conversions: 310
+                percent: 25%
+          - title: Upgrade Existing Customer
+            test_scenario:
+              - title: Control Scenario
+                split: 50%
+                calls: 1,256
+                conversions: 200
+                percent: 16%
+              - title: Simplified SSL Process
+                split: 50%
+                calls: 1,255
+                conversions: 310
+                percent: 25%
+      - title: Are You Ready To Buy A Home Theater
+        description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
+        business: DirectTV
+        status: in-active
+        is_favorite: false
+        stats:
+          - title: Modules
+            number: 122
+          - title: Rules
+            number: 34
+          - title: Tests
+            number: 1
+        updated_by: Joey Kirk
+        updated_by_img: ../images/misc/user-avatar-2-img.jpg
+        updated_on: Oct. 12, 2016
+        test:
+          - title: Simplified Upgrade Test
+            test_scenario:
+              - title: Control Scenario
+                split: 50%
+                calls: 1,256
+                conversions: 200
+                percent: 16%
+              - title: Simplified SSL Process
+                split: 50%
+                calls: 1,255
+                conversions: 310
+                percent: 25%
+          - title: Upgrade Existing Customer
+            test_scenario:
+              - title: Control Scenario
+                split: 50%
+                calls: 1,256
+                conversions: 200
+                percent: 16%
+              - title: Simplified SSL Process
+                split: 50%
+                calls: 1,255
+                conversions: 310
+                percent: 25%
+      - title: Buying Used Electronic Test Equipment
+        description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
+        business: DirectTV
+        status: in-active
+        is_favorite: false
+        stats:
+          - title: Modules
+            number: 122
+          - title: Rules
+            number: 34
+          - title: Tests
+            number: 1
+        updated_by: Joey Kirk
+        updated_by_img: ../images/misc/user-avatar-2-img.jpg
+        updated_on: Oct. 12, 2016
+        test:
+          - title: Simplified Upgrade Test
+            test_scenario:
+              - title: Control Scenario
+                split: 50%
+                calls: 1,256
+                conversions: 200
+                percent: 16%
+              - title: Simplified SSL Process
+                split: 50%
+                calls: 1,255
+                conversions: 310
+                percent: 25%
+          - title: Upgrade Existing Customer
+            test_scenario:
+              - title: Control Scenario
+                split: 50%
+                calls: 1,256
+                conversions: 200
+                percent: 16%
+              - title: Simplified SSL Process
+                split: 50%
+                calls: 1,255
+                conversions: 310
+                percent: 25%
+      - title: Myspace Layouts The Missing Element
+        description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
+        business: DirectTV
+        status: in-active
+        is_favorite: false
+        stats:
+          - title: Modules
+            number: 122
+          - title: Rules
+            number: 34
+          - title: Tests
+            number: 1
+        updated_by: Kurt Cunningham
+        updated_by_img: ../images/misc/user-avatar-img.jpg
+        updated_on: Oct. 12, 2016
+        test:
+          - title: Simplified Upgrade Test
+            test_scenario:
+              - title: Control Scenario
+                split: 50%
+                calls: 1,256
+                conversions: 200
+                percent: 16%
+              - title: Simplified SSL Process
+                split: 50%
+                calls: 1,255
+                conversions: 310
+                percent: 25%
+          - title: Upgrade Existing Customer
+            test_scenario:
+              - title: Control Scenario
+                split: 50%
+                calls: 1,256
+                conversions: 200
+                percent: 16%
+              - title: Simplified SSL Process
+                split: 50%
+                calls: 1,255
+                conversions: 310
+                percent: 25%
+      - title: Are You Ready To Buy A Home Theater
+        description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
+        business: DirectTV
+        status: active
+        is_favorite: false
+        stats:
+          - title: Modules
+            number: 122
+          - title: Rules
+            number: 34
+          - title: Tests
+            number: 1
+        updated_by: Joey Kirk
+        updated_by_img: ../images/misc/user-avatar-2-img.jpg
+        updated_on: Oct. 12, 2016
+        test:
+          - title: Simplified Upgrade Test
+            test_scenario:
+              - title: Control Scenario
+                split: 50%
+                calls: 1,256
+                conversions: 200
+                percent: 16%
+              - title: Simplified SSL Process
+                split: 50%
+                calls: 1,255
+                conversions: 310
+                percent: 25%
+          - title: Upgrade Existing Customer
+            test_scenario:
+              - title: Control Scenario
+                split: 50%
+                calls: 1,256
+                conversions: 200
+                percent: 16%
+              - title: Simplified SSL Process
+                split: 50%
+                calls: 1,255
+                conversions: 310
+                percent: 25%
+  - title: Verizon
+    scenario:
+      - title: Buying Used Electronic Test Equipment
+        description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
+        business: Verizon
+        status: in-active
+        is_favorite: false
+        stats:
+          - title: Modules
+            number: 122
+          - title: Rules
+            number: 34
+          - title: Tests
+            number: 1
+        updated_by: Joey Kirk
+        updated_by_img: ../images/misc/user-avatar-2-img.jpg
+        updated_on: Oct. 12, 2016
+        test:
+          - title: Simplified Upgrade Test
+            test_scenario:
+              - title: Control Scenario
+                split: 50%
+                calls: 1,256
+                conversions: 200
+                percent: 16%
+              - title: Simplified SSL Process
+                split: 50%
+                calls: 1,255
+                conversions: 310
+                percent: 25%
+          - title: Upgrade Existing Customer
+            test_scenario:
+              - title: Control Scenario
+                split: 50%
+                calls: 1,256
+                conversions: 200
+                percent: 16%
+              - title: Simplified SSL Process
+                split: 50%
+                calls: 1,255
+                conversions: 310
+                percent: 25%
+      - title: Myspace Layouts The Missing Element
+        description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
+        business: Verizon
+        status: active
+        is_favorite: false
+        stats:
+          - title: Modules
+            number: 122
+          - title: Rules
+            number: 34
+          - title: Tests
+            number: 1
+        updated_by: Kurt Cunningham
+        updated_by_img: ../images/misc/user-avatar-img.jpg
+        updated_on: Oct. 12, 2016
+        test:
+          - title: Simplified Upgrade Test
+            test_scenario:
+              - title: Control Scenario
+                split: 50%
+                calls: 1,256
+                conversions: 200
+                percent: 16%
+              - title: Simplified SSL Process
+                split: 50%
+                calls: 1,255
+                conversions: 310
+                percent: 25%
+          - title: Upgrade Existing Customer
+            test_scenario:
+              - title: Control Scenario
+                split: 50%
+                calls: 1,256
+                conversions: 200
+                percent: 16%
+              - title: Simplified SSL Process
+                split: 50%
+                calls: 1,255
+                conversions: 310
+                percent: 25%
+                percent: 25%

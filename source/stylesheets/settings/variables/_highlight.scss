@@ -8,8 +8,18 @@ $highlights: (
     solid
   ),
   'bravo': (
-    $white-dark,
+    #F0F0F1,
     $grey-dark,
+    dashed
+  ),
+  'charlie': (
+    $red-light,
+    $red-base,
+    dashed
+  ),
+  'delta': (
+    $green-light,
+    $green-base,
     dashed
   )
 );

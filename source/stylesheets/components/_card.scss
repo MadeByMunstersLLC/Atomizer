@@ -11,6 +11,7 @@ $card-overflow:                 hidden;
 $card-padding:                  $spacer-charlie;
 $card-position:                 relative;
 $card-radius:                   1px;
+$card-text-align:               left;
 
 $card-margin-small:             0 0 $spacer-delta;
 $card-padding-small:            $spacer-delta;
@@ -21,6 +22,8 @@ $card-padding-extra-small:      10px $spacer-delta;
 $card-draggable-shadow:         rgba(48, 54, 67, 0.1);
 $card-draggable-spread:         0 0 10px;
 $card-draggable-transition:     all 0.5s ease;
+
+$card-draggable-shadow-dark:    rgba(0, 0, 0, 0.5);
 
 $card-title-margin:             $spacer-delta;
 $card-title-padding:            $spacer-delta;
@@ -47,6 +50,7 @@ $card-icon-size:                80px;
   display: $card-display;
   margin: $card-margin;
   padding: $card-padding;
+  text-align: $card-text-align;
 }
 
 // Card Styles
@@ -77,6 +81,10 @@ $card-icon-size:                80px;
 
 .card--shadow {
   @include box-shadow($card-draggable-spread, $card-draggable-shadow);
+}
+
+.card--shadow-dark {
+  @include box-shadow($card-draggable-spread, $card-draggable-shadow-dark);
 }
 
 
