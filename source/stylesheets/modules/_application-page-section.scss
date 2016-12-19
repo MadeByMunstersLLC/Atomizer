@@ -62,12 +62,12 @@ $page-main-header-right-float: right;
   }
 }
 
+// Page Section Divider
 .page-section__divider {
   border: none;
   border-bottom: $page-sidebar-border;
   margin: $spacer-alpha 0;
 }
-
 
 // Page Section Sidebar
 .page-sidebar {
@@ -130,7 +130,7 @@ $page-main-header-right-float: right;
   &.is-active {
     width: 100%;
 
-    .search-input{
+    .search-input {
       @include position(absolute, -13px null null 0);
       display: block;
       width: 90%;
@@ -154,7 +154,6 @@ $page-main-header-right-float: right;
   }
 }
 
-
 // Page Section Main
 .page-main {
   @include position($page-main-position, $page-main-cords);
@@ -173,18 +172,22 @@ $page-main-header-right-float: right;
     height: $page-overflow-height;
   }
 
+  // Full Page
   &.page-main--full {
     width: 100%;
   }
 
+  // Sidebar Right
   &.page-main--left {
     left: 0;
   }
 
+  // Sidebar Left
   &.page-main--right {
     left: 25%;
   }
 
+  // Sidebar Left and Right
   &.page-main--middle {
     left: 18%;
     right: 25%;
@@ -192,6 +195,23 @@ $page-main-header-right-float: right;
   }
 }
 
+// Page Section Main Half (Split Panel Layout)
+.page-main--half {
+  width: 50%;
+
+  &.page-main--half-left {
+    border-right: $page-sidebar-border;
+    left: 0;
+    padding-right: $spacer-charlie;
+  }
+
+  &.page-main--half-right {
+    left: 50%;
+    padding-left: $spacer-charlie;
+  }
+}
+
+// Page Section Main Header
 .page-main__header {
   margin-bottom: $page-main-header-margin;
 
@@ -241,6 +261,7 @@ $page-main-header-right-float: right;
   }
 }
 
+// Page Section Main Content
 .page-main__content {
   @include clearfix;
 }

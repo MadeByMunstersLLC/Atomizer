@@ -94,6 +94,10 @@ $chip-text-line-height:   1.25;
     height: $chip-image-size-sm;
     width: $chip-image-size-sm;
   }
+
+  .no-avatar {
+    @include center($horizontal: true, $vertical: true);
+  }
 }
 
 

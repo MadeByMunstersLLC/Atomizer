@@ -1,0 +1,45 @@
+<section role="region" aria-label="Scenario History" id="tab-4" class="page-section page-section--header-offset tab__content">
+  <div class="page-main page-main--half page-main--half-left">
+    <header role="banner" class="page-main__header">
+      <div class="page-main__header--left">
+        <h2 class="title">Current Scenario</h2>
+      </div>
+    </header>
+    <div class="page-main--half-left">
+      <div class="page-main__content">
+        <%= partial "scenario/partials/_scenario-history-current-version" %>
+      </div>
+    </div>
+  </div>
+  <div class="page-main page-main--half page-main--half-right">
+    <div class="">
+      <header role="banner" class="page-main__header">
+        <div class="page-main__header--left">
+          <h2 class="title">Compare Scenario</h2>
+        </div>
+        <div class="page-main__header--right">
+          <ul class="list">
+            <li class="item">
+              <select class="select--small">
+                <option disabled="disabled" selected="selected">Select A Version</option>
+                <option>Version 10</option>
+                <option>Version 9</option>
+                <option>Version 8</option>
+                <option>Version 7</option>
+                <option>Version 6</option>
+                <option>Version 5</option>
+                <option>Version 4</option>
+                <option>Version 3</option>
+                <option>Version 2</option>
+                <option>Version 1</option>
+              </select>
+            </li>
+            <li class="item">
+              <a href="#" class="button--disabled button--small">Make Current</a>
+            </li>
+          </ul>
+        </div>
+      </header>
+    </div>
+  </div>
+</section>

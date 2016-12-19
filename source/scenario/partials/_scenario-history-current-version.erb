@@ -1,0 +1,54 @@
+<div class="card card--small">
+  <h6 class="form__label">Release Note</h6>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <ul class="row">
+    <li class="form__label margin-reset--bottom float--left margin-right--charlie">Last Modified: Oct. 12, 2016</li>
+    <li class="form__label margin-reset--bottom float--left margin-right--charlie">Total Modules: 100</li>
+    <li class="form__label margin-reset--bottom float--left">Total Rules: 86</li>
+  </ul>
+</div>
+<table class="card-table">
+  <thead class="card-table__header">
+    <tr>
+      <th class="card-item card-item--large">Module Name</th>
+      <th class="card-item">Modified Last</th>
+      <th class="card-item">Version</th>
+      <th class="card-item">Rules</th>
+    </tr>
+  </thead>
+  <tbody class="card-table__body">
+    <% data.scenario_modules.module.each do |m| %>
+      <tr class="card card--small">
+        <td class="card-item card-item--large">
+          <h4 class="title"><%= m.title %></h4>
+        </td>
+        <td class="card-item">
+          <div class="chip margin--reset">
+            <div class="chip--left">
+              <div class="chip__image chip__image--small">
+                <% if m.update_image %>
+                  <%= image_tag m.update_image, class: 'image' %>
+                <% else %>
+                  <span class="avatar no-avatar"><%= m.updated_by[0] %></span>
+                <% end %>
+              </div>
+            </div>
+            <div class="chip--right margin-reset--top margin-right--echo">
+              <p class="chip__text margin-reset--bottom"><%= m.updated_by %><br/><%= m.updated_on %></p>
+            </div>
+          </div>
+        </td>
+        <td class="card-item"><%= m.version %></td>
+        <td class="card-item">
+          <% if m.rules_present %>
+            <%= m.rules %>
+          <% else %>
+            0 Rules
+          <% end %>
+        </td>
+      </tr>
+      <tr class="spacer"></tr>
+    <% end %>
+  </tbody>
+</table>
