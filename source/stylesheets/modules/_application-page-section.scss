@@ -130,11 +130,6 @@ $page-main-content-icon-size:       80px;
     display: none;
   }
 
-  // Change Text Size
-  input {
-    @include s-hotel;
-  }
-
   // Show Search Bar When Header Active
   &.is-active {
     width: 100%;
@@ -258,6 +253,7 @@ $page-main-content-icon-size:       80px;
 
       input,
       select {
+        @include s-golf;
         height: 30px;
         margin-bottom: 0;
         margin-top: 0;

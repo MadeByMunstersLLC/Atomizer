@@ -1,0 +1,57 @@
+<section role="region" aria-label="Manage Tags" id="tab-3" class="page-section page-section--header-offset tab__content">
+  <div class="page-main page-main--full">
+    <header class="page-main__header margin-bottom--bravo">
+      <div class="page-main__header--left">
+        <h2 class="title">Manage Tags</h2>
+      </div>
+      <div class="page-main__header--right">
+        <ul class="list">
+          <li class="item">
+            <input type="search" placeholder="Look up a tag">
+          </li>
+          <li class="item">
+            <a href="#" class="button--alpha button--small modal__trigger" data-modal="addTag">Add Tag</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <table class="table">
+      <thead class="table__header">
+        <tr>
+          <th class="table__header-item">Tag Name</th>
+          <th class="table__header-item">Description</th>
+          <th class="table__header-item">Color</th>
+          <th class="table__header-item">Scenarios</th>
+          <th class="table__header-item">Actions</th>
+        </tr>
+      </thead>
+      <tbody class="table__body">
+        <% data.tags.tag.each_with_index do |t, i| %>
+          <tr>
+            <td class="table__body-item table__body-item--small" width="20%"><%= t.title %></td>
+            <td class="table__body-item table__body-item--small" width="60%"><%= t.description %></td>
+            <td class="table__body-item table__body-item--small" width="10%">
+              <i class="indicator--<%= t.color_indicator %>"></i>
+              <%= t.color_title %>
+            </td>
+            <td class="table__body-item table__body-item--small"><%= t.scenarios %></td>
+            <td class="table__body-item table__body-item--small">
+              <% link_to '#', class: 'table__body-trigger modal__trigger', data: {modal: "editTag#{i}"} do %>
+                <%= inline_svg("icons/edit-icon.svg") %>
+              <% end %>
+              <% link_to '#', class: 'table__body-trigger modal__trigger', data: {modal: "deleteTag#{i}"} do %>
+                <%= inline_svg("icons/trash-icon.svg") %>
+              <% end %>
+              <!-- Delete Tag Modal -->
+              <%= partial "app_settings/partials/app_settings-tags-delete-modal", locals:{t:t, i:i} %>
+              <!-- Edit Tag Modal -->
+              <%= partial "app_settings/partials/app_settings-tags-edit-modal", locals:{t:t, i:i} %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</section>
+<!-- Add Tag Modal -->
+<%= partial "app_settings/partials/app_settings-tags-add-modal" %>

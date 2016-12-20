@@ -1,0 +1,29 @@
+<div class="modal" aria-hidden="true" data-modal="addBusiness">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <%= inline_svg("icons/close-icon.svg", class: "modal__close-icon") %>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Add New Business</h3>
+          <p class="modal-intro">Please fill out all of the form fields below and then submit the form.</p>
+        </header>
+        <div class="modal__body-content">
+          <label class="form__label">Business' Name</label>
+          <input type="text" placeholder="Enter new business' name" />
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--alpha">Add Business</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

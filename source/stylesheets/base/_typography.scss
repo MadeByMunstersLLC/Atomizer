@@ -111,5 +111,10 @@ em {
 
 // Text Clickable
 .clickable {
+  @include transition(opacity 0.5s ease);
   cursor: pointer;
+
+  &:hover {
+    opacity: 0.75;
+  }
 }

@@ -1,0 +1,46 @@
+<div class="modal" aria-hidden="true" data-modal="editTag<%= i %>">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <%= inline_svg("icons/close-icon.svg", class: "modal__close-icon") %>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Edit Tag</h3>
+          <p class="modal-intro">Please fill out all of the form fields below. Don't worry you can edit the tag later if you need to make a change.</p>
+        </header>
+        <div class="modal__body-content">
+          <form>
+            <fieldset>
+              <label class="form__label">Tag Name</label>
+              <input type="text" value="<%= t.title %>" />
+            </fieldset>
+            <fieldset>
+              <label class="form__label">Short Description</label>
+              <textarea><%= t.description %></textarea>
+            </fieldset>
+            <fieldset>
+              <label class="form__label">Tag Color</label>
+              <select>
+                <option disabled="disabled">Please Select One</option>
+                <% data.tags.tag_colors.each do |c| %>
+                  <option <%= 'selected' if t.color_title === c.title  %>><%= c.title %></option>
+                <% end %>
+              </select>
+            </fieldset>
+          </form>
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--disabled">Update Tag</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

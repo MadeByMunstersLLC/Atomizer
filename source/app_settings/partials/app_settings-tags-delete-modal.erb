@@ -1,0 +1,29 @@
+<div class="modal" aria-hidden="true" data-modal="deleteTag<%= i %>">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <%= inline_svg("icons/close-icon.svg", class: "modal__close-icon") %>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Are you sure about this move?</h3>
+          <p class="modal-intro">You are about to perform an action that cannot be undone. Once you have deleted this tag it will be removed from all scenarios in the system. Please type the tag name to continue</p>
+        </header>
+        <div class="modal__body-content">
+          <label class="form__label">Enter Tag Name</label>
+          <input type="text" placeholder="<%= t.title %>" />
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--charlie">Delete Tag</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

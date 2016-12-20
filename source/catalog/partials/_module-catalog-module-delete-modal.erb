@@ -1,0 +1,29 @@
+<div class="modal" aria-hidden="true" data-modal="deleteModule<%= i %>">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <%= inline_svg("icons/close-icon.svg", class: "modal__close-icon") %>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Are you sure about this move?</h3>
+          <p class="modal-intro">You are about to perform an action that cannot be undone. It will remove the module from all scenarios it is asscoiated with. Please enter the module's name to confirm you want to delete it.</p>
+        </header>
+        <div class="modal__body-content">
+          <label class="form__label">Enter Module's Name</label>
+          <input type="text" placeholder="<%= m.title %>" />
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--charlie">Delete Module</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

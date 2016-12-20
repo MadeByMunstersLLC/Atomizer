@@ -1,0 +1,58 @@
+<div class="modal" aria-hidden="true" data-modal="editBusiness<%= i %>">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <%= inline_svg("icons/close-icon.svg", class: "modal__close-icon") %>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Update Business</h3>
+          <p class="modal-intro">Below you will find the fields you can update for a given business. Once you have updated the fields you will be able to save them.</p>
+        </header>
+        <div class="modal__body-content">
+          <form>
+            <fieldset>
+              <label class="form__label">Update Business' Name</label>
+              <input type="text" placeholder="<%= b.title %>" />
+            </fieldset>
+            <fieldset>
+              <label class="form__label">Add Associated Business</label>
+              <select>
+                <option selected="selected" disabled="disabled">Select Business To Add</option>
+                <% data.scenarios.business.each do |b| %>
+                  <option><%= b.title %></option>
+                <% end %>
+              </select>
+            </fieldset>
+          </form>
+          <div class="list__container">
+            <ul class="row">
+              <li class="columns-10__l form__label">Business Name</li>
+              <li class="columns-2__l form__label">Action</li>
+            </ul>
+            <ul class="row">
+              <li class="columns-12__l clearfix margin-bottom--delta hide-element">
+                <ul>
+                  <li class="columns-10__l">AT&amp;T</li>
+                  <li class="columns-2__l">
+                    <a href="#" class="link--charlie hide-link">Remove</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--disabled">Update Business</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -4,11 +4,14 @@ $(document).ready(function(){
   $('.tabs ul li').on('click', function(e) {
     e.preventDefault();
     var tabID = $(this).attr('data-tab'),
-        $tabContent = $('.tab__content');
-        $tabLink = $('.tab__item');
+        $tabContent = $("#" + tabID).siblings('.tab__content');
+        $tabLink = $(this).siblings();
         activeClass = 'is-active';
 
-    $tabLink.removeClass(activeClass);
+    $.each($tabLink, function(i, item) {
+      $(item).removeClass(activeClass);
+    })
+
     $tabContent.removeClass(activeClass);
 
     $(this).addClass(activeClass);

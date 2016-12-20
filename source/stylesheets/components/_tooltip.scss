@@ -6,7 +6,7 @@
 $tooltip-align:              center;
 $tooltip-background:         $white-base;
 $tooltip-margin:             0 auto;
-$tooltip-offset:             null -7em 2.5em null;
+$tooltip-offset:             null 0 2em -4em;
 $tool-tip-opacity-0:         0;
 $tool-tip-opacity-1:         1;
 $tooltip-position:           absolute;
@@ -34,7 +34,6 @@ $tooltip-text-shadow-spread: 0 5px 10px;
 // Structure
 .tooltip__item {
   @include position($tooltip-item-position);
-  display: $tooltip-item-display;
 
   &:focus,
   &:hover .tooltip {

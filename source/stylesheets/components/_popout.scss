@@ -5,9 +5,11 @@
 $popout-cords:                  30px 0 null null;
 $popout-opacity:                0;
 $popout-position:               absolute;
-$popout-transition:             opacity 0.75s ease;
+$popout-transition:             opacity 0.5s ease;
 $popout-shadow:                 rgba(35,35,35,0.20);
 $popout-spread:                 0 0 15px;
+$popout-visibility:             hidden;
+$popout-visibility-active:      visible;
 $popout-z-index:                -1;
 
 $popout-inverse-cords:          null 0 20px null;
@@ -41,10 +43,12 @@ $popout-link-white-space:       nowrap;
   @include transition($popout-transition);
   @include position($popout-position, $popout-cords);
   opacity: $popout-opacity;
+  visibility: $popout-visibility;
   z-index: $popout-z-index;
 
   &.is-active {
     opacity: $popout-opacity-active;
+    visibility: $popout-visibility-active;
     z-index: $popout-z-index-active;
   }
 

@@ -1,0 +1,43 @@
+<form>
+  <fieldset>
+    <label class="form__label">Select Business</label>
+    <select>
+      <option selected="selected" disabled="disabled">Please Select One</option>
+      <% data.scenarios.business.each do |b| %>
+        <option><%= b.title %></option>
+      <% end %>
+    </select>
+  </fieldset>
+  <fieldset>
+    <label class="form__label">Select Term Group</label>
+    <select>
+      <option selected="selected" disabled="disabled">Please Select One</option>
+        <option>Term Group A</option>
+        <option>Term Group B</option>
+        <option>Term Group C</option>
+        <option>Term Group D</option>
+        <option>Term Group E</option>
+        <option>Term Group F</option>
+    </select>
+  </fieldset>
+  <fieldset>
+    <label class="form__label">Title</label>
+    <input type="text" placeholder="Enter title" />
+  </fieldset>
+  <fieldset>
+    <label class="form__label">Object Path</label>
+    <input type="text" placeholder="Enter path" />
+  </fieldset>
+  <fieldset>
+    <label class="form__label">Add Selectors</label>
+    <select>
+      <option selected="selected" disabled="disabled">Select All That Apply</option>
+        <option>Equal To</option>
+        <option>More Than</option>
+        <option>Less Than</option>
+        <option>One Of</option>
+        <option>Only</option>
+    </select>
+  </fieldset>
+  <input type="submit" value="Add Configuration" class="button--disabled button--full" />
+</form>

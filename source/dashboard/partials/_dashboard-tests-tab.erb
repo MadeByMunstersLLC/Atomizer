@@ -57,14 +57,14 @@
       </div>
     </header>
     <div class="page-main__content">
-      <ul>
+      <ul class="list">
         <li class="highlight--alpha highlight__text--lead">IF</li>
         <li class="highlight--bravo">
           <span>Agent ID <span class="highlight__text--heavy"> is one of</span> 1, 2, 3</span>
           <span class="highlight__text--right">Configuration ID: 7765</span>
           <div class="highlight__card">
             <h4 id="show-test-details" class="highlight__card-title clickable">Streamlined SSL</h4>
-            <% link_to "#{config[:root_url] ? config[:root_url] : '/'}scenario/", class: "highlight__card-action" do %>
+            <% link_to "#{config[:root_url] ? config[:root_url] : '/'}scenario/test", class: "highlight__card-action" do %>
               <%= inline_svg("icons/edit-icon.svg") %>
             <% end %>
           </div>

@@ -1,0 +1,82 @@
+<section role="region" aria-label="Manage Configurations" id="tab-2" class="page-section page-section--header-offset tab__content">
+  <div class="page-main page-main--left">
+    <header class="page-main__header margin-bottom--bravo">
+      <div class="page-main__header--left">
+        <h2 class="title">Manage Decry Configurations</h2>
+      </div>
+      <div class="page-main__header--right">
+        <ul class="list">
+          <li class="item">
+            <input type="search" placeholder="Look up a configuration">
+          </li>
+          <li class="item">
+            <select>
+              <option disabled="disabled">Select A Business</option>
+              <% data.scenarios.business.each do |b| %>
+                <option <%= "selected" if b.title === "HughesNet" %>><%= b.title %></option>
+              <% end %>
+            </select>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <table class="table">
+      <thead class="table__header">
+        <tr>
+          <th class="table__header-item">Term Name</th>
+          <th class="table__header-item">Term Group</th>
+          <th class="table__header-item">Object Path</th>
+          <th class="table__header-item">Selectors</th>
+          <th class="table__header-item">Actions</th>
+        </tr>
+      </thead>
+      <tbody class="table__body">
+        <% (1..100).each do |i| %>
+          <tr>
+            <td class="table__body-item table__body-item--small" width="40%">Term Title Sample</td>
+            <td class="table__body-item table__body-item--small">Group Title</td>
+            <td class="table__body-item table__body-item--small">Object.pathName.here</td>
+            <td class="table__body-item table__body-item--small tooltip__item">
+              2 Selectors
+              <figure class="tooltip">
+                <p class="tooltip__text">Equal To</p>
+                <p class="tooltip__text">Contains</p>
+              </figure>
+            </td>
+            <td class="table__body-item table__body-item--small" width="5%">
+              <% link_to '#', class: 'table__body-trigger modal__trigger', data: {modal: "editConfig#{i}"} do %>
+                <%= inline_svg("icons/edit-icon.svg") %>
+              <% end %>
+              <% link_to '#', class: 'table__body-trigger modal__trigger', data: {modal: "deleteConfig#{i}"} do %>
+                <%= inline_svg("icons/trash-icon.svg") %>
+              <% end %>
+              <!-- Delete Tag Modal -->
+              <%= partial "app_settings/partials/app_settings-config-delete-modal", locals:{i:i} %>
+              <!-- Edit Tag Modal -->
+              <%= partial "app_settings/partials/app_settings-config-edit-modal", locals:{i:i} %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <aside role="complementary" class="page-sidebar page-sidebar--right">
+    <header role="banner" class="page-sidebar__header">
+      <h2 class="title">Manage Configurations</h2>
+    </header>
+    <div class="tabs">
+      <ul class="tab__list">
+        <li class="tab__item is-active" data-tab="tab-add">Add Config</li>
+        <li class="tab__item" data-tab="tab-edit">Edit Groups</li>
+      </ul>
+    </div>
+    <div class="page-sidebar__content tab__content is-active" id="tab-add">
+      <%= partial "app_settings/partials/app_settings-config-add-form" %>
+    </div>
+    <div class="page-sidebar__content tab__content" id="tab-edit">
+      <%= partial "app_settings/partials/app_settings-config-edit-form" %>
+    </div>
+  </aside>
+</section>
+<!-- Add Tag Modal -->
+<%= partial "app_settings/partials/app_settings-tags-add-modal" %>

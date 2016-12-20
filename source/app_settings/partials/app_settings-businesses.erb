@@ -10,7 +10,7 @@
             <input type="search" placeholder="Look up a business">
           </li>
           <li class="item">
-            <a href="#" class="button--alpha button--small">Add Business</a>
+            <a href="#" class="button--alpha button--small modal__trigger" data-modal="addBusiness">Add Business</a>
           </li>
         </ul>
       </div>
@@ -24,17 +24,21 @@
         </tr>
       </thead>
       <tbody class="table__body">
-        <% data.scenarios.business.each do |b| %>
+        <% data.scenarios.business.each_with_index do |b, i| %>
           <tr>
             <td class="table__body-item table__body-item--small" width="70%"><%= b.title %></td>
             <td class="table__body-item table__body-item--small" width="20%">250</td>
             <td class="table__body-item table__body-item--small" width="10%">
-              <% link_to '#', class: 'table__body-trigger' do %>
+              <% link_to '#', class: 'table__body-trigger modal__trigger', data: {modal: "editBusiness#{i}"} do %>
                 <%= inline_svg("icons/edit-icon.svg") %>
               <% end %>
-              <% link_to '#', class: 'table__body-trigger' do %>
+              <% link_to '#', class: 'table__body-trigger modal__trigger', data: {modal: "deleteBusiness#{i}"} do %>
                 <%= inline_svg("icons/trash-icon.svg") %>
               <% end %>
+              <!-- Delete Business Modal -->
+              <%= partial "app_settings/partials/app_settings-businesses-delete-modal", locals: {b:b, i:i} %>
+              <!-- Edit Business Modal -->
+              <%= partial "app_settings/partials/app_settings-businesses-edit-modal", locals: {b:b, i:i} %>
             </td>
           </tr>
         <% end %>
@@ -42,3 +46,5 @@
     </table>
   </div>
 </section>
+<!-- Add Business Modal -->
+<%= partial "app_settings/partials/app_settings-businesses-add-modal" %>

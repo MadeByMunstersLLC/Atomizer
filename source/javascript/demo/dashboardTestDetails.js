@@ -27,7 +27,7 @@ $showDetails.on('click', function () {
   });
 
   // Add Class For Hightlights
-  $.each($('li.highlight--bravo'), function (i) {
+  $.each($('.highlight-test li.highlight--bravo'), function (i) {
     if(i === 5) {
       $(this).addClass('highlight--charlie');
     } else {

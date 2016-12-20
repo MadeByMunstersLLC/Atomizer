@@ -32,7 +32,7 @@
         </tr>
       </thead>
       <tbody class="card-table__body">
-        <% data.scenario_modules.module.each do |m| %>
+        <% data.scenario_modules.module.each_with_index do |m, i| %>
           <tr class="card card-list">
             <td class="card-item card-item--large"><h4 class="title"><%= m.title %></h4></td>
             <td class="card-item">HughesNet</td>
@@ -54,12 +54,14 @@
             </td>
             <td class="card-item"><%= m.version %></td>
             <td class="card-item__actions">
-              <% link_to '#', class: 'link' do %>
+              <% link_to '#', class: 'link margin-right--delta' do %>
                 <%= inline_svg("icons/edit-icon.svg") %>
               <% end %>
-              <% link_to '#', class: 'link' do %>
+              <% link_to '#', class: 'link modal__trigger', data: {modal: "deleteModule#{i}"} do %>
                 <%= inline_svg("icons/trash-icon.svg") %>
               <% end %>
+              <!-- Delete Module Modal -->
+              <%= partial "catalog/partials/module-catalog-module-delete-modal", locals: {m:m, i:i} %>
             </td>
           </tr>
           <tr class="spacer"></tr>

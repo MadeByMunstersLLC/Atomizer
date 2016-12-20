@@ -1,0 +1,29 @@
+tag:
+  - title: Production
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum maximus, est id luctus feugiat.
+    color_title: Green
+    color_indicator: alpha
+    scenarios: 200
+  - title: Staging
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum maximus, est id luctus feugiat.
+    color_title: Yellow
+    color_indicator: bravo
+    scenarios: 15
+  - title: Beta
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum maximus, est id luctus feugiat.
+    color_title: Purple
+    color_indicator: delta
+    scenarios: 36
+  - title: Depercated
+    description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum maximus, est id luctus feugiat.
+    color_title: Red
+    color_indicator: charlie
+    scenarios: 354
+
+
+tag_colors:
+  - title: Green
+  - title: Yellow
+  - title: Red
+  - title: Purple
+  - title: Blue

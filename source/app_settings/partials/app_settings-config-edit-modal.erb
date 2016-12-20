@@ -1,0 +1,71 @@
+<div class="modal" aria-hidden="true" data-modal="editConfig<%= i %>">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <%= inline_svg("icons/close-icon.svg", class: "modal__close-icon") %>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Edit Decry Config</h3>
+          <p class="modal-intro">Please review the content below and update any fields you think need to be fixed. These changes will go live immediately after saving.</p>
+        </header>
+        <div class="modal__body-content">
+          <form>
+            <fieldset>
+              <div class="columns-6__l">
+                <label class="form__label">Edit Title</label>
+                <input type="text" value="Term Title Sample" />
+              </div>
+              <div class="columns-6__l">
+                <label class="form__label">Edit Term Group</label>
+                <select>
+                  <option>Term Group A</option>
+                  <option>Term Group B</option>
+                  <option>Term Group C</option>
+                  <option>Term Group D</option>
+                </select>
+              </div>
+            </fieldset>
+            <fieldset>
+              <label class="form__label">Edit Object Path</label>
+              <input type="text" value="object.pathName.here" />
+            </fieldset>
+            <fieldset>
+              <label class="form__label">Add or Remove Selectors</label>
+              <select>
+                <option selected="selected" disabled="disabled">Select All That Apply</option>
+                <option>Equal To</option>
+                <option>More Than</option>
+                <option>Less Than</option>
+                <option>One Of</option>
+                <option>Only</option>
+              </select>
+            </fieldset>
+          </form>
+          <ul>
+            <li class="form__label columns-3__s">Name</li>
+            <li class="form__label columns-1__s">Action</li>
+          </ul>
+          <ul>
+            <li class="columns-3__s">Contains</li>
+            <li class="columns-1__s"><a href="#" class="link--charlie">Remove</a></li>
+          </ul>
+          <ul>
+            <li class="columns-3__s">Equals</li>
+            <li class="columns-1__s"><a href="#" class="link--charlie">Remove</a></li>
+          </ul>
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--charlie">Update Configuration</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
