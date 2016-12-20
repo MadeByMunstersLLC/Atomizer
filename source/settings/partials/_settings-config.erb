@@ -51,9 +51,9 @@
                 <%= inline_svg("icons/trash-icon.svg") %>
               <% end %>
               <!-- Delete Tag Modal -->
-              <%= partial "app_settings/partials/app_settings-config-delete-modal", locals:{i:i} %>
+              <%= partial "settings/partials/_settings-config-delete-modal", locals:{i:i} %>
               <!-- Edit Tag Modal -->
-              <%= partial "app_settings/partials/app_settings-config-edit-modal", locals:{i:i} %>
+              <%= partial "settings/partials/_settings-config-edit-modal", locals:{i:i} %>
             </td>
           </tr>
         <% end %>
@@ -71,12 +71,12 @@
       </ul>
     </div>
     <div class="page-sidebar__content tab__content is-active" id="tab-add">
-      <%= partial "app_settings/partials/app_settings-config-add-form" %>
+      <%= partial "settings/partials/_settings-config-add-form" %>
     </div>
     <div class="page-sidebar__content tab__content" id="tab-edit">
-      <%= partial "app_settings/partials/app_settings-config-edit-form" %>
+      <%= partial "settings/partials/_settings-config-edit-form" %>
     </div>
   </aside>
 </section>
 <!-- Add Tag Modal -->
-<%= partial "app_settings/partials/app_settings-tags-add-modal" %>
+<%= partial "settings/partials/_settings-tags-add-modal" %>

@@ -29,22 +29,18 @@
             <td class="table__body-item table__body-item--small" width="70%"><%= b.title %></td>
             <td class="table__body-item table__body-item--small" width="20%">250</td>
             <td class="table__body-item table__body-item--small" width="10%">
-              <% link_to '#', class: 'table__body-trigger modal__trigger', data: {modal: "editBusiness#{i}"} do %>
-                <%= inline_svg("icons/edit-icon.svg") %>
-              <% end %>
-              <% link_to '#', class: 'table__body-trigger modal__trigger', data: {modal: "deleteBusiness#{i}"} do %>
-                <%= inline_svg("icons/trash-icon.svg") %>
-              <% end %>
-              <!-- Delete Business Modal -->
-              <%= partial "app_settings/partials/app_settings-businesses-delete-modal", locals: {b:b, i:i} %>
-              <!-- Edit Business Modal -->
-              <%= partial "app_settings/partials/app_settings-businesses-edit-modal", locals: {b:b, i:i} %>
+              <a href="#" class="table__body-trigger modal__trigger" data-modal="editBusiness<%= i %>"><%= inline_svg("icons/edit-icon.svg") %></a>
+              <a href="#" class="table__body-trigger modal__trigger" data-modal="deleteBusiness<%= i %>"><%= inline_svg("icons/trash-icon.svg") %></a>
             </td>
           </tr>
+          <!-- Delete Business Modal -->
+          <%= partial "settings/partials/_settings-businesses-delete-modal", locals: {b:b, i:i} %>
+          <!-- Edit Business Modal -->
+          <%= partial "settings/partials/_settings-businesses-edit-modal", locals: {b:b, i:i} %>
         <% end %>
       </tbody>
     </table>
   </div>
 </section>
 <!-- Add Business Modal -->
-<%= partial "app_settings/partials/app_settings-businesses-add-modal" %>
+<%= partial "settings/partials/_settings-businesses-add-modal" %>

@@ -43,9 +43,9 @@
                 <%= inline_svg("icons/trash-icon.svg") %>
               <% end %>
               <!-- Delete Tag Modal -->
-              <%= partial "app_settings/partials/app_settings-tags-delete-modal", locals:{t:t, i:i} %>
+              <%= partial "settings/partials/_settings-tags-delete-modal", locals:{t:t, i:i} %>
               <!-- Edit Tag Modal -->
-              <%= partial "app_settings/partials/app_settings-tags-edit-modal", locals:{t:t, i:i} %>
+              <%= partial "settings/partials/_settings-tags-edit-modal", locals:{t:t, i:i} %>
             </td>
           </tr>
         <% end %>
@@ -54,4 +54,4 @@
   </div>
 </section>
 <!-- Add Tag Modal -->
-<%= partial "app_settings/partials/app_settings-tags-add-modal" %>
+<%= partial "settings/partials/_settings-tags-add-modal" %>
