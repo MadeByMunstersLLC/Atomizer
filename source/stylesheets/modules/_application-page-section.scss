@@ -130,6 +130,11 @@ $page-main-content-icon-size:       80px;
     display: none;
   }
 
+  // Change Text Size
+  input {
+    @include s-hotel;
+  }
+
   // Show Search Bar When Header Active
   &.is-active {
     width: 100%;
@@ -139,7 +144,9 @@ $page-main-content-icon-size:       80px;
       display: block;
       width: 90%;
 
-      input { width: 100% }
+      input {
+        width: 100%
+      }
     }
 
     .toggle-element {

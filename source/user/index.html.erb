@@ -24,11 +24,19 @@ topbar: true
             <label>Update Email Address</label>
             <input type="text" value="kurt.cunningham@madebymunsters.com" placeholder="Add your email address" />
           </fieldset>
-          <fieldset>
+          <fieldset class="fieldset--border">
             <label>Update Password</label>
             <input type="password" placeholder="Create new password" />
             <label>Confirm Password Update</label>
             <input type="password" placeholder="Confirm new password" />
+          </fieldset>
+          <fieldset>
+            <label class="form__label">Associated Business</label>
+            <select>
+              <% data.scenarios.business.each do |b| %>
+                <option><%= b.title %></option>
+              <% end %>
+            </select>
           </fieldset>
           <fieldset>
             <input type="submit" value="Update" class="button--disabled float--right" disabled />

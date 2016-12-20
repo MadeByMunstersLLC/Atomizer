@@ -104,11 +104,14 @@ $card-action-icon-width:        $spacer-delta;
   text-transform: $card-body-item-transform;
   vertical-align: $card-item-v-align;
 
+
+  // Card Item Title
   .title {
     @include position(relative, 2px null null null);
     margin-bottom: 0;
   }
 
+  // Card Table Item Modifiers
   &.card-item--large {
     width: $card-item-width-lg;
 

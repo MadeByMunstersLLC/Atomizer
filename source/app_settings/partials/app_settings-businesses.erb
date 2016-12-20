@@ -1,0 +1,44 @@
+<section role="region" aria-label="Manage Businesses" id="tab-1" class="page-section page-section--header-offset tab__content is-active">
+  <div class="page-main page-main--full">
+    <header class="page-main__header margin-bottom--bravo">
+      <div class="page-main__header--left">
+        <h2 class="title">Atomizer Businesses</h2>
+      </div>
+      <div class="page-main__header--right">
+        <ul class="list">
+          <li class="item">
+            <input type="search" placeholder="Look up a business">
+          </li>
+          <li class="item">
+            <a href="#" class="button--alpha button--small">Add Business</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <table class="table">
+      <thead class="table__header">
+        <tr>
+          <th class="table__header-item">Business</th>
+          <th class="table__header-item">Scenarios</th>
+          <th class="table__header-item">Actions</th>
+        </tr>
+      </thead>
+      <tbody class="table__body">
+        <% data.scenarios.business.each do |b| %>
+          <tr>
+            <td class="table__body-item table__body-item--small" width="70%"><%= b.title %></td>
+            <td class="table__body-item table__body-item--small" width="20%">250</td>
+            <td class="table__body-item table__body-item--small" width="10%">
+              <% link_to '#', class: 'table__body-trigger' do %>
+                <%= inline_svg("icons/edit-icon.svg") %>
+              <% end %>
+              <% link_to '#', class: 'table__body-trigger' do %>
+                <%= inline_svg("icons/trash-icon.svg") %>
+              <% end %>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</section>

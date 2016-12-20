@@ -33,16 +33,16 @@
           <div class="popout">
             <ul class="popout__list">
               <li class="popout__item">
-                <a href="#" class="popout__link">
+                <% link_to "#{config[:root_url] ? config[:root_url] : '/'}catalog/", class: "popout__link" do %>
                   <%= inline_svg("icons/atom-icon.svg", class: 'popout__icon') %>
                   Module Catalog
-                </a>
+                <% end %>
               </li>
               <li class="popout__item">
-                <a href="#" class="popout__link">
+                <% link_to "#{config[:root_url] ? config[:root_url] : '/'}app_settings/", class: "popout__link" do %>
                   <%= inline_svg("icons/settings-icon.svg", class: 'popout__icon') %>
                   Application Settings
-                </a>
+                <% end %>
               </li>
               <li class="popout__item">
                 <a href="#" class="popout__link modal__trigger" data-modal="feedbackForm">

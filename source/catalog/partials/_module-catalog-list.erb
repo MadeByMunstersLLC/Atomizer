@@ -1,0 +1,70 @@
+<div class="page-main page-main--left">
+  <header role="banner" class="page-main__header">
+    <div class="page-main__header--left">
+      <h2 class="title">Modal Catalog</h2>
+    </div>
+    <div class="page-main__header--right">
+      <ul class="list">
+        <li class="item">
+          <input type="search" name="moduleLookup" placeholder="Lookup a module" class="input--search" />
+        </li>
+        <li class="item">
+          <select>
+          </div>
+            <option disabled="disabled">Please Select One</option>
+            <% data.scenarios.business.each do |b| %>
+              <option "<%= 'selected' if b.title === 'HughesNet' %>"><%= b.title %></option>
+            <% end %>
+          </select>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <div class="page-main__content">
+    <table class="card-table">
+      <thead class="card-table__header">
+        <tr class="card-list">
+          <th class="card-item card-item--large">Module Name</th>
+          <th class="card-item">Business</th>
+          <th class="card-item">Modified Last By</th>
+          <th class="card-item">Version</th>
+          <th class="card-item">Actions</th>
+        </tr>
+      </thead>
+      <tbody class="card-table__body">
+        <% data.scenario_modules.module.each do |m| %>
+          <tr class="card card-list">
+            <td class="card-item card-item--large"><h4 class="title"><%= m.title %></h4></td>
+            <td class="card-item">HughesNet</td>
+            <td class="card-item">
+              <div class="chip margin--reset">
+                <div class="chip--left">
+                  <div class="chip__image chip__image--small">
+                    <% if m.update_image %>
+                      <%= image_tag m.update_image, class: 'avatar' %>
+                    <% else %>
+                      <span class="avatar no-avatar"><%= m.updated_by[0] %></span>
+                    <% end %>
+                  </div>
+                </div>
+                <div class="chip--right margin-reset--top margin-right--echo">
+                  <p class="chip__text margin-reset--bottom"><%= m.updated_by %><br/><%= m.updated_date %></p>
+                </div>
+              </div>
+            </td>
+            <td class="card-item"><%= m.version %></td>
+            <td class="card-item__actions">
+              <% link_to '#', class: 'link' do %>
+                <%= inline_svg("icons/edit-icon.svg") %>
+              <% end %>
+              <% link_to '#', class: 'link' do %>
+                <%= inline_svg("icons/trash-icon.svg") %>
+              <% end %>
+            </td>
+          </tr>
+          <tr class="spacer"></tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
