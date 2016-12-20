@@ -1,0 +1,44 @@
+<!-- Create Scenario Modal -->
+<div class="modal" aria-hidden="true" data-modal="feedbackForm">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <%= inline_svg("icons/close-icon.svg", class: "modal__close-icon") %>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Provide Feedback</h3>
+          <p class="modal-intro">Do you have a question or did you find something wrong with the application? Just let us know.</p>
+        </header>
+        <div class="modal__body-content">
+          <form>
+            <fieldset class="row">
+              <div class="columns-4__s columns-6__l">
+                <label class="form__label">Full name</label>
+                <input type="text" placeholder="Enter your name" />
+              </div>
+              <div class="columns-4__s columns-6__l">
+                <label class="form__label">email address</label>
+                <input type="email" placeholder="Enter your email address" />
+              </div>
+            </fieldset>
+            <fielset class="row">
+              <label class="form__label">Message</label>
+              <textarea></textarea>
+            </fielset>
+          </form>
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--disabled">Send Feedback</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

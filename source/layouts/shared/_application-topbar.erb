@@ -1,3 +1,4 @@
+<%= partial "layouts/shared/feedback-form-modal" %>
 <header role="header" class="app-topbar">
   <div class="app-topbar__left">
     <% link_to "#{config[:root_url] ? config[:root_url] : '/'}dashboard/" do %>
@@ -44,7 +45,7 @@
                 </a>
               </li>
               <li class="popout__item">
-                <a href="#" class="popout__link">
+                <a href="#" class="popout__link modal__trigger" data-modal="feedbackForm">
                   <%= inline_svg("icons/file-icon.svg", class: 'popout__icon') %>
                   Provide Feedback
                 </a>
