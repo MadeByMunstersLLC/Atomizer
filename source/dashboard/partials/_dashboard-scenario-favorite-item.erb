@@ -3,7 +3,7 @@
     <% link_to '#', class: 'card__favorite-trigger' do %>
       <%= inline_svg("icons/star-filled-icon.svg") %>
     <% end %>
-    <p class="margin-bottom--delta <%= 'badge--delta' if s.status === 'active' %> <%= 'badge--charlie' if s.status === 'in-active' %>"><%= s.status %></p>
+    <p class="margin-bottom--delta <%= 'badge--delta' if s.status === 'production' %> <%= 'badge--charlie' if s.status === 'depercated' %>"><%= s.status %></p>
     <% link_to "#{config[:root_url] ? config[:root_url] : '/'}scenario/" do %>
       <h2 class="card__title-link">
         <%= s.title %>

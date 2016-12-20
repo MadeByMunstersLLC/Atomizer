@@ -4,7 +4,7 @@ business:
       - title: SSL Order Process [Production]
         description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
         business: HughesNet
-        status: active
+        status: production
         is_favorite: true
         stats:
           - title: Modules
@@ -44,7 +44,7 @@ business:
       - title: SSL Order Process - Mobile
         description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
         business: HughesNet
-        status: active
+        status: production
         is_favorite: true
         stats:
           - title: Modules
@@ -84,7 +84,7 @@ business:
       - title: Upgrade Exisiting Customer - Mobile
         description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
         business: HughesNet
-        status: in-active
+        status: depercated
         is_favorite: false
         stats:
           - title: Modules
@@ -124,7 +124,7 @@ business:
       - title: Upgrade Exisiting Customer - Simplified
         description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
         business: HughesNet
-        status: active
+        status: 'beta scenario'
         is_favorite: false
         stats:
           - title: Modules
@@ -168,7 +168,7 @@ business:
       - title: Convert Existing User To New Package
         description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
         business: DirectTV
-        status: active
+        status: production
         is_favorite: false
         stats:
           - title: Modules
@@ -208,7 +208,7 @@ business:
       - title: V7 Digital Photo Printing
         description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
         business: DirectTV
-        status: active
+        status: production
         is_favorite: false
         stats:
           - title: Modules
@@ -248,7 +248,7 @@ business:
       - title: Are You Ready To Buy A Home Theater
         description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
         business: DirectTV
-        status: in-active
+        status: depercated
         is_favorite: false
         stats:
           - title: Modules
@@ -288,7 +288,7 @@ business:
       - title: Buying Used Electronic Test Equipment
         description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
         business: DirectTV
-        status: in-active
+        status: depercated
         is_favorite: false
         stats:
           - title: Modules
@@ -328,7 +328,7 @@ business:
       - title: Myspace Layouts The Missing Element
         description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
         business: DirectTV
-        status: in-active
+        status: depercated
         is_favorite: false
         stats:
           - title: Modules
@@ -368,7 +368,7 @@ business:
       - title: Are You Ready To Buy A Home Theater
         description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
         business: DirectTV
-        status: active
+        status: production
         is_favorite: false
         stats:
           - title: Modules
@@ -410,7 +410,7 @@ business:
       - title: Buying Used Electronic Test Equipment
         description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
         business: Verizon
-        status: in-active
+        status: depercated
         is_favorite: false
         stats:
           - title: Modules
@@ -450,7 +450,7 @@ business:
       - title: Myspace Layouts The Missing Element
         description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.
         business: Verizon
-        status: active
+        status: production
         is_favorite: false
         stats:
           - title: Modules

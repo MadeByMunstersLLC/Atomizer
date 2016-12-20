@@ -11,7 +11,7 @@
   </td>
   <td class="card-item"><%= s.business %></td>
   <td class="card-item">
-    <i class="<%= 'indicator--alpha' if s.status === 'active' %> <%= 'indicator--charlie' if s.status === 'in-active' %>"></i>
+    <i class="<%= 'indicator--alpha' if s.status === 'production' %> <%= 'indicator--charlie' if s.status === 'depercated' %> <%= 'indicator--delta' if s.status === 'beta scenario' %>"></i>
     <%= s.status %>
   </td>
   <td class="card-item">
