@@ -11,7 +11,7 @@
 <table class="card-table">
   <thead class="card-table__header">
     <tr>
-      <th class="card-item card-item--large">Module Name</th>
+      <th class="card-item card-item--medium">Module Name</th>
       <th class="card-item">Modified Last</th>
       <th class="card-item">Version</th>
       <th class="card-item">Rules</th>
@@ -20,7 +20,7 @@
   <tbody class="card-table__body">
     <% data.scenario_modules.module.each do |m| %>
       <tr class="card card--small">
-        <td class="card-item card-item--large">
+        <td class="card-item" width="40%">
           <h4 class="title"><%= m.title %></h4>
         </td>
         <td class="card-item">
@@ -35,7 +35,7 @@
               </div>
             </div>
             <div class="chip--right margin-reset--top margin-right--echo">
-              <p class="chip__text margin-reset--bottom"><%= m.updated_by %><br/><%= m.updated_on %></p>
+              <p class="chip__text margin-reset--bottom"><%= m.updated_by %><br/><%= m.updated_date %></p>
             </div>
           </div>
         </td>

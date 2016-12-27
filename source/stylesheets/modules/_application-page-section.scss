@@ -13,11 +13,12 @@ $page-padding-overflow-md:          $spacer-charlie $spacer-delta 0;
 $page-padding-overflow-lg:          $spacer-charlie $spacer-charlie 0;
 
 $page-section-height:               100%;
-$page-section-margin:               105px 0 0;
-$page-section-margin-alt:           187px 0 0;
+$page-section-margin:               75px 0 0;
+$page-section-margin-alt:           172px 0 0;
 $page-section-position:             relative;
+$page-section-transition:           margin-top 0.5s ease;
 
-$page-section-no-tabs-margin:       75px 0 0;
+$page-section-no-tabs-margin:       159px 0 0;
 
 $page-sidebar-border:               1px solid $grey-light;
 $page-sidebar-cords:                0 null 0 null;
@@ -32,7 +33,7 @@ $page-main-cords:                   $page-sidebar-cords;
 $page-main-width:                   75%;
 $page-main-position:                $page-sidebar-position;
 
-$page-main-header-margin:         $page-sidebar-title-margin;
+$page-main-header-margin:           $page-sidebar-title-margin;
 
 $page-main-title-margin-0:          0;
 $page-main-title-display:           inline-block;
@@ -54,6 +55,7 @@ $page-main-content-icon-size:       80px;
 // Page Section
 .page-section {
   @include position($page-section-position);
+  @include transition($page-section-transition);
   height: $page-section-height;
   margin: $page-section-margin;
 

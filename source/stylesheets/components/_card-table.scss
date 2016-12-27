@@ -10,6 +10,7 @@ $card-table-icon-fill:          $grey-dark;
 $card-item-display:             inline-block;
 $card-item-v-align:             middle;
 
+$card-item-width-md:            20%;
 $card-item-width-lg:            35%;
 $card-item-width-extra-lg:      50%;
 
@@ -112,6 +113,14 @@ $card-action-icon-width:        $spacer-delta;
   }
 
   // Card Table Item Modifiers
+  &.card-item--medium {
+    width: $card-item-width-md;
+
+    .title {
+      @include ellipsis(50%);
+    }
+  }
+
   &.card-item--large {
     width: $card-item-width-lg;
 

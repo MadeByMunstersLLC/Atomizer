@@ -51,6 +51,7 @@ $app-topbar-settings-item-margin:   $spacer-echo;
 // Structure
 .app-topbar {
   @include position($app-topbar-position, $app-topbar-cords);
+  @include transition(padding 0.5s ease);
   background-color: $app-topbar-background;
   border-bottom: $app-topbar-border;
   max-width: $app-topbar-max-width;
@@ -162,5 +163,46 @@ $app-topbar-settings-item-margin:   $spacer-echo;
     .list__item-link {
       color: $app-topbar-settings-item-color;
     }
+  }
+}
+
+// Topbar Hidden
+.app-topbar--hidden {
+  @include transition(padding 0.5s ease);
+
+  // Topbar Styles
+  &.app-topbar {
+    overflow: hidden;
+    padding: $spacer-echo $spacer-charlie;
+
+    // Hide Topbar Elements
+    .app-topbar__middle,
+    .app-topbar__right {
+      display: none;
+    }
+
+    .app-topbar__logo {
+      width: 25%;
+    }
+
+    .hide-topbar__trigger {
+      @include position(absolute, null 30px null null);
+    }
+  }
+
+  // Page Styles
+  .page-header {
+    @include transition(top 0.5s ease);
+    top: 27px;
+  }
+
+  .page-section--header-offset {
+    @include transition(margin-top 0.5s ease);
+    margin-top: 124px;
+  }
+
+  .page-section--no-tabs {
+    @include transition(margin-top 0.5s ease);
+    margin-top: 111px;
   }
 }
