@@ -29,6 +29,8 @@ $form-add-on-container-width:    100%;
 $form-input-add-on-float:        left;
 $form-add-on-input-width:        auto;
 
+$form-input-error-background:    $red-base;
+
 
 // Structure
 #{$all-text-inputs},
@@ -129,4 +131,20 @@ input[type="search"],
   height: $form-input-add-on-height;
   padding: $form-input-add-on-padding;
   min-width: $form-input-add-on-width;
+}
+
+
+// Form Input Modifiers
+input.input--error {
+  border-color: $form-input-error-background;
+  background-color: lighten($form-input-error-background, 35%);
+
+  &:hover {
+    border-color: $form-input-error-background;
+  }
+
+  @include placeholder {
+    color: $form-input-error-background;
+    font-style: italic;
+  }
 }

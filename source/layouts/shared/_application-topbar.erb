@@ -1,9 +1,10 @@
 <%= partial "layouts/shared/feedback-form-modal" %>
-<header role="header" class="app-topbar">
+<header role="header" class="app-topbar toggle-parent">
   <div class="app-topbar__left">
     <% link_to "#{config[:root_url] ? config[:root_url] : '/'}dashboard/" do %>
       <%= image_tag 'logos/logo.svg', alt: 'Atomizer Logo' %>
     <% end %>
+    <a href="#" class="toggle-element">Hide Topbar</a>
   </div>
   <div class="app-topbar__middle">
     <input type="search" name="siteSearch" placeholder="Quickly lookup a scenario and launch its dashboard" class="input--search input--no-border" id="quick-search-input" />
