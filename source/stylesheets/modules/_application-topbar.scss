@@ -71,6 +71,22 @@ $app-topbar-settings-item-margin:   $spacer-echo;
 .app-topbar__left,
 .app-topbar__right {
   width: $app-topbar-section-width;
+
+  // Style Popout Trigger
+  .popout__trigger svg,
+  .hide-topbar__trigger svg {
+    height: $spacer-delta;
+    width: $spacer-delta;
+  }
+
+  #app-icon {
+    fill: $blue-base;
+  }
+
+  // Active Popout Trigger
+  .popout__trigger.is-active {
+    opacity: 0.5;
+  }
 }
 
 .app-topbar__middle {
@@ -96,21 +112,6 @@ $app-topbar-settings-item-margin:   $spacer-echo;
     &:not(:last-child) {
       margin-right: $spacer-delta;
     }
-  }
-
-  // Style Popout Trigger
-  .popout__trigger svg {
-    height: $spacer-delta;
-    width: $spacer-delta;
-  }
-
-  #app-icon {
-    fill: $blue-base;
-  }
-
-  // Active Popout Trigger
-  .popout__trigger.is-active {
-    opacity: 0.5;
   }
 }
 
@@ -167,6 +168,10 @@ $app-topbar-settings-item-margin:   $spacer-echo;
 }
 
 // Topbar Hidden
+.app-topbar__left .hide-topbar__trigger {
+  display: none;
+}
+
 .app-topbar--hidden {
   @include transition(padding 0.5s ease);
 
@@ -186,7 +191,8 @@ $app-topbar-settings-item-margin:   $spacer-echo;
     }
 
     .hide-topbar__trigger {
-      @include position(absolute, null 30px null null);
+      @include position(absolute, 5px 30px null null);
+      display: block;
     }
   }
 
