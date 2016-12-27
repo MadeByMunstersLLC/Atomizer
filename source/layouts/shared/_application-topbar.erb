@@ -65,7 +65,7 @@
             <span class="user__name">Kurt Cunningham</span>
             <ul class="user__settings-list">
               <li class="list__item">
-                <%= link_to 'Settings', '/user', class: 'list__item-link' %>
+                <%= link_to "Settings", "#{config[:root_url] ? config[:root_url] : '/'}user/", class: 'list__item-link' %>
               </li>
               <li class="list__item">|</li>
               <li class="list__item">
