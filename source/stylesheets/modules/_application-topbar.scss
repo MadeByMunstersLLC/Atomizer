@@ -26,6 +26,8 @@ $app-topbar-right-align:            right;
 
 $app-topbar-input-width:            100%;
 
+$app-topbar-logo-margin:            8px 0 0;
+
 $app-topbar-avatar-bg:              $white-base;
 $app-topbar-avatar-color:           $grey-dark;
 $app-topbar-avatar-display:         inline-block;
@@ -115,6 +117,10 @@ $app-topbar-settings-item-margin:   $spacer-echo;
   }
 }
 
+.app-topbar__logo {
+  margin: $app-topbar-logo-margin;
+}
+
 .app-topbar__user {
   display: $app-topbar-section-display;
 
@@ -173,7 +179,7 @@ $app-topbar-settings-item-margin:   $spacer-echo;
 }
 
 .app-topbar--hidden {
-  @include transition(padding 0.5s ease);
+  @include transition(padding 0.75s ease);
 
   // Topbar Styles
   &.app-topbar {
@@ -191,7 +197,9 @@ $app-topbar-settings-item-margin:   $spacer-echo;
     }
 
     .hide-topbar__trigger {
+      @include transition(all 0.5s ease);
       @include position(absolute, 5px 30px null null);
+      @include transform(rotate(180deg));
       display: block;
     }
   }
@@ -204,7 +212,7 @@ $app-topbar-settings-item-margin:   $spacer-echo;
 
   .page-section--header-offset {
     @include transition(margin-top 0.5s ease);
-    margin-top: 109px;
+    margin-top: 124px;
   }
 
   .page-section--no-tabs {
