@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".tabs ul li").on("click",function(a){a.preventDefault();var s=$(this).attr("data-tab"),t=$("#"+s).siblings(".tab__content");$tabLink=$(this).siblings(),activeClass="is-active",$.each($tabLink,function(a,s){$(s).removeClass(activeClass)}),t.removeClass(activeClass),$(this).addClass(activeClass),$("#"+s).addClass(activeClass)})});

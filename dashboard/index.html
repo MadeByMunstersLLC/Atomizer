@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Atomizer Dashboard | Red Ventures</title>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1 user-scalable=no">
+
+    <!-- Favicons -->
+    <link href="../images/favicon.png" rel="icon" type="image/png" />
+
+    <!-- Stylesheets -->
+    <link href="../stylesheets/application.css" rel="stylesheet" type="text/css" />
+
+    <!-- Fonts -->
+    <script src="https://use.typekit.net/gzo3ihf.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  </head>
+  <body>
+    <!-- Topbar Navigation -->
+      <!-- Create Scenario Modal -->
+<div class="modal" aria-hidden="true" data-modal="feedbackForm">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="modal__close-icon"><title>close-icon</title>
+<path d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Provide Feedback</h3>
+          <p class="modal-intro">Do you have a question or did you find something wrong with the application? Just let us know.</p>
+        </header>
+        <div class="modal__body-content">
+          <form>
+            <fieldset class="row">
+              <div class="columns-4__s columns-6__l">
+                <label class="form__label">Full name</label>
+                <input type="text" placeholder="Enter your name" />
+              </div>
+              <div class="columns-4__s columns-6__l">
+                <label class="form__label">email address</label>
+                <input type="email" placeholder="Enter your email address" />
+              </div>
+            </fieldset>
+            <fielset class="row">
+              <label class="form__label">Message</label>
+              <textarea></textarea>
+            </fielset>
+          </form>
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--disabled">Send Feedback</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<header role="header" class="app-topbar">
+  <div class="app-topbar__left">
+<a href="/Atomizer/dashboard/">      <img alt="Atomizer Logo" class="app-topbar__logo" src="../images/logos/logo.svg" />
+</a>    <a href="#" class="hide-topbar__trigger">
+      <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>arrow-up-icon</title>
+<path d="M0 10l1.393 1.435L9 3.828V20h2V3.828l7.586 7.586L20 10 10 0 0 10" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+    </a>
+  </div>
+  <div class="app-topbar__middle">
+    <input type="search" name="siteSearch" placeholder="Quickly lookup a scenario and launch its dashboard" class="input--search input--no-border" id="quick-search-input" />
+    <div class="quick-search__container">
+      <div class="quick-search__lists">
+          <h6 class="form__label">HughesNet</h6>
+          <ul class="list">
+              <li class="item">SSL Order Process [Production]</li>
+              <li class="item">SSL Order Process - Mobile</li>
+              <li class="item">Upgrade Exisiting Customer - Mobile</li>
+              <li class="item">Upgrade Exisiting Customer - Simplified</li>
+          </ul>
+          <h6 class="form__label">DirectTV</h6>
+          <ul class="list">
+              <li class="item">Convert Existing User To New Package</li>
+              <li class="item">V7 Digital Photo Printing</li>
+              <li class="item">Are You Ready To Buy A Home Theater</li>
+              <li class="item">Buying Used Electronic Test Equipment</li>
+              <li class="item">Myspace Layouts The Missing Element</li>
+              <li class="item">Are You Ready To Buy A Home Theater</li>
+          </ul>
+          <h6 class="form__label">Verizon</h6>
+          <ul class="list">
+              <li class="item">Buying Used Electronic Test Equipment</li>
+              <li class="item">Myspace Layouts The Missing Element</li>
+          </ul>
+      </div>
+      <div class="quick-search__footer">
+        <p class="quick-search__footer-text">Tip: By press "/" at any time you will load the quick search tool.</p>
+      </div>
+    </div>
+  </div>
+  <div class="app-topbar__right">
+    <ul class="right__list">
+      <li class="right__item">
+        <a href="#" class="hide-topbar__trigger">
+          <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>arrow-up-icon</title>
+<path d="M0 10l1.393 1.435L9 3.828V20h2V3.828l7.586 7.586L20 10 10 0 0 10" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        </a>
+      </li>
+      <li class="right__item">
+        <div class="popout__container">
+          <a href="#" class="popout__trigger">
+            <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>grid-icon</title>
+<path d="M13 18h5v-5h-5v5zm-2 2h9v-9h-9v9zm-9-2h5v-5H2v5zm-2 2h9v-9H0v9zM13 7h5V2h-5v5zm-2 2h9V0h-9v9zM2 7h5V2H2v5zM0 9h9V0H0v9z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+          </a>
+          <div class="popout">
+            <ul class="popout__list">
+              <li class="popout__item">
+<a class="popout__link" href="/Atomizer/module-catalog/">                  <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="popout__icon"><title>atom-icon</title>
+<path d="M16.408 11.776c-1.423 1.825-2.91 3.286-4.634 4.628 1.427.824 4.775 2.318 5.86 1.233.74-.74.4-3.056-1.226-5.86m-6.406 3.474c1.982-1.448 3.796-3.262 5.245-5.244-1.443-1.974-3.256-3.79-5.245-5.245-1.997 1.46-3.807 3.278-5.247 5.246 1.45 1.983 3.264 3.796 5.247 5.245m-1.774 1.154c-1.727-1.346-3.215-2.807-4.634-4.628-1.626 2.805-1.967 5.12-1.226 5.86 1.075 1.075 4.394-.384 5.86-1.232M3.594 8.236C5.016 6.41 6.504 4.952 8.228 3.61c-1.425-.826-4.774-2.32-5.86-1.235-.74.74-.4 3.056 1.226 5.86m8.18-4.626c1.727 1.344 3.214 2.804 4.634 4.626 3.61-6.227.88-7.814-4.634-4.627m5.89 6.396c5.434 8.49.764 13.06-7.662 7.668-8.407 5.378-13.116.85-7.663-7.668C-3.06 1.574 1.49-3.104 10 2.338c8.423-5.388 13.1-.83 7.662 7.668m-6.6-1.06c.585.584.585 1.532 0 2.116-.583.584-1.532.584-2.116 0-.585-.584-.585-1.532 0-2.116.584-.585 1.533-.585 2.117 0" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+                  Module Catalog
+</a>              </li>
+              <li class="popout__item">
+<a class="popout__link" href="/Atomizer/scripts-catalog/">                  <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="popout__icon"><title>stats-icon</title>
+<path d="M18 9h-3.882l-2.006 2.015c-1.156-1.97-3.11-5.305-3.317-5.655L7.38 6.775l.01.005L5.16 9H2V2h16v7zm0 9H2v-7h3.99l2.444-2.436c2.723 4.654 2.003 3.42 3.297 5.643L14.945 11H18v7zM0 20h20V0H0v20z" fill="#92969E" fill-rule="evenodd"></path></svg>
+                  Script Test Catalog
+</a>              </li>
+              <li class="popout__item">
+<a class="popout__link" href="/Atomizer/settings/">                  <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="popout__icon"><title>settings-icon</title>
+<path d="M18 4V0h-2v4h-2v2h2v14h2V6h2V4h-2zm-7-4H9v9H7v2h2v9h2v-9h2V9h-2V0zM4 14h2v2H4v4H2v-4H0v-2h2V0h2v14z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+                  Application Settings
+</a>              </li>
+              <li class="popout__item">
+                <a href="#" class="popout__link modal__trigger" data-modal="feedbackForm">
+                  <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="popout__icon"><title>file-icon</title>
+<path d="M4 16h12v-2H4v2zm0-4h12v-2H4v2zm0-4h6V4H4v4zm14 10H2V2h10v6h6v10zM14 0H0v20h20V6.105L14 0z" fill="#92969E" fill-rule="evenodd" id="app-icon"></path></svg>
+                  Provide Feedback
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="right__item">
+        <div class="app-topbar__user">
+          <div class="user__avatar">
+            <!-- <span class="user__avatar-img user__avatar-no-img">KC</span> -->
+            <img alt="Kurt Cunningham" class="user__avatar-img" src="../images/misc/user-avatar-img.jpg" />
+          </div>
+          <div class="user__content">
+            <span class="user__name">Kurt Cunningham</span>
+            <ul class="user__settings-list">
+              <li class="list__item">
+                <a class="list__item-link" href="/Atomizer/user/">Settings</a>
+              </li>
+              <li class="list__item">|</li>
+              <li class="list__item">
+                <a class="list__item-link" href="/Atomizer/">Sign Out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</header>
+
+    <!-- Main Body -->
+    <main role="main" class="page ">
+      <header role="header" class="page-header page-header--tabs">
+  <h2 class="page-header__title">HughesNet</h2>
+  <div class="tabs tabs--dark">
+    <ul class="tab__list">
+      <li class="tab__item is-active" data-tab="tab-1">All Scenarios</li>
+      <li class="tab__item" data-tab="tab-2">A/B Test Overview</li>
+    </ul>
+  </div>
+  <div class="page-header__right">
+    <button class="button--alpha modal__trigger" data-modal="createScenario">Create Scenario</button>
+  </div>
+</header>
+<section role="region" aria-label="atomzier-dashboard" id="tab-1" class="page-section page-section--header-offset tab__content is-active">
+  <div class="page-main page-main--full">
+    <div class="page-main__content">
+      <header role="banner" class="page-main__header">
+        <h2 class="title">Favorite Scenarios</h2>
+      </header>
+      <ul class="list card__list">
+                <li class="card card--shadow card__item">
+  <div class="card__header">
+<a class="card__favorite-trigger" href="#">      <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>star-filled-icon</title>
+<path d="M16.72 12.206c-.427.433-.62 1.057-.52 1.67l.644 3.915c.2 1.22-.73 2.21-1.784 2.21-.278 0-.565-.07-.843-.22l-3.375-1.85c-.264-.144-.553-.216-.843-.216-.29 0-.58.072-.843.216l-3.375 1.85c-.278.15-.565.22-.843.22-1.056 0-1.986-.99-1.785-2.21l.645-3.915c.1-.612-.094-1.236-.52-1.67L.547 9.434C-.526 8.343.068 6.44 1.55 6.216l3.775-.57c.59-.09 1.1-.476 1.363-1.033L8.376 1.05C8.708.35 9.354 0 10 0s1.29.35 1.623 1.05l1.688 3.563c.264.557.774.943 1.364 1.032l3.774.57c1.484.226 2.077 2.127 1.003 3.218l-2.73 2.773z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a>    <p class="margin-bottom--delta badge--delta ">production</p>
+<a href="/Atomizer/scenario/">      <h2 class="card__title-link">
+        SSL Order Process [Production]
+      </h2>
+</a>    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.</p>
+  </div>
+  <ul class="stat-list">
+      <li class="stat-item">
+        <span class="number">100</span>
+        <span class="text">Modules</span>
+      </li>
+      <li class="stat-item">
+        <span class="number">25</span>
+        <span class="text">Rules</span>
+      </li>
+      <li class="stat-item">
+        <span class="number">2</span>
+        <span class="text">Tests</span>
+      </li>
+  </ul>
+  <div class="chip">
+    <div class="chip--left">
+      <div class="chip__image">
+        <img src="../images/misc/user-avatar-img.jpg" />
+      </div>
+    </div>
+    <div class="chip--right">
+      <p class="text--small text--uppercase margin-bottom--echo">Last Updated</p>
+      <p class="text--small margin-reset--bottom">An hour ago by Kurt Cunningham </p>
+    </div>
+  </div>
+</li>
+                <li class="card card--shadow card__item">
+  <div class="card__header">
+<a class="card__favorite-trigger" href="#">      <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>star-filled-icon</title>
+<path d="M16.72 12.206c-.427.433-.62 1.057-.52 1.67l.644 3.915c.2 1.22-.73 2.21-1.784 2.21-.278 0-.565-.07-.843-.22l-3.375-1.85c-.264-.144-.553-.216-.843-.216-.29 0-.58.072-.843.216l-3.375 1.85c-.278.15-.565.22-.843.22-1.056 0-1.986-.99-1.785-2.21l.645-3.915c.1-.612-.094-1.236-.52-1.67L.547 9.434C-.526 8.343.068 6.44 1.55 6.216l3.775-.57c.59-.09 1.1-.476 1.363-1.033L8.376 1.05C8.708.35 9.354 0 10 0s1.29.35 1.623 1.05l1.688 3.563c.264.557.774.943 1.364 1.032l3.774.57c1.484.226 2.077 2.127 1.003 3.218l-2.73 2.773z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a>    <p class="margin-bottom--delta badge--delta ">production</p>
+<a href="/Atomizer/scenario/">      <h2 class="card__title-link">
+        SSL Order Process - Mobile
+      </h2>
+</a>    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.</p>
+  </div>
+  <ul class="stat-list">
+      <li class="stat-item">
+        <span class="number">155</span>
+        <span class="text">Modules</span>
+      </li>
+      <li class="stat-item">
+        <span class="number">55</span>
+        <span class="text">Rules</span>
+      </li>
+      <li class="stat-item">
+        <span class="number">0</span>
+        <span class="text">Tests</span>
+      </li>
+  </ul>
+  <div class="chip">
+    <div class="chip--left">
+      <div class="chip__image">
+        <img src="../images/misc/user-avatar-2-img.jpg" />
+      </div>
+    </div>
+    <div class="chip--right">
+      <p class="text--small text--uppercase margin-bottom--echo">Last Updated</p>
+      <p class="text--small margin-reset--bottom">July 11, 2016 by Joey Kirk </p>
+    </div>
+  </div>
+</li>
+      </ul>
+    </div>
+    <hr class="page-section__divider" />
+    <div class="page-main__content">
+      <header role="banner" class="page-main__header">
+        <div class="page-main__header--left">
+          <h2 class="title">All Scenarios</h2>
+        </div>
+        <div class="page-main__header--right">
+          <ul class="list">
+            <li class="item">
+              <input type="search" placeholder="Look up a scenario">
+            </li>
+            <li class="item">
+              <select>
+                <option disabled="disabled">Select A Business</option>
+                <option selected="selected">HughesNet</option>
+                <option>DirectTV</option>
+                <option>AT&amp;T</option>
+                <option>Verizon</option>
+                <option>Frontier Communications</option>
+              </select>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <table class="card-table">
+        <thead class="card-table__header">
+          <tr>
+            <th class="card-item card-item--large">Scenario Title</th>
+            <th class="card-item">Business</th>
+            <th class="card-item">Status</th>
+            <th class="card-item">Modified Last</th>
+            <th class="card-item">Modules</th>
+            <th class="card-item">Rules</th>
+            <th class="card-item">Tests</th>
+            <th class="card-item">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="card-table__body">
+                <tr class="card card--small">
+  <td class="card-item card-item--large">
+    <a href="#" class="card__favorite-action">
+        <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="filled"><title>star-filled-icon</title>
+<path d="M16.72 12.206c-.427.433-.62 1.057-.52 1.67l.644 3.915c.2 1.22-.73 2.21-1.784 2.21-.278 0-.565-.07-.843-.22l-3.375-1.85c-.264-.144-.553-.216-.843-.216-.29 0-.58.072-.843.216l-3.375 1.85c-.278.15-.565.22-.843.22-1.056 0-1.986-.99-1.785-2.21l.645-3.915c.1-.612-.094-1.236-.52-1.67L.547 9.434C-.526 8.343.068 6.44 1.55 6.216l3.775-.57c.59-.09 1.1-.476 1.363-1.033L8.376 1.05C8.708.35 9.354 0 10 0s1.29.35 1.623 1.05l1.688 3.563c.264.557.774.943 1.364 1.032l3.774.57c1.484.226 2.077 2.127 1.003 3.218l-2.73 2.773z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+    </a>
+    <h4 class="title">SSL Order Process [Production]</h4>
+  </td>
+  <td class="card-item">HughesNet</td>
+  <td class="card-item">
+    <i class="indicator--alpha  "></i>
+    production
+  </td>
+  <td class="card-item">
+    <div class="chip margin--reset">
+      <div class="chip--left">
+        <div class="chip__image chip__image--small">
+          <img class="image" src="../images/misc/user-avatar-img.jpg" />
+        </div>
+      </div>
+      <div class="chip--right margin-reset--top margin-right--echo">
+        <p class="chip__text margin-reset--bottom">Kurt Cunningham<br/>An hour ago</p>
+      </div>
+    </div>
+  </td>
+  <td class="card-item">100</td>
+  <td class="card-item">25</td>
+  <td class="card-item">2</td>
+  <td class="card-item__actions">
+<a class="link modal__trigger" data-modal="previewScenario0" href="#">      <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>stats-icon</title>
+<path d="M18 9h-3.882l-2.006 2.015c-1.156-1.97-3.11-5.305-3.317-5.655L7.38 6.775l.01.005L5.16 9H2V2h16v7zm0 9H2v-7h3.99l2.444-2.436c2.723 4.654 2.003 3.42 3.297 5.643L14.945 11H18v7zM0 20h20V0H0v20z" fill="#92969E" fill-rule="evenodd"></path></svg>
+</a><a class="link" href="/Atomizer/scenario/">      <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>edit-icon</title>
+<path d="M20 10.21V20H0V.42h10v1.96H2V18.04h16V10.21h2zm-13 .304l8.022-7.87 1.554 2-8.117 8.503H7v-2.633zm-2 4.59h4.316l9.907-10.46L15.076 0 5 9.688v5.417z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a><a class="link modal__trigger" data-modal="deleteScenario0" href="#">      <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>trash-icon</title>
+<path d="M7 16h2V8H7v8zm4 0h2V8h-2v8zm-6 2h10V6H5v12zM7 4h6V2H7v2zm8 0V0H5v4H0v2h3v14h14V6h3V4h-5z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a>  </td>
+</tr>
+<tr class="spacer"></tr>
+                <div class="modal" aria-hidden="true" data-modal="previewScenario0">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="modal__close-icon"><title>close-icon</title>
+<path d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        </a>
+        <header class="modal__header">
+          <p class="margin-bottom--delta badge--delta  ">
+            production
+          </p>
+          <h3 class="title">SSL Order Process [Production]</h3>
+          <p class="modal-intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.</p>
+        </header>
+        <div class="modal__body-content">
+          <ul class="stat-list">
+              <li class="stat-item">
+                <span class="number">100</span>
+                <span class="text">Modules</span>
+              </li>
+              <li class="stat-item">
+                <span class="number">25</span>
+                <span class="text">Rules</span>
+              </li>
+              <li class="stat-item">
+                <span class="number">2</span>
+                <span class="text">Tests</span>
+              </li>
+          </ul>
+          <div class="margin-top--charlie">
+              <h4>SSL Order Process - Simplified</h4>
+              <ul class="list row margin-bottom--charlie">
+                <li class="item columns-12__l">
+                  <ul class="row">
+                    <li class="columns-5__l form__label">Scenario</li>
+                    <li class="columns-2__l form__label">Split</li>
+                    <li class="columns-2__l form__label">Calls</li>
+                    <li class="columns-3__l form__label">Conversions</li>
+                  </ul>
+                </li>
+                <li class="item columns-12__l">
+                    <ul>
+                      <li class="columns-5__l">Control Scenario</li>
+                      <li class="columns-2__l">50%</li>
+                      <li class="columns-2__l">1256</li>
+                      <li class="columns-3__l">
+                        200
+                        <span class="float--right">16%</span>
+                      </li>
+                    </ul>
+                    <ul>
+                      <li class="columns-5__l">Simplified SSL Process</li>
+                      <li class="columns-2__l">50%</li>
+                      <li class="columns-2__l">1255</li>
+                      <li class="columns-3__l">
+                        310
+                        <span class="float--right">25%</span>
+                      </li>
+                    </ul>
+                </li>
+              </ul>
+              <h4>Upgrade Existing Customer</h4>
+              <ul class="list row margin-bottom--charlie">
+                <li class="item columns-12__l">
+                  <ul class="row">
+                    <li class="columns-5__l form__label">Scenario</li>
+                    <li class="columns-2__l form__label">Split</li>
+                    <li class="columns-2__l form__label">Calls</li>
+                    <li class="columns-3__l form__label">Conversions</li>
+                  </ul>
+                </li>
+                <li class="item columns-12__l">
+                    <ul>
+                      <li class="columns-5__l">Control Scenario</li>
+                      <li class="columns-2__l">50%</li>
+                      <li class="columns-2__l">1256</li>
+                      <li class="columns-3__l">
+                        200
+                        <span class="float--right">16%</span>
+                      </li>
+                    </ul>
+                    <ul>
+                      <li class="columns-5__l">Simplified SSL Process</li>
+                      <li class="columns-2__l">50%</li>
+                      <li class="columns-2__l">1255</li>
+                      <li class="columns-3__l">
+                        310
+                        <span class="float--right">25%</span>
+                      </li>
+                    </ul>
+                </li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+                <div class="modal" aria-hidden="true" data-modal="deleteScenario0">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="modal__close-icon"><title>close-icon</title>
+<path d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Are you sure about this move?</h3>
+          <p class="modal-intro">You are about to perform an action that cannot be undone. Please double check the scenario listed below before continuing. </p>
+        </header>
+        <div class="modal__body-content">
+          <label class="form__label">Selected scenario</label>
+          <ul>
+            <li>SSL Order Process [Production]</li>
+          </ul>
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--charlie">Delete Scenario</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+                <tr class="card card--small">
+  <td class="card-item card-item--large">
+    <a href="#" class="card__favorite-action">
+        <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="filled"><title>star-filled-icon</title>
+<path d="M16.72 12.206c-.427.433-.62 1.057-.52 1.67l.644 3.915c.2 1.22-.73 2.21-1.784 2.21-.278 0-.565-.07-.843-.22l-3.375-1.85c-.264-.144-.553-.216-.843-.216-.29 0-.58.072-.843.216l-3.375 1.85c-.278.15-.565.22-.843.22-1.056 0-1.986-.99-1.785-2.21l.645-3.915c.1-.612-.094-1.236-.52-1.67L.547 9.434C-.526 8.343.068 6.44 1.55 6.216l3.775-.57c.59-.09 1.1-.476 1.363-1.033L8.376 1.05C8.708.35 9.354 0 10 0s1.29.35 1.623 1.05l1.688 3.563c.264.557.774.943 1.364 1.032l3.774.57c1.484.226 2.077 2.127 1.003 3.218l-2.73 2.773z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+    </a>
+    <h4 class="title">SSL Order Process - Mobile</h4>
+  </td>
+  <td class="card-item">HughesNet</td>
+  <td class="card-item">
+    <i class="indicator--alpha  "></i>
+    production
+  </td>
+  <td class="card-item">
+    <div class="chip margin--reset">
+      <div class="chip--left">
+        <div class="chip__image chip__image--small">
+          <img class="image" src="../images/misc/user-avatar-2-img.jpg" />
+        </div>
+      </div>
+      <div class="chip--right margin-reset--top margin-right--echo">
+        <p class="chip__text margin-reset--bottom">Joey Kirk<br/>July 11, 2016</p>
+      </div>
+    </div>
+  </td>
+  <td class="card-item">155</td>
+  <td class="card-item">55</td>
+  <td class="card-item">0</td>
+  <td class="card-item__actions">
+<a class="link modal__trigger" data-modal="previewScenario1" href="#">      <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>stats-icon</title>
+<path d="M18 9h-3.882l-2.006 2.015c-1.156-1.97-3.11-5.305-3.317-5.655L7.38 6.775l.01.005L5.16 9H2V2h16v7zm0 9H2v-7h3.99l2.444-2.436c2.723 4.654 2.003 3.42 3.297 5.643L14.945 11H18v7zM0 20h20V0H0v20z" fill="#92969E" fill-rule="evenodd"></path></svg>
+</a><a class="link" href="/Atomizer/scenario/">      <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>edit-icon</title>
+<path d="M20 10.21V20H0V.42h10v1.96H2V18.04h16V10.21h2zm-13 .304l8.022-7.87 1.554 2-8.117 8.503H7v-2.633zm-2 4.59h4.316l9.907-10.46L15.076 0 5 9.688v5.417z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a><a class="link modal__trigger" data-modal="deleteScenario1" href="#">      <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>trash-icon</title>
+<path d="M7 16h2V8H7v8zm4 0h2V8h-2v8zm-6 2h10V6H5v12zM7 4h6V2H7v2zm8 0V0H5v4H0v2h3v14h14V6h3V4h-5z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a>  </td>
+</tr>
+<tr class="spacer"></tr>
+                <div class="modal" aria-hidden="true" data-modal="previewScenario1">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="modal__close-icon"><title>close-icon</title>
+<path d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        </a>
+        <header class="modal__header">
+          <p class="margin-bottom--delta badge--delta  ">
+            production
+          </p>
+          <h3 class="title">SSL Order Process - Mobile</h3>
+          <p class="modal-intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.</p>
+        </header>
+        <div class="modal__body-content">
+          <ul class="stat-list">
+              <li class="stat-item">
+                <span class="number">155</span>
+                <span class="text">Modules</span>
+              </li>
+              <li class="stat-item">
+                <span class="number">55</span>
+                <span class="text">Rules</span>
+              </li>
+              <li class="stat-item">
+                <span class="number">0</span>
+                <span class="text">Tests</span>
+              </li>
+          </ul>
+          <div class="margin-top--charlie">
+              <h4>Simplified Upgrade Test</h4>
+              <ul class="list row margin-bottom--charlie">
+                <li class="item columns-12__l">
+                  <ul class="row">
+                    <li class="columns-5__l form__label">Scenario</li>
+                    <li class="columns-2__l form__label">Split</li>
+                    <li class="columns-2__l form__label">Calls</li>
+                    <li class="columns-3__l form__label">Conversions</li>
+                  </ul>
+                </li>
+                <li class="item columns-12__l">
+                    <ul>
+                      <li class="columns-5__l">Control Scenario</li>
+                      <li class="columns-2__l">50%</li>
+                      <li class="columns-2__l">1256</li>
+                      <li class="columns-3__l">
+                        200
+                        <span class="float--right">16%</span>
+                      </li>
+                    </ul>
+                    <ul>
+                      <li class="columns-5__l">Simplified SSL Process</li>
+                      <li class="columns-2__l">50%</li>
+                      <li class="columns-2__l">1255</li>
+                      <li class="columns-3__l">
+                        310
+                        <span class="float--right">25%</span>
+                      </li>
+                    </ul>
+                </li>
+              </ul>
+              <h4>Upgrade Existing Customer</h4>
+              <ul class="list row margin-bottom--charlie">
+                <li class="item columns-12__l">
+                  <ul class="row">
+                    <li class="columns-5__l form__label">Scenario</li>
+                    <li class="columns-2__l form__label">Split</li>
+                    <li class="columns-2__l form__label">Calls</li>
+                    <li class="columns-3__l form__label">Conversions</li>
+                  </ul>
+                </li>
+                <li class="item columns-12__l">
+                    <ul>
+                      <li class="columns-5__l">Control Scenario</li>
+                      <li class="columns-2__l">50%</li>
+                      <li class="columns-2__l">1256</li>
+                      <li class="columns-3__l">
+                        200
+                        <span class="float--right">16%</span>
+                      </li>
+                    </ul>
+                    <ul>
+                      <li class="columns-5__l">Simplified SSL Process</li>
+                      <li class="columns-2__l">50%</li>
+                      <li class="columns-2__l">1255</li>
+                      <li class="columns-3__l">
+                        310
+                        <span class="float--right">25%</span>
+                      </li>
+                    </ul>
+                </li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+                <div class="modal" aria-hidden="true" data-modal="deleteScenario1">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="modal__close-icon"><title>close-icon</title>
+<path d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Are you sure about this move?</h3>
+          <p class="modal-intro">You are about to perform an action that cannot be undone. Please double check the scenario listed below before continuing. </p>
+        </header>
+        <div class="modal__body-content">
+          <label class="form__label">Selected scenario</label>
+          <ul>
+            <li>SSL Order Process - Mobile</li>
+          </ul>
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--charlie">Delete Scenario</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+                <tr class="card card--small">
+  <td class="card-item card-item--large">
+    <a href="#" class="card__favorite-action">
+        <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="outline"><title>star-outline-icon</title>
+<path d="M15.034 10.404c-.996 1.012-1.45 2.468-1.215 3.897l.436 2.657-2.29-1.254c-.604-.33-1.284-.506-1.966-.506-.683 0-1.363.175-1.967.506l-2.29 1.254.438-2.656c.236-1.428-.22-2.884-1.215-3.896l-1.852-1.88 2.56-.39C7.05 7.928 8.24 7.028 8.855 5.728L10 3.31l1.145 2.417c.615 1.3 1.805 2.2 3.18 2.408l2.562.388-1.853 1.88zm4.417-.97c1.075-1.092.483-2.993-1.002-3.218l-3.774-.57c-.59-.09-1.1-.476-1.363-1.033L11.624 1.05C11.29.35 10.645 0 10 0c-.646 0-1.292.35-1.624 1.05L6.69 4.614c-.265.557-.775.943-1.364 1.032l-3.774.57C.067 6.442-.526 8.343.548 9.434l2.73 2.773c.428.433.623 1.057.522 1.67l-.645 3.915c-.2 1.22.73 2.21 1.784 2.21.277 0 .565-.07.842-.22l3.375-1.85c.264-.144.553-.217.843-.217.29 0 .578.073.842.217l3.376 1.85c.277.15.564.22.842.22 1.055 0 1.985-.99 1.784-2.21l-.644-3.915c-.1-.612.093-1.236.52-1.67l2.73-2.772z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+    </a>
+    <h4 class="title">Upgrade Exisiting Customer - Mobile</h4>
+  </td>
+  <td class="card-item">HughesNet</td>
+  <td class="card-item">
+    <i class=" indicator--charlie "></i>
+    depercated
+  </td>
+  <td class="card-item">
+    <div class="chip margin--reset">
+      <div class="chip--left">
+        <div class="chip__image chip__image--small">
+          <img class="image" src="../images/misc/user-avatar-2-img.jpg" />
+        </div>
+      </div>
+      <div class="chip--right margin-reset--top margin-right--echo">
+        <p class="chip__text margin-reset--bottom">Joey Kirk<br/>15 minutes ago</p>
+      </div>
+    </div>
+  </td>
+  <td class="card-item">100</td>
+  <td class="card-item">25</td>
+  <td class="card-item">0</td>
+  <td class="card-item__actions">
+<a class="link modal__trigger" data-modal="previewScenario2" href="#">      <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>stats-icon</title>
+<path d="M18 9h-3.882l-2.006 2.015c-1.156-1.97-3.11-5.305-3.317-5.655L7.38 6.775l.01.005L5.16 9H2V2h16v7zm0 9H2v-7h3.99l2.444-2.436c2.723 4.654 2.003 3.42 3.297 5.643L14.945 11H18v7zM0 20h20V0H0v20z" fill="#92969E" fill-rule="evenodd"></path></svg>
+</a><a class="link" href="/Atomizer/scenario/">      <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>edit-icon</title>
+<path d="M20 10.21V20H0V.42h10v1.96H2V18.04h16V10.21h2zm-13 .304l8.022-7.87 1.554 2-8.117 8.503H7v-2.633zm-2 4.59h4.316l9.907-10.46L15.076 0 5 9.688v5.417z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a><a class="link modal__trigger" data-modal="deleteScenario2" href="#">      <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>trash-icon</title>
+<path d="M7 16h2V8H7v8zm4 0h2V8h-2v8zm-6 2h10V6H5v12zM7 4h6V2H7v2zm8 0V0H5v4H0v2h3v14h14V6h3V4h-5z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a>  </td>
+</tr>
+<tr class="spacer"></tr>
+                <div class="modal" aria-hidden="true" data-modal="previewScenario2">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="modal__close-icon"><title>close-icon</title>
+<path d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        </a>
+        <header class="modal__header">
+          <p class="margin-bottom--delta  badge--charlie ">
+            depercated
+          </p>
+          <h3 class="title">Upgrade Exisiting Customer - Mobile</h3>
+          <p class="modal-intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.</p>
+        </header>
+        <div class="modal__body-content">
+          <ul class="stat-list">
+              <li class="stat-item">
+                <span class="number">100</span>
+                <span class="text">Modules</span>
+              </li>
+              <li class="stat-item">
+                <span class="number">25</span>
+                <span class="text">Rules</span>
+              </li>
+              <li class="stat-item">
+                <span class="number">0</span>
+                <span class="text">Tests</span>
+              </li>
+          </ul>
+          <div class="margin-top--charlie">
+              <h4>Simplified Upgrade Test</h4>
+              <ul class="list row margin-bottom--charlie">
+                <li class="item columns-12__l">
+                  <ul class="row">
+                    <li class="columns-5__l form__label">Scenario</li>
+                    <li class="columns-2__l form__label">Split</li>
+                    <li class="columns-2__l form__label">Calls</li>
+                    <li class="columns-3__l form__label">Conversions</li>
+                  </ul>
+                </li>
+                <li class="item columns-12__l">
+                    <ul>
+                      <li class="columns-5__l">Control Scenario</li>
+                      <li class="columns-2__l">50%</li>
+                      <li class="columns-2__l">1256</li>
+                      <li class="columns-3__l">
+                        200
+                        <span class="float--right">16%</span>
+                      </li>
+                    </ul>
+                    <ul>
+                      <li class="columns-5__l">Simplified SSL Process</li>
+                      <li class="columns-2__l">50%</li>
+                      <li class="columns-2__l">1255</li>
+                      <li class="columns-3__l">
+                        310
+                        <span class="float--right">25%</span>
+                      </li>
+                    </ul>
+                </li>
+              </ul>
+              <h4>Upgrade Existing Customer</h4>
+              <ul class="list row margin-bottom--charlie">
+                <li class="item columns-12__l">
+                  <ul class="row">
+                    <li class="columns-5__l form__label">Scenario</li>
+                    <li class="columns-2__l form__label">Split</li>
+                    <li class="columns-2__l form__label">Calls</li>
+                    <li class="columns-3__l form__label">Conversions</li>
+                  </ul>
+                </li>
+                <li class="item columns-12__l">
+                    <ul>
+                      <li class="columns-5__l">Control Scenario</li>
+                      <li class="columns-2__l">50%</li>
+                      <li class="columns-2__l">1256</li>
+                      <li class="columns-3__l">
+                        200
+                        <span class="float--right">16%</span>
+                      </li>
+                    </ul>
+                    <ul>
+                      <li class="columns-5__l">Simplified SSL Process</li>
+                      <li class="columns-2__l">50%</li>
+                      <li class="columns-2__l">1255</li>
+                      <li class="columns-3__l">
+                        310
+                        <span class="float--right">25%</span>
+                      </li>
+                    </ul>
+                </li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+                <div class="modal" aria-hidden="true" data-modal="deleteScenario2">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="modal__close-icon"><title>close-icon</title>
+<path d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Are you sure about this move?</h3>
+          <p class="modal-intro">You are about to perform an action that cannot be undone. Please double check the scenario listed below before continuing. </p>
+        </header>
+        <div class="modal__body-content">
+          <label class="form__label">Selected scenario</label>
+          <ul>
+            <li>Upgrade Exisiting Customer - Mobile</li>
+          </ul>
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--charlie">Delete Scenario</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+                <tr class="card card--small">
+  <td class="card-item card-item--large">
+    <a href="#" class="card__favorite-action">
+        <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="outline"><title>star-outline-icon</title>
+<path d="M15.034 10.404c-.996 1.012-1.45 2.468-1.215 3.897l.436 2.657-2.29-1.254c-.604-.33-1.284-.506-1.966-.506-.683 0-1.363.175-1.967.506l-2.29 1.254.438-2.656c.236-1.428-.22-2.884-1.215-3.896l-1.852-1.88 2.56-.39C7.05 7.928 8.24 7.028 8.855 5.728L10 3.31l1.145 2.417c.615 1.3 1.805 2.2 3.18 2.408l2.562.388-1.853 1.88zm4.417-.97c1.075-1.092.483-2.993-1.002-3.218l-3.774-.57c-.59-.09-1.1-.476-1.363-1.033L11.624 1.05C11.29.35 10.645 0 10 0c-.646 0-1.292.35-1.624 1.05L6.69 4.614c-.265.557-.775.943-1.364 1.032l-3.774.57C.067 6.442-.526 8.343.548 9.434l2.73 2.773c.428.433.623 1.057.522 1.67l-.645 3.915c-.2 1.22.73 2.21 1.784 2.21.277 0 .565-.07.842-.22l3.375-1.85c.264-.144.553-.217.843-.217.29 0 .578.073.842.217l3.376 1.85c.277.15.564.22.842.22 1.055 0 1.985-.99 1.784-2.21l-.644-3.915c-.1-.612.093-1.236.52-1.67l2.73-2.772z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+    </a>
+    <h4 class="title">Upgrade Exisiting Customer - Simplified</h4>
+  </td>
+  <td class="card-item">HughesNet</td>
+  <td class="card-item">
+    <i class="  indicator--delta"></i>
+    beta scenario
+  </td>
+  <td class="card-item">
+    <div class="chip margin--reset">
+      <div class="chip--left">
+        <div class="chip__image chip__image--small">
+          <img class="image" src="../images/misc/user-avatar-img.jpg" />
+        </div>
+      </div>
+      <div class="chip--right margin-reset--top margin-right--echo">
+        <p class="chip__text margin-reset--bottom">Kurt Cunningham<br/>Nov. 11, 2016</p>
+      </div>
+    </div>
+  </td>
+  <td class="card-item">65</td>
+  <td class="card-item">12</td>
+  <td class="card-item">4</td>
+  <td class="card-item__actions">
+<a class="link modal__trigger" data-modal="previewScenario3" href="#">      <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>stats-icon</title>
+<path d="M18 9h-3.882l-2.006 2.015c-1.156-1.97-3.11-5.305-3.317-5.655L7.38 6.775l.01.005L5.16 9H2V2h16v7zm0 9H2v-7h3.99l2.444-2.436c2.723 4.654 2.003 3.42 3.297 5.643L14.945 11H18v7zM0 20h20V0H0v20z" fill="#92969E" fill-rule="evenodd"></path></svg>
+</a><a class="link" href="/Atomizer/scenario/">      <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>edit-icon</title>
+<path d="M20 10.21V20H0V.42h10v1.96H2V18.04h16V10.21h2zm-13 .304l8.022-7.87 1.554 2-8.117 8.503H7v-2.633zm-2 4.59h4.316l9.907-10.46L15.076 0 5 9.688v5.417z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a><a class="link modal__trigger" data-modal="deleteScenario3" href="#">      <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>trash-icon</title>
+<path d="M7 16h2V8H7v8zm4 0h2V8h-2v8zm-6 2h10V6H5v12zM7 4h6V2H7v2zm8 0V0H5v4H0v2h3v14h14V6h3V4h-5z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a>  </td>
+</tr>
+<tr class="spacer"></tr>
+                <div class="modal" aria-hidden="true" data-modal="previewScenario3">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="modal__close-icon"><title>close-icon</title>
+<path d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        </a>
+        <header class="modal__header">
+          <p class="margin-bottom--delta   badge--echo">
+            beta scenario
+          </p>
+          <h3 class="title">Upgrade Exisiting Customer - Simplified</h3>
+          <p class="modal-intro">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut feugiat vestibulum non convallis urna, congue pretium augue.</p>
+        </header>
+        <div class="modal__body-content">
+          <ul class="stat-list">
+              <li class="stat-item">
+                <span class="number">65</span>
+                <span class="text">Modules</span>
+              </li>
+              <li class="stat-item">
+                <span class="number">12</span>
+                <span class="text">Rules</span>
+              </li>
+              <li class="stat-item">
+                <span class="number">4</span>
+                <span class="text">Variations</span>
+              </li>
+              <li class="stat-item">
+                <span class="number">0</span>
+                <span class="text">Tests</span>
+              </li>
+          </ul>
+          <div class="margin-top--charlie">
+              <h4>Simplified Upgrade Test</h4>
+              <ul class="list row margin-bottom--charlie">
+                <li class="item columns-12__l">
+                  <ul class="row">
+                    <li class="columns-5__l form__label">Scenario</li>
+                    <li class="columns-2__l form__label">Split</li>
+                    <li class="columns-2__l form__label">Calls</li>
+                    <li class="columns-3__l form__label">Conversions</li>
+                  </ul>
+                </li>
+                <li class="item columns-12__l">
+                    <ul>
+                      <li class="columns-5__l">Control Scenario</li>
+                      <li class="columns-2__l">50%</li>
+                      <li class="columns-2__l">1256</li>
+                      <li class="columns-3__l">
+                        200
+                        <span class="float--right">16%</span>
+                      </li>
+                    </ul>
+                    <ul>
+                      <li class="columns-5__l">Simplified SSL Process</li>
+                      <li class="columns-2__l">50%</li>
+                      <li class="columns-2__l">1255</li>
+                      <li class="columns-3__l">
+                        310
+                        <span class="float--right">25%</span>
+                      </li>
+                    </ul>
+                </li>
+              </ul>
+              <h4>Upgrade Existing Customer</h4>
+              <ul class="list row margin-bottom--charlie">
+                <li class="item columns-12__l">
+                  <ul class="row">
+                    <li class="columns-5__l form__label">Scenario</li>
+                    <li class="columns-2__l form__label">Split</li>
+                    <li class="columns-2__l form__label">Calls</li>
+                    <li class="columns-3__l form__label">Conversions</li>
+                  </ul>
+                </li>
+                <li class="item columns-12__l">
+                    <ul>
+                      <li class="columns-5__l">Control Scenario</li>
+                      <li class="columns-2__l">50%</li>
+                      <li class="columns-2__l">1256</li>
+                      <li class="columns-3__l">
+                        200
+                        <span class="float--right">16%</span>
+                      </li>
+                    </ul>
+                    <ul>
+                      <li class="columns-5__l">Simplified SSL Process</li>
+                      <li class="columns-2__l">50%</li>
+                      <li class="columns-2__l">1255</li>
+                      <li class="columns-3__l">
+                        310
+                        <span class="float--right">25%</span>
+                      </li>
+                    </ul>
+                </li>
+              </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+                <div class="modal" aria-hidden="true" data-modal="deleteScenario3">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="modal__close-icon"><title>close-icon</title>
+<path d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Are you sure about this move?</h3>
+          <p class="modal-intro">You are about to perform an action that cannot be undone. Please double check the scenario listed below before continuing. </p>
+        </header>
+        <div class="modal__body-content">
+          <label class="form__label">Selected scenario</label>
+          <ul>
+            <li>Upgrade Exisiting Customer - Simplified</li>
+          </ul>
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--charlie">Delete Scenario</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+<section role="region" aria-label="atomzier-bussiness-tests" id="tab-2" class="page-section page-section--header-offset tab__content">
+  <aside role="complementary" class="page-sidebar page-sidebar--right">
+    <header role="banner" class="page-sidebar__header">
+      <h2 class="title">Test Details</h2>
+    </header>
+    <div class="page-sidebar__body">
+      <div class="page-sidebar__group is-active">
+        <p>Click on a test from the left side of the page to view its details here.</p>
+      </div>
+      <div class="page-sidebar__group">
+        <div class="page-sidebar__content page-sidebar__content--border">
+          <h4>Streamlined SSL</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu sapien nisl. Proin lorem nisi, blandit nec interdum cursus, auctor eleifend est. Nam mattis et lorem in accumsan.</p><br/>
+          <ul>
+            <li>Days Running <span class="float--right">15 Days</span></li>
+            <li>Total Users Tested <span class="float--right">3,451 Users</span></li>
+          </ul>
+        </div>
+        <div class="page-sidebar__content page-sidebar__content--border">
+          <h6 class="form__label">Scenarios + Traffic Allocation</h6>
+          <ul>
+            <li>SSL Order Process (Version 10) <span class="float--right">50%</span></li>
+            <li>Simpified Upgrade (Version 9) <span class="float--right">50%</span></li>
+          </ul>
+        </div>
+        <div class="page-sidebar__content margin-bottom--charlie">
+          <h6 class="form__label">Conversion Rates</h6>
+          <ul>
+            <li>SSL Order Process <span class="float--right text--red">12.7%</span></li>
+            <li>Simpified Upgrade <span class="float--right text--green">25.7%</span></li>
+          </ul>
+        </div>
+        <div class="page-sidebar__content text--center">
+          <a class="button--bravo button--full" href="/Atomizer/scenario/test">Launch Test</a><br/>
+          <a id="hide-test-details" class="text--grey" href="#">Hide Details</a>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="page-main page-main--left">
+    <header role="banner" class="page-main__header">
+      <div class="page-main__header--left">
+        <h2 class="title">Scenario Hierarchy</h2>
+      </div>
+      <div class="page-main__header--right">
+        <ul class="list">
+          <li class="item">
+            <div class="button--add-on__container">
+              <input type="text" placeholder="Enter call log ID" class="input--add-on" />
+              <input type="submit" value="Test" class="input--add-on__button button--disabled button--small" />
+            </div>
+          </li>
+          <li class="item">
+            <a class="button--alpha button--small" href="../scenario/create-test/">New Test</a>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <div class="page-main__content">
+      <ul id="module-list--sortable" class="list">
+        <li class="highlight--alpha highlight__text--lead">IF</li>
+        <li class="highlight--bravo">
+          <span>Agent ID <span class="highlight__text--heavy"> is one of</span> 1, 2, 3</span>
+          <span class="highlight__text--right">Configuration ID: 7765</span>
+          <div class="highlight__card">
+            <h4 id="show-test-details" class="highlight__card-title clickable">Streamlined SSL</h4>
+<a class="highlight__card-action" href="/Atomizer/scenario/test">              <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>edit-icon</title>
+<path d="M20 10.21V20H0V.42h10v1.96H2V18.04h16V10.21h2zm-13 .304l8.022-7.87 1.554 2-8.117 8.503H7v-2.633zm-2 4.59h4.316l9.907-10.46L15.076 0 5 9.688v5.417z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a>          </div>
+        </li>
+        <li class="highlight--alpha highlight__text--lead">Else If</li>
+        <li class="highlight--bravo">
+          <span>Customer Device <span class="highlight__text--heavy"> equals</span> mobile</span>
+          <span class="highlight__text--right">Configuration ID: 7786</span>
+          <div class="highlight__card">
+            <h4 class="highlight__card-title">Simplified Order Process - Mobile Customers</h4>
+<a class="highlight__card-action" href="/Atomizer/scenario/">              <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>edit-icon</title>
+<path d="M20 10.21V20H0V.42h10v1.96H2V18.04h16V10.21h2zm-13 .304l8.022-7.87 1.554 2-8.117 8.503H7v-2.633zm-2 4.59h4.316l9.907-10.46L15.076 0 5 9.688v5.417z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a>          </div>
+        </li>
+        <li class="highlight--alpha highlight__text--lead">Else If</li>
+        <li class="highlight--bravo">
+          <span>Customer Location <span class="highlight__text--heavy"> equals</span> Midwest Sales Region</span>
+          <span class="highlight__text--right">Configuration ID: 6796</span>
+          <div class="highlight__card">
+            <h4 class="highlight__card-title">Existing Customer Package Upgrade - Midwest</h4>
+<a class="highlight__card-action" href="/Atomizer/scenario/">              <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>edit-icon</title>
+<path d="M20 10.21V20H0V.42h10v1.96H2V18.04h16V10.21h2zm-13 .304l8.022-7.87 1.554 2-8.117 8.503H7v-2.633zm-2 4.59h4.316l9.907-10.46L15.076 0 5 9.688v5.417z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a>          </div>
+        </li>
+        <li class="highlight--alpha highlight__text--lead">Else</li>
+        <li class="highlight--bravo">
+          <div class="highlight__card">
+            <h4 class="highlight__card-title">SSL Order Process [Production]</h4>
+<a class="highlight__card-action" href="/Atomizer/scenario/">              <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>edit-icon</title>
+<path d="M20 10.21V20H0V.42h10v1.96H2V18.04h16V10.21h2zm-13 .304l8.022-7.87 1.554 2-8.117 8.503H7v-2.633zm-2 4.59h4.316l9.907-10.46L15.076 0 5 9.688v5.417z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a>          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- Create Scenario Modal -->
+<div class="modal" aria-hidden="true" data-modal="createScenario">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="modal__close-icon"><title>close-icon</title>
+<path d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Add New Scenario</h3>
+          <p class="modal-intro">Before you get started, we need to know a few things about this new scenario. Please fill out each field in the form below. </p>
+        </header>
+        <div class="modal__body-content">
+          <label>Select Scenario Type</label>
+          <select id="create-scenario" name="form_select">
+            <option selected="selected" disabled="disabled">Please Select One</option>
+            <option value="0">Create New Scenario</option>
+            <option value ="1">Copy Exisiting Scenario</option>
+          </select>
+          <form id="0" class="scenario-form">
+            <fieldset>
+              <div class="group columns-12__l">
+                <label>Scenario Title</label>
+                <input type="text" placeholder="Enter a title" />
+              </div>
+            </fieldset>
+            <fieldset>
+              <label>Scenario Description</label>
+              <textarea placeholder="Enter a description"></textarea>
+            </fieldset>
+          </form>
+          <form id="1" class="scenario-form">
+            <fieldset>
+              <div class="group columns-12__l">
+                <label>Select Scenario</label>
+                <select>
+                  <option selected="selected">Please Section One</option>
+                </select>
+              </div>
+            </fieldset>
+            <fieldset>
+              <div class="group columns-12__l">
+                <label>Scenario Title</label>
+                <input type="text" placeholder="Enter a title" />
+              </div>
+            </fieldset>
+            <fieldset>
+              <label>Scenario Description</label>
+              <textarea placeholder="Enter a description"></textarea>
+            </fieldset>
+          </form>
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--disabled">Create Scenario</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="../javascript/application.js" type="text/javascript"></script>
+  </body>
+</html>

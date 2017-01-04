@@ -1,0 +1,1 @@
+function checkedCheckboxes(){return $("input[type=checkbox]:checked").length}var $checkboxEle=$(".checkbox-extras-panel"),$modulePanel=$(".module-extras-panel"),activeClass="is-active";$checkboxEle.change(function(){var e=checkedCheckboxes(),c=$(".checkboxes-badge"),a=e>=1;$(this).parents().find($modulePanel).toggleClass(activeClass,a),c.text(e)});

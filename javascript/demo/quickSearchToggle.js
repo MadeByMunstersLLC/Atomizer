@@ -1,0 +1,1 @@
+var $quickSearchInput=$("#quick-search-input"),$quickSearchContainer=$(".quick-search-container");$quickSearchInput.focus(function(i){$(this).siblings($quickSearchContainer).addClass("is-active")}).blur(function(){$(this).siblings($quickSearchContainer).removeClass("is-active")}),$(function(){$("html").bind("keydown",function(i){191==i.keyCode&&$quickSearchInput.focus()})});

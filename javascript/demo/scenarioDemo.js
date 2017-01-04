@@ -1,0 +1,1 @@
+var $moduleSortable=$("#module-list--sortable");$(function(){$moduleSortable.sortable({placeholder:"module-card--dragged"})});

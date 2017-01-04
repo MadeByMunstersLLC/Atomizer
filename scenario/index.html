@@ -1,0 +1,2508 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SSL Order Process [Production] | Atomizer</title>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1 user-scalable=no">
+
+    <!-- Favicons -->
+    <link href="../images/favicon.png" rel="icon" type="image/png" />
+
+    <!-- Stylesheets -->
+    <link href="../stylesheets/application.css" rel="stylesheet" type="text/css" />
+
+    <!-- Fonts -->
+    <script src="https://use.typekit.net/gzo3ihf.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  </head>
+  <body>
+    <!-- Topbar Navigation -->
+      <!-- Create Scenario Modal -->
+<div class="modal" aria-hidden="true" data-modal="feedbackForm">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="modal__close-icon"><title>close-icon</title>
+<path d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Provide Feedback</h3>
+          <p class="modal-intro">Do you have a question or did you find something wrong with the application? Just let us know.</p>
+        </header>
+        <div class="modal__body-content">
+          <form>
+            <fieldset class="row">
+              <div class="columns-4__s columns-6__l">
+                <label class="form__label">Full name</label>
+                <input type="text" placeholder="Enter your name" />
+              </div>
+              <div class="columns-4__s columns-6__l">
+                <label class="form__label">email address</label>
+                <input type="email" placeholder="Enter your email address" />
+              </div>
+            </fieldset>
+            <fielset class="row">
+              <label class="form__label">Message</label>
+              <textarea></textarea>
+            </fielset>
+          </form>
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--disabled">Send Feedback</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<header role="header" class="app-topbar">
+  <div class="app-topbar__left">
+<a href="/Atomizer/dashboard/">      <img alt="Atomizer Logo" class="app-topbar__logo" src="../images/logos/logo.svg" />
+</a>    <a href="#" class="hide-topbar__trigger">
+      <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>arrow-up-icon</title>
+<path d="M0 10l1.393 1.435L9 3.828V20h2V3.828l7.586 7.586L20 10 10 0 0 10" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+    </a>
+  </div>
+  <div class="app-topbar__middle">
+    <input type="search" name="siteSearch" placeholder="Quickly lookup a scenario and launch its dashboard" class="input--search input--no-border" id="quick-search-input" />
+    <div class="quick-search__container">
+      <div class="quick-search__lists">
+          <h6 class="form__label">HughesNet</h6>
+          <ul class="list">
+              <li class="item">SSL Order Process [Production]</li>
+              <li class="item">SSL Order Process - Mobile</li>
+              <li class="item">Upgrade Exisiting Customer - Mobile</li>
+              <li class="item">Upgrade Exisiting Customer - Simplified</li>
+          </ul>
+          <h6 class="form__label">DirectTV</h6>
+          <ul class="list">
+              <li class="item">Convert Existing User To New Package</li>
+              <li class="item">V7 Digital Photo Printing</li>
+              <li class="item">Are You Ready To Buy A Home Theater</li>
+              <li class="item">Buying Used Electronic Test Equipment</li>
+              <li class="item">Myspace Layouts The Missing Element</li>
+              <li class="item">Are You Ready To Buy A Home Theater</li>
+          </ul>
+          <h6 class="form__label">Verizon</h6>
+          <ul class="list">
+              <li class="item">Buying Used Electronic Test Equipment</li>
+              <li class="item">Myspace Layouts The Missing Element</li>
+          </ul>
+      </div>
+      <div class="quick-search__footer">
+        <p class="quick-search__footer-text">Tip: By press "/" at any time you will load the quick search tool.</p>
+      </div>
+    </div>
+  </div>
+  <div class="app-topbar__right">
+    <ul class="right__list">
+      <li class="right__item">
+        <a href="#" class="hide-topbar__trigger">
+          <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>arrow-up-icon</title>
+<path d="M0 10l1.393 1.435L9 3.828V20h2V3.828l7.586 7.586L20 10 10 0 0 10" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        </a>
+      </li>
+      <li class="right__item">
+        <div class="popout__container">
+          <a href="#" class="popout__trigger">
+            <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>grid-icon</title>
+<path d="M13 18h5v-5h-5v5zm-2 2h9v-9h-9v9zm-9-2h5v-5H2v5zm-2 2h9v-9H0v9zM13 7h5V2h-5v5zm-2 2h9V0h-9v9zM2 7h5V2H2v5zM0 9h9V0H0v9z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+          </a>
+          <div class="popout">
+            <ul class="popout__list">
+              <li class="popout__item">
+<a class="popout__link" href="/Atomizer/module-catalog/">                  <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="popout__icon"><title>atom-icon</title>
+<path d="M16.408 11.776c-1.423 1.825-2.91 3.286-4.634 4.628 1.427.824 4.775 2.318 5.86 1.233.74-.74.4-3.056-1.226-5.86m-6.406 3.474c1.982-1.448 3.796-3.262 5.245-5.244-1.443-1.974-3.256-3.79-5.245-5.245-1.997 1.46-3.807 3.278-5.247 5.246 1.45 1.983 3.264 3.796 5.247 5.245m-1.774 1.154c-1.727-1.346-3.215-2.807-4.634-4.628-1.626 2.805-1.967 5.12-1.226 5.86 1.075 1.075 4.394-.384 5.86-1.232M3.594 8.236C5.016 6.41 6.504 4.952 8.228 3.61c-1.425-.826-4.774-2.32-5.86-1.235-.74.74-.4 3.056 1.226 5.86m8.18-4.626c1.727 1.344 3.214 2.804 4.634 4.626 3.61-6.227.88-7.814-4.634-4.627m5.89 6.396c5.434 8.49.764 13.06-7.662 7.668-8.407 5.378-13.116.85-7.663-7.668C-3.06 1.574 1.49-3.104 10 2.338c8.423-5.388 13.1-.83 7.662 7.668m-6.6-1.06c.585.584.585 1.532 0 2.116-.583.584-1.532.584-2.116 0-.585-.584-.585-1.532 0-2.116.584-.585 1.533-.585 2.117 0" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+                  Module Catalog
+</a>              </li>
+              <li class="popout__item">
+<a class="popout__link" href="/Atomizer/scripts-catalog/">                  <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="popout__icon"><title>stats-icon</title>
+<path d="M18 9h-3.882l-2.006 2.015c-1.156-1.97-3.11-5.305-3.317-5.655L7.38 6.775l.01.005L5.16 9H2V2h16v7zm0 9H2v-7h3.99l2.444-2.436c2.723 4.654 2.003 3.42 3.297 5.643L14.945 11H18v7zM0 20h20V0H0v20z" fill="#92969E" fill-rule="evenodd"></path></svg>
+                  Script Test Catalog
+</a>              </li>
+              <li class="popout__item">
+<a class="popout__link" href="/Atomizer/settings/">                  <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="popout__icon"><title>settings-icon</title>
+<path d="M18 4V0h-2v4h-2v2h2v14h2V6h2V4h-2zm-7-4H9v9H7v2h2v9h2v-9h2V9h-2V0zM4 14h2v2H4v4H2v-4H0v-2h2V0h2v14z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+                  Application Settings
+</a>              </li>
+              <li class="popout__item">
+                <a href="#" class="popout__link modal__trigger" data-modal="feedbackForm">
+                  <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="popout__icon"><title>file-icon</title>
+<path d="M4 16h12v-2H4v2zm0-4h12v-2H4v2zm0-4h6V4H4v4zm14 10H2V2h10v6h6v10zM14 0H0v20h20V6.105L14 0z" fill="#92969E" fill-rule="evenodd" id="app-icon"></path></svg>
+                  Provide Feedback
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="right__item">
+        <div class="app-topbar__user">
+          <div class="user__avatar">
+            <!-- <span class="user__avatar-img user__avatar-no-img">KC</span> -->
+            <img alt="Kurt Cunningham" class="user__avatar-img" src="../images/misc/user-avatar-img.jpg" />
+          </div>
+          <div class="user__content">
+            <span class="user__name">Kurt Cunningham</span>
+            <ul class="user__settings-list">
+              <li class="list__item">
+                <a class="list__item-link" href="/Atomizer/user/">Settings</a>
+              </li>
+              <li class="list__item">|</li>
+              <li class="list__item">
+                <a class="list__item-link" href="/Atomizer/">Sign Out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</header>
+
+    <!-- Main Body -->
+    <main role="main" class="page ">
+      <header role="header" class="page-header page-header--tabs">
+  <h2 class="page-header__title">SSL Order Process [Production]</h2>
+  <div class="tabs tabs--dark">
+    <ul class="tab__list">
+      <li class="tab__item is-active" data-tab="tab-1">Edit Scenario</li>
+      <li class="tab__item" data-tab="tab-2">Scenario Flow</li>
+      <li class="tab__item" data-tab="tab-3">A/B Test</li>
+      <li class="tab__item" data-tab="tab-4">History</li>
+      <li class="tab__item" data-tab="tab-5">Settings</li>
+    </ul>
+  </div>
+  <div class="page-header__right">
+    <div class="button--add-on__container toggle-parent">
+      <button id="alert-show-trigger" class="button--alpha button--add-on">Save Scenario</button>
+      <span class="button--add-on--alpha toggle-element">
+        <img src="../images/icons/arrow-select-icon.svg" class="button--add-on__icon">
+      </span>
+      <ul class="button--alpha button--add-on__dropdown">
+        <li class="button--add-on__dropdown-item">
+          <a href="#" class="button--add-on__dropdown-link">Preview Scenario</a>
+        </li>
+        <li class="button--add-on__dropdown-item">
+          <a href="#" class="button--add-on__dropdown-link">Publish Scenario</a>
+        </li>
+        <li class="button--add-on__dropdown-item">
+          <a href="#" class="button--add-on__dropdown-link">Archive Scenario</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+<!-- Edit Scenario Partial - Active by default -->
+<section role="region" aria-label="Edit Scenario" id="tab-1" class="page-section page-section--header-offset tab__content is-active">
+  <aside role="sidebar" class="page-sidebar page-sidebar--left">
+  <header role="banner" class="page-sidebar__header">
+    <h2 class="title">Available Modules</h2>
+    <div class="page-sidebar__header--right toggle-parent">
+      <a href="#" class="toggle-element">
+        <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>search-icon</title>
+<path d="M20 18.586L18.586 20l-5.657-5.657 1.413-1.414L20 18.585zM7 12c-2.757 0-5-2.243-5-5s2.243-5 5-5 5 2.243 5 5-2.243 5-5 5zM7 0C3.134 0 0 3.134 0 7s3.134 7 7 7 7-3.134 7-7-3.134-7-7-7z" fill="#FFFFFF" id="app-icon" fill-rule="evenodd"></path></svg>
+      </a>
+      <div class="search-input">
+        <input type="search" placeholder="Lookup a module" />
+      </div>
+    </div>
+  </header>
+  <div class="page-sidebar__body">
+      <div class="toggle toggle--border">
+        <div class="toggle__header">
+          <h5 class="form__label">Global Modules</h5>
+          <a href="#" class="toggle__trigger is-active">
+            <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="toggle__icon toggle__icon--small toggle__icon--plus"><title>plus-icon</title>
+<path d="M20 9v2h-9v9H9v-9H0V9h9V0h2v9" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+            <svg width="20" height="2" viewbox="0 0 20 2" xmlns="http://www.w3.org/2000/svg" class="toggle__icon toggle__icon--small toggle__icon--minus is-active"><title>minus-icon</title>
+<path d="M0 2h20V0H0" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+          </a>
+        </div>
+        <ul class="list toggle__body is-active">
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span>Contact Form</span>
+              </div>
+            </li>
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span>Terms of Service</span>
+              </div>
+            </li>
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span>Banner</span>
+              </div>
+            </li>
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span>Cable Widget</span>
+              </div>
+            </li>
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span>Credit Check</span>
+              </div>
+            </li>
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span>Date of Birth</span>
+              </div>
+            </li>
+        </ul>
+      </div>
+      <div class="toggle toggle--border">
+        <div class="toggle__header">
+          <h5 class="form__label">HughesNet Modules</h5>
+          <a href="#" class="toggle__trigger is-active">
+            <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="toggle__icon toggle__icon--small toggle__icon--plus"><title>plus-icon</title>
+<path d="M20 9v2h-9v9H9v-9H0V9h9V0h2v9" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+            <svg width="20" height="2" viewbox="0 0 20 2" xmlns="http://www.w3.org/2000/svg" class="toggle__icon toggle__icon--small toggle__icon--minus is-active"><title>minus-icon</title>
+<path d="M0 2h20V0H0" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+          </a>
+        </div>
+        <ul class="list toggle__body is-active">
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span>HN Contact Form</span>
+              </div>
+            </li>
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span>HN Terms of Service</span>
+              </div>
+            </li>
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span>HN Banner</span>
+              </div>
+            </li>
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span>HN Cable Widget</span>
+              </div>
+            </li>
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span>HN Credit Check</span>
+              </div>
+            </li>
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span>HN Date of Birth</span>
+              </div>
+            </li>
+        </ul>
+      </div>
+      <div class="toggle toggle--border">
+        <div class="toggle__header">
+          <h5 class="form__label">DirectTV Modules</h5>
+          <a href="#" class="toggle__trigger ">
+            <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="toggle__icon toggle__icon--small toggle__icon--plus"><title>plus-icon</title>
+<path d="M20 9v2h-9v9H9v-9H0V9h9V0h2v9" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+            <svg width="20" height="2" viewbox="0 0 20 2" xmlns="http://www.w3.org/2000/svg" class="toggle__icon toggle__icon--small toggle__icon--minus "><title>minus-icon</title>
+<path d="M0 2h20V0H0" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+          </a>
+        </div>
+        <ul class="list toggle__body ">
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span>DT Contact Form</span>
+              </div>
+            </li>
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span>DT Terms of Service</span>
+              </div>
+            </li>
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span>DT Banner</span>
+              </div>
+            </li>
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span>DT Cable Widget</span>
+              </div>
+            </li>
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span>DT Credit Check</span>
+              </div>
+            </li>
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span>DT Date of Birth</span>
+              </div>
+            </li>
+        </ul>
+      </div>
+      <div class="toggle toggle--border">
+        <div class="toggle__header">
+          <h5 class="form__label">Verizon Wireless Modules</h5>
+          <a href="#" class="toggle__trigger ">
+            <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="toggle__icon toggle__icon--small toggle__icon--plus"><title>plus-icon</title>
+<path d="M20 9v2h-9v9H9v-9H0V9h9V0h2v9" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+            <svg width="20" height="2" viewbox="0 0 20 2" xmlns="http://www.w3.org/2000/svg" class="toggle__icon toggle__icon--small toggle__icon--minus "><title>minus-icon</title>
+<path d="M0 2h20V0H0" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+          </a>
+        </div>
+        <ul class="list toggle__body ">
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span>VW Contact Form</span>
+              </div>
+            </li>
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span>VW Terms of Service</span>
+              </div>
+            </li>
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span>VW Banner</span>
+              </div>
+            </li>
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span>VW Cable Widget</span>
+              </div>
+            </li>
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span>VW Credit Check</span>
+              </div>
+            </li>
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span>VW Date of Birth</span>
+              </div>
+            </li>
+        </ul>
+      </div>
+      <div class="toggle toggle--border">
+        <div class="toggle__header">
+          <h5 class="form__label">AT&T Modules</h5>
+          <a href="#" class="toggle__trigger ">
+            <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="toggle__icon toggle__icon--small toggle__icon--plus"><title>plus-icon</title>
+<path d="M20 9v2h-9v9H9v-9H0V9h9V0h2v9" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+            <svg width="20" height="2" viewbox="0 0 20 2" xmlns="http://www.w3.org/2000/svg" class="toggle__icon toggle__icon--small toggle__icon--minus "><title>minus-icon</title>
+<path d="M0 2h20V0H0" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+          </a>
+        </div>
+        <ul class="list toggle__body ">
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span>ATT Contact Form</span>
+              </div>
+            </li>
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span>ATT Terms of Service</span>
+              </div>
+            </li>
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span>ATT Banner</span>
+              </div>
+            </li>
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span>ATT Cable Widget</span>
+              </div>
+            </li>
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span>ATT Credit Check</span>
+              </div>
+            </li>
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span>ATT Date of Birth</span>
+              </div>
+            </li>
+        </ul>
+      </div>
+      <div class="toggle toggle--border">
+        <div class="toggle__header">
+          <h5 class="form__label">Frontier Modules</h5>
+          <a href="#" class="toggle__trigger ">
+            <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="toggle__icon toggle__icon--small toggle__icon--plus"><title>plus-icon</title>
+<path d="M20 9v2h-9v9H9v-9H0V9h9V0h2v9" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+            <svg width="20" height="2" viewbox="0 0 20 2" xmlns="http://www.w3.org/2000/svg" class="toggle__icon toggle__icon--small toggle__icon--minus "><title>minus-icon</title>
+<path d="M0 2h20V0H0" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+          </a>
+        </div>
+        <ul class="list toggle__body ">
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span>F Contact Form</span>
+              </div>
+            </li>
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span>F Terms of Service</span>
+              </div>
+            </li>
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span>F Banner</span>
+              </div>
+            </li>
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span>F Cable Widget</span>
+              </div>
+            </li>
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span>F Credit Check</span>
+              </div>
+            </li>
+            <li class="item card card--extra-small card--draggable">
+              <div class="checkbox--label">
+                <input type="checkbox" />
+                <span>F Date of Birth</span>
+              </div>
+            </li>
+        </ul>
+      </div>
+</aside>
+  <div class="page-main page-main--right">
+  <header role="banner" class="page-main__header">
+    <h2 class="title">Scenario Details</h2>
+    <div class="page-main__header--right">
+      <ul class="list">
+        <li class="item">
+          <a href="#" class="button--bravo button--small modal__trigger" data-modal="updateModules">3 Updates</a>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <div class="page-main__content">
+    <ul class="module-card__list-titles">
+      <li class="form__label module-card__title">Module Name</li>
+      <li class="form__label module-card__update">Last Updated</li>
+      <li class="form__label module-card__version">Version</li>
+      <li class="form__label module-card__rules">Rules</li>
+      <li class="form__label module-card__actions">Actions</li>
+    </ul>
+    <ul id="module-list--sortable" class="list">
+        <li class="card card--small card--draggable module-card">
+          <div class="module-card__title">
+            <input type="checkbox" class="checkbox checkbox-extras-panel" />
+            <h4 class="title">1. Atom Hailo</h4>
+          </div>
+          <div class="module-card__update">
+              <img class="avatar" src="../images/misc/user-avatar-img.jpg" />
+            <div class="updated-content">
+              <h5 class="module-card__text">Kurt Cunningham</h5>
+              <h5 class="module-card__text--small">Oct. 12, 2016</h5>
+            </div>
+          </div>
+          <div class="module-card__version">
+            <p class="module-card__text">1.3.5</p>
+          </div>
+          <div class="module-card__rules">
+            <a href="#" class="module-card__text link--alpha">Add Rules</a>
+          </div>
+          <div class="module-card__actions">
+<a class="action" href="/Atomizer/scenario/show">              <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>edit-icon</title>
+<path d="M20 10.21V20H0V.42h10v1.96H2V18.04h16V10.21h2zm-13 .304l8.022-7.87 1.554 2-8.117 8.503H7v-2.633zm-2 4.59h4.316l9.907-10.46L15.076 0 5 9.688v5.417z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a>            <a href="#" class="action modal__trigger" data-modal="deleteModal0"><svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>trash-icon</title>
+<path d="M7 16h2V8H7v8zm4 0h2V8h-2v8zm-6 2h10V6H5v12zM7 4h6V2H7v2zm8 0V0H5v4H0v2h3v14h14V6h3V4h-5z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg></a>
+            <div class="modal" aria-hidden="true" data-modal="deleteModal0">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="modal__close-icon"><title>close-icon</title>
+<path d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Are you sure about this move?</h3>
+          <p class="modal-intro">You are about to perform an action that cannot be undone. Please double check the modules listed below before continuing.</p>
+        </header>
+        <div class="modal__body-content">
+          <label class="form__label">Selected modules</label>
+          <ul>
+            <li>1. Atom Hailo</li>
+          </ul>
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--charlie">Delete Module</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="card card--small card--draggable module-card">
+          <div class="module-card__title">
+            <input type="checkbox" class="checkbox checkbox-extras-panel" />
+            <h4 class="title">2. Red Switch Transfer</h4>
+          </div>
+          <div class="module-card__update">
+              <img class="avatar" src="../images/misc/user-avatar-img.jpg" />
+            <div class="updated-content">
+              <h5 class="module-card__text">Kurt Cunningham</h5>
+              <h5 class="module-card__text--small">Oct. 12, 2016</h5>
+            </div>
+          </div>
+          <div class="module-card__version">
+            <p class="module-card__text">1.0.5</p>
+          </div>
+          <div class="module-card__rules">
+            <a href="#" class="module-card__text link--alpha">Add Rules</a>
+          </div>
+          <div class="module-card__actions">
+<a class="action" href="/Atomizer/scenario/show">              <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>edit-icon</title>
+<path d="M20 10.21V20H0V.42h10v1.96H2V18.04h16V10.21h2zm-13 .304l8.022-7.87 1.554 2-8.117 8.503H7v-2.633zm-2 4.59h4.316l9.907-10.46L15.076 0 5 9.688v5.417z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a>            <a href="#" class="action modal__trigger" data-modal="deleteModal1"><svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>trash-icon</title>
+<path d="M7 16h2V8H7v8zm4 0h2V8h-2v8zm-6 2h10V6H5v12zM7 4h6V2H7v2zm8 0V0H5v4H0v2h3v14h14V6h3V4h-5z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg></a>
+            <div class="modal" aria-hidden="true" data-modal="deleteModal1">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="modal__close-icon"><title>close-icon</title>
+<path d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Are you sure about this move?</h3>
+          <p class="modal-intro">You are about to perform an action that cannot be undone. Please double check the modules listed below before continuing.</p>
+        </header>
+        <div class="modal__body-content">
+          <label class="form__label">Selected modules</label>
+          <ul>
+            <li>2. Red Switch Transfer</li>
+          </ul>
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--charlie">Delete Module</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="card card--small card--draggable module-card">
+          <div class="module-card__title">
+            <input type="checkbox" class="checkbox checkbox-extras-panel" />
+            <h4 class="title">3. Red Switch Transfer</h4>
+          </div>
+          <div class="module-card__update">
+              <img class="avatar" src="../images/misc/user-avatar-2-img.jpg" />
+            <div class="updated-content">
+              <h5 class="module-card__text">Joey Kirk</h5>
+              <h5 class="module-card__text--small">Oct. 12, 2016</h5>
+            </div>
+          </div>
+          <div class="module-card__version">
+            <p class="module-card__text">1.3.0</p>
+          </div>
+          <div class="module-card__rules">
+            <a href="#" class="module-card__text link--bravo">3 Rules</a>
+          </div>
+          <div class="module-card__actions">
+<a class="action" href="/Atomizer/scenario/show">              <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>edit-icon</title>
+<path d="M20 10.21V20H0V.42h10v1.96H2V18.04h16V10.21h2zm-13 .304l8.022-7.87 1.554 2-8.117 8.503H7v-2.633zm-2 4.59h4.316l9.907-10.46L15.076 0 5 9.688v5.417z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a>            <a href="#" class="action modal__trigger" data-modal="deleteModal2"><svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>trash-icon</title>
+<path d="M7 16h2V8H7v8zm4 0h2V8h-2v8zm-6 2h10V6H5v12zM7 4h6V2H7v2zm8 0V0H5v4H0v2h3v14h14V6h3V4h-5z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg></a>
+            <div class="modal" aria-hidden="true" data-modal="deleteModal2">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="modal__close-icon"><title>close-icon</title>
+<path d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Are you sure about this move?</h3>
+          <p class="modal-intro">You are about to perform an action that cannot be undone. Please double check the modules listed below before continuing.</p>
+        </header>
+        <div class="modal__body-content">
+          <label class="form__label">Selected modules</label>
+          <ul>
+            <li>3. Red Switch Transfer</li>
+          </ul>
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--charlie">Delete Module</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="card card--small card--draggable module-card">
+          <div class="module-card__title">
+            <input type="checkbox" class="checkbox checkbox-extras-panel" />
+            <h4 class="title">4. RB HOV Overflow Intro</h4>
+          </div>
+          <div class="module-card__update">
+              <img class="avatar" src="../images/misc/user-avatar-img.jpg" />
+            <div class="updated-content">
+              <h5 class="module-card__text">Kurt Cunningham</h5>
+              <h5 class="module-card__text--small">Oct. 12, 2016</h5>
+            </div>
+          </div>
+          <div class="module-card__version">
+            <p class="module-card__text">0.0.6</p>
+          </div>
+          <div class="module-card__rules">
+            <a href="#" class="module-card__text link--bravo">2 Rules</a>
+          </div>
+          <div class="module-card__actions">
+<a class="action" href="/Atomizer/scenario/show">              <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>edit-icon</title>
+<path d="M20 10.21V20H0V.42h10v1.96H2V18.04h16V10.21h2zm-13 .304l8.022-7.87 1.554 2-8.117 8.503H7v-2.633zm-2 4.59h4.316l9.907-10.46L15.076 0 5 9.688v5.417z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a>            <a href="#" class="action modal__trigger" data-modal="deleteModal3"><svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>trash-icon</title>
+<path d="M7 16h2V8H7v8zm4 0h2V8h-2v8zm-6 2h10V6H5v12zM7 4h6V2H7v2zm8 0V0H5v4H0v2h3v14h14V6h3V4h-5z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg></a>
+            <div class="modal" aria-hidden="true" data-modal="deleteModal3">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="modal__close-icon"><title>close-icon</title>
+<path d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Are you sure about this move?</h3>
+          <p class="modal-intro">You are about to perform an action that cannot be undone. Please double check the modules listed below before continuing.</p>
+        </header>
+        <div class="modal__body-content">
+          <label class="form__label">Selected modules</label>
+          <ul>
+            <li>4. RB HOV Overflow Intro</li>
+          </ul>
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--charlie">Delete Module</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="card card--small card--draggable module-card">
+          <div class="module-card__title">
+            <input type="checkbox" class="checkbox checkbox-extras-panel" />
+            <h4 class="title">5. Default Intro</h4>
+          </div>
+          <div class="module-card__update">
+              <span class="avatar no-avatar">C</span>
+            <div class="updated-content">
+              <h5 class="module-card__text">Clay Carpenter</h5>
+              <h5 class="module-card__text--small">Oct. 12, 2016</h5>
+            </div>
+          </div>
+          <div class="module-card__version">
+            <p class="module-card__text">0.2.5</p>
+          </div>
+          <div class="module-card__rules">
+            <a href="#" class="module-card__text link--alpha">Add Rules</a>
+          </div>
+          <div class="module-card__actions">
+<a class="action" href="/Atomizer/scenario/show">              <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>edit-icon</title>
+<path d="M20 10.21V20H0V.42h10v1.96H2V18.04h16V10.21h2zm-13 .304l8.022-7.87 1.554 2-8.117 8.503H7v-2.633zm-2 4.59h4.316l9.907-10.46L15.076 0 5 9.688v5.417z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a>            <a href="#" class="action modal__trigger" data-modal="deleteModal4"><svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>trash-icon</title>
+<path d="M7 16h2V8H7v8zm4 0h2V8h-2v8zm-6 2h10V6H5v12zM7 4h6V2H7v2zm8 0V0H5v4H0v2h3v14h14V6h3V4h-5z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg></a>
+            <div class="modal" aria-hidden="true" data-modal="deleteModal4">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="modal__close-icon"><title>close-icon</title>
+<path d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Are you sure about this move?</h3>
+          <p class="modal-intro">You are about to perform an action that cannot be undone. Please double check the modules listed below before continuing.</p>
+        </header>
+        <div class="modal__body-content">
+          <label class="form__label">Selected modules</label>
+          <ul>
+            <li>5. Default Intro</li>
+          </ul>
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--charlie">Delete Module</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="card card--small card--draggable module-card">
+          <div class="module-card__title">
+            <input type="checkbox" class="checkbox checkbox-extras-panel" />
+            <h4 class="title">6. Customer Collection</h4>
+          </div>
+          <div class="module-card__update">
+              <img class="avatar" src="../images/misc/user-avatar-img.jpg" />
+            <div class="updated-content">
+              <h5 class="module-card__text">Kurt Cunningham</h5>
+              <h5 class="module-card__text--small">Oct. 12, 2016</h5>
+            </div>
+          </div>
+          <div class="module-card__version">
+            <p class="module-card__text">0.4.8</p>
+          </div>
+          <div class="module-card__rules">
+            <a href="#" class="module-card__text link--bravo">2 Rules</a>
+          </div>
+          <div class="module-card__actions">
+<a class="action" href="/Atomizer/scenario/show">              <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>edit-icon</title>
+<path d="M20 10.21V20H0V.42h10v1.96H2V18.04h16V10.21h2zm-13 .304l8.022-7.87 1.554 2-8.117 8.503H7v-2.633zm-2 4.59h4.316l9.907-10.46L15.076 0 5 9.688v5.417z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a>            <a href="#" class="action modal__trigger" data-modal="deleteModal5"><svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>trash-icon</title>
+<path d="M7 16h2V8H7v8zm4 0h2V8h-2v8zm-6 2h10V6H5v12zM7 4h6V2H7v2zm8 0V0H5v4H0v2h3v14h14V6h3V4h-5z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg></a>
+            <div class="modal" aria-hidden="true" data-modal="deleteModal5">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="modal__close-icon"><title>close-icon</title>
+<path d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Are you sure about this move?</h3>
+          <p class="modal-intro">You are about to perform an action that cannot be undone. Please double check the modules listed below before continuing.</p>
+        </header>
+        <div class="modal__body-content">
+          <label class="form__label">Selected modules</label>
+          <ul>
+            <li>6. Customer Collection</li>
+          </ul>
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--charlie">Delete Module</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="card card--small card--draggable module-card">
+          <div class="module-card__title">
+            <input type="checkbox" class="checkbox checkbox-extras-panel" />
+            <h4 class="title">7. Contact Form</h4>
+          </div>
+          <div class="module-card__update">
+              <img class="avatar" src="../images/misc/user-avatar-img.jpg" />
+            <div class="updated-content">
+              <h5 class="module-card__text">Kurt Cunningham</h5>
+              <h5 class="module-card__text--small">Oct. 12, 2016</h5>
+            </div>
+          </div>
+          <div class="module-card__version">
+            <p class="module-card__text">0.6.8</p>
+              <div class="update-icon">
+                <div class="tooltip__item">
+                  <svg width="16" height="18" viewbox="0 0 16 18" xmlns="http://www.w3.org/2000/svg"><title>update-icon</title>
+<path d="M7 7v4h6V9H9V7H7zm7 3c0 3-2.692 6-6 6s-6-2.692-6-6 2.692-6 6-6v2l5-3-5-3v2c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3 8-8h-2z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+                  <figure class="tooltip">
+                    <p class="tooltip__text">Looks like an update is avaliable. Click the button in the top right.</p>
+                  </figure>
+                </div>
+              </div>
+          </div>
+          <div class="module-card__rules">
+            <a href="#" class="module-card__text link--bravo">1 Rule</a>
+          </div>
+          <div class="module-card__actions">
+<a class="action" href="/Atomizer/scenario/show">              <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>edit-icon</title>
+<path d="M20 10.21V20H0V.42h10v1.96H2V18.04h16V10.21h2zm-13 .304l8.022-7.87 1.554 2-8.117 8.503H7v-2.633zm-2 4.59h4.316l9.907-10.46L15.076 0 5 9.688v5.417z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a>            <a href="#" class="action modal__trigger" data-modal="deleteModal6"><svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>trash-icon</title>
+<path d="M7 16h2V8H7v8zm4 0h2V8h-2v8zm-6 2h10V6H5v12zM7 4h6V2H7v2zm8 0V0H5v4H0v2h3v14h14V6h3V4h-5z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg></a>
+            <div class="modal" aria-hidden="true" data-modal="deleteModal6">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="modal__close-icon"><title>close-icon</title>
+<path d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Are you sure about this move?</h3>
+          <p class="modal-intro">You are about to perform an action that cannot be undone. Please double check the modules listed below before continuing.</p>
+        </header>
+        <div class="modal__body-content">
+          <label class="form__label">Selected modules</label>
+          <ul>
+            <li>7. Contact Form</li>
+          </ul>
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--charlie">Delete Module</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="card card--small card--draggable module-card">
+          <div class="module-card__title">
+            <input type="checkbox" class="checkbox checkbox-extras-panel" />
+            <h4 class="title">8. Existing Customer, Satellite TV?</h4>
+          </div>
+          <div class="module-card__update">
+              <img class="avatar" src="../images/misc/user-avatar-img.jpg" />
+            <div class="updated-content">
+              <h5 class="module-card__text">Kurt Cunningham</h5>
+              <h5 class="module-card__text--small">Oct. 12, 2016</h5>
+            </div>
+          </div>
+          <div class="module-card__version">
+            <p class="module-card__text">0.7.2</p>
+              <div class="update-icon">
+                <div class="tooltip__item">
+                  <svg width="16" height="18" viewbox="0 0 16 18" xmlns="http://www.w3.org/2000/svg"><title>update-icon</title>
+<path d="M7 7v4h6V9H9V7H7zm7 3c0 3-2.692 6-6 6s-6-2.692-6-6 2.692-6 6-6v2l5-3-5-3v2c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3 8-8h-2z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+                  <figure class="tooltip">
+                    <p class="tooltip__text">Looks like an update is avaliable. Click the button in the top right.</p>
+                  </figure>
+                </div>
+              </div>
+          </div>
+          <div class="module-card__rules">
+            <a href="#" class="module-card__text link--alpha">Add Rules</a>
+          </div>
+          <div class="module-card__actions">
+<a class="action" href="/Atomizer/scenario/show">              <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>edit-icon</title>
+<path d="M20 10.21V20H0V.42h10v1.96H2V18.04h16V10.21h2zm-13 .304l8.022-7.87 1.554 2-8.117 8.503H7v-2.633zm-2 4.59h4.316l9.907-10.46L15.076 0 5 9.688v5.417z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a>            <a href="#" class="action modal__trigger" data-modal="deleteModal7"><svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>trash-icon</title>
+<path d="M7 16h2V8H7v8zm4 0h2V8h-2v8zm-6 2h10V6H5v12zM7 4h6V2H7v2zm8 0V0H5v4H0v2h3v14h14V6h3V4h-5z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg></a>
+            <div class="modal" aria-hidden="true" data-modal="deleteModal7">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="modal__close-icon"><title>close-icon</title>
+<path d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Are you sure about this move?</h3>
+          <p class="modal-intro">You are about to perform an action that cannot be undone. Please double check the modules listed below before continuing.</p>
+        </header>
+        <div class="modal__body-content">
+          <label class="form__label">Selected modules</label>
+          <ul>
+            <li>8. Existing Customer, Satellite TV?</li>
+          </ul>
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--charlie">Delete Module</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="card card--small card--draggable module-card">
+          <div class="module-card__title">
+            <input type="checkbox" class="checkbox checkbox-extras-panel" />
+            <h4 class="title">9. Alaska Or Hawaii Stop</h4>
+          </div>
+          <div class="module-card__update">
+              <img class="avatar" src="../images/misc/user-avatar-img.jpg" />
+            <div class="updated-content">
+              <h5 class="module-card__text">Kurt Cunningham</h5>
+              <h5 class="module-card__text--small">Oct. 12, 2016</h5>
+            </div>
+          </div>
+          <div class="module-card__version">
+            <p class="module-card__text">0.5.11</p>
+              <div class="update-icon">
+                <div class="tooltip__item">
+                  <svg width="16" height="18" viewbox="0 0 16 18" xmlns="http://www.w3.org/2000/svg"><title>update-icon</title>
+<path d="M7 7v4h6V9H9V7H7zm7 3c0 3-2.692 6-6 6s-6-2.692-6-6 2.692-6 6-6v2l5-3-5-3v2c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3 8-8h-2z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+                  <figure class="tooltip">
+                    <p class="tooltip__text">Looks like an update is avaliable. Click the button in the top right.</p>
+                  </figure>
+                </div>
+              </div>
+          </div>
+          <div class="module-card__rules">
+            <a href="#" class="module-card__text link--bravo">5 Rules</a>
+          </div>
+          <div class="module-card__actions">
+<a class="action" href="/Atomizer/scenario/show">              <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>edit-icon</title>
+<path d="M20 10.21V20H0V.42h10v1.96H2V18.04h16V10.21h2zm-13 .304l8.022-7.87 1.554 2-8.117 8.503H7v-2.633zm-2 4.59h4.316l9.907-10.46L15.076 0 5 9.688v5.417z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a>            <a href="#" class="action modal__trigger" data-modal="deleteModal8"><svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>trash-icon</title>
+<path d="M7 16h2V8H7v8zm4 0h2V8h-2v8zm-6 2h10V6H5v12zM7 4h6V2H7v2zm8 0V0H5v4H0v2h3v14h14V6h3V4h-5z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg></a>
+            <div class="modal" aria-hidden="true" data-modal="deleteModal8">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="modal__close-icon"><title>close-icon</title>
+<path d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Are you sure about this move?</h3>
+          <p class="modal-intro">You are about to perform an action that cannot be undone. Please double check the modules listed below before continuing.</p>
+        </header>
+        <div class="modal__body-content">
+          <label class="form__label">Selected modules</label>
+          <ul>
+            <li>9. Alaska Or Hawaii Stop</li>
+          </ul>
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--charlie">Delete Module</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="card card--small card--draggable module-card">
+          <div class="module-card__title">
+            <input type="checkbox" class="checkbox checkbox-extras-panel" />
+            <h4 class="title">10. Existing Customer Stop</h4>
+          </div>
+          <div class="module-card__update">
+              <img class="avatar" src="../images/misc/user-avatar-2-img.jpg" />
+            <div class="updated-content">
+              <h5 class="module-card__text">Joey Kirk</h5>
+              <h5 class="module-card__text--small">Oct. 12, 2016</h5>
+            </div>
+          </div>
+          <div class="module-card__version">
+            <p class="module-card__text">1.7.1</p>
+          </div>
+          <div class="module-card__rules">
+            <a href="#" class="module-card__text link--bravo">1 Rule</a>
+          </div>
+          <div class="module-card__actions">
+<a class="action" href="/Atomizer/scenario/show">              <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>edit-icon</title>
+<path d="M20 10.21V20H0V.42h10v1.96H2V18.04h16V10.21h2zm-13 .304l8.022-7.87 1.554 2-8.117 8.503H7v-2.633zm-2 4.59h4.316l9.907-10.46L15.076 0 5 9.688v5.417z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a>            <a href="#" class="action modal__trigger" data-modal="deleteModal9"><svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>trash-icon</title>
+<path d="M7 16h2V8H7v8zm4 0h2V8h-2v8zm-6 2h10V6H5v12zM7 4h6V2H7v2zm8 0V0H5v4H0v2h3v14h14V6h3V4h-5z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg></a>
+            <div class="modal" aria-hidden="true" data-modal="deleteModal9">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="modal__close-icon"><title>close-icon</title>
+<path d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Are you sure about this move?</h3>
+          <p class="modal-intro">You are about to perform an action that cannot be undone. Please double check the modules listed below before continuing.</p>
+        </header>
+        <div class="modal__body-content">
+          <label class="form__label">Selected modules</label>
+          <ul>
+            <li>10. Existing Customer Stop</li>
+          </ul>
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--charlie">Delete Module</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="card card--small card--draggable module-card">
+          <div class="module-card__title">
+            <input type="checkbox" class="checkbox checkbox-extras-panel" />
+            <h4 class="title">11. Check Availability Script</h4>
+          </div>
+          <div class="module-card__update">
+              <img class="avatar" src="../images/misc/user-avatar-2-img.jpg" />
+            <div class="updated-content">
+              <h5 class="module-card__text">Joey Kirk</h5>
+              <h5 class="module-card__text--small">Oct. 12, 2016</h5>
+            </div>
+          </div>
+          <div class="module-card__version">
+            <p class="module-card__text">0.0.7</p>
+          </div>
+          <div class="module-card__rules">
+            <a href="#" class="module-card__text link--alpha">Add Rules</a>
+          </div>
+          <div class="module-card__actions">
+<a class="action" href="/Atomizer/scenario/show">              <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>edit-icon</title>
+<path d="M20 10.21V20H0V.42h10v1.96H2V18.04h16V10.21h2zm-13 .304l8.022-7.87 1.554 2-8.117 8.503H7v-2.633zm-2 4.59h4.316l9.907-10.46L15.076 0 5 9.688v5.417z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a>            <a href="#" class="action modal__trigger" data-modal="deleteModal10"><svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>trash-icon</title>
+<path d="M7 16h2V8H7v8zm4 0h2V8h-2v8zm-6 2h10V6H5v12zM7 4h6V2H7v2zm8 0V0H5v4H0v2h3v14h14V6h3V4h-5z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg></a>
+            <div class="modal" aria-hidden="true" data-modal="deleteModal10">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="modal__close-icon"><title>close-icon</title>
+<path d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Are you sure about this move?</h3>
+          <p class="modal-intro">You are about to perform an action that cannot be undone. Please double check the modules listed below before continuing.</p>
+        </header>
+        <div class="modal__body-content">
+          <label class="form__label">Selected modules</label>
+          <ul>
+            <li>11. Check Availability Script</li>
+          </ul>
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--charlie">Delete Module</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="card card--small card--draggable module-card">
+          <div class="module-card__title">
+            <input type="checkbox" class="checkbox checkbox-extras-panel" />
+            <h4 class="title">12. Service Check</h4>
+          </div>
+          <div class="module-card__update">
+              <img class="avatar" src="../images/misc/user-avatar-img.jpg" />
+            <div class="updated-content">
+              <h5 class="module-card__text">Kurt Cunningham</h5>
+              <h5 class="module-card__text--small">Oct. 12, 2016</h5>
+            </div>
+          </div>
+          <div class="module-card__version">
+            <p class="module-card__text">2.9.5</p>
+          </div>
+          <div class="module-card__rules">
+            <a href="#" class="module-card__text link--bravo">1 Rule</a>
+          </div>
+          <div class="module-card__actions">
+<a class="action" href="/Atomizer/scenario/show">              <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>edit-icon</title>
+<path d="M20 10.21V20H0V.42h10v1.96H2V18.04h16V10.21h2zm-13 .304l8.022-7.87 1.554 2-8.117 8.503H7v-2.633zm-2 4.59h4.316l9.907-10.46L15.076 0 5 9.688v5.417z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a>            <a href="#" class="action modal__trigger" data-modal="deleteModal11"><svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>trash-icon</title>
+<path d="M7 16h2V8H7v8zm4 0h2V8h-2v8zm-6 2h10V6H5v12zM7 4h6V2H7v2zm8 0V0H5v4H0v2h3v14h14V6h3V4h-5z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg></a>
+            <div class="modal" aria-hidden="true" data-modal="deleteModal11">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="modal__close-icon"><title>close-icon</title>
+<path d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Are you sure about this move?</h3>
+          <p class="modal-intro">You are about to perform an action that cannot be undone. Please double check the modules listed below before continuing.</p>
+        </header>
+        <div class="modal__body-content">
+          <label class="form__label">Selected modules</label>
+          <ul>
+            <li>12. Service Check</li>
+          </ul>
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--charlie">Delete Module</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="card card--small card--draggable module-card">
+          <div class="module-card__title">
+            <input type="checkbox" class="checkbox checkbox-extras-panel" />
+            <h4 class="title">13. Business Address Question</h4>
+          </div>
+          <div class="module-card__update">
+              <img class="avatar" src="../images/misc/user-avatar-img.jpg" />
+            <div class="updated-content">
+              <h5 class="module-card__text">Kurt Cunningham</h5>
+              <h5 class="module-card__text--small">Oct. 12, 2016</h5>
+            </div>
+          </div>
+          <div class="module-card__version">
+            <p class="module-card__text">1.2.7</p>
+          </div>
+          <div class="module-card__rules">
+            <a href="#" class="module-card__text link--bravo">1 Rule</a>
+          </div>
+          <div class="module-card__actions">
+<a class="action" href="/Atomizer/scenario/show">              <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>edit-icon</title>
+<path d="M20 10.21V20H0V.42h10v1.96H2V18.04h16V10.21h2zm-13 .304l8.022-7.87 1.554 2-8.117 8.503H7v-2.633zm-2 4.59h4.316l9.907-10.46L15.076 0 5 9.688v5.417z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a>            <a href="#" class="action modal__trigger" data-modal="deleteModal12"><svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>trash-icon</title>
+<path d="M7 16h2V8H7v8zm4 0h2V8h-2v8zm-6 2h10V6H5v12zM7 4h6V2H7v2zm8 0V0H5v4H0v2h3v14h14V6h3V4h-5z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg></a>
+            <div class="modal" aria-hidden="true" data-modal="deleteModal12">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="modal__close-icon"><title>close-icon</title>
+<path d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Are you sure about this move?</h3>
+          <p class="modal-intro">You are about to perform an action that cannot be undone. Please double check the modules listed below before continuing.</p>
+        </header>
+        <div class="modal__body-content">
+          <label class="form__label">Selected modules</label>
+          <ul>
+            <li>13. Business Address Question</li>
+          </ul>
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--charlie">Delete Module</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="card card--small card--draggable module-card">
+          <div class="module-card__title">
+            <input type="checkbox" class="checkbox checkbox-extras-panel" />
+            <h4 class="title">14. Transfer To Business Agent RV Pro</h4>
+          </div>
+          <div class="module-card__update">
+              <img class="avatar" src="../images/misc/user-avatar-img.jpg" />
+            <div class="updated-content">
+              <h5 class="module-card__text">Kurt Cunningham</h5>
+              <h5 class="module-card__text--small">Oct. 12, 2016</h5>
+            </div>
+          </div>
+          <div class="module-card__version">
+            <p class="module-card__text">0.6.7</p>
+          </div>
+          <div class="module-card__rules">
+            <a href="#" class="module-card__text link--alpha">Add Rules</a>
+          </div>
+          <div class="module-card__actions">
+<a class="action" href="/Atomizer/scenario/show">              <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>edit-icon</title>
+<path d="M20 10.21V20H0V.42h10v1.96H2V18.04h16V10.21h2zm-13 .304l8.022-7.87 1.554 2-8.117 8.503H7v-2.633zm-2 4.59h4.316l9.907-10.46L15.076 0 5 9.688v5.417z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a>            <a href="#" class="action modal__trigger" data-modal="deleteModal13"><svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>trash-icon</title>
+<path d="M7 16h2V8H7v8zm4 0h2V8h-2v8zm-6 2h10V6H5v12zM7 4h6V2H7v2zm8 0V0H5v4H0v2h3v14h14V6h3V4h-5z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg></a>
+            <div class="modal" aria-hidden="true" data-modal="deleteModal13">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="modal__close-icon"><title>close-icon</title>
+<path d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Are you sure about this move?</h3>
+          <p class="modal-intro">You are about to perform an action that cannot be undone. Please double check the modules listed below before continuing.</p>
+        </header>
+        <div class="modal__body-content">
+          <label class="form__label">Selected modules</label>
+          <ul>
+            <li>14. Transfer To Business Agent RV Pro</li>
+          </ul>
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--charlie">Delete Module</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          </div>
+        </li>
+        <li class="card card--small card--draggable module-card">
+          <div class="module-card__title">
+            <input type="checkbox" class="checkbox checkbox-extras-panel" />
+            <h4 class="title">15. Business Address Stop</h4>
+          </div>
+          <div class="module-card__update">
+              <img class="avatar" src="../images/misc/user-avatar-img.jpg" />
+            <div class="updated-content">
+              <h5 class="module-card__text">Kurt Cunningham</h5>
+              <h5 class="module-card__text--small">Oct. 12, 2016</h5>
+            </div>
+          </div>
+          <div class="module-card__version">
+            <p class="module-card__text">2.3.5</p>
+          </div>
+          <div class="module-card__rules">
+            <a href="#" class="module-card__text link--alpha">Add Rules</a>
+          </div>
+          <div class="module-card__actions">
+<a class="action" href="/Atomizer/scenario/show">              <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>edit-icon</title>
+<path d="M20 10.21V20H0V.42h10v1.96H2V18.04h16V10.21h2zm-13 .304l8.022-7.87 1.554 2-8.117 8.503H7v-2.633zm-2 4.59h4.316l9.907-10.46L15.076 0 5 9.688v5.417z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a>            <a href="#" class="action modal__trigger" data-modal="deleteModal14"><svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>trash-icon</title>
+<path d="M7 16h2V8H7v8zm4 0h2V8h-2v8zm-6 2h10V6H5v12zM7 4h6V2H7v2zm8 0V0H5v4H0v2h3v14h14V6h3V4h-5z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg></a>
+            <div class="modal" aria-hidden="true" data-modal="deleteModal14">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="modal__close-icon"><title>close-icon</title>
+<path d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Are you sure about this move?</h3>
+          <p class="modal-intro">You are about to perform an action that cannot be undone. Please double check the modules listed below before continuing.</p>
+        </header>
+        <div class="modal__body-content">
+          <label class="form__label">Selected modules</label>
+          <ul>
+            <li>15. Business Address Stop</li>
+          </ul>
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--charlie">Delete Module</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+          </div>
+        </li>
+    </ul>
+  </div>
+</div>
+</section>
+<!-- Edit Scenario Save Alert -->
+<figure aria-hidden="true" id="save-alert" class="alert--success toggle-parent">
+  <svg width="16" height="20" viewbox="0 0 16 20" xmlns="http://www.w3.org/2000/svg" class="alert__icon"><title>notification-icon</title>
+<path d="M12 14H4V8c0-2.666 2-4 4-4s4 1.334 4 4v6zm-3 3c0 .552-.448 1-1 1s-1-.448-1-1v-1h2v1zm5-3V8c0-3.553-2.368-5.525-5-5.92V0H7v2.08C4.368 2.474 2 4.446 2 8v6H0v2h5v1c0 1.657 1.343 3 3 3s3-1.343 3-3v-1h5v-2h-2z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+  <h5 class="alert__text">High fives! You have successfully updated the module.</h5>
+  <a class="alert__trigger" href="#">
+    <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="alert__icon alert__icon--close toggle-element"><title>close-icon</title>
+<path d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+    </svg>
+  </a>
+</figure>
+<!-- Edit Scenario Extras Panel -->
+<!-- Extras Panel Footer -->
+<div class="module-extras-panel">
+  <div class="module-extras-panel__left">
+    <p class="form__label margin--reset"><span class="badge--alpha margin-right--echo checkboxes-badge"></span> Selected Modules</p>
+  </div>
+  <div class="module-extras-panel__middle">
+    <ul class="list">
+      <li class="item module-extras-panel__action">
+        <a href="#" class="module-extras-panel__link modal__trigger" data-modal="deleteModules"><svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>trash-icon</title>
+<path d="M7 16h2V8H7v8zm4 0h2V8h-2v8zm-6 2h10V6H5v12zM7 4h6V2H7v2zm8 0V0H5v4H0v2h3v14h14V6h3V4h-5z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg></a>
+      </li>
+      <li class="item module-extras-panel__action">
+        <a href="#" class="module-extras-panel__link modal__trigger" data-modal="duplicateModules"><svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>duplicate-icon</title>
+<path d="M18 14h-2V4H6V2h12v12zM2 18h12V6H2v12zM4 0v4H0v16h16v-4h4V0H4z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg></a>
+      </li>
+      <li class="item module-extras-panel__action popout__container">
+        <a href="#" class="module-extras-panel__link popout__trigger"><svg width="18" height="20" viewbox="0 0 18 20" xmlns="http://www.w3.org/2000/svg"><title>arrow-up-down-icon</title>
+<path d="M9.894 4.654L4.922 0 0 4.654l1.383 1.45 2.63-2.42V20H6.02V3.684l2.522 2.42 1.352-1.45zm6.753 9.243l-2.6 2.42V.07H12.04v16.246l-2.552-2.42-1.367 1.45L13.087 20 18 15.346l-1.353-1.45z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg></a>
+        <div class="popout popout--inverse popout--max-height">
+  <div class="popout__header">
+    <select>
+      <option selected>Move Above</option>
+      <option>Move Below</option>
+    </select>
+  </div>
+  <ul class="popout__list">
+      <li class="popout__item">
+        <a href="#" class="popout__link">1. Atom Hailo</a>
+      </li>
+      <li class="popout__item">
+        <a href="#" class="popout__link">2. Red Switch Transfer</a>
+      </li>
+      <li class="popout__item">
+        <a href="#" class="popout__link">3. Red Switch Transfer</a>
+      </li>
+      <li class="popout__item">
+        <a href="#" class="popout__link">4. RB HOV Overflow Intro</a>
+      </li>
+      <li class="popout__item">
+        <a href="#" class="popout__link">5. Default Intro</a>
+      </li>
+      <li class="popout__item">
+        <a href="#" class="popout__link">6. Customer Collection</a>
+      </li>
+      <li class="popout__item">
+        <a href="#" class="popout__link">7. Contact Form</a>
+      </li>
+      <li class="popout__item">
+        <a href="#" class="popout__link">8. Existing Customer, Satellite TV?</a>
+      </li>
+      <li class="popout__item">
+        <a href="#" class="popout__link">9. Alaska Or Hawaii Stop</a>
+      </li>
+      <li class="popout__item">
+        <a href="#" class="popout__link">10. Existing Customer Stop</a>
+      </li>
+      <li class="popout__item">
+        <a href="#" class="popout__link">11. Check Availability Script</a>
+      </li>
+      <li class="popout__item">
+        <a href="#" class="popout__link">12. Service Check</a>
+      </li>
+      <li class="popout__item">
+        <a href="#" class="popout__link">13. Business Address Question</a>
+      </li>
+      <li class="popout__item">
+        <a href="#" class="popout__link">14. Transfer To Business Agent RV Pro</a>
+      </li>
+      <li class="popout__item">
+        <a href="#" class="popout__link">15. Business Address Stop</a>
+      </li>
+  </ul>
+</div>
+      </li>
+    </ul>
+  </div>
+  <div class="module-extras-panel__right">
+    <p class="text--small text--grey margin--reset"><em>Press <strong>ESC</strong> to unselect all modules</em></p>
+  </div>
+</div>
+<div class="modal" aria-hidden="true" data-modal="duplicateModules">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="modal__close-icon"><title>close-icon</title>
+<path d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Duplicate Modules</h3>
+          <p class="modal-intro">Please confirm that you want to duplicate these modules. Once they are duplicated, they will appear below the last selected module.</p>
+        </header>
+        <div class="modal__body-content">
+          <ul class="row">
+            <li class="columns-10__l form__label">Selected Modules</li>
+            <li class="columns-2__l form__label">Action</li>
+          </ul>
+          <ul class="row">
+            <li class="columns-12__l clearfix margin-bottom--delta hide-element">
+              <ul>
+                <li class="columns-10__l">Contact Form</li>
+                <li class="columns-2__l">
+                  <a href="#" class="link--delta hide-link">Remove</a>
+                </li>
+              </ul>
+            </li>
+            <li class="columns-12__l clearfix margin-bottom--delta hide-element">
+              <ul>
+                <li class="columns-10__l">Existing Customer, Satellite TV?</li>
+                <li class="columns-2__l">
+                  <a href="#" class="link--delta hide-link">Remove</a>
+                </li>
+              </ul>
+            </li>
+            <li class="columns-12__l clearfix margin-bottom--delta hide-element">
+              <ul>
+                <li class="columns-10__l">Alaska or Hawaii Stop</li>
+                <li class="columns-2__l">
+                  <a href="#" class="link--delta hide-link">Remove</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--alpha">Duplicate Modules</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal" aria-hidden="true" data-modal="deleteModules">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="modal__close-icon"><title>close-icon</title>
+<path d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Are you sure about this move? </h3>
+          <p class="modal-intro">You are about to perform an action that cannot be undone. Please double check the modules listed below before confirming this action.</p>
+        </header>
+        <div class="modal__body-content">
+          <ul class="row">
+            <li class="columns-10__l form__label">Selected Modules</li>
+            <li class="columns-2__l form__label">Action</li>
+          </ul>
+          <ul class="row">
+            <li class="columns-12__l clearfix margin-bottom--delta hide-element">
+              <ul>
+                <li class="columns-10__l">Contact Form</li>
+                <li class="columns-2__l">
+                  <a href="#" class="link--delta hide-link">Remove</a>
+                </li>
+              </ul>
+            </li>
+            <li class="columns-12__l clearfix margin-bottom--delta hide-element">
+              <ul>
+                <li class="columns-10__l">Existing Customer, Satellite TV?</li>
+                <li class="columns-2__l">
+                  <a href="#" class="link--delta hide-link">Remove</a>
+                </li>
+              </ul>
+            </li>
+            <li class="columns-12__l clearfix margin-bottom--delta hide-element">
+              <ul>
+                <li class="columns-10__l">Alaska or Hawaii Stop</li>
+                <li class="columns-2__l">
+                  <a href="#" class="link--delta hide-link">Remove</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--charlie">Delete Modules</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Edit Scenario Modals -->
+<div class="modal" aria-hidden="true" data-modal="updateModules">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="modal__close-icon"><title>close-icon</title>
+<path d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Update Outdated Modules</h3>
+          <p class="modal-intro">Please review the modules that need to be updated. If you have questions about the modules that have updates just ask. You won’t break anything by updating. Some just need more testing then others.</p>
+        </header>
+        <div class="modal__body-content">
+          <div class="toggle toggle--card">
+            <div class="toggle__header">
+              <h5 class="toggle--card-title form__label">Update Legend</h5>
+              <a href="" class="toggle__trigger">
+                <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="toggle__icon toggle__icon--small toggle__icon--plus"><title>plus-icon</title>
+<path d="M20 9v2h-9v9H9v-9H0V9h9V0h2v9" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+                <svg width="20" height="2" viewbox="0 0 20 2" xmlns="http://www.w3.org/2000/svg" class="toggle__icon toggle__icon--small toggle__icon--minus"><title>minus-icon</title>
+<path d="M0 2h20V0H0" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+              </a>
+            </div>
+            <div class="toggle__body">
+              <ul>
+                <li class="margin-bottom--delta"><span class="indicator--alpha"></span>Minor Updates: Safe to update.</li>
+                <li class="margin-bottom--delta"><span class="indicator--bravo"></span>Patch Updates: Safe to update with testing.</li>
+                <li><span class="indicator--charlie"></span>Major Updates: Caution, thorough testing needed.</li>
+              </ul>
+            </div>
+          </div>
+          <ul class="row">
+            <li class="columns-7__l form__label">Outdated Modules</li>
+            <li class="columns-3__l form__label">Update</li>
+            <li class="columns-2__l form__label">Action</li>
+          </ul>
+          <ul class="row">
+            <li class="columns-12__l clearfix margin-bottom--delta hide-element">
+              <ul>
+                <li class="columns-7__l">
+                  <span class="indicator--bravo"></span>
+                  Contact Form
+                </li>
+                <li class="columns-3__l">
+                  0.6.8 to 0.7.0
+                </li>
+                <li class="columns-2__l">
+                  <a href="#" class="link--delta hide-link">Remove</a>
+                </li>
+              </ul>
+            </li>
+            <li class="columns-12__l clearfix margin-bottom--delta hide-element">
+              <ul>
+                <li class="columns-7__l">
+                  <span class="indicator--alpha"></span>
+                  Existing Customer, Satellite TV?
+                </li>
+                <li class="columns-3__l">
+                  0.7.2 to 0.7.3
+                </li>
+                <li class="columns-2__l">
+                  <a href="#" class="link--delta hide-link">Remove</a>
+                </li>
+              </ul>
+            </li>
+            <li class="columns-12__l clearfix margin-bottom--delta hide-element">
+              <ul>
+                <li class="columns-7__l">
+                  <span class="indicator--bravo"></span>
+                  Alaska or Hawaii Stop
+                </li>
+                <li class="columns-3__l">
+                  0.5.11 to 0.6.0
+                </li>
+                <li class="columns-2__l">
+                  <a href="#" class="link--delta hide-link">Remove</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--alpha">Update Module</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<section role="region" aria-label="Test Scenario Flow" id="tab-2" class="page-section page-section--header-offset tab__content">
+  <aside role="complementary" class="page-sidebar page-sidebar--right">
+    <header role="banner" class="page-sidebar__header">
+      <h2 class="title">Test Call</h2>
+    </header>
+    <div class="page-sidebar__body">
+      <div class="page-sidebar__content page-sidebar__content--border">
+        <label class="form__label">Enter Call log Id</label>
+        <div class="button--add-on__container button--add-on__container--full">
+          <input type="text" placeholder="Enter call ID" class="input--add-on margin-reset--bottom" />
+          <button id="show-test-details" class="input--add-on__button button--alpha">Test</button>
+        </div>
+      </div>
+      <div class="page-sidebar__content">
+        <div class="page-sidebar__group is-active">
+          <h6 class="form__label">Call Log Details</h6>
+          <p>Please enter a call log ID to test.</p>
+        </div>
+        <div class="page-sidebar__group">
+          <h6 class="form__label">Call Log Details</h6>
+          <ul>
+            <li class="margin-bottom--delta">Caller ID<span class="float--right">12456</span></li>
+            <li class="margin-bottom--delta">Call Location<span class="float--right">North Charlotte</span></li>
+            <li class="margin-bottom--delta">Device Type<span class="float--right">Mobile</span></li>
+            <li class="margin-bottom--delta">Call Duration<span class="float--right">3:45</span></li>
+            <li class="margin-bottom--delta">Conversion<span class="float--right">False</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="page-main page-main--left">
+    <header role="banner" class="page-main__header">
+      <div class="page-main__header--left">
+        <h2 class="title">Scenario Flow</h2>
+      </div>
+    </header>
+    <div class="page-main__content">
+      <ul class="list highlight-test">
+        <li class="highlight--alpha highlight__text--lead">IF CONTROL SCENARIO SERVERED</li>
+        <li class="highlight--bravo">
+          <div class="highlight__card">
+            <h4 id="show-test-details" class="highlight__card-title">1. Atom Hailo</h4>
+            <p class="highlight__card-action">Version: 1.3.5</p>
+          </div>
+        </li>
+        <li class="highlight--alpha highlight__text--lead">Then If</li>
+        <li class="highlight--bravo">
+          <span>Marketing Program ID <span class="highlight__text--heavy">is one of</span> 1271057, 1273203 <span class="highlight__text--heavy">AND</span> Company equals Hughesnet <span class="highlight__text--heavy">OR</span> Company equals DirectTV </span>
+          <div class="highlight__card">
+            <h4 class="highlight__card-title">2. Red Switch Transfer</h4>
+            <p class="highlight__card-action">Version: 1.0.5</p>
+          </div>
+        </li>
+        <li class="highlight--alpha highlight__text--lead">Else Then</li>
+        <li class="highlight--bravo">
+          <div class="highlight__card">
+            <h4 class="highlight__card-title">3. D* Transfer Intro</h4>
+            <p class="highlight__card-action">Version: 1.3.0</p>
+          </div>
+        </li>
+        <li class="highlight--alpha highlight__text--lead">Then</li>
+        <li class="highlight--bravo">
+          <div class="highlight__card">
+            <h4 class="highlight__card-title">4. RB HOV Overflow Intro</h4>
+            <p class="highlight__card-action">Version: 0.0.6</p>
+          </div>
+        </li>
+        <li class="highlight--alpha highlight__text--lead">Then</li>
+        <li class="highlight--bravo">
+          <div class="highlight__card">
+            <h4 class="highlight__card-title">5. Default Intro</h4>
+            <p class="highlight__card-action">Version: 0.0.6</p>
+          </div>
+        </li>
+        <li class="highlight--alpha highlight__text--lead">Then If</li>
+        <li class="highlight--bravo">
+          <span>Customer Information <span class="highlight__text--heavy">contains</span> something</span>
+          <div class="highlight__card">
+            <h4 class="highlight__card-title">6. Customer Collection</h4>
+            <p class="highlight__card-action">Version: 1.0.5</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+<!-- A/B Test Scenario Partial -->
+<section role="region" aria-label="Scenario A/B Test" id="tab-3" class="page-section page-section--header-offset tab__content">
+  <div class="page-main page-main--full">
+    <div class="page-main__content">
+      <header role="banner" class="page-main__header">
+        <h2 class="title">Active Tests</h2>
+      </header>
+      <table class="card-table">
+        <thead class="card-table__header">
+          <tr>
+            <th class="card-item card-item--large">Test Title</th>
+            <th class="card-item">Status</th>
+            <th class="card-item">Test Created On</th>
+            <th class="card-item">Users</th>
+            <th class="card-item">Days Active</th>
+            <th class="card-item">Actions</th>
+          </tr>
+        </thead>
+        <tbody class="card-table__body">
+              <tr class="card card--small ">
+  <td class="card-item card-item--extra-large">
+    <h4 class="title">SSL Order Streamlined</h4>
+  </td>
+  <td class="card-item">
+    <i class="indicator--alpha  "></i>
+    active
+  </td>
+  <td class="card-item">
+    <div class="chip margin--reset">
+      <div class="chip--left">
+        <div class="chip__image chip__image--small">
+          <img class="image" src="../images/misc/user-avatar-img.jpg" />
+        </div>
+      </div>
+      <div class="chip--right margin-reset--top margin-right--echo">
+        <p class="chip__text margin-reset--bottom">Kurt Cunningham<br/>Oct. 12, 2016</p>
+      </div>
+    </div>
+  </td>
+  <td class="card-item">5,345</td>
+  <td class="card-item">27 days</td>
+  <td class="card-item__actions">
+<a class="link" href="#">        <svg width="10" height="14" viewbox="0 0 10 14" xmlns="http://www.w3.org/2000/svg"><title>pause-icon</title>
+<path d="M0 13.333h3.333V0H0v13.333zm6.667 0H10V0H6.667v13.333z" fill="#FFFFFF" id="app-icon" fill-rule="evenodd"></path></svg>
+</a><a class="link" href="test/">      <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>edit-icon</title>
+<path d="M20 10.21V20H0V.42h10v1.96H2V18.04h16V10.21h2zm-13 .304l8.022-7.87 1.554 2-8.117 8.503H7v-2.633zm-2 4.59h4.316l9.907-10.46L15.076 0 5 9.688v5.417z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a><a class="link" href="#">        <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>archive-icon</title>
+<path d="M14 16v-4h4v6H2v-6h4v4h8zm-2-6v4H8v-4H2.515l1.6-8h12.8l1.6 8H12zM0 20h20V10L18.515 0h-16L0 10v10z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a>  </td>
+</tr>
+<tr class="spacer "></tr>
+              <tr class="card card--small ">
+  <td class="card-item card-item--extra-large">
+    <h4 class="title">Existing Customer Package Upgrade - Midwest</h4>
+  </td>
+  <td class="card-item">
+    <i class=" indicator--bravo "></i>
+    paused
+  </td>
+  <td class="card-item">
+    <div class="chip margin--reset">
+      <div class="chip--left">
+        <div class="chip__image chip__image--small">
+          <img class="image" src="../images/misc/user-avatar-2-img.jpg" />
+        </div>
+      </div>
+      <div class="chip--right margin-reset--top margin-right--echo">
+        <p class="chip__text margin-reset--bottom">Joey Kirk<br/>Nov. 7, 2016</p>
+      </div>
+    </div>
+  </td>
+  <td class="card-item">345</td>
+  <td class="card-item">10 days</td>
+  <td class="card-item__actions">
+<a class="link" href="#">        <svg width="10" height="12" viewbox="0 0 10 12" xmlns="http://www.w3.org/2000/svg"><title>play-icon</title>
+<path d="M0 0v11.43l10-5.716" fill="#FFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a><a class="link" href="test/">      <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>edit-icon</title>
+<path d="M20 10.21V20H0V.42h10v1.96H2V18.04h16V10.21h2zm-13 .304l8.022-7.87 1.554 2-8.117 8.503H7v-2.633zm-2 4.59h4.316l9.907-10.46L15.076 0 5 9.688v5.417z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a><a class="link" href="#">        <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>archive-icon</title>
+<path d="M14 16v-4h4v6H2v-6h4v4h8zm-2-6v4H8v-4H2.515l1.6-8h12.8l1.6 8H12zM0 20h20V10L18.515 0h-16L0 10v10z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a>  </td>
+</tr>
+<tr class="spacer "></tr>
+          <tr class="toggle-table-row__trigger">
+            <td colspan="6" class="padding-top--charlie">
+              <a class="link--alpha" href="#">View Archived Tests</a>
+            </td>
+          </tr>
+              <tr class="card card--small card-row__toggle hidden">
+  <td class="card-item card-item--extra-large">
+    <h4 class="title">Existing Customer Package Upgrade - Mobile</h4>
+  </td>
+  <td class="card-item">
+    <i class="  indicator--charlie"></i>
+    archived
+  </td>
+  <td class="card-item">
+    <div class="chip margin--reset">
+      <div class="chip--left">
+        <div class="chip__image chip__image--small">
+          <img class="image" src="../images/misc/user-avatar-2-img.jpg" />
+        </div>
+      </div>
+      <div class="chip--right margin-reset--top margin-right--echo">
+        <p class="chip__text margin-reset--bottom">Joey Kirk<br/>Aug. 15, 2016</p>
+      </div>
+    </div>
+  </td>
+  <td class="card-item">345</td>
+  <td class="card-item">10 days</td>
+  <td class="card-item__actions">
+<a class="link" href="#">        <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>trash-icon</title>
+<path d="M7 16h2V8H7v8zm4 0h2V8h-2v8zm-6 2h10V6H5v12zM7 4h6V2H7v2zm8 0V0H5v4H0v2h3v14h14V6h3V4h-5z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a><a class="link" href="test/">      <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>edit-icon</title>
+<path d="M20 10.21V20H0V.42h10v1.96H2V18.04h16V10.21h2zm-13 .304l8.022-7.87 1.554 2-8.117 8.503H7v-2.633zm-2 4.59h4.316l9.907-10.46L15.076 0 5 9.688v5.417z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a><a class="link" href="#">        <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>unarchive-icon</title>
+<path d="M17 10V7.207L18 10h-1zm1 8H2v-6h4v4h8v-4h4v6zM3 7.207V10H2l1-2.793zM5 2h10v8h-3v4h-1.034l-.033-7.28 1.88 1.88 1.413-1.414-4.242-4.243L5.69 7.236 7.085 8.67l1.95-1.95L9.012 14H8v-4H5V2zm13 2h-1V0H3v4H2l-2 6.207V20h20v-9.793L18 4z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a>  </td>
+</tr>
+<tr class="spacer card-row__toggle hidden"></tr>
+              <tr class="card card--small card-row__toggle hidden">
+  <td class="card-item card-item--extra-large">
+    <h4 class="title">Simplified Order Process</h4>
+  </td>
+  <td class="card-item">
+    <i class="  indicator--charlie"></i>
+    archived
+  </td>
+  <td class="card-item">
+    <div class="chip margin--reset">
+      <div class="chip--left">
+        <div class="chip__image chip__image--small">
+          <img class="image" src="../images/misc/user-avatar-img.jpg" />
+        </div>
+      </div>
+      <div class="chip--right margin-reset--top margin-right--echo">
+        <p class="chip__text margin-reset--bottom">Kurt Cunningham<br/>July. 25, 2016</p>
+      </div>
+    </div>
+  </td>
+  <td class="card-item">4,534</td>
+  <td class="card-item">36 days</td>
+  <td class="card-item__actions">
+<a class="link" href="#">        <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>trash-icon</title>
+<path d="M7 16h2V8H7v8zm4 0h2V8h-2v8zm-6 2h10V6H5v12zM7 4h6V2H7v2zm8 0V0H5v4H0v2h3v14h14V6h3V4h-5z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a><a class="link" href="test/">      <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>edit-icon</title>
+<path d="M20 10.21V20H0V.42h10v1.96H2V18.04h16V10.21h2zm-13 .304l8.022-7.87 1.554 2-8.117 8.503H7v-2.633zm-2 4.59h4.316l9.907-10.46L15.076 0 5 9.688v5.417z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a><a class="link" href="#">        <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>unarchive-icon</title>
+<path d="M17 10V7.207L18 10h-1zm1 8H2v-6h4v4h8v-4h4v6zM3 7.207V10H2l1-2.793zM5 2h10v8h-3v4h-1.034l-.033-7.28 1.88 1.88 1.413-1.414-4.242-4.243L5.69 7.236 7.085 8.67l1.95-1.95L9.012 14H8v-4H5V2zm13 2h-1V0H3v4H2l-2 6.207V20h20v-9.793L18 4z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+</a>  </td>
+</tr>
+<tr class="spacer card-row__toggle hidden"></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+<section role="region" aria-label="Scenario History" id="tab-4" class="page-section page-section--header-offset tab__content">
+  <div class="page-main page-main--half page-main--half-left">
+    <header role="banner" class="page-main__header">
+      <div class="page-main__header--left">
+        <h2 class="title">Current Scenario</h2>
+      </div>
+    </header>
+    <div class="page-main--half-left">
+      <div class="page-main__content">
+        <div class="card card--small">
+  <h6 class="form__label">Release Note</h6>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  <ul class="row">
+    <li class="form__label margin-reset--bottom float--left margin-right--charlie">Last Modified: Oct. 12, 2016</li>
+    <li class="form__label margin-reset--bottom float--left margin-right--charlie">Total Modules: 100</li>
+    <li class="form__label margin-reset--bottom float--left">Total Rules: 86</li>
+  </ul>
+</div>
+<table class="card-table">
+  <thead class="card-table__header">
+    <tr>
+      <th class="card-item card-item--medium">Module Name</th>
+      <th class="card-item">Modified Last</th>
+      <th class="card-item">Version</th>
+      <th class="card-item">Rules</th>
+    </tr>
+  </thead>
+  <tbody class="card-table__body">
+      <tr class="card card--small">
+        <td class="card-item" width="40%">
+          <h4 class="title">1. Atom Hailo</h4>
+        </td>
+        <td class="card-item">
+          <div class="chip margin--reset">
+            <div class="chip--left">
+              <div class="chip__image chip__image--small">
+                  <img class="image" src="../images/misc/user-avatar-img.jpg" />
+              </div>
+            </div>
+            <div class="chip--right margin-reset--top margin-right--echo">
+              <p class="chip__text margin-reset--bottom">Kurt Cunningham<br/>Oct. 12, 2016</p>
+            </div>
+          </div>
+        </td>
+        <td class="card-item">1.3.5</td>
+        <td class="card-item">
+            0 Rules
+        </td>
+      </tr>
+      <tr class="spacer"></tr>
+      <tr class="card card--small">
+        <td class="card-item" width="40%">
+          <h4 class="title">2. Red Switch Transfer</h4>
+        </td>
+        <td class="card-item">
+          <div class="chip margin--reset">
+            <div class="chip--left">
+              <div class="chip__image chip__image--small">
+                  <img class="image" src="../images/misc/user-avatar-img.jpg" />
+              </div>
+            </div>
+            <div class="chip--right margin-reset--top margin-right--echo">
+              <p class="chip__text margin-reset--bottom">Kurt Cunningham<br/>Oct. 12, 2016</p>
+            </div>
+          </div>
+        </td>
+        <td class="card-item">1.0.5</td>
+        <td class="card-item">
+            0 Rules
+        </td>
+      </tr>
+      <tr class="spacer"></tr>
+      <tr class="card card--small">
+        <td class="card-item" width="40%">
+          <h4 class="title">3. Red Switch Transfer</h4>
+        </td>
+        <td class="card-item">
+          <div class="chip margin--reset">
+            <div class="chip--left">
+              <div class="chip__image chip__image--small">
+                  <img class="image" src="../images/misc/user-avatar-2-img.jpg" />
+              </div>
+            </div>
+            <div class="chip--right margin-reset--top margin-right--echo">
+              <p class="chip__text margin-reset--bottom">Joey Kirk<br/>Oct. 12, 2016</p>
+            </div>
+          </div>
+        </td>
+        <td class="card-item">1.3.0</td>
+        <td class="card-item">
+            3 Rules
+        </td>
+      </tr>
+      <tr class="spacer"></tr>
+      <tr class="card card--small">
+        <td class="card-item" width="40%">
+          <h4 class="title">4. RB HOV Overflow Intro</h4>
+        </td>
+        <td class="card-item">
+          <div class="chip margin--reset">
+            <div class="chip--left">
+              <div class="chip__image chip__image--small">
+                  <img class="image" src="../images/misc/user-avatar-img.jpg" />
+              </div>
+            </div>
+            <div class="chip--right margin-reset--top margin-right--echo">
+              <p class="chip__text margin-reset--bottom">Kurt Cunningham<br/>Oct. 12, 2016</p>
+            </div>
+          </div>
+        </td>
+        <td class="card-item">0.0.6</td>
+        <td class="card-item">
+            2 Rules
+        </td>
+      </tr>
+      <tr class="spacer"></tr>
+      <tr class="card card--small">
+        <td class="card-item" width="40%">
+          <h4 class="title">5. Default Intro</h4>
+        </td>
+        <td class="card-item">
+          <div class="chip margin--reset">
+            <div class="chip--left">
+              <div class="chip__image chip__image--small">
+                  <span class="avatar no-avatar">C</span>
+              </div>
+            </div>
+            <div class="chip--right margin-reset--top margin-right--echo">
+              <p class="chip__text margin-reset--bottom">Clay Carpenter<br/>Oct. 12, 2016</p>
+            </div>
+          </div>
+        </td>
+        <td class="card-item">0.2.5</td>
+        <td class="card-item">
+            0 Rules
+        </td>
+      </tr>
+      <tr class="spacer"></tr>
+      <tr class="card card--small">
+        <td class="card-item" width="40%">
+          <h4 class="title">6. Customer Collection</h4>
+        </td>
+        <td class="card-item">
+          <div class="chip margin--reset">
+            <div class="chip--left">
+              <div class="chip__image chip__image--small">
+                  <img class="image" src="../images/misc/user-avatar-img.jpg" />
+              </div>
+            </div>
+            <div class="chip--right margin-reset--top margin-right--echo">
+              <p class="chip__text margin-reset--bottom">Kurt Cunningham<br/>Oct. 12, 2016</p>
+            </div>
+          </div>
+        </td>
+        <td class="card-item">0.4.8</td>
+        <td class="card-item">
+            2 Rules
+        </td>
+      </tr>
+      <tr class="spacer"></tr>
+      <tr class="card card--small">
+        <td class="card-item" width="40%">
+          <h4 class="title">7. Contact Form</h4>
+        </td>
+        <td class="card-item">
+          <div class="chip margin--reset">
+            <div class="chip--left">
+              <div class="chip__image chip__image--small">
+                  <img class="image" src="../images/misc/user-avatar-img.jpg" />
+              </div>
+            </div>
+            <div class="chip--right margin-reset--top margin-right--echo">
+              <p class="chip__text margin-reset--bottom">Kurt Cunningham<br/>Oct. 12, 2016</p>
+            </div>
+          </div>
+        </td>
+        <td class="card-item">0.6.8</td>
+        <td class="card-item">
+            1 Rule
+        </td>
+      </tr>
+      <tr class="spacer"></tr>
+      <tr class="card card--small">
+        <td class="card-item" width="40%">
+          <h4 class="title">8. Existing Customer, Satellite TV?</h4>
+        </td>
+        <td class="card-item">
+          <div class="chip margin--reset">
+            <div class="chip--left">
+              <div class="chip__image chip__image--small">
+                  <img class="image" src="../images/misc/user-avatar-img.jpg" />
+              </div>
+            </div>
+            <div class="chip--right margin-reset--top margin-right--echo">
+              <p class="chip__text margin-reset--bottom">Kurt Cunningham<br/>Oct. 12, 2016</p>
+            </div>
+          </div>
+        </td>
+        <td class="card-item">0.7.2</td>
+        <td class="card-item">
+            0 Rules
+        </td>
+      </tr>
+      <tr class="spacer"></tr>
+      <tr class="card card--small">
+        <td class="card-item" width="40%">
+          <h4 class="title">9. Alaska Or Hawaii Stop</h4>
+        </td>
+        <td class="card-item">
+          <div class="chip margin--reset">
+            <div class="chip--left">
+              <div class="chip__image chip__image--small">
+                  <img class="image" src="../images/misc/user-avatar-img.jpg" />
+              </div>
+            </div>
+            <div class="chip--right margin-reset--top margin-right--echo">
+              <p class="chip__text margin-reset--bottom">Kurt Cunningham<br/>Oct. 12, 2016</p>
+            </div>
+          </div>
+        </td>
+        <td class="card-item">0.5.11</td>
+        <td class="card-item">
+            5 Rules
+        </td>
+      </tr>
+      <tr class="spacer"></tr>
+      <tr class="card card--small">
+        <td class="card-item" width="40%">
+          <h4 class="title">10. Existing Customer Stop</h4>
+        </td>
+        <td class="card-item">
+          <div class="chip margin--reset">
+            <div class="chip--left">
+              <div class="chip__image chip__image--small">
+                  <img class="image" src="../images/misc/user-avatar-2-img.jpg" />
+              </div>
+            </div>
+            <div class="chip--right margin-reset--top margin-right--echo">
+              <p class="chip__text margin-reset--bottom">Joey Kirk<br/>Oct. 12, 2016</p>
+            </div>
+          </div>
+        </td>
+        <td class="card-item">1.7.1</td>
+        <td class="card-item">
+            1 Rule
+        </td>
+      </tr>
+      <tr class="spacer"></tr>
+      <tr class="card card--small">
+        <td class="card-item" width="40%">
+          <h4 class="title">11. Check Availability Script</h4>
+        </td>
+        <td class="card-item">
+          <div class="chip margin--reset">
+            <div class="chip--left">
+              <div class="chip__image chip__image--small">
+                  <img class="image" src="../images/misc/user-avatar-2-img.jpg" />
+              </div>
+            </div>
+            <div class="chip--right margin-reset--top margin-right--echo">
+              <p class="chip__text margin-reset--bottom">Joey Kirk<br/>Oct. 12, 2016</p>
+            </div>
+          </div>
+        </td>
+        <td class="card-item">0.0.7</td>
+        <td class="card-item">
+            0 Rules
+        </td>
+      </tr>
+      <tr class="spacer"></tr>
+      <tr class="card card--small">
+        <td class="card-item" width="40%">
+          <h4 class="title">12. Service Check</h4>
+        </td>
+        <td class="card-item">
+          <div class="chip margin--reset">
+            <div class="chip--left">
+              <div class="chip__image chip__image--small">
+                  <img class="image" src="../images/misc/user-avatar-img.jpg" />
+              </div>
+            </div>
+            <div class="chip--right margin-reset--top margin-right--echo">
+              <p class="chip__text margin-reset--bottom">Kurt Cunningham<br/>Oct. 12, 2016</p>
+            </div>
+          </div>
+        </td>
+        <td class="card-item">2.9.5</td>
+        <td class="card-item">
+            1 Rule
+        </td>
+      </tr>
+      <tr class="spacer"></tr>
+      <tr class="card card--small">
+        <td class="card-item" width="40%">
+          <h4 class="title">13. Business Address Question</h4>
+        </td>
+        <td class="card-item">
+          <div class="chip margin--reset">
+            <div class="chip--left">
+              <div class="chip__image chip__image--small">
+                  <img class="image" src="../images/misc/user-avatar-img.jpg" />
+              </div>
+            </div>
+            <div class="chip--right margin-reset--top margin-right--echo">
+              <p class="chip__text margin-reset--bottom">Kurt Cunningham<br/>Oct. 12, 2016</p>
+            </div>
+          </div>
+        </td>
+        <td class="card-item">1.2.7</td>
+        <td class="card-item">
+            1 Rule
+        </td>
+      </tr>
+      <tr class="spacer"></tr>
+      <tr class="card card--small">
+        <td class="card-item" width="40%">
+          <h4 class="title">14. Transfer To Business Agent RV Pro</h4>
+        </td>
+        <td class="card-item">
+          <div class="chip margin--reset">
+            <div class="chip--left">
+              <div class="chip__image chip__image--small">
+                  <img class="image" src="../images/misc/user-avatar-img.jpg" />
+              </div>
+            </div>
+            <div class="chip--right margin-reset--top margin-right--echo">
+              <p class="chip__text margin-reset--bottom">Kurt Cunningham<br/>Oct. 12, 2016</p>
+            </div>
+          </div>
+        </td>
+        <td class="card-item">0.6.7</td>
+        <td class="card-item">
+            0 Rules
+        </td>
+      </tr>
+      <tr class="spacer"></tr>
+      <tr class="card card--small">
+        <td class="card-item" width="40%">
+          <h4 class="title">15. Business Address Stop</h4>
+        </td>
+        <td class="card-item">
+          <div class="chip margin--reset">
+            <div class="chip--left">
+              <div class="chip__image chip__image--small">
+                  <img class="image" src="../images/misc/user-avatar-img.jpg" />
+              </div>
+            </div>
+            <div class="chip--right margin-reset--top margin-right--echo">
+              <p class="chip__text margin-reset--bottom">Kurt Cunningham<br/>Oct. 12, 2016</p>
+            </div>
+          </div>
+        </td>
+        <td class="card-item">2.3.5</td>
+        <td class="card-item">
+            0 Rules
+        </td>
+      </tr>
+      <tr class="spacer"></tr>
+  </tbody>
+</table>
+      </div>
+    </div>
+  </div>
+  <div class="page-main page-main--half page-main--half-right">
+    <div class="">
+      <header role="banner" class="page-main__header">
+        <div class="page-main__header--left">
+          <h2 class="title">Compare Scenario</h2>
+        </div>
+        <div class="page-main__header--right">
+          <ul class="list">
+            <li class="item">
+              <select class="select--small">
+                <option disabled="disabled" selected="selected">Select A Version</option>
+                <option>Version 10</option>
+                <option>Version 9</option>
+                <option>Version 8</option>
+                <option>Version 7</option>
+                <option>Version 6</option>
+                <option>Version 5</option>
+                <option>Version 4</option>
+                <option>Version 3</option>
+                <option>Version 2</option>
+                <option>Version 1</option>
+              </select>
+            </li>
+            <li class="item">
+              <a href="#" class="button--disabled button--small">Make Current</a>
+            </li>
+          </ul>
+        </div>
+      </header>
+      <div class="page-main__content page-main__content--default">
+        <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="icon"><title>file-icon</title>
+<path d="M4 16h12v-2H4v2zm0-4h12v-2H4v2zm0-4h6V4H4v4zm14 10H2V2h10v6h6v10zM14 0H0v20h20V6.105L14 0z" fill="#92969E" fill-rule="evenodd" id="app-icon"></path></svg>
+        <h2 class="title">No scenario selected</h2>
+        <p class="description">Select a version of this scenario to view its details.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Scenario Settings -->
+<section role="region" aria-label="Edit Scenario" id="tab-5" class="page-section page-section--header-offset tab__content">
+  <aside role="complementary" class="page-sidebar page-sidebar--right">
+    <header role="banner" class="page-sidebar__header">
+      <h2 class="title">Scenario History</h2>
+    </header>
+    <div class="page-sidebar__body">
+      <ul class="list">
+          <li class="page-sidebar__item chip">
+    <div class="chip--left">
+        <div class="chip__image">
+          <img class="" src="../images/misc/user-avatar-img.jpg" />
+        </div>
+    </div>
+    <div class="chip--right">
+      <p class="chip__text"><b>Kurt Cunningham</b> updated the module rules to fix issue with visibility issue.<br/><time class="text--grey"><em>October 12, 2016</em></time></p>
+    </div>
+  </li>
+  <li class="page-sidebar__item chip">
+    <div class="chip--left">
+        <div class="chip__image">
+          <img class="" src="../images/misc/user-avatar-img.jpg" />
+        </div>
+    </div>
+    <div class="chip--right">
+      <p class="chip__text"><b>Kurt Cunningham</b> removed rule because the campaign ended recently.<br/><time class="text--grey"><em>October 11, 2016</em></time></p>
+    </div>
+  </li>
+  <li class="page-sidebar__item chip">
+    <div class="chip--left">
+        <div class="chip__image">
+          <span class="chip__image--none">C</span>
+        </div>
+    </div>
+    <div class="chip--right">
+      <p class="chip__text"><b>Clay Carpenter</b> removed rule because the campaign ended recently.<br/><time class="text--grey"><em>October 11, 2016</em></time></p>
+    </div>
+  </li>
+  <li class="page-sidebar__item chip">
+    <div class="chip--left">
+        <div class="chip__image">
+          <img class="chip__icon" src="../images/icons/update-icon.svg" />
+        </div>
+    </div>
+    <div class="chip--right">
+      <p class="chip__text"><b>MINOR UPDATE</b> to module. Update from version 1.0.4 to 1.0.5<br/><time class="text--grey"><em>September 12, 2016</em></time></p>
+    </div>
+  </li>
+  <li class="page-sidebar__item chip">
+    <div class="chip--left">
+        <div class="chip__image">
+          <img class="" src="../images/misc/user-avatar-2-img.jpg" />
+        </div>
+    </div>
+    <div class="chip--right">
+      <p class="chip__text"><b>Joey Kirk</b> added module and rules to scenario.<br/><time class="text--grey"><em>September 10, 2016</em></time></p>
+    </div>
+  </li>
+
+      </ul>
+    </div>
+  </aside>
+  <div class="page-main page-main--left">
+    <div class="page-main__content">
+      <header role="banner" class="page-main__header">
+        <h2 class="title">Scenario Settings</h2>
+      </header>
+      <form>
+        <fieldset class="row">
+          <div class="columns-6__l">
+            <label>Scenario Title</label>
+            <input type="text" value="SSL Order Process [Production]" />
+          </div>
+          <div class="columns-6__l">
+            <label>Associated Tag</label>
+            <select>
+              <option selected="selected" disabled="disabled">Please Select One</option>
+              <option>Tag Name 1</option>
+              <option>Tag Name 2</option>
+              <option>Tag Name 3</option>
+              <option>Tag Name 4</option>
+            </select>
+          </div>
+        </fieldset>
+        <fieldset class="row">
+          <label>Scenario Description</label>
+          <textarea class="margin-reset--bottom">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tristique, ligula vulputate scelerisque maximus, massa urna pellentesque velit, mollis imperdiet lectus justo sed magna.</textarea>
+        </fieldset>
+      </form>
+    </div>
+    <hr class="page-section__divider" />
+    <div class="page-main__content">
+      <header role="banner" class="page-main__header">
+        <h2 class="title">Delete Scenario</h2>
+        <p class="margin-top--delta">By deleting this scenario, you will be removing it from the system and any of its associated variations will be deleted as well. This action is final. Please make sure you want to move forward with this action.</p>
+      </header>
+      <button data-modal="deleteScenario" class="button--charlie modal__trigger">Delete Scenario</button>
+    </div>
+  </div>
+</section>
+<div class="modal" aria-hidden="true" data-modal="deleteScenario">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="modal__close-icon"><title>close-icon</title>
+<path d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Are you sure about this move?</h3>
+          <p class="modal-intro">You are about to perform an action that cannot be undone. Please double check the variation listed before continuing. This will delete the scenario and all of it's variations and end any A/B tests currently running.</p>
+        </header>
+        <div class="modal__body-content">
+          <label>Confirm Scenario name</label>
+          <input type="text" placeholder="Enter scenario name to continue" class="required-input" />
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--charlie">Delete Scenario</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="../javascript/application.js" type="text/javascript"></script>
+  </body>
+</html>

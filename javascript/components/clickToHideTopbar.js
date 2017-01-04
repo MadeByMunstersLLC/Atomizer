@@ -1,0 +1,1 @@
+$(function(){var t=$(".hide-topbar__trigger");$(".app-topbar");t.on("click",function(){$(this).parents().toggleClass("app-topbar--hidden")})});

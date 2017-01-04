@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create New Split Test | Atomizer</title>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1 user-scalable=no">
+
+    <!-- Favicons -->
+    <link href="../../images/favicon.png" rel="icon" type="image/png" />
+
+    <!-- Stylesheets -->
+    <link href="../../stylesheets/application.css" rel="stylesheet" type="text/css" />
+
+    <!-- Fonts -->
+    <script src="https://use.typekit.net/gzo3ihf.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+  </head>
+  <body>
+    <!-- Topbar Navigation -->
+      <!-- Create Scenario Modal -->
+<div class="modal" aria-hidden="true" data-modal="feedbackForm">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <a href="#" role="button" class="modal__close">
+          <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="modal__close-icon"><title>close-icon</title>
+<path d="M11.446 10L20 18.554 18.553 20 10 11.446 1.446 20 0 18.554 8.553 10 0 1.446 1.446 0 10 8.554 18.553 0 20 1.446" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        </a>
+        <header class="modal__header">
+          <h3 class="title">Provide Feedback</h3>
+          <p class="modal-intro">Do you have a question or did you find something wrong with the application? Just let us know.</p>
+        </header>
+        <div class="modal__body-content">
+          <form>
+            <fieldset class="row">
+              <div class="columns-4__s columns-6__l">
+                <label class="form__label">Full name</label>
+                <input type="text" placeholder="Enter your name" />
+              </div>
+              <div class="columns-4__s columns-6__l">
+                <label class="form__label">email address</label>
+                <input type="email" placeholder="Enter your email address" />
+              </div>
+            </fieldset>
+            <fielset class="row">
+              <label class="form__label">Message</label>
+              <textarea></textarea>
+            </fielset>
+          </form>
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a href="#" class="link--delta">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <button class="button--disabled">Send Feedback</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<header role="header" class="app-topbar">
+  <div class="app-topbar__left">
+<a href="/Atomizer/dashboard/">      <img alt="Atomizer Logo" class="app-topbar__logo" src="../../images/logos/logo.svg" />
+</a>    <a href="#" class="hide-topbar__trigger">
+      <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>arrow-up-icon</title>
+<path d="M0 10l1.393 1.435L9 3.828V20h2V3.828l7.586 7.586L20 10 10 0 0 10" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+    </a>
+  </div>
+  <div class="app-topbar__middle">
+    <input type="search" name="siteSearch" placeholder="Quickly lookup a scenario and launch its dashboard" class="input--search input--no-border" id="quick-search-input" />
+    <div class="quick-search__container">
+      <div class="quick-search__lists">
+          <h6 class="form__label">HughesNet</h6>
+          <ul class="list">
+              <li class="item">SSL Order Process [Production]</li>
+              <li class="item">SSL Order Process - Mobile</li>
+              <li class="item">Upgrade Exisiting Customer - Mobile</li>
+              <li class="item">Upgrade Exisiting Customer - Simplified</li>
+          </ul>
+          <h6 class="form__label">DirectTV</h6>
+          <ul class="list">
+              <li class="item">Convert Existing User To New Package</li>
+              <li class="item">V7 Digital Photo Printing</li>
+              <li class="item">Are You Ready To Buy A Home Theater</li>
+              <li class="item">Buying Used Electronic Test Equipment</li>
+              <li class="item">Myspace Layouts The Missing Element</li>
+              <li class="item">Are You Ready To Buy A Home Theater</li>
+          </ul>
+          <h6 class="form__label">Verizon</h6>
+          <ul class="list">
+              <li class="item">Buying Used Electronic Test Equipment</li>
+              <li class="item">Myspace Layouts The Missing Element</li>
+          </ul>
+      </div>
+      <div class="quick-search__footer">
+        <p class="quick-search__footer-text">Tip: By press "/" at any time you will load the quick search tool.</p>
+      </div>
+    </div>
+  </div>
+  <div class="app-topbar__right">
+    <ul class="right__list">
+      <li class="right__item">
+        <a href="#" class="hide-topbar__trigger">
+          <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>arrow-up-icon</title>
+<path d="M0 10l1.393 1.435L9 3.828V20h2V3.828l7.586 7.586L20 10 10 0 0 10" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        </a>
+      </li>
+      <li class="right__item">
+        <div class="popout__container">
+          <a href="#" class="popout__trigger">
+            <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>grid-icon</title>
+<path d="M13 18h5v-5h-5v5zm-2 2h9v-9h-9v9zm-9-2h5v-5H2v5zm-2 2h9v-9H0v9zM13 7h5V2h-5v5zm-2 2h9V0h-9v9zM2 7h5V2H2v5zM0 9h9V0H0v9z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+          </a>
+          <div class="popout">
+            <ul class="popout__list">
+              <li class="popout__item">
+<a class="popout__link" href="/Atomizer/module-catalog/">                  <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="popout__icon"><title>atom-icon</title>
+<path d="M16.408 11.776c-1.423 1.825-2.91 3.286-4.634 4.628 1.427.824 4.775 2.318 5.86 1.233.74-.74.4-3.056-1.226-5.86m-6.406 3.474c1.982-1.448 3.796-3.262 5.245-5.244-1.443-1.974-3.256-3.79-5.245-5.245-1.997 1.46-3.807 3.278-5.247 5.246 1.45 1.983 3.264 3.796 5.247 5.245m-1.774 1.154c-1.727-1.346-3.215-2.807-4.634-4.628-1.626 2.805-1.967 5.12-1.226 5.86 1.075 1.075 4.394-.384 5.86-1.232M3.594 8.236C5.016 6.41 6.504 4.952 8.228 3.61c-1.425-.826-4.774-2.32-5.86-1.235-.74.74-.4 3.056 1.226 5.86m8.18-4.626c1.727 1.344 3.214 2.804 4.634 4.626 3.61-6.227.88-7.814-4.634-4.627m5.89 6.396c5.434 8.49.764 13.06-7.662 7.668-8.407 5.378-13.116.85-7.663-7.668C-3.06 1.574 1.49-3.104 10 2.338c8.423-5.388 13.1-.83 7.662 7.668m-6.6-1.06c.585.584.585 1.532 0 2.116-.583.584-1.532.584-2.116 0-.585-.584-.585-1.532 0-2.116.584-.585 1.533-.585 2.117 0" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+                  Module Catalog
+</a>              </li>
+              <li class="popout__item">
+<a class="popout__link" href="/Atomizer/scripts-catalog/">                  <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="popout__icon"><title>stats-icon</title>
+<path d="M18 9h-3.882l-2.006 2.015c-1.156-1.97-3.11-5.305-3.317-5.655L7.38 6.775l.01.005L5.16 9H2V2h16v7zm0 9H2v-7h3.99l2.444-2.436c2.723 4.654 2.003 3.42 3.297 5.643L14.945 11H18v7zM0 20h20V0H0v20z" fill="#92969E" fill-rule="evenodd"></path></svg>
+                  Script Test Catalog
+</a>              </li>
+              <li class="popout__item">
+<a class="popout__link" href="/Atomizer/settings/">                  <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="popout__icon"><title>settings-icon</title>
+<path d="M18 4V0h-2v4h-2v2h2v14h2V6h2V4h-2zm-7-4H9v9H7v2h2v9h2v-9h2V9h-2V0zM4 14h2v2H4v4H2v-4H0v-2h2V0h2v14z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+                  Application Settings
+</a>              </li>
+              <li class="popout__item">
+                <a href="#" class="popout__link modal__trigger" data-modal="feedbackForm">
+                  <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" class="popout__icon"><title>file-icon</title>
+<path d="M4 16h12v-2H4v2zm0-4h12v-2H4v2zm0-4h6V4H4v4zm14 10H2V2h10v6h6v10zM14 0H0v20h20V6.105L14 0z" fill="#92969E" fill-rule="evenodd" id="app-icon"></path></svg>
+                  Provide Feedback
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="right__item">
+        <div class="app-topbar__user">
+          <div class="user__avatar">
+            <!-- <span class="user__avatar-img user__avatar-no-img">KC</span> -->
+            <img alt="Kurt Cunningham" class="user__avatar-img" src="../../images/misc/user-avatar-img.jpg" />
+          </div>
+          <div class="user__content">
+            <span class="user__name">Kurt Cunningham</span>
+            <ul class="user__settings-list">
+              <li class="list__item">
+                <a class="list__item-link" href="/Atomizer/user/">Settings</a>
+              </li>
+              <li class="list__item">|</li>
+              <li class="list__item">
+                <a class="list__item-link" href="/Atomizer/">Sign Out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</header>
+
+    <!-- Main Body -->
+    <main role="main" class="page ">
+      <div class="modal modal--active" aria-hidden="false">
+  <div class="modal__overlay">
+    <div class="modal__container">
+      <div class="modal__body">
+        <header class="modal__header">
+          <h3 class="title">Create New Test</h3>
+          <p class="modal-intro">Please give your test a title and a description. This will allow others to track and review the test results.</p>
+        </header>
+        <div class="modal__body-content">
+          <form>
+            <fieldset>
+              <label>Test Title</label>
+              <input type="text" />
+            </fieldset>
+            <fieldset>
+              <label>Test Description</label>
+              <textarea></textarea>
+            </fieldset>
+          </form>
+          <div class="modal__actions">
+            <ul class="modal__actions-list">
+              <li class="modal__actions-item">
+                <a class="link--delta" href="/Atomizer/dashboard/">Cancel</a>
+              </li>
+              <li class="modal__actions-item">
+                <a class="button--alpha" href="../test/">Create Test</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<header role="header" class="page-header">
+<a class="page-header__back-link" href="/Atomizer/scenario/">    <svg width="20" height="20" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>arrow-left-icon</title>
+<path d="M10 20l1.435-1.393L3.828 11H20V9H3.828l7.586-7.586L10 0 0 10l10 10" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+    <span>Back To All Tests</span>
+</a>  <h2 class="page-header__title margin-bottom--echo">
+      Start New Split Test
+  </h2>
+  <div class="page-header__right">
+      <button class="button-outline--disabled margin-right--delta"> <i><svg width="10" height="12" viewbox="0 0 10 12" xmlns="http://www.w3.org/2000/svg" class="margin-right--echo"><title>play-icon</title>
+<path d="M0 0v11.43l10-5.716" fill="#FFF" fill-rule="evenodd" id="app-icon"></path></svg></i> Start</button>
+    <button class="button--disabled">Save Updates</button>
+  </div>
+</header>
+<section role="region" aria-label="Create A/B Test" class="page-section page-section--no-tabs">
+  <div class="page-main page-main--left">
+    <div class="page-main__content">
+      <header role="banner" class="page-main__header">
+        <h2 class="title">Performance Summary</h2>
+      </header>
+      <div class="tabs">
+        <ul class="tab__list">
+          <li class="tab__item is-active" data-tab="tab-1">Overview</li>
+          <li class="tab__item" data-tab="tab-2">Set Visibility</li>
+        </ul>
+      </div>
+      <div id="tab-1" class="tab__content is-active">
+        <div class="margin-bottom--alpha row">
+  <ul class="list">
+    <li class="item card card--small card--overflow columns-4__l columns-3__m">
+      <i class="card--user-icon"></i>
+      <label>Total Number of Users</label>
+      <h2 class="margin-reset--bottom">0 Users</h2>
+    </li>
+    <li class="item card card--small card--overflow columns-4__l columns-3__m">
+      <i class="card--date-icon"></i>
+      <label>Days Running</label>
+      <h2 class="margin-reset--bottom">0 Days</h2>
+    </li>
+    <li class="item card card--small card--overflow columns-4__l columns-3__m">
+      <i class="card--document-icon"></i>
+      <label>Active Scenarios</label>
+      <h2 class="margin-reset--bottom">0 Scenarios</h2>
+    </li>
+  </ul>
+</div>
+<div>
+  <header role="banner" class="page-main__header">
+    <h2 class="title">Breakdown Summary</h2>
+  </header>
+  <table class="card-table">
+    <thead class="card-table__header">
+      <tr>
+        <th class="card-item">Scenario</th>
+        <th class="card-item">Avg. Call Time</th>
+        <th class="card-item">Avg. Sold Time</th>
+        <th class="card-item">Avg. Non-Sold Time</th>
+        <th class="card-item">Calls Tested</th>
+        <th class="card-item">Conversions</th>
+        <th class="card-item">Modules</th>
+        <th class="card-item">Rules</th>
+      </tr>
+    </thead>
+    <tbody class="card-table__body">
+        <tr class="card card--small">
+          <td colspan="8" class="card-item text--center">You have not included any scripts in this test. You can do so by adding scenarios from the visibility tab.</td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+      </div>
+      <div id="tab-2" class="tab__content">
+        <div class="card">
+  <h3 class="card__title">Add Scenarios</h3>
+  <select class="margin-reset--bottom">
+    <option selected="selected" disabled>Select One</option>
+      <option>SSL Order Process - Mobile</option>
+      <option>SSL Order Process - Simplified</option>
+      <option>Upgrade Existing Customer - Midwest</option>
+      <option>Upgrade Existing Customer - Northeast</option>
+  </select>
+  <div class="row">
+    <ul class="list margin-bottom--charlie">
+      <li class="item form__label columns-8__l columns-6__m">Scenario</li>
+      <li class="item form__label columns-2__l columns-1__m">Users</li>
+    </ul>
+    <ul class="list">
+      <li class="item columns-8__l columns-6__m">
+        <input type="text" value="SSL Order Process" disabled="true" class="margin-reset--bottom" />
+      </li>
+      <li class="item columns-2__l columns-1__m">
+        <input type="text" value="50%" class="margin-reset--bottom" />
+      </li>
+      <li class="item columns-2__l columns-2__m">
+        <button class="button--charlie button--full button--form">Remove</button>
+      </li>
+    </ul>
+    <ul class="list">
+      <li class="item columns-8__l columns-6__m">
+        <input type="text" value="SSL Order Process" disabled="true" class="margin-reset--bottom" />
+      </li>
+      <li class="item columns-2__l columns-1__m">
+        <input type="text" value="50%" class="margin-reset--bottom" />
+      </li>
+      <li class="item columns-2__l columns-2__m">
+        <button class="button--charlie button--full button--form">Remove</button>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="card">
+  <h3 class="card__title">Build Rule Set</h3>
+  <form class="row">
+    <fieldset class="columns-4__l columns-3__m">
+      <div class="tooltip__item">
+        <label class="tooltip__label label">Property</label>
+        <svg width="18" height="18" viewbox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" class="tooltip__icon"><title>help-icon</title>
+<path d="M9 0C4.032 0 0 4.032 0 9s4.032 9 9 9 9-4.032 9-9-4.032-9-9-9zm.9 15.3H8.1v-1.8h1.8v1.8zm1.863-6.975l-.81.828C10.305 9.81 9.9 10.35 9.9 11.7H8.1v-.45c0-.99.405-1.89 1.053-2.547L10.27 7.57c.332-.325.53-.775.53-1.27 0-.99-.81-1.8-1.8-1.8s-1.8.81-1.8 1.8H5.4c0-1.99 1.61-3.6 3.6-3.6s3.6 1.61 3.6 3.6c0 .792-.324 1.512-.837 2.025z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        <figure class="tooltip">
+          <p class="tooltip__text">Set the property you want to check.</p>
+        </figure>
+      </div>
+      <select class="margin-reset--bottom">
+        <option selected="selected">Select One</option>
+      </select>
+    </fieldset>
+    <fieldset class="columns-2__l columns-2__m">
+      <div class="tooltip__item">
+        <label class="tooltip__label label">Rule</label>
+        <svg width="18" height="18" viewbox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" class="tooltip__icon"><title>help-icon</title>
+<path d="M9 0C4.032 0 0 4.032 0 9s4.032 9 9 9 9-4.032 9-9-4.032-9-9-9zm.9 15.3H8.1v-1.8h1.8v1.8zm1.863-6.975l-.81.828C10.305 9.81 9.9 10.35 9.9 11.7H8.1v-.45c0-.99.405-1.89 1.053-2.547L10.27 7.57c.332-.325.53-.775.53-1.27 0-.99-.81-1.8-1.8-1.8s-1.8.81-1.8 1.8H5.4c0-1.99 1.61-3.6 3.6-3.6s3.6 1.61 3.6 3.6c0 .792-.324 1.512-.837 2.025z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        <figure class="tooltip">
+          <p class="tooltip__text">Selecting the rule means the the property and value need to equal true for the module to display correctly.</p>
+        </figure>
+      </div>
+      <select class="margin-reset--bottom">
+        <option selected="selected">Select One</option>
+      </select>
+    </fieldset>
+    <fieldset class="columns-4__l columns-2__m">
+      <div class="tooltip__item">
+        <label class="tooltip__label label">Value</label>
+        <svg width="18" height="18" viewbox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" class="tooltip__icon"><title>help-icon</title>
+<path d="M9 0C4.032 0 0 4.032 0 9s4.032 9 9 9 9-4.032 9-9-4.032-9-9-9zm.9 15.3H8.1v-1.8h1.8v1.8zm1.863-6.975l-.81.828C10.305 9.81 9.9 10.35 9.9 11.7H8.1v-.45c0-.99.405-1.89 1.053-2.547L10.27 7.57c.332-.325.53-.775.53-1.27 0-.99-.81-1.8-1.8-1.8s-1.8.81-1.8 1.8H5.4c0-1.99 1.61-3.6 3.6-3.6s3.6 1.61 3.6 3.6c0 .792-.324 1.512-.837 2.025z" fill="#FFFFFF" fill-rule="evenodd" id="app-icon"></path></svg>
+        <figure class="tooltip">
+          <p class="tooltip__text">Set the value you want to check.</p>
+        </figure>
+      </div>
+      <input type="text" class="margin-reset--bottom" />
+    </fieldset>
+    <fieldset class="columns-2__l columns-2__m">
+      <input type="submit" value="add" class="button--disabled button--full button--form label--offset float--right" disabled />
+    </fieldset>
+  </form>
+</div>
+      </div>
+    </div>
+  </div>
+  <aside role="complementary" class="page-sidebar page-sidebar--right">
+  <header role="banner" class="page-sidebar__header">
+    <h2 class="title">General Information</h2>
+  </header>
+  <div class="page-sidebar__body">
+    <div class="page-sidebar__content">
+      <form>
+        <fieldset>
+          <label>Title</label>
+          <input type="text" value="" />
+        </fieldset>
+        <fieldset>
+          <label>Description</label>
+          <textarea></textarea>
+        </fieldset>
+      </form>
+    </div>
+    <div class="page-sidebar__content page-sidebar__content--border">
+    </div>
+    <div class="page-sidebar__content">
+      <header role="banner" class="page-sidebar__header">
+        <h5 class="form__label">Test Rules</h5>
+      </header>
+      <div class="button--add-on__container button--add-on__container--full">
+        <input type="text" placeholder="Enter call ID" class="input--add-on" />
+        <input type="submit" value="Test" class="input--add-on__button button--disabled" />
+      </div>
+    </div>
+  </div>
+</aside>
+</section>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="../../javascript/application.js" type="text/javascript"></script>
+  </body>
+</html>
