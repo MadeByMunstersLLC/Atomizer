@@ -27,6 +27,11 @@ $table-body-trigger-size:     15px;
 .table {
   margin: $table-margin;
   width: $table-width;
+
+  // Remove Display for Tooltips
+  .tooltip__item {
+    display: table-cell;
+  }
 }
 
 
