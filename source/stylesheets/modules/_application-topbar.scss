@@ -206,7 +206,7 @@ $app-topbar-settings-item-margin:   $spacer-echo;
   // Page Styles
   .page-header {
     @include transition(top 0.5s ease);
-    top: 32px;
+    top: 31px;
   }
 
   .page-section--header-offset {
