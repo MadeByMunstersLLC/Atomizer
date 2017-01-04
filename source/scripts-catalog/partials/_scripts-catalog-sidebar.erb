@@ -1,0 +1,113 @@
+<aside role="complementary" class="page-sidebar page-sidebar--right">
+  <header role="banner" class="page-sidebar__header">
+    <h2 class="title">Script Test Details</h2>
+  </header>
+  <div class="page-sidebar__body margin-top--charlie toggle-details-default">
+    <p>To view the details of an A/B Script Test, click on the title of the test from the left side panel.</p>
+  </div>
+  <!-- If active this should show -->
+  <% data.tests.test.each_with_index do |t, i| %>
+    <div class="page-sidebar__body toggle-details" data-toggle="script-test-details<%= i%>" aria-hidden="true">
+      <header role="banner" class="page-sidebar__header page-sidebar__content page-sidebar__content--border">
+        <label class="form__label">Overview</label>
+        <h4><%= t.title %></h4>
+        <p class="margin-bottom--charlie">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod. Consectetur adipisicing elit, sed do eiusmod.</p>
+        <ul>
+          <li class="margin-bottom--delta">
+            Users Tested
+            <span class="float--right">3,451</span>
+          </li>
+          <li class="margin-bottom--delta">
+            Days Active
+            <span class="float--right">15</span>
+          </li>
+          <li class="margin-bottom--delta">
+            Scripts In Test
+            <span class="float--right">2</span>
+          </li>
+        </ul>
+      </header>
+      <div class="page-sidebar__content margin-bottom--charlie">
+        <label class="form__label">Results</label>
+        <p><%= t.outcome %></p>
+      </div>
+      <div class="page-sidebar__content margin-bottom--charlie">
+        <label class="form__label">SSL Order Process</label>
+        <ul>
+          <li class="margin-bottom--delta">
+            Script Version
+            <span class="float--right">Version 9</span>
+          </li>
+          <li class="margin-bottom--delta">
+            Total Modules
+            <span class="float--right">151</span>
+          </li>
+          <li class="margin-bottom--delta">
+            Total Rules
+            <span class="float--right">34</span>
+          </li>
+          <li class="margin-bottom--delta">
+            Avg. Call Time
+            <span class="float--right">5.45 mins</span>
+          </li>
+          <li class="margin-bottom--delta">
+            Avg. Sold Time
+            <span class="float--right">5.23 mins</span>
+          </li>
+          <li class="margin-bottom--delta">
+            Avg. Non-Sold Time
+            <span class="float--right">7.89 mins</span>
+          </li>
+          <li class="margin-bottom--delta">
+            Calls Tested
+            <span class="float--right">1,726 (50%)</span>
+          </li>
+          <li class="margin-bottom--delta">
+            Conversions
+            <span class="float--right">220 (<span class="text--red">12.7%</span>)</span>
+          </li>
+        </ul>
+      </div>
+      <div class="page-sidebar__content page-sidebar__content--border">
+        <label class="form__label">SSL Simplified Order Process</label>
+        <ul>
+          <li class="margin-bottom--delta">
+            Script Version
+            <span class="float--right">Version 10</span>
+          </li>
+          <li class="margin-bottom--delta">
+            Total Modules
+            <span class="float--right">67</span>
+          </li>
+          <li class="margin-bottom--delta">
+            Total Rules
+            <span class="float--right">15</span>
+          </li>
+          <li class="margin-bottom--delta">
+            Avg. Call Time
+            <span class="float--right">3.45 mins</span>
+          </li>
+          <li class="margin-bottom--delta">
+            Avg. Sold Time
+            <span class="float--right">3.55 mins</span>
+          </li>
+          <li class="margin-bottom--delta">
+            Avg. Non-Sold Time
+            <span class="float--right">2.45 mins</span>
+          </li>
+          <li class="margin-bottom--delta">
+            Calls Tested
+            <span class="float--right">1,726 (50%)</span>
+          </li>
+          <li class="margin-bottom--delta">
+            Conversions
+            <span class="float--right">443 (<span class="text--green">25.7%</span>)</span>
+          </li>
+        </ul>
+      </div>
+      <div class="page-sidebar__content">
+        <%= link_to "Launch Test", "#{config[:root_url] ? config[:root_url] : '/'}scenario/test", class: 'button--bravo button--full' %>
+      </div>
+    </div>
+  <% end %>
+</aside>

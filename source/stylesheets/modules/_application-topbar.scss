@@ -197,7 +197,6 @@ $app-topbar-settings-item-margin:   $spacer-echo;
     }
 
     .hide-topbar__trigger {
-      @include transition(all 0.5s ease);
       @include position(absolute, 5px 30px null null);
       @include transform(rotate(180deg));
       display: block;
@@ -207,12 +206,12 @@ $app-topbar-settings-item-margin:   $spacer-echo;
   // Page Styles
   .page-header {
     @include transition(top 0.5s ease);
-    top: 27px;
+    top: 32px;
   }
 
   .page-section--header-offset {
     @include transition(margin-top 0.5s ease);
-    margin-top: 124px;
+    margin-top: 144px;
   }
 
   .page-section--no-tabs {

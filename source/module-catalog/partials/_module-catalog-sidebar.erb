@@ -1,0 +1,37 @@
+<aside role="complementary" class="page-sidebar page-sidebar--right">
+  <header role="banner" class="page-sidebar__header">
+    <h2 class="title">Modal Details</h2>
+    <div class="tabs">
+      <ul class="tab__list">
+        <li class="tab__item is-active" data-tab="tab-1">Change Log</li>
+        <li class="tab__item" data-tab="tab-2">Settings</li>
+      </ul>
+    </div>
+  </header>
+  <div class="page-sidebar__body margin-top--charlie toggle-details-default">
+    <p>Select a module to see its details.</p>
+  </div>
+  <!-- If active this should show -->
+  <% data.scenario_modules.module.each_with_index do |m, i| %>
+    <div class="page-sidebar__body toggle-details" data-toggle="module-details<%= i%>">
+      <div id="tab-1" class="tab__content is-active">
+        <ul class="list">
+          <%= partial 'scenario/partials/_scenario-activity' %>
+        </ul>
+      </div>
+      <div id="tab-2" class="tab__content">
+        <form>
+          <fieldset>
+            <label class="form__label">Title</label>
+            <input type="text" />
+          </fieldset>
+          <fieldset>
+            <label class="form__label">Description</label>
+            <textarea></textarea>
+          </fieldset>
+          <input type="submit" value="Save Updates" class="button--alpha float--right" />
+        </form>
+      </div>
+    </div>
+  <% end %>
+</aside>

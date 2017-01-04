@@ -72,14 +72,14 @@
         </figure>
       </div>
       <select class="margin-reset--bottom">
-        <option selected="selected" disabled>Select One</option>
-        <option>Visible</option>
+        <option disabled="disabled">Select One</option>
+        <option selected="selected">Visible</option>
         <option>Not Visible</option>
       </select>
     </div>
     <div class="card">
       <h3 class="card__title">Build Rule Set</h3>
-      <form class="row">
+      <form class="row margin-bottom--delta">
         <fieldset class="columns-4__l columns-3__m">
           <div class="tooltip__item">
             <label class="tooltip__label label">Property</label>
@@ -88,20 +88,14 @@
               <p class="tooltip__text">Set the property you want to check.</p>
             </figure>
           </div>
-          <select class="margin-reset--bottom" disabled>
-            <option selected="selected">Select One</option>
+          <select class="margin-reset--bottom">
+            <option selected="selected">Marketing Program Id</option>
           </select>
         </fieldset>
         <fieldset class="columns-2__l columns-2__m">
-          <div class="tooltip__item">
-            <label class="tooltip__label label">Rule</label>
-            <%= inline_svg ('icons/help-icon.svg'), class: 'tooltip__icon' %>
-            <figure class="tooltip">
-              <p class="tooltip__text">Selecting the rule means the the property and value need to equal true for the module to display correctly.</p>
-            </figure>
-          </div>
-          <select class="margin-reset--bottom" disabled>
-            <option selected="selected">Select One</option>
+          <label class="label">Rule</label>
+          <select class="margin-reset--bottom">
+            <option selected="selected">Is one of</option>
           </select>
         </fieldset>
         <fieldset class="columns-4__l columns-2__m">
@@ -112,15 +106,94 @@
               <p class="tooltip__text">Set the value you want to check.</p>
             </figure>
           </div>
-          <input type="text" class="margin-reset--bottom" disabled />
+          <input type="text" value="1271057, 1273203" class="margin-reset--bottom" />
         </fieldset>
         <fieldset class="columns-2__l columns-2__m">
-          <input type="submit" value="add" class="button--disabled button--form label--offset float--right" disabled />
+          <input type="submit" value="Remove" class="button--bravo button--full button--form label--offset float--right" />
         </fieldset>
       </form>
+      <ul>
+        <li class="margin-left--charlie margin-bottom--delta"><a href="#" class="link--alpha">+ Add Or</a></li>
+      </ul>
+      <div class="divider">
+        <label class="divider--label">And</label>
+      </div>
+      <form class="row margin-bottom--delta">
+        <fieldset class="columns-4__l columns-3__m">
+          <div class="tooltip__item">
+            <label class="tooltip__label label">Property</label>
+            <%= inline_svg ('icons/help-icon.svg'), class: 'tooltip__icon' %>
+            <figure class="tooltip">
+              <p class="tooltip__text">Set the property you want to check.</p>
+            </figure>
+          </div>
+          <select class="margin-reset--bottom">
+            <option selected="selected">Company</option>
+          </select>
+        </fieldset>
+        <fieldset class="columns-2__l columns-2__m">
+          <label class="label">Rule</label>
+          <select class="margin-reset--bottom">
+            <option selected="selected">Equals</option>
+          </select>
+        </fieldset>
+        <fieldset class="columns-4__l columns-2__m">
+          <div class="tooltip__item">
+            <label class="tooltip__label label">Value</label>
+            <%= inline_svg ('icons/help-icon.svg'), class: 'tooltip__icon' %>
+            <figure class="tooltip">
+              <p class="tooltip__text">Set the value you want to check.</p>
+            </figure>
+          </div>
+          <input type="text" value="HughesNet" class="margin-reset--bottom" />
+        </fieldset>
+        <fieldset class="columns-2__l columns-2__m">
+          <input type="submit" value="Remove" class="button--bravo button--full button--form label--offset float--right" />
+        </fieldset>
+      </form>
+      <div class="divider">
+        <label class="divider--label divider--label-alt">Or</label>
+      </div>
+      <form class="row margin-bottom--delta">
+        <fieldset class="columns-4__l columns-3__m">
+          <div class="tooltip__item">
+            <label class="tooltip__label label">Property</label>
+            <%= inline_svg ('icons/help-icon.svg'), class: 'tooltip__icon' %>
+            <figure class="tooltip">
+              <p class="tooltip__text">Set the property you want to check.</p>
+            </figure>
+          </div>
+          <select class="margin-reset--bottom">
+            <option selected="selected">Company</option>
+          </select>
+        </fieldset>
+        <fieldset class="columns-2__l columns-2__m">
+          <label class="label">Rule</label>
+          <select class="margin-reset--bottom">
+            <option selected="selected">Equals</option>
+          </select>
+        </fieldset>
+        <fieldset class="columns-4__l columns-2__m">
+          <div class="tooltip__item">
+            <label class="tooltip__label label">Value</label>
+            <%= inline_svg ('icons/help-icon.svg'), class: 'tooltip__icon' %>
+            <figure class="tooltip">
+              <p class="tooltip__text">Set the value you want to check.</p>
+            </figure>
+          </div>
+          <input type="text" value="DirectTV" class="margin-reset--bottom" />
+        </fieldset>
+        <fieldset class="columns-2__l columns-2__m">
+          <input type="submit" value="Remove" class="button--bravo button--full button--form label--offset float--right" />
+        </fieldset>
+      </form>
+      <ul>
+        <li class="margin-left--charlie margin-bottom--delta"><a href="#" class="link--alpha">+ Add Or</a></li>
+        <li><a href="#" class="link--alpha">+ Add And</a></li>
+      </ul>
     </div>
   </div>
   <div id="tab-3" class="margin-top--charlie tab__content">
-    <!-- Preview Module -->
+    <p>Module Preview Goes Here</p>
   </div>
 </div>

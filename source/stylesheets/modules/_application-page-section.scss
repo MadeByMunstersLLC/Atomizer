@@ -14,11 +14,11 @@ $page-padding-overflow-lg:          $spacer-charlie $spacer-charlie 0;
 
 $page-section-height:               100%;
 $page-section-margin:               75px 0 0;
-$page-section-margin-alt:           172px 0 0;
+$page-section-margin-alt:           187px 0 0;
 $page-section-position:             relative;
 $page-section-transition:           margin-top 0.5s ease;
 
-$page-section-no-tabs-margin:       159px 0 0;
+$page-section-no-tabs-margin:       189px 0 0;
 
 $page-sidebar-border:               1px solid $grey-light;
 $page-sidebar-cords:                0 null 0 null;
@@ -44,6 +44,16 @@ $page-main-content-default-align:   center;
 $page-main-content-default-margin:  ($spacer-alpha * 2) 0 0;
 
 $page-main-content-icon-size:       80px;
+
+$page-divider-border:               1px solid $grey-light;
+$page-divider-margin:               $spacer-charlie 0;
+$page-divider-position:             relative;
+
+$page-divider-label-background:     $white-base;
+$page-divider-label-color:          $grey-dark;
+$page-divider-label-cords:          -13px null null 10px;
+$page-divider-label-padding:        5px 10px;
+$page-divider-label-position:       absolute;
 
 
 // Structure
@@ -296,5 +306,23 @@ $page-main-content-icon-size:       80px;
 
   #app-icon {
     fill: $grey-base;
+  }
+}
+
+// Page Divider
+.divider {
+  @include position($page-divider-position);
+  border-bottom: $page-divider-border;
+  margin: $page-divider-margin;
+
+  .divider--label {
+    @include position($page-divider-label-position, $page-divider-label-cords);
+    background-color: $page-divider-label-background;
+    color: $page-divider-label-color;
+    padding: $page-divider-label-padding;
+  }
+
+  .divider--label-alt {
+    left: $spacer-charlie;
   }
 }

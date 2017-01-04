@@ -34,7 +34,11 @@
       <tbody class="card-table__body">
         <% data.scenario_modules.module.each_with_index do |m, i| %>
           <tr class="card card-list">
-            <td class="card-item card-item--large"><h4 class="title"><%= m.title %></h4></td>
+            <td class="card-item card-item--large">
+              <a href="#" class="toggle-details-trigger" data-toggle="module-details<%= i%>">
+                <h4 class="title"><%= m.title %></h4>
+              </a>
+            </td>
             <td class="card-item">HughesNet</td>
             <td class="card-item">
               <div class="chip margin--reset">
@@ -61,7 +65,7 @@
                 <%= inline_svg("icons/trash-icon.svg") %>
               <% end %>
               <!-- Delete Module Modal -->
-              <%= partial "catalog/partials/module-catalog-module-delete-modal", locals: {m:m, i:i} %>
+              <%= partial "module-catalog/partials/module-catalog-module-delete-modal", locals: {m:m, i:i} %>
             </td>
           </tr>
           <tr class="spacer"></tr>

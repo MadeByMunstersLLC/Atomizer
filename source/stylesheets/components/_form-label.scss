@@ -5,10 +5,11 @@
 // Variabeles
 $form-label-color:          $purple-base;
 $form-label-display:        block;
+$form-label-line-height:    1.5;
 $form-label-margin:         $spacer-delta;
 $form-label-transform:      uppercase;
 
-$form-label-offset-margin:  $spacer-charlie - 1px;
+$form-label-offset-margin:  $spacer-charlie + 3px;
 
 $fieldset-border:           1px solid $grey-base;
 $fieldset-margin:           0 0 $spacer-charlie;
@@ -23,6 +24,7 @@ label,
   @include s-golf;
   color: $form-label-color;
   display: $form-label-display;
+  line-height: $form-label-line-height;
   margin-bottom: $form-label-margin;
   text-transform: $form-label-transform;
 }

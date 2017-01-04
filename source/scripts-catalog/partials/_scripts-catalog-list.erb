@@ -1,0 +1,48 @@
+<div class="page-main page-main--left">
+  <header role="banner" class="page-main__header">
+    <div class="page-main__header--left">
+      <h2 class="title">A/B Scripts Tests</h2>
+    </div>
+    <div class="page-main__header--right">
+      <ul class="list">
+        <li class="item">
+          <input type="search" name="moduleLookup" placeholder="Lookup a module" class="input--search" />
+        </li>
+        <li class="item">
+          <select>
+          </div>
+            <option disabled="disabled" selected="selected">All Businesses </option>
+            <% data.scenarios.business.each do |b| %>
+              <option><%= b.title %></option>
+            <% end %>
+          </select>
+        </li>
+      </ul>
+    </div>
+  </header>
+  <div class="page-main__content">
+    <table class="card-table">
+      <thead class="card-table__header">
+        <tr class="card-list">
+          <th class="card-item card-item--large">Test Name</th>
+          <th class="card-item">Test Outcome</th>
+          <th class="card-item">Business</th>
+        </tr>
+      </thead>
+      <tbody class="card-table__body">
+        <% data.tests.test.each_with_index do |t, i| %>
+          <tr class="card card-list">
+            <td class="card-item card-item--large">
+              <a href="#" class="toggle-details-trigger" data-toggle="script-test-details<%= i %>">
+                <h4 class="title"><%= t.title %></h4>
+              </a>
+            </td>
+            <td class="card-item"><%= t.outcome %></td>
+            <td class="card-item"><%= t.business %></td>
+          </tr>
+          <tr class="spacer"></tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

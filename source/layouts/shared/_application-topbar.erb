@@ -41,9 +41,15 @@
           <div class="popout">
             <ul class="popout__list">
               <li class="popout__item">
-                <% link_to "#{config[:root_url] ? config[:root_url] : '/'}catalog/", class: "popout__link" do %>
+                <% link_to "#{config[:root_url] ? config[:root_url] : '/'}module-catalog/", class: "popout__link" do %>
                   <%= inline_svg("icons/atom-icon.svg", class: 'popout__icon') %>
                   Module Catalog
+                <% end %>
+              </li>
+              <li class="popout__item">
+                <% link_to "#{config[:root_url] ? config[:root_url] : '/'}scripts-catalog/", class: "popout__link" do %>
+                  <%= inline_svg("icons/stats-icon.svg", class: 'popout__icon') %>
+                  Script Test Catalog
                 <% end %>
               </li>
               <li class="popout__item">

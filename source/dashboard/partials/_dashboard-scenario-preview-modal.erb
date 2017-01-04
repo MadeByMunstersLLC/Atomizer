@@ -6,7 +6,7 @@
           <%= inline_svg("icons/close-icon.svg", class: "modal__close-icon") %>
         </a>
         <header class="modal__header">
-          <p class="margin-bottom--delta <%= 'badge--delta' if s.status === 'active' %> <%= 'badge--charlie' if s.status === 'in-active' %>">
+          <p class="margin-bottom--delta <%= 'badge--delta' if s.status === 'production' %> <%= 'badge--charlie' if s.status === 'depercated' %> <%= 'badge--echo' if s.status === 'beta scenario' %>">
             <%= s.status %>
           </p>
           <h3 class="title"><%= s.title %></h3>

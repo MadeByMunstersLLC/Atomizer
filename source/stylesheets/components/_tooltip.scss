@@ -23,7 +23,7 @@ $tooltip-item-position:      relative;
 $tooltip-icon-cords:         -5px null null null;
 $tooltip-icon-fill:          $purple-base;
 $tooltip-icon-position:      relative;
-$tooltip-icon-size:          12px;
+$tooltip-icon-size:          10px;
 
 $tooltip-text-color:         $black-base;
 $tooltip-text-line-height:   normal;
@@ -34,6 +34,7 @@ $tooltip-text-shadow-spread: 0 5px 10px;
 // Structure
 .tooltip__item {
   @include position($tooltip-item-position);
+  display: $tooltip-item-display;
 
   &:focus,
   &:hover .tooltip {

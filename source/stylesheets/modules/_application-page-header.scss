@@ -8,10 +8,11 @@ $page-header-max-width:           1600px;
 $page-header-padding:             $spacer-charlie;
 $page-header-padding-0:           0;
 $page-header-position:            fixed;
+$page-header-transition:          top 0.5s ease;
 $page-header-width:               100%;
 $page-header-z-index:             10;
 
-$page-header-tabs-margin:         $spacer-delta;
+$page-header-tabs-margin:         $spacer-charlie;
 
 $page-header-right-cords:         null 30px null null;
 $page-header-right-position:      absolute;
@@ -27,7 +28,7 @@ $page-header-link-transform:      uppercase;
 // Structure
 .page-header {
   @include position($page-header-position, $page-header-cords);
-  @include transition(top 0.5s ease);
+  @include transition($page-header-transition);
   background-color: $page-header-background;
   max-width: $page-header-max-width;
   padding: $page-header-padding;
